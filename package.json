@@ -6,13 +6,16 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "vitest run"
   },
   "dependencies": {
     "@vercel/analytics": "latest",
+    "drizzle-orm": "latest",
     "next": "^16.2.2",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "zod": "latest"
   },
   "devDependencies": {
     "@eslint/eslintrc": "latest",
@@ -20,10 +23,12 @@
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "drizzle-kit": "latest",
     "eslint": "latest",
     "eslint-config-next": "^16.2.2",
     "postcss": "latest",
     "tailwindcss": "latest",
-    "typescript": "latest"
+    "typescript": "latest",
+    "vitest": "latest"
   }
 }
