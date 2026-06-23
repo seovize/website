@@ -1,23 +1,27 @@
 import type { NextConfig } from "next";
 
+const securityHeaders = [
+  { key: "X-Frame-Options", value: "DENY" },
+  { key: "X-Content-Type-Options", value: "nosniff" },
+  { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+  { key: "X-DNS-Prefetch-Control", value: "on" },
+  { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
+];
+
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   images: {
     formats: ["image/avif", "image/webp"],
   },
+  async headers() {
+    return [{ source: "/(.*)", headers: securityHeaders }];
+  },
   async redirects() {
     return [
-      {
-        source: "/seo",
-        destination: "/services/seo",
-        permanent: true,
-      },
-      {
-        source: "/contact-2-2",
-        destination: "/services/website-design",
-        permanent: true,
-      },
+      { source: "/seo", destination: "/services/seo", permanent: true },
+      { source: "/contact-2-2", destination: "/services/website-design", permanent: true },
+      { source: "/services", destination: "/services/seo", permanent: false },
     ];
   },
 };

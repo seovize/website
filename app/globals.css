@@ -1,9 +1,33 @@
 @import "tailwindcss";
 
+@theme inline {
+  /* Fonts */
+  --font-display: var(--font-manrope);
+  --font-body: var(--font-inter);
+  --font-mono: var(--font-ibm-plex-mono);
+
+  /* Brand colors */
+  --color-obsidian: #0B1020;
+  --color-navy: #121A2F;
+  --color-line: #27324A;
+  --color-cloud: #F8FAFC;
+  --color-mist: #CBD5E1;
+  --color-slate-mid: #475569;
+  --color-mint: #14B8A6;
+  --color-sky: #38BDF8;
+  --color-orange: #F97316;
+  --color-peach: #FFEDD5;
+
+  /* Type scale */
+  --text-display-2xl: clamp(3.5rem, 6vw, 5rem);
+  --text-display-xl: clamp(2.75rem, 4.2vw, 4rem);
+  --text-h1: clamp(2.25rem, 3vw, 3rem);
+}
+
 :root {
   color-scheme: dark;
-  --background: #020617;
-  --foreground: #f8fafc;
+  --background: #0B1020;
+  --foreground: #F8FAFC;
 }
 
 * {
@@ -17,17 +41,19 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at top left, rgba(20, 184, 166, 0.18), transparent 32rem),
-    radial-gradient(circle at top right, rgba(249, 115, 22, 0.16), transparent 26rem),
+    radial-gradient(circle at top left, rgba(20, 184, 166, 0.16), transparent 36rem),
+    radial-gradient(circle at top right, rgba(249, 115, 22, 0.12), transparent 28rem),
     var(--background);
   color: var(--foreground);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
 ::selection {
-  background: #5eead4;
-  color: #020617;
+  background: #14B8A6;
+  color: #0B1020;
 }
 
+/* Noise / grid texture overlay */
 .noise {
   position: relative;
 }
@@ -37,13 +63,22 @@ body {
   pointer-events: none;
   position: absolute;
   inset: 0;
-  opacity: 0.14;
-  background-image: linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px);
+  opacity: 0.12;
+  background-image:
+    linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px),
+    linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px);
   background-size: 42px 42px;
   mask-image: linear-gradient(to bottom, black, transparent 85%);
 }
 
+/* Focus ring */
 .focus-ring:focus-visible {
-  outline: 3px solid #2dd4bf;
+  outline: 3px solid #14B8A6;
   outline-offset: 4px;
+}
+
+*:focus-visible {
+  outline: 2px solid #14B8A6;
+  outline-offset: 3px;
+  border-radius: 4px;
 }

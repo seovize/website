@@ -1,14 +1,60 @@
 import type { MetadataRoute } from "next";
-import { services, site } from "@/lib/site";
+import { blogPosts, services, site } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/pricing", "/case-studies", "/about", "/contact"];
-  const serviceRoutes = services.map((service) => service.href);
+  const highPriority = [""];
+  const medHighPriority = [
+    "/pricing",
+    "/about",
+    "/contact",
+    "/locations/texas",
+    "/locations/texas/social-media-management",
+    "/locations/texas/seo-services",
+    "/locations/texas/social-media-manager",
+    "/compare/seo-agency-vs-freelancer",
+  ];
+  const medPriority = [
+    "/case-studies",
+    "/blog",
+    "/industries",
+    "/locations",
+  ];
 
-  return [...staticRoutes, ...serviceRoutes].map((route) => ({
-    url: `${site.domain}${route}`,
-    lastModified: new Date(),
-    changeFrequency: (route === "" ? "weekly" : "monthly") as "weekly" | "monthly",
-    priority: route === "" ? 1 : route.includes("services") ? 0.9 : 0.7,
-  }));
+  const serviceRoutes = services.map((s) => s.href);
+  const blogRoutes = blogPosts.map((p) => `/blog/${p.slug}`);
+
+  const allRoutes: MetadataRoute.Sitemap = [
+    ...highPriority.map((route) => ({
+      url: `${site.domain}${route}`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 1,
+    })),
+    ...serviceRoutes.map((route) => ({
+      url: `${site.domain}${route}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    })),
+    ...medHighPriority.map((route) => ({
+      url: `${site.domain}${route}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
+    ...medPriority.map((route) => ({
+      url: `${site.domain}${route}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
+    ...blogRoutes.map((route) => ({
+      url: `${site.domain}${route}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    })),
+  ];
+
+  return allRoutes;
 }

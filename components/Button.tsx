@@ -4,19 +4,28 @@ import type { ReactNode } from "react";
 type ButtonProps = {
   href: string;
   children: ReactNode;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "ghost";
+  size?: "sm" | "md" | "lg";
+  className?: string;
 };
 
-export function Button({ href, children, variant = "primary" }: ButtonProps) {
-  const classes =
-    variant === "primary"
-      ? "bg-teal-300 text-slate-950 hover:bg-teal-200 shadow-[0_0_45px_rgba(45,212,191,0.25)]"
-      : "border border-white/15 bg-white/5 text-white hover:bg-white/10";
+export function Button({ href, children, variant = "primary", size = "md", className = "" }: ButtonProps) {
+  const sizeClasses = {
+    sm: "px-4 py-2 text-xs",
+    md: "px-6 py-3 text-sm",
+    lg: "px-8 py-4 text-base",
+  };
+
+  const variantClasses = {
+    primary: "bg-orange text-cloud font-bold hover:bg-orange/90 shadow-[0_0_45px_rgba(249,115,22,0.28)]",
+    secondary: "border border-line bg-navy text-cloud font-semibold hover:bg-navy/80 hover:border-mint/50",
+    ghost: "border border-white/20 bg-transparent text-mist font-semibold hover:bg-white/5 hover:text-cloud",
+  };
 
   return (
     <Link
       href={href}
-      className={`inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition ${classes}`}
+      className={`inline-flex items-center justify-center rounded-full font-semibold transition-all duration-200 ${sizeClasses[size]} ${variantClasses[variant]} ${className}`}
     >
       {children}
     </Link>

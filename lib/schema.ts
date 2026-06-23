@@ -9,10 +9,15 @@ export function organizationSchema() {
     email: site.email,
     slogan: site.tagline,
     description: site.description,
+    logo: {
+      "@type": "ImageObject",
+      url: `${site.domain}/logo.svg`,
+    },
     sameAs: [
       "https://www.linkedin.com/company/seovize",
       "https://www.instagram.com/seovizeofficial/",
       "https://www.behance.net/seovize",
+      "https://twitter.com/seovizeofficial",
     ],
   };
 }
@@ -50,6 +55,96 @@ export function serviceSchema(slug: string) {
       priceCurrency: "USD",
       description: service.price,
       availability: "https://schema.org/InStock",
+    },
+  };
+}
+
+type BreadcrumbItem = { name: string; url: string };
+
+export function breadcrumbSchema(items: BreadcrumbItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+}
+
+type FAQ = { q: string; a: string };
+
+export function faqSchema(faqs: FAQ[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.a,
+      },
+    })),
+  };
+}
+
+export function localBusinessSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: site.name,
+    url: site.domain,
+    email: site.email,
+    description: site.description,
+    areaServed: [
+      { "@type": "State", name: "Texas" },
+      { "@type": "Country", name: "United States" },
+    ],
+    serviceArea: {
+      "@type": "GeoCircle",
+      geoMidpoint: {
+        "@type": "GeoCoordinates",
+        latitude: 31.0,
+        longitude: -100.0,
+      },
+      geoRadius: "1500000",
+    },
+    knowsAbout: ["SEO", "Semantic SEO", "Social Media Management", "Content Marketing", "Local SEO"],
+    priceRange: "$$",
+  };
+}
+
+type ArticlePost = {
+  slug: string;
+  title: string;
+  description: string;
+  date: string;
+};
+
+export function articleSchema(post: ArticlePost) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.description,
+    url: `${site.domain}/blog/${post.slug}`,
+    datePublished: post.date,
+    dateModified: post.date,
+    publisher: {
+      "@type": "Organization",
+      name: site.name,
+      url: site.domain,
+      logo: {
+        "@type": "ImageObject",
+        url: `${site.domain}/logo.svg`,
+      },
+    },
+    author: {
+      "@type": "Organization",
+      name: site.name,
     },
   };
 }

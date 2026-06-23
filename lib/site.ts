@@ -4,15 +4,17 @@ export const site = {
   email: "seovizeofficial@gmail.com",
   tagline: "Build authority. Capture demand.",
   description:
-    "SEO, semantic SEO, and social media management systems for U.S. growth-focused brands.",
+    "Semantic SEO, social media management, and conversion-ready website systems for U.S. growth-focused brands.",
+  twitterHandle: "@seovizeofficial",
 };
 
 export const navItems = [
-  { label: "SEO", href: "/services/seo" },
+  { label: "Services", href: "/services/seo" },
   { label: "Semantic SEO", href: "/services/semantic-seo" },
   { label: "Social Media", href: "/services/social-media-management" },
   { label: "Pricing", href: "/pricing" },
-  { label: "Case Studies", href: "/case-studies" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const services = [
@@ -25,16 +27,68 @@ export const services = [
     outcomes: ["Cleaner site architecture", "Higher-intent content", "Stronger conversion paths"],
     price: "From $1,250/mo",
     href: "/services/seo",
+    icon: "search",
+    deliverables: [
+      "Technical SEO audit and fix list",
+      "Keyword universe and opportunity map",
+      "Homepage + 5 service-page optimizations",
+      "Monthly content briefs and refreshes",
+      "Internal linking and schema implementation",
+      "GA4 + Google Search Console setup and monthly report",
+    ],
+    faqs: [
+      { q: "How long before I see results?", a: "Most clients see meaningful ranking movement within 60–90 days for lower-competition terms. Competitive niches typically take 4–6 months for significant organic growth." },
+      { q: "Do you write the content too?", a: "Yes. All SEO plans include content briefs and page rewrites. Growth and Authority plans include fully written pages each month." },
+      { q: "What makes your SEO different?", a: "We focus on semantic structure — not just keywords. Pages are built around entity clarity, buyer intent, and content architecture, which produces more durable rankings than keyword stuffing." },
+    ],
   },
   {
     slug: "semantic-seo",
-    title: "Semantic SEO Implementation",
+    title: "Semantic SEO",
     eyebrow: "Entity authority",
     description:
       "Topic mapping, entity-led page architecture, FAQ layers, service taxonomies, structured data, and internal-link graphs for long-term authority.",
     outcomes: ["Entity/topic map", "Service + industry matrix", "Schema-ready content clusters"],
     price: "From $2,200/mo",
     href: "/services/semantic-seo",
+    icon: "graph",
+    deliverables: [
+      "Entity and topic map for your brand and services",
+      "Service-page architecture and content taxonomy",
+      "FAQ layer and structured data implementation",
+      "Internal linking graph and anchor-text strategy",
+      "Semantic content briefs aligned to buyer intent",
+      "Monthly schema audit and structured data refinement",
+    ],
+    faqs: [
+      { q: "What is semantic SEO?", a: "Semantic SEO is the practice of building page content and site architecture around entities (who/what/where) and topic clusters rather than isolated keywords — so search engines understand exactly what you do and who you serve." },
+      { q: "Is semantic SEO different from regular SEO?", a: "Yes. Traditional SEO optimizes for specific keywords. Semantic SEO builds a topic model so your site has clear authority on an entire subject area, which produces broader, more defensible rankings." },
+      { q: "Who needs semantic SEO most?", a: "Expert-led and service-led businesses — consultants, agencies, law firms, healthcare providers, and B2B companies — where authority signals matter more than volume." },
+    ],
+  },
+  {
+    slug: "local-seo",
+    title: "Local SEO",
+    eyebrow: "Local visibility",
+    description:
+      "Google Business Profile optimization, local citation building, service-area pages, local schema, and review systems for businesses competing in specific geographic markets.",
+    outcomes: ["Google Business Profile optimized", "Local citation consistency", "Service-area page system"],
+    price: "From $950/mo",
+    href: "/services/local-seo",
+    icon: "map",
+    deliverables: [
+      "Google Business Profile audit and optimization",
+      "Local citation audit and consistency fix",
+      "Service-area page strategy and creation",
+      "Local schema markup (LocalBusiness, Service)",
+      "Review acquisition strategy and templates",
+      "Monthly local rank tracking and reporting",
+    ],
+    faqs: [
+      { q: "Do I need a physical address for local SEO?", a: "Not necessarily. Service-area businesses can rank locally without a storefront. We build ethical service-area SEO strategies that don't require a fake address." },
+      { q: "How important is Google Business Profile?", a: "It is the single highest-impact local SEO asset for most businesses. A fully optimized GBP (photos, posts, reviews, Q&A, services) dramatically increases map-pack visibility." },
+      { q: "Can you help a Texas business rank locally?", a: "Yes. We specialize in Texas service-area SEO — including dedicated location pages, local content, and citation strategies for Texas markets." },
+    ],
   },
   {
     slug: "social-media-management",
@@ -45,16 +99,68 @@ export const services = [
     outcomes: ["Consistent visual identity", "SEO-optimized captions", "Monthly performance reports"],
     price: "From $1,100/mo",
     href: "/services/social-media-management",
+    icon: "social",
+    deliverables: [
+      "Monthly content calendar and strategy",
+      "Custom-designed post graphics and templates",
+      "SEO-optimized captions and hashtag strategy",
+      "Short-form reels scripting and editing",
+      "Scheduling and publishing across platforms",
+      "Monthly analytics report and performance review",
+    ],
+    faqs: [
+      { q: "Which platforms do you manage?", a: "We manage Instagram, Facebook, LinkedIn, TikTok, and X (Twitter). Most plans focus on 2–3 platforms depending on your audience." },
+      { q: "Do you create video content?", a: "Yes. Our Growth and Authority plans include reels editing. We work from your raw footage or provide scripted direction for content creation." },
+      { q: "How do you measure social media success?", a: "We track reach, engagement rate, follower growth, profile visits, link clicks, and lead attribution where measurable — not just vanity metrics." },
+    ],
   },
   {
     slug: "website-design",
-    title: "Website Design & Conversion Pages",
+    title: "Website Design",
     eyebrow: "Conversion design",
     description:
       "Fast, modern Next.js websites and landing pages designed around trust, speed, SEO, and strong buyer journeys.",
     outcomes: ["Modern UI/UX", "SEO-ready pages", "Vercel deployment"],
     price: "Custom quote",
     href: "/services/website-design",
+    icon: "design",
+    deliverables: [
+      "Brand strategy and messaging review",
+      "Wireframes and UX architecture",
+      "Custom Next.js + Tailwind design system",
+      "SEO-optimized page structure and metadata",
+      "Vercel deployment and performance setup",
+      "Post-launch audit and support period",
+    ],
+    faqs: [
+      { q: "Why Next.js instead of WordPress?", a: "Next.js sites are significantly faster, more secure, and easier to maintain at scale. Vercel deployment means instant global edge performance and automatic SSL." },
+      { q: "What does a website project cost?", a: "Most marketing site projects range from $4,500 to $12,000+ depending on page count, complexity, and content production. We provide a detailed quote after an initial scoping call." },
+      { q: "Do you do redesigns of existing sites?", a: "Yes. We handle full redesigns from WordPress, Wix, Squarespace, or any platform to a modern Next.js stack." },
+    ],
+  },
+  {
+    slug: "content-marketing",
+    title: "Content Marketing",
+    eyebrow: "Authority content",
+    description:
+      "Strategic blog content, pillar pages, comparison articles, industry guides, and resource pages that build topical authority and generate qualified organic traffic.",
+    outcomes: ["Topical authority content", "Organic traffic growth", "Lead-generating resources"],
+    price: "From $800/mo",
+    href: "/services/content-marketing",
+    icon: "content",
+    deliverables: [
+      "Content strategy and editorial calendar",
+      "Keyword-mapped article briefs",
+      "SEO-optimized long-form articles (2–4/month)",
+      "Pillar pages and topic cluster architecture",
+      "Internal linking recommendations",
+      "Content performance reporting",
+    ],
+    faqs: [
+      { q: "How many articles per month?", a: "Plans start at 2 articles per month and scale to 6–8 for Authority plans. All articles are fully written, SEO-optimized, and ready to publish." },
+      { q: "What topics do you cover?", a: "We write about your industry, your services, and buyer-intent topics that your ideal customers are searching. No generic filler content." },
+      { q: "Does content marketing work for local businesses?", a: "Yes — especially for service businesses. Local and industry-specific content builds trust, answers buyer questions, and creates ranking opportunities beyond your service pages." },
+    ],
   },
 ];
 
@@ -123,7 +229,7 @@ export const socialPackages = [
 export const processSteps = [
   {
     title: "Discover",
-    text: "We map your offer, audience, competitors, content gaps, and conversion path before production starts.",
+    text: "We map your offer, audience, competitors, content gaps, and conversion path before any production starts.",
   },
   {
     title: "Architect",
@@ -144,15 +250,116 @@ export const caseStudies = [
     title: "Local Service SEO Architecture",
     metric: "+70% modeled organic growth window",
     text: "A semantic service-page rebuild designed to improve crawlability, topic coverage, and buyer clarity across local landing pages.",
+    tag: "SEO",
   },
   {
     title: "Social Content System",
     metric: "30-day creative calendar",
     text: "Premium post design, SEO captions, reels direction, scheduling, and monthly reporting for consistent brand visibility.",
+    tag: "Social Media",
   },
   {
     title: "Conversion Website Rebuild",
     metric: "Next.js + Vercel stack",
     text: "A fast marketing site with metadata, sitemap, robots, structured content, and focused CTAs for qualified leads.",
+    tag: "Web Design",
   },
 ];
+
+export const industries = [
+  {
+    slug: "law-firms",
+    title: "Law Firms",
+    description: "SEO and content systems for attorneys who need to rank for competitive legal service terms and build trust before the call.",
+    href: "/industries/law-firms",
+  },
+  {
+    slug: "real-estate",
+    title: "Real Estate",
+    description: "Local SEO, social media, and content for agents and brokers competing in fast-moving geographic markets.",
+    href: "/industries/real-estate",
+  },
+  {
+    slug: "med-spas",
+    title: "Med Spas",
+    description: "Premium social media management, local SEO, and content for aesthetic practices ready to grow their digital presence.",
+    href: "/industries/med-spas",
+  },
+  {
+    slug: "consultants",
+    title: "Consultants",
+    description: "Thought leadership content, semantic SEO, and social systems for independent consultants building authority at scale.",
+    href: "/industries/consultants",
+  },
+  {
+    slug: "contractors",
+    title: "Contractors",
+    description: "Local SEO, Google Business Profile, and service-area pages for home service and construction businesses.",
+    href: "/industries/contractors",
+  },
+  {
+    slug: "restaurants",
+    title: "Restaurants",
+    description: "Social media management, local SEO, and Google Business Profile for restaurants growing their dine-in and delivery presence.",
+    href: "/industries/restaurants",
+  },
+];
+
+export const blogPosts = [
+  {
+    slug: "what-is-semantic-seo",
+    title: "What Is Semantic SEO? A Practical Guide for Service Businesses",
+    description: "Semantic SEO builds topic authority by connecting entities, not just targeting keywords. Here is how it works and why it matters for service businesses.",
+    tag: "Semantic SEO",
+    readTime: "8 min read",
+    date: "2026-01-15",
+  },
+  {
+    slug: "social-media-manager-texas",
+    title: "What Does a Social Media Manager Do for Texas Businesses?",
+    description: "A breakdown of what a professional social media manager actually delivers — content planning, design, captions, scheduling, and reporting — for Texas small businesses.",
+    tag: "Social Media",
+    readTime: "6 min read",
+    date: "2026-01-22",
+  },
+  {
+    slug: "seo-vs-social-media-small-business",
+    title: "SEO vs Social Media for Small Business: Which Should You Prioritize?",
+    description: "Both build visibility, but they work differently. Here is how to decide which channel to invest in first — and when to combine them.",
+    tag: "Strategy",
+    readTime: "7 min read",
+    date: "2026-02-01",
+  },
+  {
+    slug: "local-seo-without-physical-address",
+    title: "How Service-Area Businesses Can Win at Local SEO Without a Storefront",
+    description: "You do not need a physical address to rank locally. Here is how to build an ethical, effective local SEO strategy as a remote or mobile service business.",
+    tag: "Local SEO",
+    readTime: "9 min read",
+    date: "2026-02-10",
+  },
+  {
+    slug: "content-calendar-texas-small-business",
+    title: "How to Build a Social Media Content Calendar for a Texas Small Business",
+    description: "A step-by-step process for planning 30 days of social media content that reflects your brand, serves your audience, and supports local visibility.",
+    tag: "Social Media",
+    readTime: "10 min read",
+    date: "2026-02-18",
+  },
+];
+
+export const homepageFaqs = [
+  { q: "What makes Seovize different from a typical SEO agency?", a: "We focus on semantic SEO and message architecture — not just keyword rankings. Our work connects search structure, content clarity, and social systems into one coherent growth strategy rather than treating each channel as a separate silo." },
+  { q: "Do you work with small businesses?", a: "Yes. Most of our clients are SMBs, expert-led service firms, and growth-stage brands that need a focused strategy — not a bloated agency retainer covering 12 different things poorly." },
+  { q: "How does the pricing work?", a: "We offer monthly retainer packages for SEO, semantic SEO, and social media management. Website design projects are quoted by scope. You can view our starting pricing on the pricing page." },
+  { q: "Do you work with Texas businesses?", a: "Yes. We serve Texas businesses remotely — including service-area SEO, local content, and social media management tailored to Texas markets and industries." },
+  { q: "How do I get started?", a: "The best first step is a Growth Roadmap — a structured review of your current search visibility, content gaps, and conversion path. Use the contact form or email us directly to schedule one." },
+];
+
+export const texasData = {
+  headline: "Serving Texas Businesses",
+  subhead: "Remote SEO and social media systems for Texas service businesses, SMBs, and growth-stage brands.",
+  positioning: "Seovize is a remote-first studio. We serve Texas businesses through dedicated service-area SEO, Texas-specific content, and social media management — without a physical office requirement.",
+  services: ["Social media management", "Local SEO", "Semantic SEO", "Content marketing", "Website design"],
+  industries: ["Law firms", "Real estate", "Med spas", "Restaurants", "Contractors", "Consultants"],
+};
