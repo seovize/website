@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { Button } from "@/components/Button";
 import { CTABanner } from "@/components/CTABanner";
+import { EntityGraph } from "@/components/EntityGraph";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { FounderSection } from "@/components/FounderSection";
 import { JsonLd } from "@/components/JsonLd";
@@ -9,6 +10,7 @@ import { MetricTicker } from "@/components/MetricTicker";
 import { PlatformSelector } from "@/components/PlatformSelector";
 import { PricingCards } from "@/components/PricingCards";
 import { Section } from "@/components/Section";
+import { ServiceIcon } from "@/components/ServiceIcon";
 import { TrustStrip } from "@/components/TrustStrip";
 import { faqSchema } from "@/lib/schema";
 import { caseStudies, founder, homepageFaqs, processSteps, seoPackages, services, texasData } from "@/lib/site";
@@ -162,8 +164,9 @@ export default function HomePage() {
             >
               <div className="pointer-events-none absolute -right-6 -top-6 h-28 w-28 rounded-full bg-mint/[0.06] blur-2xl transition group-hover:bg-mint/[0.12]" />
               <div className="relative">
+                <ServiceIcon slug={s.slug} className="mb-4 h-10 w-10" />
                 <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-mint">{s.eyebrow}</p>
-                <h3 className="mt-4 font-display text-2xl font-black text-cloud">{s.title}</h3>
+                <h3 className="mt-3 font-display text-2xl font-black text-cloud">{s.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-mist">{s.description}</p>
                 <div className="mt-6 flex items-center justify-between">
                   <p className="font-mono text-sm font-bold text-orange">{s.price}</p>
@@ -195,8 +198,8 @@ export default function HomePage() {
               Your brand, services, founder, and service areas — structured as semantic entities so search engines can
               verify, connect, and rank each claim with confidence.
             </p>
-            <div className="mt-6 rounded-xl border border-line bg-obsidian p-4 font-mono text-xs text-slate-mid">
-              <span className="text-mint">Organization</span> → <span className="text-sky">Service</span> → <span className="text-orange">areaServed</span> → Texas
+            <div className="mt-6 rounded-2xl border border-line bg-obsidian p-4">
+              <EntityGraph />
             </div>
           </div>
           <div className="rounded-[2rem] border border-line bg-navy p-7">

@@ -22,13 +22,23 @@ export function FounderSection() {
                 </p>
               </div>
               <div className="mt-10">
-                <div className="mb-4 flex items-center gap-3">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-mint text-xl font-black text-obsidian">
-                    AG
+                <div className="mb-4 flex items-center gap-4">
+                  {/* Founder avatar — replace src with real headshot when available */}
+                  <div className="relative shrink-0">
+                    <svg viewBox="0 0 64 64" className="h-16 w-16" aria-label="Abdul Ghani — Texas SEO Expert and Founder of Seovize">
+                      <circle cx="32" cy="32" r="30" fill="#14B8A6" fillOpacity=".12" stroke="#14B8A6" strokeWidth="1.5"/>
+                      <circle cx="32" cy="32" r="24" fill="#14B8A6"/>
+                      <text x="32" y="28" textAnchor="middle" fontSize="11" fontWeight="800" fill="white" fontFamily="system-ui, sans-serif">Abdul</text>
+                      <text x="32" y="42" textAnchor="middle" fontSize="11" fontWeight="800" fill="white" fontFamily="system-ui, sans-serif">Ghani</text>
+                    </svg>
+                    <span className="absolute -bottom-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full border-2 border-navy bg-mint">
+                      <svg width="8" height="8" viewBox="0 0 10 8" fill="none" aria-hidden="true"><path d="M1 4l3 3 5-6" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    </span>
                   </div>
                   <div>
                     <p className="font-bold text-cloud">{founder.name}</p>
-                    <p className="text-xs text-slate-mid">{founder.title} · {founder.experience} years</p>
+                    <p className="text-xs text-slate-mid">{founder.title}</p>
+                    <p className="mt-0.5 font-mono text-[10px] text-mint">{founder.experience} yrs · Founder · Seovize</p>
                   </div>
                 </div>
                 <a

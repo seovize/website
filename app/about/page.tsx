@@ -77,8 +77,16 @@ export default function AboutPage() {
           <div className="overflow-hidden rounded-[2rem] border border-line bg-navy">
             <div className="grid md:grid-cols-[auto_1fr] md:divide-x md:divide-line">
               <div className="flex flex-col items-center justify-center gap-4 p-10 text-center">
-                <div className="flex h-24 w-24 items-center justify-center rounded-3xl bg-mint text-4xl font-black text-obsidian">
-                  AG
+                <div className="relative">
+                  <svg viewBox="0 0 96 96" className="h-24 w-24" aria-label="Abdul Ghani — Founder of Seovize, Texas SEO Expert with 20+ years experience">
+                    <circle cx="48" cy="48" r="46" fill="#14B8A6" fillOpacity=".1" stroke="#14B8A6" strokeWidth="1.5"/>
+                    <circle cx="48" cy="48" r="38" fill="#14B8A6"/>
+                    <text x="48" y="43" textAnchor="middle" fontSize="15" fontWeight="800" fill="white" fontFamily="system-ui, sans-serif">Abdul</text>
+                    <text x="48" y="62" textAnchor="middle" fontSize="15" fontWeight="800" fill="white" fontFamily="system-ui, sans-serif">Ghani</text>
+                  </svg>
+                  <span className="absolute -bottom-1 -right-1 flex h-7 w-7 items-center justify-center rounded-full border-2 border-navy bg-mint">
+                    <svg width="12" height="10" viewBox="0 0 12 10" fill="none" aria-hidden="true"><path d="M1 5l3.5 3.5 6.5-8" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  </span>
                 </div>
                 <div>
                   <p className="font-display text-2xl font-black text-cloud">{founder.name}</p>

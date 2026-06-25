@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTABanner } from "@/components/CTABanner";
@@ -48,12 +49,24 @@ export default function TexasHubPage() {
             {" "}— top local SEO expert and social media strategist with {founder.experience} years of digital marketing experience.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/contact" className="inline-flex items-center rounded-full bg-orange px-7 py-3.5 text-sm font-bold text-cloud shadow-[0_0_40px_rgba(249,115,22,0.3)] transition hover:bg-orange/90">
+            <Link href="/contact" className="inline-flex items-center rounded-full bg-orange px-7 py-3.5 text-sm font-bold text-white shadow-sm transition hover:bg-orange/90">
               Get a Free Texas Audit →
             </Link>
             <Link href="/pricing" className="inline-flex items-center rounded-full border border-line px-7 py-3.5 text-sm font-semibold text-mist transition hover:border-mint/40 hover:text-cloud">
               See packages
             </Link>
+          </div>
+
+          {/* Texas map — SEO-optimized SVG with keyword-rich alt text */}
+          <div className="mt-12 overflow-hidden rounded-[2rem] border border-line bg-navy p-6">
+            <Image
+              src="/images/texas-seo-social-media-services-map.svg"
+              alt="Texas map showing Seovize SEO and social media management service areas: Houston, Dallas, Austin, and San Antonio — remote studio serving all Texas businesses"
+              width={520}
+              height={480}
+              className="mx-auto w-full max-w-lg"
+              priority={false}
+            />
           </div>
         </div>
       </section>
