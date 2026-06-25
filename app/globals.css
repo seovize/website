@@ -74,6 +74,18 @@ body {
   to { transform: translateX(-50%); }
 }
 
+/* ── Force-dark island (always dark, ignores light/dark toggle) ─── */
+/* Use on sections that must remain dark for visual contrast */
+.force-dark {
+  --color-obsidian: #0B1020;
+  --color-navy: #121A2F;
+  --color-line: #27324A;
+  --color-cloud: #F8FAFC;
+  --color-mist: #CBD5E1;
+  --color-slate-mid: #475569;
+  color-scheme: dark;
+}
+
 /* ── Focus ring ─────────────────────────────────────────────────── */
 .focus-ring:focus-visible {
   outline: 3px solid #14B8A6;
