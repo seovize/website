@@ -5,7 +5,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
-import { organizationSchema, websiteSchema } from "@/lib/schema";
+import { organizationSchema, personSchema, websiteSchema } from "@/lib/schema";
 import { site } from "@/lib/site";
 
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope", display: "swap", weight: ["600", "700", "800"] });
@@ -43,6 +43,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className="antialiased">
         <JsonLd data={organizationSchema()} />
         <JsonLd data={websiteSchema()} />
+        <JsonLd data={personSchema()} />
         <Header />
         <main>{children}</main>
         <Footer />

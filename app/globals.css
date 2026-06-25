@@ -71,6 +71,18 @@ body {
   mask-image: linear-gradient(to bottom, black, transparent 85%);
 }
 
+/* Ticker */
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Gradient border utility */
+.gradient-border {
+  background: linear-gradient(135deg, rgba(20,184,166,0.4), rgba(56,189,248,0.2), rgba(249,115,22,0.2));
+  padding: 1px;
+}
+
 /* Focus ring */
 .focus-ring:focus-visible {
   outline: 3px solid #14B8A6;

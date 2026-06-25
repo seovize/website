@@ -1,32 +1,25 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { Button } from "@/components/Button";
 import { CTABanner } from "@/components/CTABanner";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { JsonLd } from "@/components/JsonLd";
 import { Section } from "@/components/Section";
 import { faqSchema, localBusinessSchema } from "@/lib/schema";
-import { services, texasData } from "@/lib/site";
+import { founder, texasData } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "SEO & Social Media Management for Texas Businesses | Seovize",
   description:
-    "Remote SEO, semantic SEO, and social media management for Texas small businesses, service firms, and growth-stage brands. No fake office — real results.",
+    "Seovize delivers semantic SEO, local SEO, and social media management for Texas businesses in Houston, Dallas, Austin, and San Antonio. Founded by Abdul Ghani, 20+ years experience.",
   alternates: { canonical: "/locations/texas" },
 };
 
 const texasFaqs = [
-  { q: "Does Seovize have a physical office in Texas?", a: "No — Seovize is a remote studio. We serve Texas businesses fully remotely with the same quality and accountability as an in-person agency. All project communication, reporting, and strategy calls happen online." },
-  { q: "Can you help a Texas business rank locally?", a: "Yes. We build dedicated service-area SEO strategies for Texas businesses — including city/region landing pages, local citation work, and Texas-specific content — without requiring a physical storefront." },
-  { q: "What types of Texas businesses do you work with?", a: "We work with law firms, real estate agents, med spas, restaurants, contractors, consultants, and other service businesses across Texas looking to improve their search visibility and social media presence." },
-  { q: "How do you know Texas markets?", a: "We research each client's specific Texas market — including competitor landscapes, search patterns, and local content gaps — before building any strategy. Texas markets vary significantly by city, industry, and buyer behavior." },
-];
-
-const texasSubPages = [
-  { title: "Social Media Management for Texas", href: "/locations/texas/social-media-management", desc: "Premium social content, post design, reels, and reporting for Texas businesses." },
-  { title: "SEO Services for Texas Businesses", href: "/locations/texas/seo-services", desc: "Technical SEO, local search, and content strategy for Texas service businesses." },
-  { title: "Social Media Manager for Texas", href: "/locations/texas/social-media-manager", desc: "What a professional social media manager does for Texas small businesses." },
+  { q: "Do you have a physical office in Texas?", a: "Seovize is a remote-first studio. We never list a fake address. We serve Texas businesses through dedicated service-area SEO, Texas-specific content clusters, and remote social media management with genuine Texas market expertise." },
+  { q: "Which Texas cities do you serve?", a: "We build dedicated strategies for Houston, Dallas, Austin, and San Antonio — each with distinct buyer behavior, competitive dynamics, and content requirements. We also serve businesses across smaller Texas markets." },
+  { q: "Can a service-area business rank locally without a storefront?", a: "Yes. We build ethical local SEO strategies using service-area pages, LocalBusiness schema with areaServed fields (no fake street address), and citation strategies designed for remote and mobile service businesses." },
+  { q: "What makes Seovize different from large Texas agencies like Thrive?", a: "Large agencies build generic city pages with boilerplate copy and no named expert. Seovize is founder-led by Abdul Ghani — every strategy is personally designed with entity-first content architecture and real Texas market knowledge." },
 ];
 
 export default function TexasHubPage() {
@@ -34,79 +27,84 @@ export default function TexasHubPage() {
     <>
       <JsonLd data={localBusinessSchema()} />
       <JsonLd data={faqSchema(texasFaqs)} />
-
       <Breadcrumbs items={[{ name: "Locations", href: "/locations/texas" }, { name: "Texas", href: "/locations/texas" }]} />
 
-      <section className="noise px-5 py-20 md:py-28">
-        <div className="mx-auto max-w-5xl">
-          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-mint">Remote studio · serving Texas</p>
-          <h1 className="font-display text-5xl font-black leading-[1.0] tracking-tight text-cloud md:text-7xl">
-            SEO &amp; Social Media for Texas Businesses
+      <section className="noise relative overflow-hidden px-5 pb-16 pt-20 md:pt-28">
+        <div className="pointer-events-none absolute -left-20 top-0 h-80 w-80 rounded-full bg-mint/[0.06] blur-[90px]" />
+        <div className="relative z-10 mx-auto max-w-5xl">
+          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-mint">Texas · Remote studio</p>
+          <h1 className="font-display text-4xl font-black leading-tight tracking-tight text-cloud md:text-6xl">
+            SEO & Social Media Management<br />
+            for{" "}
+            <span className="bg-gradient-to-r from-mint to-sky bg-clip-text text-transparent">
+              Texas Businesses
+            </span>
           </h1>
           <p className="mt-7 max-w-3xl text-lg leading-8 text-mist">
-            {texasData.positioning}
+            {texasData.positioning} Led by{" "}
+            <Link href="/about" className="font-semibold text-cloud underline decoration-mint/40 hover:decoration-mint">
+              {founder.name}
+            </Link>
+            {" "}— top local SEO expert and social media strategist with {founder.experience} years of digital marketing experience.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Button href="/contact">Get a Texas growth roadmap</Button>
-            <Button href="/services/local-seo" variant="secondary">Local SEO services</Button>
+            <Link href="/contact" className="inline-flex items-center rounded-full bg-orange px-7 py-3.5 text-sm font-bold text-cloud shadow-[0_0_40px_rgba(249,115,22,0.3)] transition hover:bg-orange/90">
+              Get a Free Texas Audit →
+            </Link>
+            <Link href="/pricing" className="inline-flex items-center rounded-full border border-line px-7 py-3.5 text-sm font-semibold text-mist transition hover:border-mint/40 hover:text-cloud">
+              See packages
+            </Link>
           </div>
         </div>
       </section>
 
-      <Section eyebrow="Texas services" title="What we do for Texas businesses">
-        <div className="grid gap-5 md:grid-cols-3">
-          {texasSubPages.map((page) => (
-            <Link
-              key={page.href}
-              href={page.href}
-              className="group rounded-[2rem] border border-line bg-navy p-6 transition hover:border-mint/30"
-            >
-              <h2 className="font-display text-xl font-black text-cloud">{page.title}</h2>
-              <p className="mt-3 text-sm leading-7 text-mist">{page.desc}</p>
-              <span className="mt-4 block text-xs font-semibold text-mint group-hover:underline">Learn more →</span>
+      <Section eyebrow="Texas markets" title="City-specific strategy. Not templated spam." intro="Each Texas market has a distinct economy, buyer type, and competitive landscape. Here is how the strategy differs city by city.">
+        <div className="grid gap-4 md:grid-cols-2">
+          {texasData.cities.map((city, i) => (
+            <div key={city.slug} className="overflow-hidden rounded-[2rem] border border-line bg-navy">
+              <div className="border-b border-line bg-obsidian px-7 py-5">
+                <div className="flex items-baseline justify-between">
+                  <h2 className="font-display text-3xl font-black text-cloud">{city.name}</h2>
+                  <span className="font-mono text-xs text-mint">0{i + 1}</span>
+                </div>
+                <p className="mt-1 text-xs font-semibold text-mint">{city.market}</p>
+              </div>
+              <div className="p-7">
+                <p className="text-sm leading-7 text-mist">{city.description}</p>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {city.topKeywords.map((kw) => (
+                    <span key={kw} className="rounded-full border border-line bg-obsidian px-3 py-1.5 text-[10px] text-slate-mid">{kw}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <Section variant="navy" eyebrow="Texas services" title="What we deliver for Texas brands.">
+        <div className="grid gap-4 md:grid-cols-3">
+          {[
+            { title: "SEO Services Texas", href: "/locations/texas/seo-services", desc: "Local and semantic SEO for Texas businesses competing in Houston, Dallas, Austin, and San Antonio." },
+            { title: "Social Media Management Texas", href: "/locations/texas/social-media-management", desc: "Premium social content systems — post design, captions, reels, and monthly reporting for Texas brands." },
+            { title: "Social Media Manager Texas", href: "/locations/texas/social-media-manager", desc: "Find the best social media manager for your Texas business — agency expertise without the agency overhead." },
+          ].map((s) => (
+            <Link key={s.href} href={s.href} className="group flex flex-col rounded-[2rem] border border-line bg-obsidian p-7 transition hover:border-mint/30 hover:-translate-y-0.5">
+              <h3 className="font-display text-xl font-black text-cloud">{s.title}</h3>
+              <p className="mt-3 flex-1 text-sm leading-7 text-mist">{s.desc}</p>
+              <span className="mt-5 text-xs font-semibold text-mint group-hover:underline">Learn more →</span>
             </Link>
           ))}
         </div>
       </Section>
 
-      <Section variant="navy" eyebrow="Industries" title="Texas industries we serve">
-        <div className="flex flex-wrap gap-3">
-          {texasData.industries.map((ind) => (
-            <span key={ind} className="rounded-full border border-line bg-obsidian px-4 py-2 text-sm text-mist">
-              {ind}
-            </span>
-          ))}
-        </div>
-        <div className="mt-8">
-          <Link href="/industries" className="text-sm font-semibold text-mint hover:underline">
-            See all industries we serve →
-          </Link>
-        </div>
-      </Section>
-
-      <Section eyebrow="Important note" title="Our Texas positioning — no fake address, no fake GBP">
-        <div className="max-w-3xl rounded-[2rem] border border-line bg-navy p-7">
-          <p className="text-mist leading-7">
-            Seovize does not claim a Texas street address or Google Business Profile location it does not have. We build ethical, remote-first service-area SEO that does not depend on fake physical presence. Everything we do is transparent, verifiable, and built to last.
-          </p>
-          <p className="mt-4 text-mist leading-7">
-            This means Texas businesses we work with get a real strategy — service-area pages, local citations, Texas-specific content, and schema markup — without any black-hat local SEO tactics that risk penalties.
-          </p>
-        </div>
-      </Section>
-
-      <Section variant="navy" eyebrow="FAQ" title="Texas businesses — common questions">
+      <Section eyebrow="FAQ" title="Texas business questions answered.">
         <div className="max-w-3xl">
           <FAQAccordion faqs={texasFaqs} />
         </div>
       </Section>
 
-      <CTABanner
-        headline="Texas business ready to grow online?"
-        subhead="Start with a Growth Roadmap. We will review your current search presence, social accounts, and conversion path — and show you exactly what we would prioritize."
-        primaryLabel="Get a Texas growth roadmap"
-        primaryHref="/contact"
-      />
+      <CTABanner headline="Ready to grow your Texas business online?" subhead="Get a free Growth Roadmap built specifically for your Texas market — Houston, Dallas, Austin, or San Antonio." primaryLabel="Get Your Free Texas Audit" primaryHref="/contact" />
     </>
   );
 }

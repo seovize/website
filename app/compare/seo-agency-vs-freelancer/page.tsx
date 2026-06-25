@@ -1,77 +1,66 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
+import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { Button } from "@/components/Button";
 import { CTABanner } from "@/components/CTABanner";
 import { FAQAccordion } from "@/components/FAQAccordion";
-import { JsonLd } from "@/components/JsonLd";
 import { Section } from "@/components/Section";
-import { faqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "SEO Agency vs Freelancer: Which Is Right for Your Business?",
-  description: "A clear, honest comparison of SEO agencies vs freelancers — covering cost, capacity, accountability, expertise depth, and what to choose based on your stage and goals.",
+  title: "SEO Agency vs Freelancer: Which Is Right for Your Business? | Seovize",
+  description: "Comparing SEO agency vs freelancer for your Texas or U.S. business? Understand the real trade-offs, what each option delivers, and why a founder-led studio beats both for most growth brands.",
   alternates: { canonical: "/compare/seo-agency-vs-freelancer" },
 };
 
 const faqs = [
-  { q: "Is an SEO freelancer cheaper than an agency?", a: "Usually yes — freelancers typically charge $500–$2,000/mo vs agencies at $1,000–$5,000+/mo. But cheaper does not always mean better value. Freelancers are often limited in capacity, tool access, and the ability to handle technical + content + reporting simultaneously." },
-  { q: "When should I hire an SEO freelancer?", a: "A freelancer makes sense for small, straightforward projects — a one-time audit, a single page rewrite, or light ongoing optimization for a simple site. If you need ongoing strategy, content, and technical work, an agency or studio provides more consistent delivery." },
-  { q: "What do SEO agencies do that freelancers typically cannot?", a: "Agencies typically provide dedicated teams (strategy, content, technical), project management systems, multi-service integration (SEO + social + content), and more accountability through contracts and reporting infrastructure." },
-  { q: "Is Seovize an agency or a freelancer?", a: "Seovize is a remote studio — smaller and more focused than a large agency, but with a dedicated team covering strategy, design, content, and technical SEO. You get agency-level accountability and output without agency-level overhead." },
+  { q: "Is an SEO agency or freelancer better for small businesses?", a: "For most small businesses, a founder-led studio is the best option. You get senior expertise on every decision (unlike an agency that routes you through account managers) and a full-service system (unlike a freelancer who maxes out at a few hours per week)." },
+  { q: "How much cheaper is a freelancer vs an SEO agency?", a: "Freelancers typically charge $50-200/hr or $500-2,000/mo. Agencies range from $1,500-10,000+/mo. A founder-led studio like Seovize sits in between — agency-quality output at retainer prices starting around $800-2,500/mo." },
+  { q: "What are the risks of hiring a cheap SEO freelancer?", a: "The main risks are: no redundancy (if they disappear, your SEO stops), limited bandwidth, no integrated strategy (SEO separate from social and content), and often outdated tactics that don't account for 2026 entity-based search." },
 ];
 
-const comparison = [
-  { attribute: "Monthly cost", freelancer: "$500–$2,000/mo", agency: "$1,000–$5,000+/mo", studio: "$800–$4,500/mo" },
-  { attribute: "Capacity", freelancer: "1 person", agency: "Large team", studio: "Focused team" },
-  { attribute: "Strategy depth", freelancer: "Varies widely", agency: "Structured", studio: "Structured" },
-  { attribute: "Content production", freelancer: "Often limited", agency: "Yes (extra cost)", studio: "Included" },
-  { attribute: "Accountability", freelancer: "Variable", agency: "High (contract)", studio: "High (contract)" },
-  { attribute: "Responsiveness", freelancer: "Variable", agency: "Slow (account mgr)", studio: "Fast (direct)" },
-  { attribute: "Technical SEO", freelancer: "Often shallow", agency: "Full capability", studio: "Full capability" },
-  { attribute: "Transparency", freelancer: "High", agency: "Variable", studio: "High" },
+const rows = [
+  { factor: "Senior strategy on every account", agency: "Rarely — account managers filter", freelancer: "Only if hiring senior", seovize: "Always — founder-led" },
+  { factor: "Semantic SEO expertise", agency: "Varies widely", freelancer: "Varies by individual", seovize: "Core specialization" },
+  { factor: "Content + SEO + Social integrated", agency: "Siloed teams", freelancer: "Usually only 1 service", seovize: "One connected system" },
+  { factor: "Texas city targeting", agency: "Generic city page spam", freelancer: "Limited capacity", seovize: "Hub-and-spoke architecture" },
+  { factor: "Entity/Person schema", agency: "Template-level only", freelancer: "Rarely implemented", seovize: "Full @graph implementation" },
+  { factor: "Pricing transparency", agency: "Discovery call to get a number", freelancer: "Hourly, hard to predict", seovize: "Published packages from $800/mo" },
+  { factor: "AEO/GEO (AI engine) optimization", agency: "Not a priority yet", freelancer: "Unlikely", seovize: "Built into every strategy" },
 ];
 
-export default function CompareAgencyVsFreelancerPage() {
+export default function ComparePage() {
   return (
     <>
-      <JsonLd data={faqSchema(faqs)} />
-
       <Breadcrumbs items={[{ name: "Compare", href: "/compare/seo-agency-vs-freelancer" }, { name: "Agency vs Freelancer", href: "/compare/seo-agency-vs-freelancer" }]} />
-
-      <section className="noise px-5 py-20 md:py-28">
+      <section className="noise px-5 pb-16 pt-20 md:pt-24">
         <div className="mx-auto max-w-5xl">
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-mint">Comparison</p>
-          <h1 className="font-display text-5xl font-black leading-[1.0] tracking-tight text-cloud md:text-7xl">
-            SEO Agency vs Freelancer
+          <h1 className="font-display text-4xl font-black tracking-tight text-cloud md:text-6xl">
+            SEO Agency vs Freelancer:<br />Which is right for you?
           </h1>
-          <p className="mt-7 max-w-3xl text-lg leading-8 text-mist">
-            An honest breakdown of the tradeoffs between hiring a freelance SEO specialist vs a focused studio or agency — and how to decide based on your business stage, budget, and goals.
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-mist">
+            Both options have real trade-offs. Here is an honest breakdown — and why most U.S. growth brands choose neither, opting instead for a founder-led studio.
           </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Button href="/contact">Talk to Seovize</Button>
-            <Button href="/pricing" variant="secondary">See our packages</Button>
-          </div>
         </div>
       </section>
 
-      <Section eyebrow="Comparison" title="Side-by-side breakdown">
-        <div className="overflow-auto rounded-[2rem] border border-line">
+      <Section eyebrow="Comparison" title="Side-by-side breakdown.">
+        <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-line bg-navy">
-                <th className="px-6 py-4 text-left text-xs font-semibold uppercase tracking-[0.2em] text-slate-mid">Attribute</th>
-                <th className="px-6 py-4 text-left text-xs font-semibold uppercase tracking-[0.2em] text-slate-mid">Freelancer</th>
-                <th className="px-6 py-4 text-left text-xs font-semibold uppercase tracking-[0.2em] text-slate-mid">Large agency</th>
-                <th className="px-6 py-4 text-left text-xs font-semibold uppercase tracking-[0.2em] text-mint">Seovize (studio)</th>
+              <tr className="border-b border-line text-left">
+                <th className="pb-4 pr-6 text-xs font-bold uppercase tracking-[0.2em] text-slate-mid">Factor</th>
+                <th className="pb-4 pr-6 text-xs font-bold uppercase tracking-[0.2em] text-slate-mid">SEO Agency</th>
+                <th className="pb-4 pr-6 text-xs font-bold uppercase tracking-[0.2em] text-slate-mid">Freelancer</th>
+                <th className="pb-4 text-xs font-bold uppercase tracking-[0.2em] text-mint">Seovize (Founder-led)</th>
               </tr>
             </thead>
-            <tbody>
-              {comparison.map((row, i) => (
-                <tr key={row.attribute} className={`border-b border-line ${i % 2 === 0 ? "bg-obsidian" : "bg-navy"}`}>
-                  <td className="px-6 py-4 font-semibold text-cloud">{row.attribute}</td>
-                  <td className="px-6 py-4 text-mist">{row.freelancer}</td>
-                  <td className="px-6 py-4 text-mist">{row.agency}</td>
-                  <td className="px-6 py-4 font-semibold text-cloud">{row.studio}</td>
+            <tbody className="divide-y divide-line">
+              {rows.map((row) => (
+                <tr key={row.factor}>
+                  <td className="py-4 pr-6 font-semibold text-cloud">{row.factor}</td>
+                  <td className="py-4 pr-6 text-mist">{row.agency}</td>
+                  <td className="py-4 pr-6 text-mist">{row.freelancer}</td>
+                  <td className="py-4 font-semibold text-mint">{row.seovize}</td>
                 </tr>
               ))}
             </tbody>
@@ -79,18 +68,16 @@ export default function CompareAgencyVsFreelancerPage() {
         </div>
       </Section>
 
-      <Section variant="navy" eyebrow="FAQ" title="Agency vs freelancer questions answered">
+      <Section variant="navy" eyebrow="FAQ" title="Common comparison questions.">
         <div className="max-w-3xl">
           <FAQAccordion faqs={faqs} />
         </div>
+        <div className="mt-10 text-center">
+          <Link href="/pricing" className="text-sm font-semibold text-mint hover:underline">View Seovize pricing →</Link>
+        </div>
       </Section>
 
-      <CTABanner
-        headline="Looking for the focused studio option?"
-        subhead="Seovize sits between freelancer and large agency — focused team, clear deliverables, real accountability, and pricing that makes sense for serious SMBs."
-        primaryLabel="See how Seovize works"
-        primaryHref="/contact"
-      />
+      <CTABanner headline="Stop choosing between expensive and underpowered." subhead="Seovize delivers senior SEO strategy with a full-service system — at transparent retainer pricing. Book a free Growth Roadmap call." primaryLabel="See What We Deliver" primaryHref="/contact" />
     </>
   );
 }
