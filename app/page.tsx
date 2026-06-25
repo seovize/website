@@ -45,7 +45,7 @@ export default function HomePage() {
               <h1 className="font-display text-[clamp(2.6rem,5.5vw,4.2rem)] font-black leading-[1.0] tracking-tight">
                 <span className="text-cloud">Data-driven digital</span>
                 <br />
-                <span className="bg-gradient-to-r from-mint via-sky to-mint/70 bg-clip-text text-transparent">
+                <span className="text-mint">
                   architecture
                 </span>
                 <br />
@@ -157,7 +157,7 @@ export default function HomePage() {
               key={s.slug}
               href={s.href}
               className={`group relative overflow-hidden rounded-[2rem] border border-line p-7 transition hover:border-mint/30 hover:-translate-y-0.5 ${
-                i === 0 ? "bg-gradient-to-br from-mint/[0.08] to-navy" : "bg-obsidian"
+                i === 0 ? "bg-navy" : "bg-obsidian"
               }`}
             >
               <div className="pointer-events-none absolute -right-6 -top-6 h-28 w-28 rounded-full bg-mint/[0.06] blur-2xl transition group-hover:bg-mint/[0.12]" />
@@ -238,7 +238,7 @@ export default function HomePage() {
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {processSteps.map((step, i) => (
             <div key={step.title} className="relative rounded-[2rem] border border-line bg-obsidian p-6">
-              <span className="font-mono grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-mint to-sky text-lg font-bold text-obsidian">
+              <span className="font-mono grid h-12 w-12 place-items-center rounded-2xl bg-mint text-lg font-bold text-obsidian">
                 {i + 1}
               </span>
               <h3 className="mt-6 font-display text-xl font-black text-cloud">{step.title}</h3>

@@ -36,7 +36,7 @@ export default function TexasSeoPage() {
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-mint">Texas · SEO services</p>
           <h1 className="font-display text-4xl font-black leading-tight tracking-tight text-cloud md:text-6xl">
             SEO Services for<br />
-            <span className="bg-gradient-to-r from-mint to-sky bg-clip-text text-transparent">
+            <span className="text-mint">
               Texas Businesses
             </span>
           </h1>

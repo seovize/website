@@ -13,7 +13,7 @@ export function FounderSection() {
                 <p className="text-xs font-bold uppercase tracking-[0.28em] text-mint">Founder-led studio</p>
                 <h2 className="mt-4 font-display text-4xl font-black leading-tight text-cloud">
                   Every strategy personally designed by{" "}
-                  <span className="bg-gradient-to-r from-mint to-sky bg-clip-text text-transparent">
+                  <span className="text-mint">
                     Abdul Ghani
                   </span>
                 </h2>
@@ -23,7 +23,7 @@ export function FounderSection() {
               </div>
               <div className="mt-10">
                 <div className="mb-4 flex items-center gap-3">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-mint to-sky text-xl font-black text-obsidian">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-mint text-xl font-black text-obsidian">
                     AG
                   </div>
                   <div>

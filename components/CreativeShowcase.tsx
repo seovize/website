@@ -31,7 +31,7 @@ export function CreativeShowcase() {
           ))}
         </div>
         <div className="rounded-[2rem] border border-line bg-obsidian p-5">
-          <div className="mx-auto h-[520px] max-w-[260px] rounded-[2rem] border-[8px] border-navy bg-gradient-to-br from-navy via-obsidian to-obsidian p-5 shadow-2xl">
+          <div className="mx-auto h-[520px] max-w-[260px] rounded-[2rem] border-[8px] border-navy bg-obsidian p-5 shadow-2xl">
             <div className="mb-6 mx-auto h-5 w-20 rounded-full bg-line" />
             <p className="text-[9px] font-bold uppercase tracking-[0.25em] text-mint">Seovize system</p>
             <h3 className="mt-4 font-display text-2xl font-black leading-tight text-cloud">

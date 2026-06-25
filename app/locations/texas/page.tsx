@@ -36,7 +36,7 @@ export default function TexasHubPage() {
           <h1 className="font-display text-4xl font-black leading-tight tracking-tight text-cloud md:text-6xl">
             SEO & Social Media Management<br />
             for{" "}
-            <span className="bg-gradient-to-r from-mint to-sky bg-clip-text text-transparent">
+            <span className="text-mint">
               Texas Businesses
             </span>
           </h1>

@@ -16,7 +16,7 @@ export function CTABanner({
 }: CTABannerProps) {
   return (
     <section className="px-5 py-20">
-      <div className="mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] border border-orange/20 bg-gradient-to-br from-orange/[0.12] via-navy to-mint/[0.07] p-10 md:p-14">
+      <div className="mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] border border-orange/20 bg-navy p-10 md:p-14">
         <div className="absolute inset-0 -z-10" aria-hidden="true">
           <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-orange/[0.14] blur-3xl" />
         </div>

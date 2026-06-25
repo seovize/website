@@ -27,7 +27,7 @@ export default function AboutPage() {
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-mint">About the founder</p>
           <h1 className="font-display text-4xl font-black leading-tight tracking-tight text-cloud md:text-6xl">
             About{" "}
-            <span className="bg-gradient-to-r from-mint to-sky bg-clip-text text-transparent">
+            <span className="text-mint">
               Abdul Ghani
             </span>
             <br />
@@ -77,7 +77,7 @@ export default function AboutPage() {
           <div className="overflow-hidden rounded-[2rem] border border-line bg-navy">
             <div className="grid md:grid-cols-[auto_1fr] md:divide-x md:divide-line">
               <div className="flex flex-col items-center justify-center gap-4 p-10 text-center">
-                <div className="flex h-24 w-24 items-center justify-center rounded-3xl bg-gradient-to-br from-mint to-sky text-4xl font-black text-obsidian">
+                <div className="flex h-24 w-24 items-center justify-center rounded-3xl bg-mint text-4xl font-black text-obsidian">
                   AG
                 </div>
                 <div>
