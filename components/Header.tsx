@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { navItems } from "@/lib/site";
 import { Button } from "@/components/Button";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -30,6 +31,7 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
+          <ThemeToggle />
           <div className="hidden md:block">
             <Button href="/contact" size="sm">Get roadmap</Button>
           </div>

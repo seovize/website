@@ -13,8 +13,8 @@ const posts = [
 export function CreativeShowcase() {
   return (
     <div className="relative overflow-hidden rounded-[2.5rem] border border-line bg-navy p-5 shadow-2xl">
-      <div className="absolute -right-20 -top-24 h-60 w-60 rounded-full bg-mint/[0.18] blur-3xl" />
-      <div className="absolute -bottom-24 left-10 h-60 w-60 rounded-full bg-orange/[0.14] blur-3xl" />
+      <div className="absolute -right-20 -top-24 h-60 w-60 rounded-full bg-mint/[0.06] blur-3xl dark:bg-mint/[0.18]" />
+      <div className="absolute -bottom-24 left-10 h-60 w-60 rounded-full bg-orange/[0.04] blur-3xl dark:bg-orange/[0.14]" />
       <div className="relative grid gap-5 lg:grid-cols-[1fr_0.75fr]">
         <div className="grid grid-cols-3 gap-3">
           {posts.map((post, index) => (

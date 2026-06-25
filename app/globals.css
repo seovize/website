@@ -1,33 +1,50 @@
 @import "tailwindcss";
 
+/* ── Fonts & type scale — inlined (no CSS vars needed) ─────── */
 @theme inline {
-  /* Fonts */
   --font-display: var(--font-manrope);
   --font-body: var(--font-inter);
   --font-mono: var(--font-ibm-plex-mono);
 
-  /* Brand colors */
+  --text-display-2xl: clamp(3.5rem, 6vw, 5rem);
+  --text-display-xl: clamp(2.75rem, 4.2vw, 4rem);
+  --text-h1: clamp(2.25rem, 3vw, 3rem);
+}
+
+/* ── Color tokens — CSS custom properties (theme-swappable) ─── */
+/* Light mode defaults */
+@theme {
+  --color-obsidian: #FFFFFF;
+  --color-navy: #F1F5F9;
+  --color-line: #E2E8F0;
+  --color-cloud: #0F172A;
+  --color-mist: #475569;
+  --color-slate-mid: #94A3B8;
+
+  /* Brand accents — unchanged in both modes */
+  --color-mint: #14B8A6;
+  --color-sky: #38BDF8;
+  --color-orange: #F97316;
+  --color-peach: #FFEDD5;
+}
+
+/* ── Dark mode overrides ──────────────────────────────────────── */
+html.dark {
   --color-obsidian: #0B1020;
   --color-navy: #121A2F;
   --color-line: #27324A;
   --color-cloud: #F8FAFC;
   --color-mist: #CBD5E1;
   --color-slate-mid: #475569;
-  --color-mint: #14B8A6;
-  --color-sky: #38BDF8;
-  --color-orange: #F97316;
-  --color-peach: #FFEDD5;
-
-  /* Type scale */
-  --text-display-2xl: clamp(3.5rem, 6vw, 5rem);
-  --text-display-xl: clamp(2.75rem, 4.2vw, 4rem);
-  --text-h1: clamp(2.25rem, 3vw, 3rem);
 }
 
+/* ── Base ──────────────────────────────────────────────────────── */
 :root {
+  color-scheme: light;
+}
+
+html.dark {
   color-scheme: dark;
-  --background: #0B1020;
-  --foreground: #F8FAFC;
 }
 
 * {
@@ -40,9 +57,10 @@ html {
 
 body {
   margin: 0;
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-obsidian);
+  color: var(--color-cloud);
   font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 ::selection {
@@ -50,13 +68,13 @@ body {
   color: #0B1020;
 }
 
-/* Ticker */
+/* ── Ticker animation ──────────────────────────────────────────── */
 @keyframes ticker {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 
-/* Focus ring */
+/* ── Focus ring ─────────────────────────────────────────────────── */
 .focus-ring:focus-visible {
   outline: 3px solid #14B8A6;
   outline-offset: 4px;

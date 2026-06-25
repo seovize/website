@@ -28,7 +28,7 @@ export function CTABanner({
         <div className="mt-8 flex flex-wrap gap-4">
           <Link
             href={primaryHref}
-            className="inline-flex items-center rounded-full bg-orange px-7 py-3.5 text-sm font-bold text-cloud shadow-[0_0_40px_rgba(249,115,22,0.3)] transition hover:bg-orange/90"
+            className="inline-flex items-center rounded-full bg-orange px-7 py-3.5 text-sm font-bold text-white shadow-sm dark:shadow-[0_0_40px_rgba(249,115,22,0.3)] transition hover:bg-orange/90"
           >
             {primaryLabel}
           </Link>

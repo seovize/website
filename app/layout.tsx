@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope, Inter, IBM_Plex_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -39,14 +40,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${manrope.variable} ${inter.variable} ${ibmPlexMono.variable}`}>
+    <html lang="en" className={`${manrope.variable} ${inter.variable} ${ibmPlexMono.variable}`} suppressHydrationWarning>
       <body className="antialiased">
-        <JsonLd data={organizationSchema()} />
-        <JsonLd data={websiteSchema()} />
-        <JsonLd data={personSchema()} />
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange={false}>
+          <JsonLd data={organizationSchema()} />
+          <JsonLd data={websiteSchema()} />
+          <JsonLd data={personSchema()} />
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>
