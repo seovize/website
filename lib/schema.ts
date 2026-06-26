@@ -167,6 +167,72 @@ export function personSchema() {
   };
 }
 
+export function howToSchema(opts: {
+  name: string;
+  description: string;
+  steps: { name: string; text: string }[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: opts.name,
+    description: opts.description,
+    step: opts.steps.map((s, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: s.name,
+      text: s.text,
+    })),
+  };
+}
+
+export function speakableSchema(pageUrl: string) {
+  return {
+    "@context": "https://schema.org/",
+    "@type": "WebPage",
+    url: pageUrl,
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: [".speakable"],
+    },
+  };
+}
+
+export function cityServiceSchema(opts: {
+  city: string;
+  serviceType: string;
+  description: string;
+  url: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": ["ProfessionalService", "LocalBusiness"],
+    name: `Seovize — ${opts.serviceType} in ${opts.city}, Texas`,
+    description: opts.description,
+    url: opts.url,
+    email: site.email,
+    priceRange: "$$",
+    areaServed: [
+      {
+        "@type": "City",
+        name: opts.city,
+        containedInPlace: {
+          "@type": "State",
+          name: "Texas",
+          containedInPlace: { "@type": "Country", name: "United States" },
+        },
+      },
+    ],
+    founder: {
+      "@type": "Person",
+      name: "Abdul Ghani",
+      jobTitle: "Founder & Senior SEO Specialist",
+      sameAs: "https://www.linkedin.com/in/sardarabdulghani",
+    },
+    knowsAbout: ["SEO", "Local SEO", "Social Media Management", "Semantic SEO", "Content Marketing"],
+  };
+}
+
 type ArticlePost = {
   slug: string;
   title: string;

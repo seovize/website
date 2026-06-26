@@ -111,6 +111,52 @@ export default function TexasHubPage() {
         </div>
       </Section>
 
+      <Section eyebrow="Texas city pages" title="Dedicated SEO and social media pages by city.">
+        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          {[
+            {
+              city: "Houston",
+              market: "Energy & healthcare",
+              seoHref: "/locations/texas/houston-seo",
+              socialHref: "/locations/texas/houston-social-media",
+            },
+            {
+              city: "Dallas",
+              market: "Corporate & real estate",
+              seoHref: "/locations/texas/dallas-seo",
+              socialHref: "/locations/texas/dallas-social-media",
+            },
+            {
+              city: "Austin",
+              market: "Tech & SaaS",
+              seoHref: "/locations/texas/austin-seo",
+              socialHref: "/locations/texas/austin-social-media",
+            },
+            {
+              city: "San Antonio",
+              market: "SMBs & hospitality",
+              seoHref: "/locations/texas/san-antonio-seo",
+              socialHref: "/locations/texas/san-antonio-social-media",
+            },
+          ].map((c) => (
+            <div key={c.city} className="rounded-[2rem] border border-line bg-navy p-6">
+              <h3 className="font-display text-xl font-black text-cloud">{c.city}</h3>
+              <p className="mt-1 text-xs text-mint">{c.market}</p>
+              <div className="mt-5 space-y-2.5">
+                <Link href={c.seoHref} className="flex items-center gap-2 text-sm font-semibold text-mist transition hover:text-cloud">
+                  <span className="h-1.5 w-1.5 rounded-full bg-mint" />
+                  {c.city} SEO Services →
+                </Link>
+                <Link href={c.socialHref} className="flex items-center gap-2 text-sm font-semibold text-mist transition hover:text-cloud">
+                  <span className="h-1.5 w-1.5 rounded-full bg-sky" />
+                  {c.city} Social Media →
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
       <Section eyebrow="FAQ" title="Texas business questions answered.">
         <div className="max-w-3xl">
           <FAQAccordion faqs={texasFaqs} />
