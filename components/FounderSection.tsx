@@ -5,27 +5,25 @@ import { founder, site } from "@/lib/site";
    regardless of the page's light/dark mode toggle. */
 export function FounderSection() {
   return (
-    <section className="force-dark bg-obsidian px-5 py-24">
+    <section className="force-dark bg-obsidian px-4 py-16 sm:px-5 md:py-24">
       <div className="mx-auto max-w-7xl">
 
         {/* Top: headline + identity */}
-        <div className="grid items-start gap-12 lg:grid-cols-[1fr_auto]">
+        <div className="grid items-start gap-10 lg:grid-cols-[1fr_auto] lg:gap-12">
           <div>
-            <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.28em] text-mint">
+            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.28em] text-mint">
               Founder-led studio
             </p>
-            <h2 className="font-display text-4xl font-black leading-[1.0] tracking-tight text-cloud md:text-[3.5rem] md:leading-[1.05]">
-              Every strategy personally
-              <br />
-              designed by{" "}
+            <h2 className="font-display text-3xl font-black leading-tight tracking-tight text-cloud md:text-[3.5rem] md:leading-[1.05]">
+              Every strategy personally designed by{" "}
               <span className="text-mint">Abdul Ghani</span>
             </h2>
-            <p className="mt-6 max-w-xl text-lg leading-[1.75] text-mist">
+            <p className="mt-5 max-w-xl text-base leading-[1.75] text-mist md:mt-6 md:text-lg">
               {founder.snippet}
             </p>
 
             {/* Credential badges */}
-            <div className="mt-8 flex flex-wrap gap-2">
+            <div className="mt-6 flex flex-wrap gap-2 md:mt-8">
               {[
                 `${founder.experience}+ years experience`,
                 "Entity-first SEO",
@@ -84,11 +82,11 @@ export function FounderSection() {
         </div>
 
         {/* Expertise grid */}
-        <div className="mt-14 border-t border-line pt-10">
-          <p className="mb-6 text-[10px] font-bold uppercase tracking-[0.28em] text-slate-mid">
+        <div className="mt-10 border-t border-line pt-8 md:mt-14 md:pt-10">
+          <p className="mb-5 text-[10px] font-bold uppercase tracking-[0.28em] text-slate-mid">
             Core expertise
           </p>
-          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-3 sm:grid-cols-2 md:gap-4 xl:grid-cols-3">
             {founder.expertise.map((item) => (
               <div key={item.area} className="rounded-xl border border-line bg-navy p-5">
                 <p className="font-mono text-xs font-bold text-mint">{item.area}</p>

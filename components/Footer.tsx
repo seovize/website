@@ -22,8 +22,8 @@ export function Footer() {
   return (
     <footer className="border-t border-line/60 bg-navy px-5 pb-8 pt-14 text-mist">
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
-          <div>
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-[1.4fr_1fr_1fr_1fr] md:gap-10">
+          <div className="col-span-2 md:col-span-1">
             <div className="mb-5 flex items-center gap-3 text-cloud">
               <span className="grid h-10 w-10 place-items-center rounded-2xl bg-mint font-black text-obsidian">SV</span>
               <span className="font-bold uppercase tracking-[0.28em]">Seovize</span>
@@ -78,7 +78,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-line/40 pt-6 text-xs text-slate-mid">
+        <div className="mt-10 flex flex-col gap-3 border-t border-line/40 pt-6 text-xs text-slate-mid sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-4">
           <p>© {new Date().getFullYear()} Seovize. Built for clarity, speed, and qualified demand.</p>
           <div className="flex gap-5">
             <Link href="/locations/texas" className="hover:text-cloud">Texas</Link>

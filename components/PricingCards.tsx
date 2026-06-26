@@ -8,7 +8,7 @@ type PricingCard = {
 
 export function PricingCards({ items }: { items: PricingCard[] }) {
   return (
-    <div className="grid gap-5 lg:grid-cols-3">
+    <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {items.map((item) => (
         <article
           key={item.name}

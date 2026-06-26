@@ -18,7 +18,7 @@ export function Header() {
           </span>
           <span>
             <span className="block text-sm font-bold uppercase tracking-[0.32em] text-cloud">Seovize</span>
-            <span className="block text-xs text-mist">Search + Social Systems</span>
+            <span className="hidden text-xs text-mist sm:block">Search + Social Systems</span>
           </span>
         </Link>
 

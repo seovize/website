@@ -28,14 +28,14 @@ export default function HomePage() {
       <JsonLd data={faqSchema(homepageFaqs)} />
 
       {/* ── HERO ─────────────────────────────────────────── */}
-      <section className="relative overflow-hidden border-b border-line px-5 pb-20 pt-24 md:pb-28 md:pt-36">
+      <section className="relative overflow-hidden border-b border-line px-4 pb-14 pt-20 sm:px-5 md:pb-24 md:pt-32">
         <div className="relative z-10 mx-auto max-w-7xl">
-          <div className="grid items-start gap-14 lg:grid-cols-[1.15fr_0.85fr]">
+          <div className="grid items-start gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-14">
 
             {/* Left */}
             <div>
               {/* Trust credential pills */}
-              <div className="mb-8 flex flex-wrap items-center gap-2">
+              <div className="mb-6 flex flex-wrap items-center gap-2 md:mb-8">
                 {[
                   { label: "20+ Years Experience", color: "bg-mint" },
                   { label: "Founder-Led Strategy", color: "bg-orange" },
@@ -51,15 +51,14 @@ export default function HomePage() {
                 ))}
               </div>
 
-              <h1 className="font-display text-[clamp(3.2rem,7.2vw,5.8rem)] font-black leading-[0.92] tracking-[-0.025em] text-cloud">
-                Build authority.
-                <br />
-                <span className="text-mint">Capture demand.</span>
-                <br />
+              {/* H1 — fluid from 2.2rem (375px) to 5.8rem (1280px+), no forced breaks */}
+              <h1 className="font-display text-[clamp(2.2rem,7.2vw,5.8rem)] font-black leading-[1.0] tracking-[-0.02em] text-cloud">
+                Build authority.{" "}
+                <span className="text-mint">Capture demand.</span>{" "}
                 Win Texas.
               </h1>
 
-              <p className="mt-8 max-w-lg text-lg leading-[1.75] text-mist">
+              <p className="mt-6 max-w-lg text-base leading-[1.8] text-mist md:mt-8 md:text-lg">
                 Semantic SEO, local search authority, and social media systems — engineered by{" "}
                 <Link
                   href="/about"
@@ -70,30 +69,33 @@ export default function HomePage() {
                 , top Texas SEO expert with {founder.experience}+ years of expertise.
               </p>
 
-              <div className="mt-9 flex flex-wrap gap-3">
-                <Button href="/contact" size="lg">Get a Free Audit →</Button>
-                <Button href="/services/semantic-seo" variant="secondary" size="lg">
+              {/* CTAs — stacked on mobile, row on sm+ */}
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row md:mt-9">
+                <Button href="/contact" size="lg" className="justify-center sm:justify-start">
+                  Get a Free Audit →
+                </Button>
+                <Button href="/services/semantic-seo" variant="secondary" size="lg" className="justify-center sm:justify-start">
                   See how it works
                 </Button>
               </div>
 
-              {/* Stats row */}
-              <div className="mt-12 grid grid-cols-4 border-t border-line pt-8">
+              {/* Stats — 2 col on mobile, 4 on sm+ */}
+              <div className="mt-10 grid grid-cols-2 gap-y-6 border-t border-line pt-8 sm:grid-cols-4 sm:gap-y-0">
                 {[
                   { v: "20+", l: "Years experience" },
                   { v: "6", l: "Service systems" },
                   { v: "4", l: "Texas markets" },
                   { v: "AEO", l: "AI-optimized" },
                 ].map((s) => (
-                  <div key={s.l} className="pr-6">
-                    <p className="font-mono text-3xl font-bold text-cloud">{s.v}</p>
+                  <div key={s.l} className="pr-4 sm:pr-6">
+                    <p className="font-mono text-2xl font-bold text-cloud md:text-3xl">{s.v}</p>
                     <p className="mt-1 text-[11px] font-medium text-slate-mid">{s.l}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Right */}
+            {/* Right — PlatformSelector */}
             <div>
               <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-mid">
                 What do you need?
@@ -107,17 +109,15 @@ export default function HomePage() {
       <MetricTicker />
 
       {/* ── CITY HUBS ────────────────────────────────────── */}
-      <section className="px-5 py-24">
+      <section className="px-4 py-16 sm:px-5 md:py-24">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-14 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+          <div className="mb-10 flex flex-col gap-4 md:mb-14 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-mint">
                 Texas markets
               </p>
-              <h2 className="font-display text-4xl font-black tracking-tight text-cloud md:text-[3.5rem] md:leading-[1.05]">
-                Four cities.
-                <br />
-                One authority system.
+              <h2 className="font-display text-3xl font-black leading-tight tracking-tight text-cloud md:text-[3.5rem] md:leading-[1.05]">
+                Four cities. One authority system.
               </h2>
             </div>
             <Link
@@ -169,18 +169,16 @@ export default function HomePage() {
       <TrustStrip />
 
       {/* ── SERVICES ──────────────────────────────────────── */}
-      <section className="bg-navy px-5 py-24">
+      <section className="bg-navy px-4 py-16 sm:px-5 md:py-24">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-14">
+          <div className="mb-10 md:mb-14">
             <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-mint">
               What we build
             </p>
-            <h2 className="font-display text-4xl font-black tracking-tight text-cloud md:text-[3.5rem] md:leading-[1.05]">
-              Six services.
-              <br />
-              One growth system.
+            <h2 className="font-display text-3xl font-black leading-tight tracking-tight text-cloud md:text-[3.5rem] md:leading-[1.05]">
+              Six services. One growth system.
             </h2>
-            <p className="mt-5 max-w-xl text-lg leading-[1.75] text-mist">
+            <p className="mt-4 max-w-xl text-base leading-[1.75] text-mist md:mt-5 md:text-lg">
               SEO informs content. Content fuels social. Social signals support search. Everything
               connects — no silos, no guesswork.
             </p>
@@ -220,18 +218,16 @@ export default function HomePage() {
       <FounderSection />
 
       {/* ── SEMANTIC SEO FEATURE ────────────────────────── */}
-      <section className="px-5 py-24">
+      <section className="px-4 py-16 sm:px-5 md:py-24">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-14">
+          <div className="mb-10 md:mb-14">
             <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-mint">
               Semantic SEO
             </p>
-            <h2 className="font-display text-4xl font-black tracking-tight text-cloud md:text-[3.5rem] md:leading-[1.05]">
-              Entity authority that outlasts
-              <br />
-              algorithm updates.
+            <h2 className="font-display text-3xl font-black leading-tight tracking-tight text-cloud md:text-[3.5rem] md:leading-[1.05]">
+              Entity authority that outlasts algorithm updates.
             </h2>
-            <p className="mt-5 max-w-2xl text-lg leading-[1.75] text-mist">
+            <p className="mt-4 max-w-2xl text-base leading-[1.75] text-mist md:mt-5 md:text-lg">
               We build content around entities and topic clusters — not keywords — so Google understands
               your expertise, trust, and geographic focus at a structural level.
             </p>
@@ -301,16 +297,14 @@ export default function HomePage() {
       </section>
 
       {/* ── PROCESS ─────────────────────────────────────── */}
-      <section className="bg-navy px-5 py-24">
+      <section className="bg-navy px-4 py-16 sm:px-5 md:py-24">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-14">
+          <div className="mb-10 md:mb-14">
             <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-mint">
               How we work
             </p>
-            <h2 className="font-display text-4xl font-black tracking-tight text-cloud md:text-[3.5rem] md:leading-[1.05]">
-              Strategy first. Execution second.
-              <br />
-              Results third.
+            <h2 className="font-display text-3xl font-black leading-tight tracking-tight text-cloud md:text-[3.5rem] md:leading-[1.05]">
+              Strategy first. Execution second. Results third.
             </h2>
           </div>
 
@@ -342,16 +336,16 @@ export default function HomePage() {
       </section>
 
       {/* ── PROOF ───────────────────────────────────────── */}
-      <section className="px-5 py-24">
+      <section className="px-4 py-16 sm:px-5 md:py-24">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-14">
+          <div className="mb-10 md:mb-14">
             <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-mint">
               Proof
             </p>
-            <h2 className="font-display text-4xl font-black tracking-tight text-cloud md:text-[3.5rem] md:leading-[1.05]">
+            <h2 className="font-display text-3xl font-black leading-tight tracking-tight text-cloud md:text-[3.5rem] md:leading-[1.05]">
               Results you can verify.
             </h2>
-            <p className="mt-4 max-w-xl text-lg text-mist">
+            <p className="mt-3 max-w-xl text-base text-mist md:text-lg">
               Not screenshots you have to trust.
             </p>
           </div>

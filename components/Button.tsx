@@ -11,13 +11,13 @@ type ButtonProps = {
 
 export function Button({ href, children, variant = "primary", size = "md", className = "" }: ButtonProps) {
   const sizeClasses = {
-    sm: "px-4 py-2 text-xs",
-    md: "px-6 py-3 text-sm",
-    lg: "px-8 py-4 text-base",
+    sm: "min-h-[36px] px-4 py-2 text-xs",
+    md: "min-h-[44px] px-6 py-3 text-sm",
+    lg: "min-h-[52px] px-8 py-4 text-base",
   };
 
   const variantClasses = {
-    primary: "bg-orange text-cloud font-bold hover:bg-orange/90 shadow-[0_0_45px_rgba(249,115,22,0.28)]",
+    primary: "bg-orange text-cloud font-bold hover:bg-orange/90 dark:shadow-[0_0_45px_rgba(249,115,22,0.28)]",
     secondary: "border border-line bg-navy text-cloud font-semibold hover:bg-navy/80 hover:border-mint/50",
     ghost: "border border-white/20 bg-transparent text-mist font-semibold hover:bg-white/5 hover:text-cloud",
   };

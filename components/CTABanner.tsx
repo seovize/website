@@ -15,29 +15,30 @@ export function CTABanner({
   primaryHref = "/contact",
 }: CTABannerProps) {
   return (
-    <section className="px-5 py-20">
-      <div className="mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] border border-orange/20 bg-navy p-10 md:p-14">
-        <div className="absolute inset-0 -z-10" aria-hidden="true">
-          <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-orange/[0.14] blur-3xl" />
-        </div>
-        <p className="text-xs font-bold uppercase tracking-[0.28em] text-orange">Start here</p>
-        <h2 className="mt-4 max-w-3xl font-display text-4xl font-black tracking-tight text-cloud md:text-5xl">
-          {headline}
-        </h2>
-        <p className="mt-5 max-w-2xl text-lg leading-8 text-mist">{subhead}</p>
-        <div className="mt-8 flex flex-wrap gap-4">
-          <Link
-            href={primaryHref}
-            className="inline-flex items-center rounded-full bg-orange px-7 py-3.5 text-sm font-bold text-white shadow-sm dark:shadow-[0_0_40px_rgba(249,115,22,0.3)] transition hover:bg-orange/90"
-          >
-            {primaryLabel}
-          </Link>
-          <a
-            href={`mailto:${site.email}`}
-            className="inline-flex items-center rounded-full border border-line px-7 py-3.5 text-sm font-semibold text-mist transition hover:border-cloud/30 hover:text-cloud"
-          >
-            Email us directly
-          </a>
+    <section className="px-4 py-14 md:py-20 sm:px-5">
+      <div className="relative mx-auto max-w-7xl overflow-hidden rounded-2xl border border-orange/20 bg-navy p-8 md:rounded-[2.5rem] md:p-14">
+        {/* Glow inside relative parent so it renders correctly */}
+        <div className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-orange/[0.12] blur-3xl" aria-hidden="true" />
+        <div className="relative">
+          <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-orange">Start here</p>
+          <h2 className="mt-4 font-display text-3xl font-black leading-tight tracking-tight text-cloud md:text-5xl md:leading-[1.1]">
+            {headline}
+          </h2>
+          <p className="mt-4 max-w-2xl text-base leading-[1.75] text-mist md:text-lg">{subhead}</p>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <Link
+              href={primaryHref}
+              className="inline-flex min-h-[52px] items-center justify-center rounded-full bg-orange px-7 text-sm font-bold text-white transition hover:bg-orange/90 dark:shadow-[0_0_40px_rgba(249,115,22,0.3)]"
+            >
+              {primaryLabel}
+            </Link>
+            <a
+              href={`mailto:${site.email}`}
+              className="inline-flex min-h-[52px] items-center justify-center rounded-full border border-line px-7 text-sm font-semibold text-mist transition hover:border-cloud/30 hover:text-cloud"
+            >
+              Email us directly
+            </a>
+          </div>
         </div>
       </div>
     </section>

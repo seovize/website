@@ -49,10 +49,13 @@ html.dark {
 
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
   scroll-behavior: smooth;
+  /* Prevent horizontal overflow at any viewport */
+  overflow-x: hidden;
 }
 
 body {
@@ -61,6 +64,13 @@ body {
   color: var(--color-cloud);
   font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   transition: background-color 0.2s ease, color 0.2s ease;
+  /* 2026 rendering standards */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  /* Safe area for notched/dynamic-island devices */
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
 }
 
 ::selection {

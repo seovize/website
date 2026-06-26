@@ -13,18 +13,18 @@ export function Section({ eyebrow, title, intro, children, variant = "default", 
   const bg = variant === "navy" ? "bg-navy" : "";
 
   return (
-    <section id={id} className={`px-5 py-20 ${bg}`}>
+    <section id={id} className={`px-5 py-14 md:py-20 ${bg}`}>
       <div className="mx-auto max-w-7xl">
         {(eyebrow || title || intro) && (
-          <div className="mb-12 max-w-3xl">
+          <div className="mb-10 max-w-3xl md:mb-14">
             {eyebrow && (
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-mint">{eyebrow}</p>
+              <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-mint">{eyebrow}</p>
             )}
             {title && (
-              <h2 className="font-display text-3xl font-black tracking-tight text-cloud md:text-5xl">{title}</h2>
+              <h2 className="font-display text-3xl font-black leading-tight tracking-tight text-cloud md:text-5xl md:leading-[1.1]">{title}</h2>
             )}
             {intro && (
-              <p className="mt-5 text-lg leading-8 text-mist">{intro}</p>
+              <p className="mt-4 text-base leading-[1.75] text-mist md:text-lg">{intro}</p>
             )}
           </div>
         )}
