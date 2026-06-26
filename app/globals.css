@@ -96,6 +96,66 @@ h2.font-display {
   letter-spacing: -0.028em;
 }
 
+/* ── Premium text shaping (2026) ────────────────────────────────── */
+/* balance = no orphan/widow words in headings (high-end editorial feel);
+   pretty = better paragraph rag + last-line handling. Zero markup cost. */
+h1, h2, h3, .font-display {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
+
+/* Sticky-header anchor offset — in-page #links land below the fixed
+   header instead of hiding under it (real app-like nav fix). */
+html {
+  scroll-padding-top: 5.5rem;
+}
+
+/* Reserve space for the floating mobile action bar so the footer and
+   last section are never hidden behind it. Desktop has no bar. */
+@media (max-width: 1023px) {
+  body {
+    padding-bottom: calc(5rem + env(safe-area-inset-bottom));
+  }
+}
+
+/* ── Scroll-driven reveal (progressive enhancement) ─────────────── */
+/* Pure-CSS entrance animation tied to the scroll timeline — no JS, no
+   bundle cost, no layout shift (animates opacity/transform only).
+   Browsers without animation-timeline simply show content normally. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    [data-reveal] {
+      animation: reveal-in linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 38%;
+    }
+  }
+}
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Global motion safety ───────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* ── Ticker animation ──────────────────────────────────────────── */
 @keyframes ticker {
   from { transform: translateX(0); }
@@ -110,7 +170,7 @@ h2.font-display {
   --color-line: #27324A;
   --color-cloud: #F8FAFC;
   --color-mist: #CBD5E1;
-  --color-slate-mid: #475569;
+  --color-slate-mid: #64748B;
   color-scheme: dark;
 }
 

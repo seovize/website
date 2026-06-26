@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Manrope, Inter, IBM_Plex_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { MobileActionBar } from "@/components/MobileActionBar";
 import { JsonLd } from "@/components/JsonLd";
 import { organizationSchema, personSchema, websiteSchema } from "@/lib/schema";
 import { site } from "@/lib/site";
@@ -28,14 +29,26 @@ export const metadata: Metadata = {
     siteName: site.name,
     title: "Seovize | Build authority. Capture demand.",
     description: site.description,
-    images: [{ url: "/og-seovize.svg", width: 1200, height: 630, alt: "Seovize — SEO, semantic SEO, and social media systems" }],
+    // Image is provided by app/opengraph-image.tsx (generated PNG) — no SVG.
   },
   twitter: {
     card: "summary_large_image",
     title: "Seovize | SEO, Semantic SEO & Social Media Systems",
     description: site.description,
-    images: ["/og-seovize.svg"],
+    // Image is provided by app/twitter-image.tsx (generated PNG).
   },
+};
+
+// Separate viewport export (Next.js 16) — themeColor drives the mobile
+// browser chrome / status bar color for an app-like feel in both modes.
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover", // extend under notches; pairs with safe-area insets
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#FFFFFF" },
+    { media: "(prefers-color-scheme: dark)", color: "#0B1020" },
+  ],
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -49,6 +62,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <Header />
           <main>{children}</main>
           <Footer />
+          <MobileActionBar />
         </ThemeProvider>
         <Analytics />
       </body>

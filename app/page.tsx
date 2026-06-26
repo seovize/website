@@ -129,7 +129,7 @@ export default function HomePage() {
           </div>
 
           {/* Architectural grid — gap-px + bg-line creates hairline dividers */}
-          <div className="grid gap-px bg-line md:grid-cols-2 xl:grid-cols-4">
+          <div data-reveal className="grid gap-px bg-line md:grid-cols-2 xl:grid-cols-4">
             {texasData.cities.map((city, i) => (
               <Link
                 key={city.slug}
@@ -179,7 +179,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          <div data-reveal className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {services.map((s) => (
               <Link
                 key={s.slug}
@@ -228,7 +228,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid gap-4 lg:grid-cols-[1.5fr_1fr_1fr]">
+          <div data-reveal className="grid gap-4 lg:grid-cols-[1.5fr_1fr_1fr]">
             <div className="rounded-2xl border border-line bg-navy p-8 shadow-[0_1px_3px_rgba(0,0,0,0.05),0_8px_24px_rgba(0,0,0,0.04)] dark:shadow-none">
               <div className="mb-5 flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-mint/10 text-sm font-black text-mint">
@@ -303,7 +303,7 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <div data-reveal className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             {processSteps.map((step, i) => (
               <div
                 key={step.title}
@@ -339,7 +339,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-3">
+          <div data-reveal className="grid gap-4 md:grid-cols-3">
             {caseStudies.map((study) => (
               <article
                 key={study.title}
