@@ -14,12 +14,13 @@
 /* ── Color tokens — CSS custom properties (theme-swappable) ─── */
 /* Light mode defaults */
 @theme {
+  /* Light mode — premium refined neutrals (cooler, softer dividers) */
   --color-obsidian: #FFFFFF;
-  --color-navy: #F1F5F9;
-  --color-line: #E2E8F0;
-  --color-cloud: #0F172A;
-  --color-mist: #475569;
-  --color-slate-mid: #94A3B8;
+  --color-navy: #F6F8FB;       /* elevated surface — softer than slate-100 */
+  --color-line: #E7ECF3;       /* hairline dividers — refined, not harsh */
+  --color-cloud: #0B1220;      /* primary text — 16:1 on white */
+  --color-mist: #475569;       /* body text — 7.4:1 on white (AA+) */
+  --color-slate-mid: #64748B;  /* captions — 4.7:1 on white (AA, was 3.3:1 fail) */
 
   /* Brand accents — unchanged in both modes */
   --color-mint: #14B8A6;
@@ -35,7 +36,7 @@ html.dark {
   --color-line: #27324A;
   --color-cloud: #F8FAFC;
   --color-mist: #CBD5E1;
-  --color-slate-mid: #475569;
+  --color-slate-mid: #64748B;  /* captions — lifted for legibility on dark */
 }
 
 /* ── Base ──────────────────────────────────────────────────────── */
@@ -76,6 +77,23 @@ body {
 ::selection {
   background: #14B8A6;
   color: #0B1020;
+}
+
+/* ── Premium typographic discipline (2026) ──────────────────────── */
+/* Unlayered rules override Tailwind's layered utilities, so these cap
+   weight + set editorial tracking across ALL headings site-wide without
+   touching component markup. 900-weight reads "dealership"; 800 reads
+   "authority studio". */
+.font-display {
+  letter-spacing: -0.021em;
+}
+.font-black {
+  font-weight: 800;
+}
+/* Large display headings get tighter optical tracking */
+h1.font-display,
+h2.font-display {
+  letter-spacing: -0.028em;
 }
 
 /* ── Ticker animation ──────────────────────────────────────────── */

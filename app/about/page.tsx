@@ -53,7 +53,7 @@ export default function AboutPage() {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-5">
-            <Link href="/contact" className="inline-flex items-center rounded-full bg-orange px-7 py-3.5 text-sm font-bold text-cloud shadow-[0_0_40px_rgba(249,115,22,0.3)] transition hover:bg-orange/90">
+            <Link href="/contact" className="inline-flex min-h-[52px] items-center rounded-full bg-orange px-7 text-sm font-bold text-white transition hover:bg-orange/90 dark:shadow-[0_0_40px_rgba(249,115,22,0.3)]">
               Work with Abdul Ghani →
             </Link>
             <a
@@ -153,7 +153,7 @@ export default function AboutPage() {
             },
           ].map((item) => (
             <div key={item.title} className="rounded-[2rem] border border-line bg-obsidian p-7">
-              <div className="mb-4 h-1 w-10 rounded-full bg-orange" />
+              <div className="mb-4 h-1 w-10 rounded-full bg-mint" />
               <h3 className="font-display text-xl font-black text-cloud">{item.title}</h3>
               <p className="mt-3 text-sm leading-7 text-mist">{item.desc}</p>
             </div>

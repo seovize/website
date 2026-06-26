@@ -33,7 +33,7 @@ export function ServicePageTemplate({ slug, showPricing = false }: ServicePageTe
           </h1>
           <p className="mt-7 max-w-3xl text-lg leading-8 text-mist">{service.description}</p>
           <div className="mt-5 flex items-center gap-3">
-            <span className="font-mono text-sm font-bold text-orange">{service.price}</span>
+            <span className="font-mono text-sm font-bold text-cloud">{service.price}</span>
           </div>
           <div className="mt-8 flex flex-wrap gap-4">
             <Button href="/contact">Get a roadmap for {service.title}</Button>
@@ -60,7 +60,7 @@ export function ServicePageTemplate({ slug, showPricing = false }: ServicePageTe
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {service.deliverables.map((item, i) => (
               <div key={i} className="flex items-start gap-3 rounded-2xl border border-line bg-obsidian p-5">
-                <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-orange" />
+                <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-mint" />
                 <p className="text-sm leading-7 text-mist">{item}</p>
               </div>
             ))}

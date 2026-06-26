@@ -18,7 +18,7 @@ export function ServiceCard({ eyebrow, title, description, price, href }: Servic
       <h2 className="mt-4 font-display text-2xl font-black text-cloud">{title}</h2>
       <p className="mt-3 flex-1 text-sm leading-7 text-mist">{description}</p>
       <div className="mt-6 flex items-center justify-between">
-        <p className="font-mono text-sm font-bold text-orange">{price}</p>
+        <p className="font-mono text-sm font-bold text-cloud">{price}</p>
         <span className="text-xs font-semibold text-slate-mid group-hover:text-mint transition-colors">
           Learn more →
         </span>

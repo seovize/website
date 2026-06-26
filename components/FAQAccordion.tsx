@@ -23,7 +23,7 @@ export function FAQAccordion({ faqs }: { faqs: FAQ[] }) {
           >
             <span className="pr-4 text-sm font-semibold text-cloud">{faq.q}</span>
             <span
-              className={`shrink-0 text-orange transition-transform duration-200 ${open === i ? "rotate-180" : ""}`}
+              className={`shrink-0 text-mint transition-transform duration-200 ${open === i ? "rotate-180" : ""}`}
               aria-hidden="true"
             >
               <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">

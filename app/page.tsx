@@ -38,7 +38,7 @@ export default function HomePage() {
               <div className="mb-6 flex flex-wrap items-center gap-2 md:mb-8">
                 {[
                   { label: "20+ Years Experience", color: "bg-mint" },
-                  { label: "Founder-Led Strategy", color: "bg-orange" },
+                  { label: "Founder-Led Strategy", color: "bg-mint" },
                   { label: "Texas SEO Expert", color: "bg-sky" },
                 ].map((b) => (
                   <span
@@ -136,24 +136,19 @@ export default function HomePage() {
                 href="/locations/texas"
                 className="group relative overflow-hidden bg-obsidian p-8 transition-colors duration-200 hover:bg-navy"
               >
-                {/* Large decorative number */}
-                <span
-                  className="pointer-events-none absolute -right-2 -top-4 select-none font-mono text-[5.5rem] font-black leading-none text-line transition-colors group-hover:text-line/80"
-                  aria-hidden="true"
-                >
+                {/* Refined index — small mint tabular marker, not a giant ghost numeral */}
+                <span className="font-mono text-xs font-semibold tracking-[0.2em] text-mint/70" aria-hidden="true">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-
-                <div className="relative">
-                  <h3 className="font-display text-2xl font-black text-cloud">{city.name}</h3>
-                  <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.18em] text-mint">
-                    {city.market}
-                  </p>
-                  <p className="mt-4 text-sm leading-[1.7] text-mist">{city.description}</p>
-                  <p className="mt-5 text-xs font-semibold text-mint opacity-0 transition-opacity group-hover:opacity-100">
-                    View city strategy →
-                  </p>
-                </div>
+                <h3 className="mt-3 font-display text-2xl font-extrabold text-cloud">{city.name}</h3>
+                <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.18em] text-mint">
+                  {city.market}
+                </p>
+                <p className="mt-4 text-sm leading-[1.7] text-mist">{city.description}</p>
+                <p className="mt-5 inline-flex items-center gap-1 text-xs font-semibold text-mint transition-all group-hover:gap-2">
+                  View city strategy
+                  <span aria-hidden="true">→</span>
+                </p>
               </Link>
             ))}
           </div>
@@ -203,7 +198,7 @@ export default function HomePage() {
                 <p className="mt-3 flex-1 text-sm leading-[1.75] text-mist">{s.description}</p>
 
                 <div className="mt-6 flex items-center justify-between border-t border-line pt-5">
-                  <p className="font-mono text-sm font-bold text-orange">{s.price}</p>
+                  <p className="font-mono text-sm font-bold text-cloud">{s.price}</p>
                   <span className="text-xs font-semibold text-slate-mid transition group-hover:translate-x-0.5 group-hover:text-mint">
                     →
                   </span>
@@ -271,7 +266,7 @@ export default function HomePage() {
             </div>
 
             <div className="rounded-2xl border border-line bg-navy p-7 shadow-[0_1px_3px_rgba(0,0,0,0.05),0_8px_24px_rgba(0,0,0,0.04)] dark:shadow-none">
-              <div className="mb-5 h-0.5 w-10 rounded-full bg-orange" />
+              <div className="mb-5 h-0.5 w-10 rounded-full bg-sky" />
               <h3 className="font-display text-xl font-black text-cloud">Schema architecture</h3>
               <p className="mt-3 text-sm leading-[1.75] text-mist">
                 FAQPage, Service, LocalBusiness, Person, and Article schema — every page speaks directly
@@ -280,7 +275,7 @@ export default function HomePage() {
               <div className="mt-6 space-y-3">
                 {["AEO ready", "GEO optimized", "LLM-cited content", "Position 0 targeting"].map((t) => (
                   <div key={t} className="flex items-center gap-2.5 text-xs text-mist">
-                    <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-orange/60" />
+                    <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-sky/60" />
                     {t}
                   </div>
                 ))}
@@ -314,21 +309,15 @@ export default function HomePage() {
                 key={step.title}
                 className="group relative overflow-hidden rounded-2xl bg-obsidian p-8 shadow-[0_1px_3px_rgba(0,0,0,0.07),0_8px_28px_rgba(0,0,0,0.05)] dark:shadow-none dark:border dark:border-line"
               >
-                {/* Large decorative step number */}
-                <span
-                  className="pointer-events-none absolute -right-2 -top-4 select-none font-mono text-[6rem] font-black leading-none text-line/50"
-                  aria-hidden="true"
-                >
-                  {i + 1}
-                </span>
-
-                <div className="relative">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-mint font-mono text-sm font-black text-[#0B1020]">
+                {/* Refined step marker — mint ring with index, no giant ghost numeral */}
+                <div className="flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-mint/30 bg-mint/10 font-mono text-sm font-bold text-mint">
                     {i + 1}
                   </div>
-                  <h3 className="mt-6 font-display text-xl font-black text-cloud">{step.title}</h3>
-                  <p className="mt-3 text-sm leading-[1.75] text-mist">{step.text}</p>
+                  <span className="h-px flex-1 bg-line" aria-hidden="true" />
                 </div>
+                <h3 className="mt-6 font-display text-xl font-extrabold text-cloud">{step.title}</h3>
+                <p className="mt-3 text-sm leading-[1.75] text-mist">{step.text}</p>
               </div>
             ))}
           </div>
@@ -356,12 +345,12 @@ export default function HomePage() {
                 key={study.title}
                 className="group flex flex-col overflow-hidden rounded-2xl border border-line bg-navy shadow-[0_1px_3px_rgba(0,0,0,0.05),0_8px_24px_rgba(0,0,0,0.04)] transition duration-200 hover:-translate-y-0.5 dark:shadow-none"
               >
-                {/* Display-scale metric */}
+                {/* Metric — mint intelligence accent, restrained scale */}
                 <div className="border-b border-line p-8">
                   <span className="inline-block rounded-full border border-mint/20 bg-mint/[0.08] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-mint">
                     {study.tag}
                   </span>
-                  <p className="font-mono mt-4 text-[3.5rem] font-black leading-none text-cloud">
+                  <p className="font-mono mt-4 text-[2.75rem] font-bold leading-none text-mint">
                     {study.metric}
                   </p>
                 </div>

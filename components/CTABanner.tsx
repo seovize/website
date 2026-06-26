@@ -16,11 +16,11 @@ export function CTABanner({
 }: CTABannerProps) {
   return (
     <section className="px-4 py-14 md:py-20 sm:px-5">
-      <div className="relative mx-auto max-w-7xl overflow-hidden rounded-2xl border border-orange/20 bg-navy p-8 md:rounded-[2.5rem] md:p-14">
-        {/* Glow inside relative parent so it renders correctly */}
-        <div className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-orange/[0.12] blur-3xl" aria-hidden="true" />
+      <div className="relative mx-auto max-w-7xl overflow-hidden rounded-2xl border border-line bg-navy p-8 md:rounded-[2.5rem] md:p-14">
+        {/* Mint glow — intelligence accent; orange is reserved for the button only */}
+        <div className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-mint/[0.10] blur-3xl" aria-hidden="true" />
         <div className="relative">
-          <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-orange">Start here</p>
+          <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-mint">Start here</p>
           <h2 className="mt-4 font-display text-3xl font-black leading-tight tracking-tight text-cloud md:text-5xl md:leading-[1.1]">
             {headline}
           </h2>

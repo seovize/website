@@ -29,7 +29,7 @@ export function PricingCards({ items }: { items: PricingCard[] }) {
           <ul className="mt-7 space-y-3 text-sm text-mist">
             {item.features.map((feature) => (
               <li key={feature} className="flex gap-3">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-orange" />
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-mint" />
                 <span>{feature}</span>
               </li>
             ))}
