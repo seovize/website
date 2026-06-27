@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { founder, site } from "@/lib/site";
 
@@ -44,16 +45,13 @@ export function FounderSection() {
           {/* Founder identity card */}
           <div className="flex flex-col items-center gap-4 rounded-2xl border border-line bg-navy p-8 text-center">
             <div className="relative">
-              <svg
-                viewBox="0 0 80 80"
-                className="h-20 w-20"
-                aria-label="Abdul Ghani — Founder of Seovize, Texas SEO Expert"
-              >
-                <circle cx="40" cy="40" r="38" fill="#14B8A6" fillOpacity=".12" stroke="#14B8A6" strokeWidth="1.5" />
-                <circle cx="40" cy="40" r="30" fill="#14B8A6" />
-                <text x="40" y="36" textAnchor="middle" fontSize="12" fontWeight="800" fill="white" fontFamily="system-ui, sans-serif">Abdul</text>
-                <text x="40" y="52" textAnchor="middle" fontSize="12" fontWeight="800" fill="white" fontFamily="system-ui, sans-serif">Ghani</text>
-              </svg>
+              <Image
+                src="/images/abdul-ghani.jpg"
+                alt="Abdul Ghani — Founder of Seovize, Texas SEO Expert with 20+ years experience"
+                width={80}
+                height={80}
+                className="h-20 w-20 rounded-full object-cover ring-2 ring-mint/30"
+              />
               <span className="absolute -bottom-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full border-2 border-navy bg-mint">
                 <svg width="10" height="8" viewBox="0 0 10 8" fill="none" aria-hidden="true">
                   <path d="M1 4l3 3 5-6" stroke="white" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />

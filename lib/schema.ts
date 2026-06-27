@@ -259,8 +259,10 @@ export function articleSchema(post: ArticlePost) {
       },
     },
     author: {
-      "@type": "Organization",
-      name: site.name,
+      "@type": "Person",
+      name: "Abdul Ghani",
+      url: `${site.domain}/about`,
+      sameAs: "https://www.linkedin.com/in/sardarabdulghani",
     },
   };
 }
