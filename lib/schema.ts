@@ -63,6 +63,59 @@ export function serviceSchema(slug: string) {
   };
 }
 
+/**
+ * Service schema with a hasOfferCatalog of real, named packages and an explicit
+ * geographic areaServed. This is the structured-data format Google rich results
+ * and 2026 LLMs (Gemini / ChatGPT / Perplexity) read to understand exactly what a
+ * business offers, where, and at what price. Use for Texas service-area pillar pages.
+ */
+export function offerCatalogServiceSchema(opts: {
+  serviceType: string;
+  name: string;
+  description: string;
+  url: string;
+  areaServed?: { type: "State" | "City" | "Country"; name: string }[];
+  packages: { name: string; price: string; description: string }[];
+}) {
+  const area = opts.areaServed ?? [
+    { type: "State" as const, name: "Texas" },
+    { type: "Country" as const, name: "United States" },
+  ];
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: opts.serviceType,
+    name: opts.name,
+    description: opts.description,
+    url: opts.url,
+    provider: {
+      "@type": "Organization",
+      "@id": `${site.domain}/#organization`,
+      name: site.name,
+      url: site.domain,
+    },
+    areaServed: area.map((a) => ({ "@type": a.type, name: a.name })),
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: opts.name,
+      itemListElement: opts.packages.map((p) => ({
+        "@type": "Offer",
+        name: p.name,
+        description: p.description,
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          price: p.price.replace(/[^0-9.]/g, ""),
+          priceCurrency: "USD",
+        },
+        itemOffered: {
+          "@type": "Service",
+          name: `${opts.serviceType} — ${p.name}`,
+        },
+      })),
+    },
+  };
+}
+
 type BreadcrumbItem = { name: string; url: string };
 
 export function breadcrumbSchema(items: BreadcrumbItem[]) {

@@ -378,6 +378,14 @@ export const blogPosts = [
     readTime: "5 min read",
     date: "2026-03-28",
   },
+  {
+    slug: "social-media-management-cost-texas",
+    title: "How Much Does Social Media Management Cost in Texas? (2026 Pricing Guide)",
+    description: "Social media management in Texas costs $500–$8,000+/month depending on who you hire and what's included. Here is the complete 2026 pricing breakdown for small businesses — freelancers vs studios vs agencies.",
+    tag: "Social Media",
+    readTime: "9 min read",
+    date: "2026-04-08",
+  },
 ];
 
 export const homepageFaqs = [

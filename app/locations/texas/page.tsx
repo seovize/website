@@ -28,7 +28,7 @@ export default function TexasHubPage() {
     <>
       <JsonLd data={localBusinessSchema()} />
       <JsonLd data={faqSchema(texasFaqs)} />
-      <Breadcrumbs items={[{ name: "Locations", href: "/locations/texas" }, { name: "Texas", href: "/locations/texas" }]} />
+      <Breadcrumbs items={[{ name: "Locations", href: "/locations" }, { name: "Texas", href: "/locations/texas" }]} />
 
       <section className="noise relative overflow-hidden px-5 pb-16 pt-20 md:pt-28">
         <div className="pointer-events-none absolute -left-20 top-0 h-80 w-80 rounded-full bg-mint/[0.06] blur-[90px]" />
