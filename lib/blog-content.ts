@@ -5,7 +5,8 @@ export type ContentBlock =
   | { type: "h3"; text: string }
   | { type: "ul"; items: string[] }
   | { type: "ol"; items: string[] }
-  | { type: "callout"; title: string; text: string };
+  | { type: "callout"; title: string; text: string }
+  | { type: "cta-link"; label: string; href: string; desc: string };
 
 export const blogContent: Record<string, ContentBlock[]> = {
   "what-is-semantic-seo": [
@@ -69,6 +70,12 @@ export const blogContent: Record<string, ContentBlock[]> = {
       type: "callout",
       title: "The Speakable schema opportunity",
       text: "In 2026, Google's AI Overviews pull direct answers from pages that use Speakable schema — a specification that points Google to the specific sections of your page worth reading aloud or surfacing as a direct answer. Seovize implements Speakable schema on every service and location page, with 40–55 word answer paragraphs structured to match the format Google lifts into AI Overviews.",
+    },
+    {
+      type: "cta-link",
+      label: "Semantic SEO Services",
+      href: "/services/semantic-seo",
+      desc: "How Seovize builds entity authority, topic clusters, and AI Overview-eligible content for service businesses.",
     },
     {
       type: "h2",
@@ -144,6 +151,12 @@ export const blogContent: Record<string, ContentBlock[]> = {
       type: "callout",
       title: "Ready to build topical authority for your service business?",
       text: "Seovize builds complete semantic SEO systems — entity establishment, topic cluster architecture, schema markup, and featured snippet optimization — for service businesses in Texas and across the United States. Book a free Growth Roadmap call to see what your current authority gaps are.",
+    },
+    {
+      type: "cta-link",
+      label: "SEO Services — from $1,250/mo",
+      href: "/services/seo",
+      desc: "Technical SEO, content systems, schema, and reporting built to increase qualified organic demand.",
     },
   ],
 
@@ -246,6 +259,12 @@ export const blogContent: Record<string, ContentBlock[]> = {
       type: "callout",
       title: "The founder-led advantage",
       text: "Seovize is a founder-led studio, not a large agency. Abdul Ghani personally designs every social media strategy — you get agency-level expertise and tools with founder-direct involvement and no account manager diluting the strategy.",
+    },
+    {
+      type: "cta-link",
+      label: "Social Media Management Services",
+      href: "/services/social-media-management",
+      desc: "Strategy, content design, scheduling, and analytics for Texas businesses — from $1,100/mo.",
     },
     {
       type: "h2",
@@ -390,6 +409,18 @@ export const blogContent: Record<string, ContentBlock[]> = {
       text: "Rather than choosing, many Seovize clients combine SEO and social media management in a single integrated engagement. Every piece of social content is designed to reinforce SEO topical authority. Every SEO article is repurposed into social media posts. The result is a compound growth system rather than two disconnected channels.",
     },
     {
+      type: "cta-link",
+      label: "SEO Services — from $1,250/mo",
+      href: "/services/seo",
+      desc: "Organic search infrastructure: technical SEO, content systems, schema, and qualified demand.",
+    },
+    {
+      type: "cta-link",
+      label: "Social Media Management — from $1,100/mo",
+      href: "/services/social-media-management",
+      desc: "Full-service social content strategy, design, and scheduling for Texas businesses.",
+    },
+    {
       type: "h2",
       text: "The Decision Framework: Which Channel First?",
     },
@@ -514,6 +545,18 @@ export const blogContent: Record<string, ContentBlock[]> = {
       type: "callout",
       title: "Service-area SEO is what Seovize was built for",
       text: "Seovize is itself a service-area business — we serve Texas clients remotely. Every tactic in this guide is in production on our own site. We build the same service-area SEO architecture for our clients: city pages, LocalBusiness schema with areaServed, local citations, and topical authority content — all without a fake address.",
+    },
+    {
+      type: "cta-link",
+      label: "Local SEO Services for Service-Area Businesses",
+      href: "/services/local-seo",
+      desc: "City pages, LocalBusiness schema, and GBP optimization — no physical address required.",
+    },
+    {
+      type: "cta-link",
+      label: "Texas SEO Hub — Austin, Dallas, Houston, San Antonio",
+      href: "/locations/texas",
+      desc: "Seovize's dedicated resource for service-area SEO across Texas markets.",
     },
   ],
 
@@ -658,6 +701,18 @@ export const blogContent: Record<string, ContentBlock[]> = {
       type: "callout",
       title: "Rather have it done for you?",
       text: "Seovize builds and manages complete social media content calendars for Texas businesses — monthly content planning, custom post design, caption writing, scheduling, and analytics reporting. Our Social Launch plan starts at $1,100/month and includes 12 posts across two platforms, full design, and monthly reporting.",
+    },
+    {
+      type: "cta-link",
+      label: "Social Media Management — from $1,100/mo",
+      href: "/services/social-media-management",
+      desc: "Done-for-you social media content calendars, design, and scheduling for Texas businesses.",
+    },
+    {
+      type: "cta-link",
+      label: "Content Marketing Services",
+      href: "/services/content-marketing",
+      desc: "Blog content that builds topical authority and compounds organic traffic month over month.",
     },
     {
       type: "h2",

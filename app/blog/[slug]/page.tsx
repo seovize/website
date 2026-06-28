@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTABanner } from "@/components/CTABanner";
@@ -81,6 +82,18 @@ function renderBlock(block: ContentBlock, index: number) {
           <p className="mb-3 font-display text-lg font-black text-cloud">{block.title}</p>
           <p className="text-sm leading-7 text-mist">{block.text}</p>
         </div>
+      );
+    case "cta-link":
+      return (
+        <Link key={index} href={block.href}
+          className="my-6 flex items-center gap-4 rounded-2xl border border-line bg-navy px-5 py-4 transition hover:border-mint/30 group no-underline">
+          <div className="flex-1">
+            <p className="text-[9px] font-semibold uppercase tracking-[0.18em] text-slate-mid mb-1">Related service</p>
+            <p className="font-semibold text-cloud group-hover:text-mint transition-colors">{block.label}</p>
+            <p className="mt-0.5 text-xs text-mist">{block.desc}</p>
+          </div>
+          <span className="text-mint opacity-60 group-hover:opacity-100 transition-opacity text-lg shrink-0">→</span>
+        </Link>
       );
     default:
       return null;
