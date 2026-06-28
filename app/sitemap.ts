@@ -12,11 +12,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/locations/texas/seo-services",
     "/locations/texas/social-media-manager",
     "/compare/seo-agency-vs-freelancer",
+    "/locations/texas/houston-seo",
+    "/locations/texas/houston-social-media",
+    "/locations/texas/dallas-seo",
+    "/locations/texas/dallas-social-media",
+    "/locations/texas/austin-seo",
+    "/locations/texas/austin-social-media",
+    "/locations/texas/san-antonio-seo",
+    "/locations/texas/san-antonio-social-media",
   ];
   const medPriority = [
     "/case-studies",
     "/blog",
     "/industries",
+    "/industries/law-firms",
+    "/industries/real-estate",
+    "/industries/med-spas",
+    "/industries/consultants",
+    "/industries/contractors",
+    "/industries/restaurants",
     "/locations",
   ];
 

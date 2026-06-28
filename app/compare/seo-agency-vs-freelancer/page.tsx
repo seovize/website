@@ -3,7 +3,10 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTABanner } from "@/components/CTABanner";
 import { FAQAccordion } from "@/components/FAQAccordion";
+import { JsonLd } from "@/components/JsonLd";
 import { Section } from "@/components/Section";
+import { breadcrumbSchema, faqSchema, speakableSchema } from "@/lib/schema";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "SEO Agency vs Freelancer: Which Is Right for Your Business? | Seovize",
@@ -30,6 +33,13 @@ const rows = [
 export default function ComparePage() {
   return (
     <>
+      <JsonLd data={faqSchema(faqs)} />
+      <JsonLd data={speakableSchema(`${site.domain}/compare/seo-agency-vs-freelancer`)} />
+      <JsonLd data={breadcrumbSchema([
+        { name: "Home", url: site.domain },
+        { name: "Compare", url: `${site.domain}/compare/seo-agency-vs-freelancer` },
+        { name: "SEO Agency vs Freelancer", url: `${site.domain}/compare/seo-agency-vs-freelancer` },
+      ])} />
       <Breadcrumbs items={[{ name: "Compare", href: "/compare/seo-agency-vs-freelancer" }, { name: "Agency vs Freelancer", href: "/compare/seo-agency-vs-freelancer" }]} />
       <section className="noise px-5 pb-16 pt-20 md:pt-24">
         <div className="mx-auto max-w-5xl">
@@ -37,9 +47,12 @@ export default function ComparePage() {
           <h1 className="font-display text-4xl font-black tracking-tight text-cloud md:text-6xl">
             SEO Agency vs Freelancer:<br />Which is right for you?
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-mist">
-            Both options have real trade-offs. Here is an honest breakdown — and why most U.S. growth brands choose neither, opting instead for a founder-led studio.
-          </p>
+          <div className="speakable mt-6 max-w-2xl rounded-2xl border border-mint/20 bg-navy px-6 py-5">
+            <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-mint mb-2">Quick answer</p>
+            <p className="text-base leading-[1.8] text-cloud">
+              For most U.S. growth brands, a founder-led studio outperforms both options. SEO agencies route you through account managers and charge premium rates. Freelancers lack capacity and integration. A founder-led studio delivers senior strategy on every account with a full-service system at transparent retainer pricing.
+            </p>
+          </div>
         </div>
       </section>
 

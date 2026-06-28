@@ -12,8 +12,8 @@ import { PricingCards } from "@/components/PricingCards";
 import { Section } from "@/components/Section";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { TrustStrip } from "@/components/TrustStrip";
-import { faqSchema } from "@/lib/schema";
-import { caseStudies, founder, homepageFaqs, processSteps, seoPackages, services, texasData } from "@/lib/site";
+import { faqSchema, speakableSchema } from "@/lib/schema";
+import { caseStudies, founder, homepageFaqs, processSteps, seoPackages, services, site, texasData } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Seovize | Semantic SEO & Social Media Systems — Texas & U.S.",
@@ -26,6 +26,7 @@ export default function HomePage() {
   return (
     <>
       <JsonLd data={faqSchema(homepageFaqs)} />
+      <JsonLd data={speakableSchema(site.domain)} />
 
       {/* ── HERO ─────────────────────────────────────────── */}
       <section className="relative overflow-hidden border-b border-line px-4 pb-14 pt-20 sm:px-5 md:pb-24 md:pt-32">
@@ -58,16 +59,16 @@ export default function HomePage() {
                 Win Texas.
               </h1>
 
-              <p className="mt-6 max-w-lg text-base leading-[1.8] text-mist md:mt-8 md:text-lg">
-                Semantic SEO, local search authority, and social media systems — engineered by{" "}
-                <Link
-                  href="/about"
-                  className="font-semibold text-cloud underline decoration-mint/40 underline-offset-2 hover:decoration-mint"
-                >
-                  {founder.name}
-                </Link>
-                , top Texas SEO expert with {founder.experience}+ years of expertise.
-              </p>
+              <div className="speakable mt-6 max-w-2xl rounded-2xl border border-mint/20 bg-navy px-6 py-5">
+                <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-mint mb-2">What is Seovize?</p>
+                <p className="text-base leading-[1.8] text-cloud">
+                  Seovize is a semantic SEO and social media management studio founded by{" "}
+                  <Link href="/about" className="font-semibold text-mint hover:underline">
+                    {founder.name}
+                  </Link>
+                  {" "}— a Texas SEO expert with {founder.experience}+ years of experience. We build topical authority, local search visibility, and social content systems for service businesses and growth brands across Texas and the U.S.
+                </p>
+              </div>
 
               {/* CTAs — stacked on mobile, row on sm+ */}
               <div className="mt-7 flex flex-col gap-3 sm:flex-row md:mt-9">
@@ -133,7 +134,7 @@ export default function HomePage() {
             {texasData.cities.map((city, i) => (
               <Link
                 key={city.slug}
-                href="/locations/texas"
+                href={`/locations/texas/${city.slug}-seo`}
                 className="group relative overflow-hidden bg-obsidian p-8 transition-colors duration-200 hover:bg-navy"
               >
                 {/* Refined index — small mint tabular marker, not a giant ghost numeral */}

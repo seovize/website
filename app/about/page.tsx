@@ -5,7 +5,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTABanner } from "@/components/CTABanner";
 import { JsonLd } from "@/components/JsonLd";
 import { Section } from "@/components/Section";
-import { personSchema } from "@/lib/schema";
+import { personSchema, speakableSchema } from "@/lib/schema";
 import { founder, site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -19,6 +19,7 @@ export default function AboutPage() {
   return (
     <>
       <JsonLd data={personSchema()} />
+      <JsonLd data={speakableSchema(`${site.domain}/about`)} />
       <Breadcrumbs items={[{ name: "About", href: "/about" }]} />
 
       {/* ── HERO ─────────────────────────────────────────── */}
@@ -40,7 +41,7 @@ export default function AboutPage() {
                definition-style Featured Snippet for
                "Who is Abdul Ghani"
           ────────────────────────────────────────────────── */}
-          <p className="mt-7 max-w-3xl text-lg leading-8 text-cloud" itemScope itemType="https://schema.org/Person">
+          <p className="speakable mt-7 max-w-3xl text-lg leading-8 text-cloud" itemScope itemType="https://schema.org/Person">
             <span itemProp="name">Abdul Ghani</span> is an expert digital marketing strategist, semantic SEO specialist,
             and the founder of{" "}
             <Link href="/" className="font-semibold text-mint hover:underline" itemProp="worksFor">
@@ -177,11 +178,16 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="grid divide-line p-6 sm:grid-cols-4 sm:divide-x">
-            {["Houston", "Dallas", "Austin", "San Antonio"].map((city) => (
-              <div key={city} className="px-5 py-3 text-center first:pl-0 sm:first:pl-5">
-                <p className="font-display text-lg font-black text-cloud">{city}</p>
+            {[
+              { name: "Houston", slug: "houston" },
+              { name: "Dallas", slug: "dallas" },
+              { name: "Austin", slug: "austin" },
+              { name: "San Antonio", slug: "san-antonio" },
+            ].map((city) => (
+              <Link key={city.name} href={`/locations/texas/${city.slug}-seo`} className="px-5 py-3 text-center first:pl-0 sm:first:pl-5 group">
+                <p className="font-display text-lg font-black text-cloud group-hover:text-mint transition-colors">{city.name}</p>
                 <p className="mt-1 text-xs text-slate-mid">Active market</p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

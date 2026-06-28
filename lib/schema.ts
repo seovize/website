@@ -1,24 +1,33 @@
 import { site, services, founder } from "@/lib/site";
 
+const ORG_SAME_AS = [
+  "https://www.linkedin.com/company/seovize",
+  "https://www.instagram.com/seovizeofficial/",
+  "https://www.behance.net/seovize",
+  "https://twitter.com/seovizeofficial",
+];
+
 export function organizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": `${site.domain}/#organization`,
     name: site.name,
     url: site.domain,
     email: site.email,
     slogan: site.tagline,
     description: site.description,
+    foundingDate: "2024",
+    address: {
+      "@type": "PostalAddress",
+      addressRegion: "TX",
+      addressCountry: "US",
+    },
     logo: {
       "@type": "ImageObject",
       url: `${site.domain}/logo.svg`,
     },
-    sameAs: [
-      "https://www.linkedin.com/company/seovize",
-      "https://www.instagram.com/seovizeofficial/",
-      "https://www.behance.net/seovize",
-      "https://twitter.com/seovizeofficial",
-    ],
+    sameAs: ORG_SAME_AS,
   };
 }
 
@@ -28,11 +37,6 @@ export function websiteSchema() {
     "@type": "WebSite",
     name: site.name,
     url: site.domain,
-    potentialAction: {
-      "@type": "SearchAction",
-      target: `${site.domain}/search?q={search_term_string}`,
-      "query-input": "required name=search_term_string",
-    },
   };
 }
 
@@ -110,7 +114,7 @@ export function localBusinessSchema() {
         latitude: 31.0,
         longitude: -100.0,
       },
-      geoRadius: "1500000",
+      geoRadius: "800000",
     },
     knowsAbout: ["SEO", "Semantic SEO", "Social Media Management", "Content Marketing", "Local SEO"],
     priceRange: "$$",
@@ -128,9 +132,12 @@ export function personSchema() {
         alternateName: founder.fullName,
         jobTitle: founder.title,
         description: founder.snippet,
-        url: site.domain,
+        url: `${site.domain}/about`,
+        image: {
+          "@type": "ImageObject",
+          url: `${site.domain}/images/abdul-ghani.jpg`,
+        },
         sameAs: [
-          founder.linkedin,
           "https://www.linkedin.com/in/sardarabdulghani",
         ],
         knowsAbout: founder.knowsAbout,
@@ -149,6 +156,7 @@ export function personSchema() {
         email: site.email,
         slogan: site.tagline,
         description: site.description,
+        foundingDate: "2024",
         founder: {
           "@type": "Person",
           "@id": `${site.domain}/#person-abdulghani`,
@@ -158,10 +166,7 @@ export function personSchema() {
           { "@type": "Country", name: "United States" },
           { "@type": "State", name: "Texas" },
         ],
-        sameAs: [
-          "https://www.linkedin.com/company/seovize",
-          "https://www.instagram.com/seovizeofficial/",
-        ],
+        sameAs: ORG_SAME_AS,
       },
     ],
   };
