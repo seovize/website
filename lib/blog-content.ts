@@ -729,4 +729,364 @@ export const blogContent: Record<string, ContentBlock[]> = {
       ],
     },
   ],
+
+  "how-many-keywords-should-i-use-for-seo": [
+    {
+      type: "answer",
+      text: "Focus on one primary keyword per page, supported by 3–5 semantically related terms that address the same buyer intent from different angles. Keyword count is the wrong question — topic coverage is the right one. A page that comprehensively answers the topic it targets will naturally include the relevant keyword variations without stuffing.",
+    },
+    {
+      type: "h2",
+      text: "Why 'How Many Keywords' Is the Wrong Question",
+    },
+    {
+      type: "p",
+      text: "The framing of 'how many keywords should I use' comes from a keyword-stuffing era of SEO that Google's Hummingbird and subsequent updates fundamentally changed. Modern Google uses semantic understanding — it evaluates whether a page comprehensively covers a topic, not whether it repeats a specific phrase enough times.",
+    },
+    {
+      type: "p",
+      text: "A page about 'Dallas SEO company' that genuinely addresses what SEO is, what service-area businesses need, how to evaluate an SEO agency, and what results look like will naturally include dozens of relevant keyword variations without any deliberate keyword stuffing. Google's NLP reads context, not keyword frequency.",
+    },
+    {
+      type: "h2",
+      text: "The Right Framework: One Primary, Three to Five Supporting",
+    },
+    {
+      type: "p",
+      text: "Despite the semantic shift, there is still a practical structure that works well for on-page SEO:",
+    },
+    {
+      type: "ul",
+      items: [
+        "Primary keyword (1): The main query you want the page to rank for — appears in the H1, URL slug, meta title, and first 100 words of body text",
+        "Supporting keywords (3–5): Semantically related terms and alternative phrasings that address the same buyer intent — appear naturally in H2 subheadings and body paragraphs",
+        "Long-tail variations: Questions and specific sub-queries that appear in FAQ sections — eligible for featured snippets and People Also Ask positions",
+        "Entity mentions: Brand names, location names, service categories — reinforce what your page is about at the entity graph level",
+      ],
+    },
+    {
+      type: "h2",
+      text: "How Many Keywords Per Page by Page Type",
+    },
+    {
+      type: "p",
+      text: "Different page types serve different buyer intents, and keyword structure differs accordingly:",
+    },
+    {
+      type: "ul",
+      items: [
+        "Homepage: 1 primary brand + service term, 3–4 supporting city/service combinations. Never try to rank a homepage for a specific blog post query.",
+        "Service page: 1 primary service query ('Dallas SEO company'), 3–5 supporting service variations ('SEO services Dallas', 'Dallas SEO agency'), and FAQ answers targeting long-tail questions.",
+        "Blog post / informational content: 1 primary informational query, 3–4 related question variations, supporting terms that appear naturally in covering the topic comprehensively.",
+        "Location page: 1 primary city + service combination, 3–5 service variations within that market, neighborhood or metro area mentions that signal genuine local relevance.",
+      ],
+    },
+    {
+      type: "h2",
+      text: "Keyword Density: What Number Actually Matters",
+    },
+    {
+      type: "p",
+      text: "There is no magic keyword density percentage. The old 1–2% rule is not used by Google and should not be used by SEO practitioners. What matters is:",
+    },
+    {
+      type: "ol",
+      items: [
+        "Your primary keyword appears in the H1, the meta title, the URL, and the first paragraph — these are structural signals, not density calculations",
+        "Your content comprehensively covers the topic — Google's QA systems evaluate completeness, not repetition",
+        "Your page answers the questions a buyer would have about this topic — featured snippet eligibility comes from answer quality, not keyword frequency",
+        "Related terms appear naturally in context — not forced repetitions of the same phrase",
+      ],
+    },
+    {
+      type: "h2",
+      text: "What Actually Moves Rankings in 2026",
+    },
+    {
+      type: "p",
+      text: "Based on what Google's search quality raters evaluate and what correlates with rankings in competitive markets, these signals matter more than keyword count:",
+    },
+    {
+      type: "ul",
+      items: [
+        "Topical authority: does your site have multiple pages covering related topics? A single page about 'Dallas SEO' on a site with no other SEO content is weaker than the same page on a site with 20 SEO articles.",
+        "E-E-A-T signals: does your page demonstrate actual expertise? First-person analysis, case study data, and specific methodology details outperform generic content.",
+        "Content depth and structure: longer, well-structured content that answers follow-up questions outperforms thin pages targeting the same keyword.",
+        "Schema markup: FAQ schema, HowTo schema, and Article schema make your content eligible for rich results and featured snippets regardless of keyword density.",
+        "Internal linking: linking from this page to related pages and from related pages to this one reinforces the topic signal to Google's crawler.",
+      ],
+    },
+    {
+      type: "callout",
+      title: "The semantic SEO approach to keyword strategy",
+      text: "Seovize builds keyword strategies around topic clusters, not keyword counts. We map the full question landscape your buyers search — organized by intent and buyer stage — then build content architecture that covers each topic comprehensively. The result is pages that rank for dozens of related queries naturally, rather than one page trying to stuff in as many keyword variations as possible.",
+    },
+    {
+      type: "cta-link",
+      label: "Semantic SEO Services — topical authority, not keyword stuffing",
+      href: "/services/semantic-seo",
+      desc: "How Seovize builds entity authority and topic clusters that rank for keyword clusters, not single terms.",
+    },
+    {
+      type: "cta-link",
+      label: "Content Marketing Services — from $800/mo",
+      href: "/services/content-marketing",
+      desc: "SEO-optimized articles written with genuine expertise and structured for featured snippet eligibility.",
+    },
+  ],
+
+  "how-long-does-it-take-to-learn-seo": [
+    {
+      type: "answer",
+      text: "You can learn the foundations of SEO — technical basics, on-page optimization, keyword research, and content structure — in 3 months of dedicated study. Professional-level SEO proficiency, where you can execute full audits, build content strategies, and interpret ranking data, takes 12–18 months of hands-on practice. Expert-level SEO, where you understand algorithm behavior, entity graphs, and semantic search architecture, takes 3–5 years of active work.",
+    },
+    {
+      type: "h2",
+      text: "The Three Stages of SEO Learning",
+    },
+    {
+      type: "p",
+      text: "SEO knowledge is not linear. It follows a progression from foundational mechanics through practical execution to strategic judgment — and the jump between each stage is significant.",
+    },
+    {
+      type: "h3",
+      text: "Stage 1: Foundations (0–3 months)",
+    },
+    {
+      type: "p",
+      text: "In the first three months, a focused learner can cover: how Google crawls and indexes pages, on-page optimization factors (title tags, meta descriptions, H1 structure, URL slugs), basic keyword research using free tools (Google Search Console, Ahrefs Free, Google Trends), content quality principles (E-E-A-T, helpful content), and the purpose of backlinks and internal links.",
+    },
+    {
+      type: "p",
+      text: "This stage is enough to improve an existing website's basic optimization — fixing title tags, improving page structure, installing analytics. It is not enough to build a competitive SEO strategy from scratch.",
+    },
+    {
+      type: "h3",
+      text: "Stage 2: Practitioner Level (3–12 months)",
+    },
+    {
+      type: "p",
+      text: "At 3–12 months, consistent practice produces practitioners who can: conduct a technical SEO audit and prioritize fixes, build a keyword universe and content calendar, write and optimize content for specific queries, implement schema markup, interpret Google Search Console data, and diagnose ranking drops.",
+    },
+    {
+      type: "p",
+      text: "This is the level required to work as a junior SEO specialist or manage SEO for a small business. Getting here requires applying what you learn — reading about SEO is not the same as ranking a site.",
+    },
+    {
+      type: "h3",
+      text: "Stage 3: Strategic SEO (12–18+ months)",
+    },
+    {
+      type: "p",
+      text: "Strategic SEO competence — building topical authority systems, diagnosing algorithm impact, managing multi-site SEO programs, understanding entity graph optimization — takes 12–18 months minimum and usually several years of active work across different industries and site types.",
+    },
+    {
+      type: "h2",
+      text: "Is SEO Hard to Learn?",
+    },
+    {
+      type: "p",
+      text: "SEO is moderately difficult to learn and genuinely hard to master. The foundational concepts are accessible to anyone willing to spend time with Google Search Console and a few quality resources. The difficulty increases at the strategic level — SEO requires understanding how Google evaluates quality, how algorithm updates shift ranking factors, and how to balance technical, content, and authority signals simultaneously.",
+    },
+    {
+      type: "p",
+      text: "The most common learning mistake is stopping at theory. SEO is a practical discipline. Reading about keyword research for six months produces less skill than running a keyword analysis for one real site and seeing what happens when you publish optimized content.",
+    },
+    {
+      type: "h2",
+      text: "Can I Learn SEO in 3 Months?",
+    },
+    {
+      type: "p",
+      text: "Yes — at the foundational level. In 3 months of focused study (roughly 5–10 hours per week), you can learn enough to: optimize a website's existing pages, set up Google Search Console and understand the data, write basic meta titles and descriptions, build a simple keyword list, and understand what technical SEO issues to look for.",
+    },
+    {
+      type: "p",
+      text: "Three months will not produce the ability to build and execute a full competitive SEO strategy, manage a complex technical audit, or build topical authority from scratch. Those require hands-on experience across multiple sites.",
+    },
+    {
+      type: "h2",
+      text: "The Fastest Way to Learn SEO",
+    },
+    {
+      type: "ol",
+      items: [
+        "Build or own a website to practice on — theory without application does not produce skill",
+        "Install Google Search Console on day one — real crawl data teaches more than any tutorial",
+        "Follow one or two primary sources (Google's own documentation, Search Engine Journal, Ahrefs blog) rather than consuming every SEO opinion on the internet",
+        "Run your own keyword research for a real topic and publish content — see what happens",
+        "Analyze competitor pages that rank for your target keywords — reverse-engineer what Google is rewarding",
+        "Track your rankings monthly — the discipline of seeing what moved and why accelerates learning faster than any course",
+      ],
+    },
+    {
+      type: "callout",
+      title: "When to hire rather than learn",
+      text: "If your business generates enough revenue that 6–12 months of your time has significant opportunity cost, hiring an SEO professional is usually faster to ROI than learning SEO yourself. The learning curve is real, and a capable SEO professional brings both the knowledge and the tools — without the 12-month training period before results appear.",
+    },
+    {
+      type: "cta-link",
+      label: "SEO Services — expert-led, from $1,250/mo",
+      href: "/services/seo",
+      desc: "Technical SEO, content systems, and reporting — without a 12-month learning curve on your end.",
+    },
+  ],
+
+  "reciprocal-links-seo": [
+    {
+      type: "answer",
+      text: "Reciprocal links — where Site A links to Site B and Site B links back — are not automatically bad for SEO. Links that exist because two sites genuinely recommend each other are natural and acceptable. Organized link exchange schemes, where the sole purpose is to artificially inflate link counts, violate Google's spam policies and can result in ranking penalties.",
+    },
+    {
+      type: "h2",
+      text: "What Are Reciprocal Links?",
+    },
+    {
+      type: "p",
+      text: "A reciprocal link is any situation where Site A links to Site B and Site B links back to Site A. This happens naturally all the time — a supplier links to a retailer who links back to the supplier, two bloggers in the same niche mention each other's work, a local business links to a neighboring business and vice versa.",
+    },
+    {
+      type: "p",
+      text: "Reciprocal links become an SEO problem when they are systematic and artificial — organized link exchange programs where the only purpose is mutual link passing, not genuine editorial recommendation.",
+    },
+    {
+      type: "h2",
+      text: "What Google Says About Reciprocal Links",
+    },
+    {
+      type: "p",
+      text: "Google's spam policies specifically address 'excessive link exchanges' as a link spam violation. The key word is excessive. Google acknowledges that some reciprocal linking is natural — it is the artificial, large-scale link swap programs designed purely to manipulate PageRank that trigger algorithmic and manual penalties.",
+    },
+    {
+      type: "p",
+      text: "Google's documentation states that links should be 'created for users, not for search engines.' A link that exists because it genuinely helps users navigate to related content passes this test. A link that exists purely because the other site linked back to you does not.",
+    },
+    {
+      type: "h2",
+      text: "Are Reciprocal Links Good or Bad for SEO?",
+    },
+    {
+      type: "p",
+      text: "The honest answer: it depends entirely on the context and intent behind the link.",
+    },
+    {
+      type: "ul",
+      items: [
+        "SAFE: Two relevant businesses in related industries linking to each other because their audiences overlap — a wedding photographer linking to a florist who links back, a law firm linking to an accountant they refer clients to",
+        "SAFE: Industry publications that feature each other's content naturally cross-link — this happens all the time in media and is fully editorial",
+        "RISKY: Organized link exchange networks — 'I'll link to your site if you link to mine' schemes run at scale",
+        "RISKY: Links from completely unrelated sites — a cybersecurity site and a wedding photography site exchanging links for no editorial reason signals manipulation",
+        "AVOID: Three-way link schemes (A links to B, B links to C, C links to A) — these were designed to hide reciprocal links from Google and are explicitly called out in spam policies",
+      ],
+    },
+    {
+      type: "h2",
+      text: "How to Audit Your Backlink Profile for Reciprocal Link Risk",
+    },
+    {
+      type: "ol",
+      items: [
+        "Export your backlink profile from Google Search Console or a tool like Ahrefs",
+        "Identify sites that both link to you and that you link to",
+        "Evaluate each reciprocal link pair: does the link exist for genuine editorial reasons, or purely as a swap?",
+        "For suspect links on your site, remove them — a link you control that points to a low-quality site passing reciprocal links back is a signal you can clean up",
+        "For inbound links from suspicious link exchanges, submit a disavow file in Google Search Console if you cannot contact the site to remove them",
+      ],
+    },
+    {
+      type: "callout",
+      title: "The safer link building approach in 2026",
+      text: "The most durable links are earned through content that other sites want to reference — authoritative guides, original research, and expert analysis that becomes a citation source. Seovize's content marketing approach focuses on building the kind of content that earns natural editorial links, including from sites that also happen to appear in your own link profile. The difference is intent: links exist because the content deserves them, not because of a swap.",
+    },
+    {
+      type: "cta-link",
+      label: "SEO Services — ethical link-building and content authority",
+      href: "/services/seo",
+      desc: "Technical SEO, content systems, and link-worthy content — without link schemes.",
+    },
+    {
+      type: "cta-link",
+      label: "Content Marketing — earn links through authority",
+      href: "/services/content-marketing",
+      desc: "Expert-written articles that build topical authority and naturally attract editorial citations.",
+    },
+  ],
+
+  "seo-slug-guide": [
+    {
+      type: "answer",
+      text: "An SEO slug is the human-readable part of a URL that identifies a specific page — for example, in seovize.com/services/semantic-seo, the slug is 'semantic-seo'. A well-written slug is short, includes the primary keyword, uses hyphens between words, and accurately describes the page content. Good slugs improve click-through rate from search results and give Google a clear topical signal about the page.",
+    },
+    {
+      type: "h2",
+      text: "What Is a URL Slug in SEO?",
+    },
+    {
+      type: "p",
+      text: "A URL slug is the endpoint of a web address — the specific page identifier after the domain name and any folder path. If your page URL is example.com/blog/what-is-seo, then 'what-is-seo' is the slug. If the URL is example.com/services/local-seo, then 'local-seo' is the slug.",
+    },
+    {
+      type: "p",
+      text: "Slugs matter for SEO for two reasons: they give Google a direct signal about what the page covers (a URL containing the keyword 'semantic-seo' tells Google the page is about semantic SEO), and they appear in search result URLs visible to users, which affects click-through rate.",
+    },
+    {
+      type: "h2",
+      text: "How to Write an SEO Slug",
+    },
+    {
+      type: "ol",
+      items: [
+        "Include your primary keyword: the slug should contain the main keyword you want the page to rank for — 'dallas-seo-company' for a Dallas SEO page, 'semantic-seo' for a semantic SEO service page",
+        "Keep it short: shorter slugs are more readable in search results and easier to share. 3–5 words is the sweet spot — 'seo-slug-guide' outperforms 'what-is-an-seo-slug-and-how-do-i-write-one-for-better-rankings'",
+        "Use hyphens, not underscores: Google treats hyphens as word separators (dallas-seo = two words: dallas + seo) but treats underscores as connectors (dallas_seo = one word). Use hyphens consistently",
+        "Use lowercase only: URLs are case-sensitive on some servers, which can create duplicate content issues. Always write slugs in lowercase",
+        "Remove stop words: articles and prepositions (a, the, of, in, for) add length without adding keyword signal. 'how-to-write-seo-slug' is cleaner than 'how-to-write-an-seo-url-slug-for-search-engines'",
+        "Never change slugs on live pages without redirects: changing a slug changes the URL, which loses any backlinks and Google authority the old URL had accumulated. Always add a 301 redirect from the old slug to the new one",
+      ],
+    },
+    {
+      type: "h2",
+      text: "SEO Slug Best Practices for Different Page Types",
+    },
+    {
+      type: "ul",
+      items: [
+        "Homepage: no slug needed — the domain itself is the identifier",
+        "Service pages: /services/[service-name] — example: /services/local-seo, /services/semantic-seo",
+        "Blog posts: /blog/[descriptive-keyword-slug] — example: /blog/how-many-keywords-for-seo",
+        "Location pages: /locations/[state]/[city]-[service] — example: /locations/texas/dallas-seo",
+        "Category pages: /[category-name] — example: /industries, /blog",
+        "Avoid dates in slugs for service or evergreen content — /blog/2024/02/what-is-seo will look outdated in 2027, /blog/what-is-seo will not",
+      ],
+    },
+    {
+      type: "h2",
+      text: "What Is a Yoast SEO Slug?",
+    },
+    {
+      type: "p",
+      text: "Yoast SEO is a popular WordPress plugin, and its 'slug' field is simply the editable URL slug for a given post or page within WordPress. Yoast calls it the 'slug' in its meta box editor. You can edit the slug directly in the Yoast snippet preview, and the same rules apply: short, keyword-rich, hyphenated, lowercase, no stop words.",
+    },
+    {
+      type: "p",
+      text: "For non-WordPress sites (Next.js, Webflow, Squarespace, custom builds), the slug is typically set by the filename, the routing configuration, or a CMS field — same principle, different interface.",
+    },
+    {
+      type: "callout",
+      title: "Slug architecture on Seovize.com",
+      text: "Seovize's entire URL structure was built with slug architecture in mind: /services/[slug], /locations/texas/[city]-[service], /blog/[descriptive-keyword-slug], /industries/[industry]. Every URL gives Google a clear topical signal about the page, and every slug is optimized for click-through from search results. This is part of the technical SEO foundation we build for every client site.",
+    },
+    {
+      type: "cta-link",
+      label: "Website Design — SEO architecture built in",
+      href: "/services/website-design",
+      desc: "Next.js sites with proper slug structure, schema, and meta from day one — not retrofitted after launch.",
+    },
+    {
+      type: "cta-link",
+      label: "Technical SEO Services",
+      href: "/services/seo",
+      desc: "URL structure, redirects, site architecture, and technical optimization for service businesses.",
+    },
+  ],
 };

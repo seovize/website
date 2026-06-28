@@ -346,6 +346,38 @@ export const blogPosts = [
     readTime: "10 min read",
     date: "2026-02-18",
   },
+  {
+    slug: "how-many-keywords-should-i-use-for-seo",
+    title: "How Many Keywords Should I Use for SEO? (2026 Answer)",
+    description: "The short answer: focus on one primary keyword per page, supported by 3–5 semantically related terms. Here is the full framework — and why keyword count is the wrong question.",
+    tag: "SEO",
+    readTime: "7 min read",
+    date: "2026-03-05",
+  },
+  {
+    slug: "how-long-does-it-take-to-learn-seo",
+    title: "How Long Does It Take to Learn SEO? A Realistic Breakdown",
+    description: "You can learn the foundations of SEO in 3 months. Professional-level SEO proficiency takes 12–18 months. Here is what to expect at every stage.",
+    tag: "SEO",
+    readTime: "8 min read",
+    date: "2026-03-12",
+  },
+  {
+    slug: "reciprocal-links-seo",
+    title: "Reciprocal Links in SEO: Do They Help or Hurt Rankings in 2026?",
+    description: "Reciprocal links are not automatically bad — but link exchanges that exist purely to game rankings are. Here is how Google evaluates them and how to link safely.",
+    tag: "SEO",
+    readTime: "6 min read",
+    date: "2026-03-20",
+  },
+  {
+    slug: "seo-slug-guide",
+    title: "What Is an SEO Slug? How to Write URL Slugs That Rank",
+    description: "An SEO slug is the URL-safe part of a page address that tells Google and users what the page is about. Here is how to write slugs that improve both rankings and click-through rate.",
+    tag: "SEO",
+    readTime: "5 min read",
+    date: "2026-03-28",
+  },
 ];
 
 export const homepageFaqs = [
