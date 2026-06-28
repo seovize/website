@@ -20,6 +20,7 @@ export const metadata: Metadata = {
   description:
     "Abdul Ghani's Seovize delivers semantic SEO, local SEO, and social media systems for U.S. brands. Founder-led strategy, 20+ years experience, serving Texas and nationwide.",
   alternates: { canonical: "/" },
+  verification: { google: "LYLtdnAUVec_Ay6HIpaC6juwzMZoKhkY6-i7nF-ANak" },
 };
 
 export default function HomePage() {
