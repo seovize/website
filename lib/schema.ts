@@ -53,7 +53,10 @@ export function serviceSchema(slug: string) {
       url: site.domain,
     },
     description: service.description,
-    areaServed: "United States",
+    areaServed: [
+      { "@type": "Country", name: "United States" },
+      { "@type": "State", name: "Texas" },
+    ],
     offers: {
       "@type": "Offer",
       priceCurrency: "USD",

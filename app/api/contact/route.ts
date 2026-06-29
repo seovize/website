@@ -5,7 +5,9 @@ export async function POST(request: Request) {
   const payload = {
     name: String(formData.get("name") || ""),
     email: String(formData.get("email") || ""),
+    website: String(formData.get("website") || ""),
     service: String(formData.get("service") || ""),
+    city: String(formData.get("city") || ""),
     message: String(formData.get("message") || ""),
     submittedAt: new Date().toISOString(),
   };
