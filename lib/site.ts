@@ -386,6 +386,22 @@ export const blogPosts = [
     readTime: "9 min read",
     date: "2026-04-08",
   },
+  {
+    slug: "best-social-media-management-texas-small-business",
+    title: "Best Social Media Management for Small Business in Texas (2026)",
+    description: "What separates the social media management that actually grows Texas small businesses from the kind that just burns the budget? A frank guide to what works, what doesn't, and how to choose the right approach for your market.",
+    tag: "Social Media",
+    readTime: "11 min read",
+    date: "2026-05-14",
+  },
+  {
+    slug: "how-often-small-business-post-social-media",
+    title: "How Often Should a Small Business Post on Social Media? (2026 Answer)",
+    description: "The honest answer: it depends on the platform — but there are specific frequencies that research and practice confirm for small businesses. Here is the complete breakdown by platform, industry, and business type.",
+    tag: "Social Media",
+    readTime: "8 min read",
+    date: "2026-05-28",
+  },
 ];
 
 export const homepageFaqs = [

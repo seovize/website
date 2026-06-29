@@ -327,3 +327,53 @@ export function articleSchema(post: ArticlePost) {
     },
   };
 }
+
+// ─── Review-acquisition scaffold ────────────────────────────────────────────
+// Ready to activate once Trustpilot/Google reviews are collected.
+// AggregateRating requires real verified reviews — DO NOT set reviewCount or
+// ratingValue until actual reviews exist on a claimable review platform.
+//
+// To activate: collect ≥5 real reviews on Trustpilot or Google, then uncomment
+// and update reviewCount, ratingValue, and populate the reviews array.
+
+/*
+export interface ReviewInput {
+  author: string;
+  date: string;  // ISO 8601 — e.g. "2026-06-01"
+  rating: 1 | 2 | 3 | 4 | 5;
+  text: string;
+  platform?: string;  // "Trustpilot" | "Google" | "Fiverr"
+}
+
+export function aggregateRatingSchema(
+  reviews: ReviewInput[],
+  overallRating: number,
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${site.domain}/#organization`,
+    name: site.name,
+    url: site.domain,
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: overallRating.toFixed(1),
+      reviewCount: reviews.length,
+      bestRating: "5",
+      worstRating: "1",
+    },
+    review: reviews.map((r) => ({
+      "@type": "Review",
+      author: { "@type": "Person", name: r.author },
+      datePublished: r.date,
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: r.rating,
+        bestRating: "5",
+        worstRating: "1",
+      },
+      reviewBody: r.text,
+    })),
+  };
+}
+*/
