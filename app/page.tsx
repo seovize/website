@@ -373,6 +373,85 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── CLIENT REVIEWS ──────────────────────────────── */}
+      <section className="bg-navy px-4 py-16 sm:px-5 md:py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-10 md:mb-14">
+            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-mint">
+              Client reviews
+            </p>
+            <h2 className="font-display text-3xl font-black leading-tight tracking-tight text-cloud md:text-[3.5rem] md:leading-[1.05]">
+              Real clients. Real results. Verified.
+            </h2>
+            <div className="mt-4 flex flex-wrap items-center gap-3">
+              <div className="flex gap-0.5">
+                {[1, 2, 3, 4, 5].map((i) => (
+                  <svg key={i} className="h-4 w-4 text-orange" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-sm text-mist">
+                <span className="font-bold text-cloud">4.3 / 5</span> across{" "}
+                <span className="font-bold text-cloud">93</span> verified client projects
+              </p>
+            </div>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-3">
+            {[
+              {
+                quote: "Outstanding work — Highly Recommend! What stood out immediately was the strategic thinking. They approached the project with a forward-looking perspective that ensured the final result would serve my objectives both now and in the future. Communication was smooth, instructions were clear, and the entire process was very professional.",
+                name: "K. McIver",
+                location: "United States",
+                tag: "Social media management · Repeat client",
+              },
+              {
+                quote: "We are very pleased with the work done and are looking forward to the results. Professional, crisp, a pleasure to work with.",
+                name: "Aaron H.",
+                location: "Israel",
+                tag: "Social media management · Repeat client",
+              },
+              {
+                quote: "Awesome work and designs! I am so happy they delivered great posts and content for my social media. They understood my requests so clearly and were very patient to deliver the best quality. Thank you and looking forward to more projects.",
+                name: "Soha H.",
+                location: "United States",
+                tag: "Social media management · Repeat client",
+              },
+            ].map((r) => (
+              <div
+                key={r.name}
+                className="flex flex-col rounded-[2rem] border border-line bg-obsidian p-8"
+              >
+                <div className="mb-5 flex gap-0.5">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <svg key={i} className="h-3.5 w-3.5 text-orange" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="flex-1 text-sm leading-[1.8] text-mist">
+                  &ldquo;{r.quote}&rdquo;
+                </p>
+                <div className="mt-6 flex items-center gap-3 border-t border-line pt-5">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-mint/10 font-mono text-sm font-bold text-mint">
+                    {r.name.charAt(0)}
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-cloud">{r.name}</p>
+                    <p className="text-[10px] text-slate-mid">{r.tag} · {r.location}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-6 text-center text-[10px] text-slate-mid">
+            Verified client reviews for social media management engagements
+          </p>
+        </div>
+      </section>
+
       {/* ── PRICING PREVIEW ─────────────────────────────── */}
       <Section
         eyebrow="Pricing"
