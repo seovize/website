@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { contactFormSchema } from "@/lib/validation";
 import { sendContactEmail, sendLeadConfirmation } from "@/lib/services/contact";
+import { upsertLeadContact } from "@/lib/services/brevo";
 
 function redirect(request: Request, query: string) {
   return NextResponse.redirect(new URL(`/contact?${query}`, request.url), { status: 303 });
@@ -9,8 +10,10 @@ function redirect(request: Request, query: string) {
 export async function POST(request: Request) {
   const formData = await request.formData();
 
-  // Honeypot: bots fill the hidden "company" field. Pretend success, drop silently.
-  if (String(formData.get("company") || "").trim() !== "") {
+  // Honeypot: bots fill the hidden "hp_field" input. Pretend success, drop silently.
+  // (Named distinctly from the real "company" field so legitimate leads who
+  // fill in their company name are never mistaken for bots.)
+  if (String(formData.get("hp_field") || "").trim() !== "") {
     return redirect(request, "success=true");
   }
 
@@ -21,6 +24,12 @@ export async function POST(request: Request) {
     service: formData.get("service"),
     city: formData.get("city"),
     message: formData.get("message"),
+    phone: formData.get("phone"),
+    company: formData.get("company"),
+    sourcePage: formData.get("sourcePage"),
+    utmSource: formData.get("utmSource"),
+    utmMedium: formData.get("utmMedium"),
+    utmCampaign: formData.get("utmCampaign"),
   });
 
   if (!parsed.success) {
@@ -39,6 +48,15 @@ export async function POST(request: Request) {
     await sendLeadConfirmation(parsed.data);
   } catch (err) {
     console.error("[contact] confirmation auto-reply failed (non-blocking):", err);
+  }
+
+  // Persist the lead into Brevo (system of record + nurture segmentation).
+  // Best-effort: a Brevo outage must never cost the lead, since the
+  // notification + auto-reply above have already gone out.
+  try {
+    await upsertLeadContact(parsed.data);
+  } catch (err) {
+    console.error("[contact] Brevo contact upsert failed (non-blocking):", err);
   }
 
   // Best-effort secondary delivery (e.g. CRM/Slack). Never blocks the lead.

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ConversionTracker } from "@/components/ConversionTracker";
 import { JsonLd } from "@/components/JsonLd";
+import { LeadSourceFields } from "@/components/LeadSourceFields";
 import { site, founder } from "@/lib/site";
 
 const serviceOptions = [
@@ -185,13 +186,16 @@ export default async function ContactPage({ searchParams }: Props) {
                   </h2>
                   <p className="mt-1 text-sm text-slate-mid">All fields marked * are required.</p>
 
-                  {/* Honeypot — hidden from humans, bots fill it and get dropped server-side. */}
+                  {/* Honeypot — hidden from humans, bots fill it and get dropped server-side.
+                      Named distinctly from the real "company" field below. */}
                   <div aria-hidden="true" className="absolute left-[-9999px] top-[-9999px] h-0 w-0 overflow-hidden">
                     <label>
-                      Company
-                      <input name="company" tabIndex={-1} autoComplete="off" />
+                      Leave this field empty
+                      <input name="hp_field" tabIndex={-1} autoComplete="off" />
                     </label>
                   </div>
+
+                  <LeadSourceFields />
 
                   {failed && (
                     <div className="mt-5 rounded-xl border border-orange/40 bg-orange/[0.08] px-4 py-3 text-sm text-cloud">
@@ -226,6 +230,30 @@ export default async function ContactPage({ searchParams }: Props) {
                           type="email"
                           required
                           placeholder="you@company.com"
+                          className="rounded-xl border border-line bg-obsidian px-4 py-3 text-sm text-cloud placeholder:text-slate-mid/60 focus:border-mint/40 focus:outline-none focus:ring-1 focus:ring-mint/20"
+                        />
+                      </label>
+                    </div>
+
+                    <div className="grid gap-4 sm:grid-cols-2">
+                      <label className="grid gap-1.5">
+                        <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-mid">
+                          Company <span className="font-normal normal-case text-slate-mid/70">(optional)</span>
+                        </span>
+                        <input
+                          name="company"
+                          placeholder="Your business name"
+                          className="rounded-xl border border-line bg-obsidian px-4 py-3 text-sm text-cloud placeholder:text-slate-mid/60 focus:border-mint/40 focus:outline-none focus:ring-1 focus:ring-mint/20"
+                        />
+                      </label>
+                      <label className="grid gap-1.5">
+                        <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-mid">
+                          Phone <span className="font-normal normal-case text-slate-mid/70">(optional)</span>
+                        </span>
+                        <input
+                          name="phone"
+                          type="tel"
+                          placeholder="(555) 555-5555"
                           className="rounded-xl border border-line bg-obsidian px-4 py-3 text-sm text-cloud placeholder:text-slate-mid/60 focus:border-mint/40 focus:outline-none focus:ring-1 focus:ring-mint/20"
                         />
                       </label>
