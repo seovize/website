@@ -6,6 +6,8 @@ export const site = {
   description:
     "Semantic SEO, social media management, and conversion-ready website systems for U.S. growth-focused brands.",
   twitterHandle: "@seovizeofficial",
+  // Calendly / Cal.com booking URL. Leave blank to hide the "Book a call" CTA.
+  bookingUrl: "https://calendly.com/seovizeofficial/30min",
 };
 
 export const navItems = [

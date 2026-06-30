@@ -32,6 +32,16 @@ export function CTABanner({
             >
               {primaryLabel}
             </Link>
+            {site.bookingUrl && (
+              <a
+                href={site.bookingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-[52px] items-center justify-center rounded-full border border-mint/40 bg-mint/[0.06] px-7 text-sm font-bold text-mint transition hover:bg-mint/[0.12]"
+              >
+                Book a call →
+              </a>
+            )}
             <a
               href={`mailto:${site.email}`}
               className="inline-flex min-h-[52px] items-center justify-center rounded-full border border-line px-7 text-sm font-semibold text-mist transition hover:border-cloud/30 hover:text-cloud"

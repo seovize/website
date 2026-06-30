@@ -92,11 +92,11 @@ export default function PricingPage() {
       </section>
 
       <Section eyebrow="SEO retainers" title="Search visibility packages">
-        <PricingCards items={seoPackages} />
+        <PricingCards items={seoPackages} service="SEO Services" />
       </Section>
 
       <Section eyebrow="Social media" title="Creative visibility packages" variant="navy">
-        <PricingCards items={socialPackages} />
+        <PricingCards items={socialPackages} service="Social Media Management" />
         <p className="mt-6 text-sm text-slate-mid">
           Social media management for small businesses in Texas starts at $1,100/month.{" "}
           <Link href="/locations/texas/social-media-management" className="font-semibold text-mint hover:underline">

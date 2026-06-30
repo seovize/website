@@ -1,10 +1,19 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 /* App-like floating action bar — mobile only (hidden on lg+).
    Keeps the primary conversion action in thumb reach at all times,
    the pattern native apps use. Safe-area aware; body gets bottom
-   padding (globals.css) so nothing hides behind it. */
+   padding (globals.css) so nothing hides behind it.
+
+   Hidden on /contact, where it would point at the current page and
+   visually compete with the form's own submit button. */
 export function MobileActionBar() {
+  const pathname = usePathname();
+  if (pathname === "/contact") return null;
+
   return (
     <div
       className="fixed inset-x-0 bottom-0 z-40 px-4 pb-[calc(0.75rem+env(safe-area-inset-bottom))] pt-3 lg:hidden"
