@@ -55,6 +55,21 @@ describe("contactFormSchema", () => {
     const parsed = contactFormSchema.safeParse({ ...validInput, message: "" });
     expect(parsed.success).toBe(true);
   });
+
+  it("treats null the same as an absent optional field (FormData.get() returns null, not undefined, for fields missing from the request entirely)", () => {
+    const parsed = contactFormSchema.safeParse({
+      ...validInput,
+      city: null,
+      message: null,
+      phone: null,
+      company: null,
+      sourcePage: null,
+      utmSource: null,
+      utmMedium: null,
+      utmCampaign: null,
+    });
+    expect(parsed.success).toBe(true);
+  });
 });
 
 describe("buildResendPayload", () => {

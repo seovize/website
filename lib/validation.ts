@@ -5,10 +5,13 @@ import { z } from "zod";
  *
  * Mirrors the fields in app/contact/page.tsx. Optional fields accept an empty
  * string from the HTML form and are normalized to `undefined` so downstream
- * code can treat "not provided" consistently.
+ * code can treat "not provided" consistently. Also treats `null` as empty —
+ * `FormData.get()` returns `null` (not `undefined`) for a field that's
+ * entirely absent from the request, which would otherwise fail Zod's
+ * `.optional()` (which only accepts `undefined`, not `null`).
  */
 const emptyToUndefined = (v: unknown) =>
-  typeof v === "string" && v.trim() === "" ? undefined : v;
+  v === null || (typeof v === "string" && v.trim() === "") ? undefined : v;
 
 const optionalText = (max: number) =>
   z.preprocess(emptyToUndefined, z.string().trim().max(max).optional());

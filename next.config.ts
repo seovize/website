@@ -44,7 +44,9 @@ const nextConfig: NextConfig = {
       { source: "/how-we-ranked-kingmodapk-net/", destination: "/case-studies", permanent: true },
 
       // ── Old WordPress utility pages ──
-      { source: "/contact", destination: "/contact", permanent: false },
+      // NOTE: a prior rule here mapped "/contact" -> "/contact" (a literal
+      // self-redirect), which caused an infinite ERR_TOO_MANY_REDIRECTS loop
+      // on the live contact page for every visitor. Removed.
       { source: "/contact-2-2", destination: "/contact", permanent: true },
       { source: "/contact-2-2/", destination: "/contact", permanent: true },
       { source: "/privacy-policy-2", destination: "/privacy-policy", permanent: true },
