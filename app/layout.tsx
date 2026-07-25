@@ -7,7 +7,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileActionBar } from "@/components/MobileActionBar";
 import { JsonLd } from "@/components/JsonLd";
-import { organizationSchema, personSchema, websiteSchema } from "@/lib/schema";
+import { organizationSchema, personSchema, professionalServiceSchema, websiteSchema } from "@/lib/schema";
 import { site } from "@/lib/site";
 
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope", display: "swap", weight: ["600", "700", "800"] });
@@ -59,6 +59,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <JsonLd data={organizationSchema()} />
           <JsonLd data={websiteSchema()} />
           <JsonLd data={personSchema()} />
+          <JsonLd data={professionalServiceSchema()} />
           <Header />
           <main>{children}</main>
           <Footer />

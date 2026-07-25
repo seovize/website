@@ -18,6 +18,7 @@ export function organizationSchema() {
     slogan: site.tagline,
     description: site.description,
     foundingDate: "2024",
+    founder: { "@id": `${site.domain}/#person-abdulghani` },
     address: {
       "@type": "PostalAddress",
       addressRegion: "TX",
@@ -27,6 +28,10 @@ export function organizationSchema() {
       "@type": "ImageObject",
       url: `${site.domain}/logo.svg`,
     },
+    areaServed: [
+      { "@type": "Country", name: "United States" },
+      { "@type": "State", name: "Texas" },
+    ],
     sameAs: ORG_SAME_AS,
   };
 }
@@ -151,6 +156,31 @@ export function faqSchema(faqs: FAQ[]) {
   };
 }
 
+/**
+ * ProfessionalService entity, linked to the Organization declared once by
+ * organizationSchema() via @id — not re-declared. Render this once, site-wide
+ * (root layout), alongside organizationSchema()/personSchema()/websiteSchema().
+ * This is what lets Google's Knowledge Graph (and GEO crawlers) merge the
+ * Organization, Person, and ProfessionalService into one entity across every
+ * page, instead of treating each page's schema as an isolated claim.
+ */
+export function professionalServiceSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": `${site.domain}/#professionalservice`,
+    name: site.name,
+    url: site.domain,
+    priceRange: "$$",
+    areaServed: [
+      { "@type": "State", name: "Texas" },
+      { "@type": "Country", name: "United States" },
+    ],
+    provider: { "@id": `${site.domain}/#organization` },
+    founder: { "@id": `${site.domain}/#person-abdulghani` },
+  };
+}
+
 export function localBusinessSchema() {
   return {
     "@context": "https://schema.org",
@@ -177,54 +207,33 @@ export function localBusinessSchema() {
   };
 }
 
+/**
+ * Person entity only — the Organization it works for is declared once by
+ * organizationSchema() and referenced here by @id, not re-declared. Previously
+ * this function also emitted a full duplicate Organization object (same @id
+ * as organizationSchema(), different property set), which is what happens
+ * when the same entity is declared piecemeal across a codebase — cleaned up
+ * as part of building the site-wide @id-linked entity graph.
+ */
 export function personSchema() {
   return {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Person",
-        "@id": `${site.domain}/#person-abdulghani`,
-        name: founder.name,
-        alternateName: founder.fullName,
-        jobTitle: founder.title,
-        description: founder.snippet,
-        url: `${site.domain}/about`,
-        image: {
-          "@type": "ImageObject",
-          url: `${site.domain}/images/abdul-ghani.jpg`,
-        },
-        sameAs: [
-          "https://www.linkedin.com/in/sardarabdulghani",
-        ],
-        knowsAbout: founder.knowsAbout,
-        worksFor: {
-          "@type": "Organization",
-          "@id": `${site.domain}/#organization`,
-          name: site.name,
-          url: site.domain,
-        },
-      },
-      {
-        "@type": "Organization",
-        "@id": `${site.domain}/#organization`,
-        name: site.name,
-        url: site.domain,
-        email: site.email,
-        slogan: site.tagline,
-        description: site.description,
-        foundingDate: "2024",
-        founder: {
-          "@type": "Person",
-          "@id": `${site.domain}/#person-abdulghani`,
-          name: founder.name,
-        },
-        areaServed: [
-          { "@type": "Country", name: "United States" },
-          { "@type": "State", name: "Texas" },
-        ],
-        sameAs: ORG_SAME_AS,
-      },
+    "@type": "Person",
+    "@id": `${site.domain}/#person-abdulghani`,
+    name: founder.name,
+    alternateName: founder.fullName,
+    jobTitle: founder.title,
+    description: founder.snippet,
+    url: `${site.domain}/about`,
+    image: {
+      "@type": "ImageObject",
+      url: `${site.domain}/images/abdul-ghani.jpg`,
+    },
+    sameAs: [
+      "https://www.linkedin.com/in/sardarabdulghani",
     ],
+    knowsAbout: founder.knowsAbout,
+    worksFor: { "@id": `${site.domain}/#organization` },
   };
 }
 
