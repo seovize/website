@@ -85,6 +85,7 @@ export function Footer() {
             <Link href="/locations/texas" className="hover:text-cloud">Texas</Link>
             <Link href="/industries" className="hover:text-cloud">Industries</Link>
             <Link href="/compare/seo-agency-vs-freelancer" className="hover:text-cloud">Compare</Link>
+            <Link href="/privacy-policy" className="hover:text-cloud">Privacy Policy</Link>
           </div>
         </div>
       </div>
