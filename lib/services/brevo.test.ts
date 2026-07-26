@@ -1,6 +1,13 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { contactFormSchema } from "@/lib/validation";
-import { buildBrevoContactPayload, getBrevoEnv, upsertLeadContact, type BrevoEnv } from "@/lib/services/brevo";
+import { contactFormSchema, reportSignupSchema } from "@/lib/validation";
+import {
+  buildBrevoContactPayload,
+  buildReportSignupPayload,
+  getBrevoEnv,
+  upsertLeadContact,
+  upsertReportSignup,
+  type BrevoEnv,
+} from "@/lib/services/brevo";
 
 const validInput = {
   name: "Jane Doe",
@@ -98,5 +105,46 @@ describe("upsertLeadContact", () => {
     await expect(upsertLeadContact(contactFormSchema.parse(validInput))).rejects.toThrow(
       /Brevo contact upsert failed/,
     );
+  });
+});
+
+describe("buildReportSignupPayload", () => {
+  it("tags the lead with FUNNEL_STAGE=report_download, distinct from audit-request leads", () => {
+    const data = reportSignupSchema.parse({
+      name: "Jamie Rivera",
+      email: "jamie@example.com",
+      utmSource: "linkedin",
+    });
+    const payload = buildReportSignupPayload(data, env);
+    expect(payload.email).toBe("jamie@example.com");
+    expect(payload.listIds).toEqual([4]);
+    expect(payload.attributes.FUNNEL_STAGE).toBe("report_download");
+    expect(payload.attributes.FIRSTNAME).toBe("Jamie");
+    expect(payload.attributes.LASTNAME).toBe("Rivera");
+    expect(payload.attributes.UTM_SOURCE).toBe("linkedin");
+    expect(payload.attributes.SOURCE_PAGE).toBe("/research/texas-digital-marketing-report-2026");
+  });
+
+  it("works with only an email — name is optional for this soft-gate form", () => {
+    const data = reportSignupSchema.parse({ email: "anon@example.com" });
+    const payload = buildReportSignupPayload(data, env);
+    expect(payload.attributes.FIRSTNAME).toBeUndefined();
+    expect(payload.attributes.FUNNEL_STAGE).toBe("report_download");
+  });
+});
+
+describe("upsertReportSignup", () => {
+  it("POSTs to Brevo with the api-key header on success", async () => {
+    vi.stubEnv("BREVO_API_KEY", "secret");
+    const fetchMock = vi.fn().mockResolvedValue(new Response(JSON.stringify({ id: 2 }), { status: 201 }));
+    vi.stubGlobal("fetch", fetchMock);
+
+    await expect(
+      upsertReportSignup(reportSignupSchema.parse({ email: "lead@example.com" })),
+    ).resolves.toBeUndefined();
+
+    const [url, init] = fetchMock.mock.calls[0];
+    expect(url).toBe("https://api.brevo.com/v3/contacts");
+    expect((init.headers as Record<string, string>)["api-key"]).toBe("secret");
   });
 });

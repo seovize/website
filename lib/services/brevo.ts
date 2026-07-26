@@ -1,5 +1,5 @@
 import { z } from "zod";
-import type { ContactFormData } from "@/lib/validation";
+import type { ContactFormData, ReportSignupData } from "@/lib/validation";
 
 /**
  * Lead persistence + segmentation via Brevo's contact database.
@@ -85,19 +85,11 @@ export function buildBrevoContactPayload(data: ContactFormData, env: BrevoEnv): 
   };
 }
 
-/**
- * Upsert the lead into Brevo's contact database. Throws on misconfiguration
- * or a non-2xx Brevo response — callers must treat this as best-effort and
- * catch failures so a Brevo outage never blocks lead delivery.
- */
-export async function upsertLeadContact(data: ContactFormData): Promise<void> {
-  const env = getBrevoEnv();
-  const payload = buildBrevoContactPayload(data, env);
-
+async function postContactToBrevo(payload: BrevoContactPayload, apiKey: string): Promise<void> {
   const res = await fetch(BREVO_CONTACTS_ENDPOINT, {
     method: "POST",
     headers: {
-      "api-key": env.BREVO_API_KEY,
+      "api-key": apiKey,
       "content-type": "application/json",
       accept: "application/json",
     },
@@ -109,4 +101,47 @@ export async function upsertLeadContact(data: ContactFormData): Promise<void> {
     const body = await res.text().catch(() => "");
     throw new Error(`Brevo contact upsert failed (${res.status}): ${body}`);
   }
+}
+
+/**
+ * Upsert the lead into Brevo's contact database. Throws on misconfiguration
+ * or a non-2xx Brevo response — callers must treat this as best-effort and
+ * catch failures so a Brevo outage never blocks lead delivery.
+ */
+export async function upsertLeadContact(data: ContactFormData): Promise<void> {
+  const env = getBrevoEnv();
+  await postContactToBrevo(buildBrevoContactPayload(data, env), env.BREVO_API_KEY);
+}
+
+/** Pure: build the Brevo upsert-contact request body for a report-signup lead. */
+export function buildReportSignupPayload(data: ReportSignupData, env: BrevoEnv): BrevoContactPayload {
+  const [firstName, ...rest] = (data.name ?? "").trim().split(/\s+/).filter(Boolean);
+  const lastName = rest.join(" ");
+
+  const attributes: Record<string, string> = {
+    ...(firstName ? { FIRSTNAME: firstName } : {}),
+    ...(lastName ? { LASTNAME: lastName } : {}),
+    FUNNEL_STAGE: "report_download",
+    SOURCE_PAGE: data.sourcePage ?? "/research/texas-digital-marketing-report-2026",
+    ...(data.utmSource ? { UTM_SOURCE: data.utmSource } : {}),
+    ...(data.utmMedium ? { UTM_MEDIUM: data.utmMedium } : {}),
+    ...(data.utmCampaign ? { UTM_CAMPAIGN: data.utmCampaign } : {}),
+  };
+
+  return {
+    email: data.email,
+    updateEnabled: true,
+    listIds: [env.BREVO_LIST_ID],
+    attributes,
+  };
+}
+
+/**
+ * Upsert a report-signup lead into Brevo, tagged FUNNEL_STAGE=report_download
+ * so it can be segmented separately from audit-request leads and used as the
+ * trigger for the Texas report nurture sequence (Phase 2).
+ */
+export async function upsertReportSignup(data: ReportSignupData): Promise<void> {
+  const env = getBrevoEnv();
+  await postContactToBrevo(buildReportSignupPayload(data, env), env.BREVO_API_KEY);
 }

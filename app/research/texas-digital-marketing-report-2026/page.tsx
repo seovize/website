@@ -4,6 +4,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { Section } from "@/components/Section";
 import { CTABanner } from "@/components/CTABanner";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ReportSignupForm } from "@/components/ReportSignupForm";
 import { breadcrumbSchema, speakableSchema } from "@/lib/schema";
 import { site } from "@/lib/site";
 
@@ -166,7 +167,14 @@ const reportSchema = {
   keywords: "Texas digital marketing, Texas social media management, Texas SEO benchmarks, Houston social media, Dallas SEO, Austin digital marketing",
 };
 
-export default function TexasDigitalMarketingReportPage() {
+interface Props {
+  searchParams: Promise<{ report?: string }>;
+}
+
+export default async function TexasDigitalMarketingReportPage({ searchParams }: Props) {
+  const params = await searchParams;
+  const signupSent = params.report === "sent";
+
   return (
     <>
       <JsonLd data={reportSchema} />
@@ -215,6 +223,11 @@ export default function TexasDigitalMarketingReportPage() {
             <p className="font-mono text-xs text-mist">
               Ghani, A. (2026). <em className="text-cloud">Texas Small Business Digital Marketing Report 2026.</em> Seovize. {site.domain}/research/texas-digital-marketing-report-2026
             </p>
+          </div>
+
+          {/* Signup — the report itself stays fully public; this is an opt-in for updates */}
+          <div className="relative mt-8">
+            {signupSent ? <ReportSignupForm sent /> : <ReportSignupForm variant="banner" />}
           </div>
         </div>
       </section>

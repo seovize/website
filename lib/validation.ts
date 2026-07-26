@@ -36,3 +36,19 @@ export const contactFormSchema = z.object({
 });
 
 export type ContactFormData = z.infer<typeof contactFormSchema>;
+
+/**
+ * Report-signup form payload (Texas Digital Marketing Report lead capture).
+ * Deliberately minimal — this is a soft-gate email capture on an already-public
+ * page, not an audit request, so it doesn't collect website/service/etc.
+ */
+export const reportSignupSchema = z.object({
+  name: optionalText(120),
+  email: z.string().trim().email("A valid email is required."),
+  sourcePage: optionalText(2048),
+  utmSource: optionalText(160),
+  utmMedium: optionalText(160),
+  utmCampaign: optionalText(160),
+});
+
+export type ReportSignupData = z.infer<typeof reportSignupSchema>;

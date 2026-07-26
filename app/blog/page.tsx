@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from "next";
+import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BlogCard } from "@/components/BlogCard";
 import { CTABanner } from "@/components/CTABanner";
@@ -27,6 +28,20 @@ export default function BlogPage() {
         </div>
       </section>
       <Section>
+        <Link
+          href="/research/texas-digital-marketing-report-2026"
+          className="mb-10 flex flex-col justify-between gap-4 rounded-[2rem] border border-sky/20 bg-sky/[0.04] p-8 transition hover:border-sky/40 sm:flex-row sm:items-center"
+        >
+          <div>
+            <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-sky">Original research</p>
+            <p className="mt-2 font-display text-xl font-black text-cloud">
+              Texas Small Business Digital Marketing Report 2026
+            </p>
+            <p className="mt-1 text-sm text-mist">Platform benchmarks, SEO findings, and city-by-city data.</p>
+          </div>
+          <span className="shrink-0 text-sm font-semibold text-sky">Read the report →</span>
+        </Link>
+
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {blogPosts.map((post) => (
             <BlogCard key={post.slug} {...post} />

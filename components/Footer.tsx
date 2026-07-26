@@ -8,6 +8,7 @@ const footerLinks = [
   { label: "Case Studies", href: "/case-studies" },
   { label: "Pricing", href: "/pricing" },
   { label: "Blog", href: "/blog" },
+  { label: "Texas Report 2026", href: "/research/texas-digital-marketing-report-2026" },
   { label: "Industries", href: "/industries" },
   { label: "Agency vs Freelancer", href: "/compare/seo-agency-vs-freelancer" },
   { label: "Contact", href: "/contact" },
