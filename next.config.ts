@@ -29,6 +29,10 @@ const nextConfig: NextConfig = {
       { source: "/dallas-seo-company", destination: "/locations/texas/dallas-seo", permanent: true },
       { source: "/dallas-seo-company/", destination: "/locations/texas/dallas-seo", permanent: true },
 
+      // ── Old WordPress service page ──
+      { source: "/wordpress-website-design", destination: "/services/website-design", permanent: true },
+      { source: "/wordpress-website-design/", destination: "/services/website-design", permanent: true },
+
       // ── Old WordPress blog posts (29K+ impressions total) ──
       { source: "/how-many-keywords-should-i-use-for-seo", destination: "/blog/how-many-keywords-should-i-use-for-seo", permanent: true },
       { source: "/how-many-keywords-should-i-use-for-seo/", destination: "/blog/how-many-keywords-should-i-use-for-seo", permanent: true },

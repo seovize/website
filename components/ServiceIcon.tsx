@@ -92,11 +92,10 @@ const iconMap: Record<string, (p: Props) => ReactElement> = {
 
 type ServiceIconProps = {
   slug: string;
-  size?: number;
   className?: string;
 };
 
-export function ServiceIcon({ slug, size = 40, className = "" }: ServiceIconProps) {
+export function ServiceIcon({ slug, className = "" }: ServiceIconProps) {
   const Icon = iconMap[slug];
   if (!Icon) return null;
   return (

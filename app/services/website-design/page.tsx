@@ -138,7 +138,7 @@ export default function WebsiteDesignPage() {
               What is a conversion-ready website?
             </p>
             <p className="text-base leading-[1.85] text-cloud">
-              A conversion-ready website is designed around the buyer journey — not around aesthetics. Every page is structured to earn trust, answer specific objections, and drive a single clear action. Built on Next.js and deployed on Vercel's edge network, it loads under 1 second globally, scores 90+ on Core Web Vitals, and ships with SEO schema built in from day one.
+              A conversion-ready website is designed around the buyer journey — not around aesthetics. Every page is structured to earn trust, answer specific objections, and drive a single clear action. Built on Next.js and deployed on Vercel&apos;s edge network, it loads under 1 second globally, scores 90+ on Core Web Vitals, and ships with SEO schema built in from day one.
             </p>
           </div>
 

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { Section } from "@/components/Section";
 import { CTABanner } from "@/components/CTABanner";
@@ -369,13 +368,13 @@ export default async function TexasDigitalMarketingReportPage({ searchParams }: 
             This report synthesizes data from multiple sources to produce a Texas-specific digital marketing benchmark reference. Primary sources include the Sprout Social Index 2026, HubSpot State of Marketing 2026, Hootsuite Digital 2026 Global Report, and Pew Research Center data on social media platform adoption by demographic.
           </p>
           <p className="mt-4 text-sm leading-[1.9] text-mist">
-            Texas-specific observations and benchmarks are drawn from Seovize's analysis of digital marketing performance across Texas service business categories including restaurants, med spas, real estate, legal, contracting, and professional consulting. Market-specific insights reflect patterns observed in audience behavior, content performance, and search ranking movement in Houston, Dallas, Austin, San Antonio, Fort Worth, and El Paso.
+            Texas-specific observations and benchmarks are drawn from Seovize&apos;s analysis of digital marketing performance across Texas service business categories including restaurants, med spas, real estate, legal, contracting, and professional consulting. Market-specific insights reflect patterns observed in audience behavior, content performance, and search ranking movement in Houston, Dallas, Austin, San Antonio, Fort Worth, and El Paso.
           </p>
           <p className="mt-4 text-sm leading-[1.9] text-mist">
             Engagement rate benchmarks are platform-specific averages for service business accounts with under 10,000 followers — the relevant range for most Texas small businesses. Large brand and influencer account performance is explicitly excluded from these benchmarks as it is not representative of the small business experience.
           </p>
           <p className="mt-6 text-xs text-slate-mid">
-            This report is published by Seovize for educational and research purposes. External sources are cited where applicable. Texas-specific observations represent Seovize's analysis and professional judgment, not independently peer-reviewed research. Last updated June 2026.
+            This report is published by Seovize for educational and research purposes. External sources are cited where applicable. Texas-specific observations represent Seovize&apos;s analysis and professional judgment, not independently peer-reviewed research. Last updated June 2026.
           </p>
         </div>
       </Section>

@@ -199,7 +199,7 @@ export default function LocalSeoPage() {
           ))}
         </div>
         <p className="mt-8 max-w-3xl text-sm leading-7 text-slate-mid">
-          Google's local pack algorithm weighs these three factors simultaneously. Most businesses over-invest in content and under-invest in GBP category optimization and citation consistency — the two highest-leverage factors for new local SEO engagements.
+          Google&apos;s local pack algorithm weighs these three factors simultaneously. Most businesses over-invest in content and under-invest in GBP category optimization and citation consistency — the two highest-leverage factors for new local SEO engagements.
         </p>
       </Section>
 
