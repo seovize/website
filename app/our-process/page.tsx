@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Image from "next/image";
 import { JsonLd } from "@/components/JsonLd";
 import { Section } from "@/components/Section";
@@ -204,7 +203,7 @@ export default function OurProcessPage() {
       {/* ── Process stages ────────────────────────────────── */}
       <Section eyebrow="The process" title="Five stages. Zero guesswork.">
         <div className="space-y-6">
-          {stages.map((stage, i) => (
+          {stages.map((stage) => (
             <div
               key={stage.num}
               className="overflow-hidden rounded-[2rem] border border-line bg-navy"
@@ -315,7 +314,7 @@ export default function OurProcessPage() {
                 A note on how I work with clients
               </p>
               <p className="text-sm leading-[1.9] text-mist">
-                Every client engagement starts with me reading your business the way a buyer reads it — checking your Google rankings, your social presence, your competitor's content, and the gap between where you are and where you could be. The Growth Roadmap I deliver is not a template. It is a document I write based specifically on what I find.
+                Every client engagement starts with me reading your business the way a buyer reads it — checking your Google rankings, your social presence, your competitor&apos;s content, and the gap between where you are and where you could be. The Growth Roadmap I deliver is not a template. It is a document I write based specifically on what I find.
               </p>
               <p className="mt-4 text-sm leading-[1.9] text-mist">
                 That same level of attention continues through every month of the engagement. Your content is not passed to a writer who has never heard of your Texas market or your industry. I design it, I oversee it, and I read your analytics every month to decide what changes.

@@ -71,11 +71,6 @@ const deliverables = [
   { title: "Monthly analytics report", desc: "Reach, impressions, engagement rate, follower growth, link clicks, and lead attribution. What worked, what did not, and what we are changing next month." },
 ];
 
-const socialPackages = seoPackages.map((pkg) => ({
-  ...pkg,
-  name: pkg.name.replace("SEO", "Social"),
-}));
-
 export default function SocialMediaPage() {
   return (
     <>

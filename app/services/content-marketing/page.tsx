@@ -356,10 +356,10 @@ export default function ContentMarketingPage() {
                 Content written from expertise, not briefs.
               </h2>
               <p className="mt-5 text-base leading-[1.85] text-mist">
-                Google's helpful content system evaluates whether content was created with genuine expertise or manufactured for search performance. The difference is detectable at scale: generic content that restates commonly available information ranks poorly against content that adds original analysis, real-world application, and expert perspective that can only come from having done the work.
+                Google&apos;s helpful content system evaluates whether content was created with genuine expertise or manufactured for search performance. The difference is detectable at scale: generic content that restates commonly available information ranks poorly against content that adds original analysis, real-world application, and expert perspective that can only come from having done the work.
               </p>
               <p className="mt-4 text-base leading-[1.85] text-mist">
-                Every Seovize article reflects Abdul Ghani's actual knowledge of SEO, content strategy, and buyer behavior — developed across 20+ years of engagements. Not a generic template. Not AI copy. Expert content, positioned for search.
+                Every Seovize article reflects Abdul Ghani&apos;s actual knowledge of SEO, content strategy, and buyer behavior — developed across 20+ years of engagements. Not a generic template. Not AI copy. Expert content, positioned for search.
               </p>
             </div>
           </div>

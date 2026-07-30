@@ -222,7 +222,7 @@ export default function SemanticSeoPage() {
               </div>
               <h3 className="font-display text-2xl font-black text-cloud">Entity Graph</h3>
               <p className="mt-4 text-sm leading-[1.85] text-mist">
-                Your brand, founder, services, and locations — structured as a semantic network Google can verify. When entity signals are consistent across your website, schema, LinkedIn, and citations, Google becomes confident surfacing your brand for every relevant query — including queries that don't mention your name.
+                Your brand, founder, services, and locations — structured as a semantic network Google can verify. When entity signals are consistent across your website, schema, LinkedIn, and citations, Google becomes confident surfacing your brand for every relevant query — including queries that don&apos;t mention your name.
               </p>
               <div className="mt-6 space-y-2">
                 {["Person schema with @id anchors", "Organization @graph linking", "sameAs verification signals", "Knowledge Graph entity nodes"].map((t) => (
@@ -280,7 +280,7 @@ export default function SemanticSeoPage() {
         <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
           <div>
             <p className="text-base leading-[1.85] text-mist">
-              Google's AI Overviews surface content from pages with three things: high topical authority, clear entity signals, and Speakable schema pointing to the answer section. We build this infrastructure into every page we produce — so your content is structurally eligible for AI-generated answer features, not just traditional blue-link results.
+              Google&apos;s AI Overviews surface content from pages with three things: high topical authority, clear entity signals, and Speakable schema pointing to the answer section. We build this infrastructure into every page we produce — so your content is structurally eligible for AI-generated answer features, not just traditional blue-link results.
             </p>
             <p className="mt-5 text-base leading-[1.85] text-mist">
               The 40–55 word answer paragraph format is not a coincidence. It matches the length Google consistently lifts into AI Overviews. Every semantic SEO engagement Seovize delivers includes answer-formatted paragraphs targeting every key question in your topic cluster.
@@ -307,7 +307,7 @@ export default function SemanticSeoPage() {
               </div>
             </div>
             <p className="mt-4 text-xs text-slate-mid">
-              The answer above is formatted to match Google's AI Overview extraction pattern — 47 words, direct definition, entity-first structure, backed by Speakable schema.
+              The answer above is formatted to match Google&apos;s AI Overview extraction pattern — 47 words, direct definition, entity-first structure, backed by Speakable schema.
             </p>
           </div>
         </div>

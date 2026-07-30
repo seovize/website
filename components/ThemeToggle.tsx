@@ -7,6 +7,11 @@ export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
+  // This is next-themes' own documented hydration-guard pattern: the effect
+  // exists solely to detect "we're past hydration" so theme-dependent output
+  // doesn't mismatch server vs. client. There's no non-effect equivalent for
+  // that without over-engineering a one-line boolean flag on a small toggle.
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => setMounted(true), []);
 
   if (!mounted) return <div className="h-9 w-9" aria-hidden="true" />;

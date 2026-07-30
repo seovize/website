@@ -291,7 +291,7 @@ export default function TexasSocialMediaManagementPage() {
       {/* ── DELIVERABLES ──────────────────────────────────── */}
       <section className="bg-navy px-5 py-16 md:py-24">
         <div className="mx-auto max-w-7xl">
-          <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-mint">What's included</p>
+          <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-mint">What&apos;s included</p>
           <h2 className="mb-10 font-display text-3xl font-black leading-tight text-cloud md:mb-14 md:text-5xl">
             A complete done-for-you social system.
           </h2>
@@ -430,7 +430,7 @@ export default function TexasSocialMediaManagementPage() {
               founder-led.
             </p>
             <Link href="/about" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-mint hover:underline">
-              Read Abdul Ghani's full background →
+              Read Abdul Ghani&apos;s full background →
             </Link>
           </div>
         </div>

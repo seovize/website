@@ -323,6 +323,12 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+
+          <div className="mt-8 text-center">
+            <Link href="/our-process" className="text-sm font-semibold text-mint hover:underline">
+              See the full 5-stage engagement process →
+            </Link>
+          </div>
         </div>
       </section>
 
