@@ -1,5 +1,6 @@
 import { z } from "zod";
 import type { ContactFormData, ReportSignupData } from "@/lib/validation";
+import { ProviderNotConfiguredError, ProviderRequestError } from "@/lib/services/lead-log";
 
 /**
  * Lead persistence + segmentation via Brevo's contact database.
@@ -35,7 +36,7 @@ export function getBrevoEnv(): BrevoEnv {
   });
   if (!parsed.success) {
     const reason = parsed.error.issues.map((i) => i.message).join("; ");
-    throw new Error(`Brevo environment misconfigured: ${reason}`);
+    throw new ProviderNotConfiguredError("brevo", `Brevo environment misconfigured: ${reason}`);
   }
   return parsed.data;
 }
@@ -98,8 +99,9 @@ async function postContactToBrevo(payload: BrevoContactPayload, apiKey: string):
 
   // Brevo returns 204 on update-of-existing-contact, 201 on create.
   if (!res.ok) {
-    const body = await res.text().catch(() => "");
-    throw new Error(`Brevo contact upsert failed (${res.status}): ${body}`);
+    // Deliberately not including the response body — see the matching note
+    // in lib/services/contact.ts's postToResend for why.
+    throw new ProviderRequestError("brevo", res.status, `Brevo contact upsert failed (${res.status})`);
   }
 }
 
@@ -186,8 +188,7 @@ export async function getReportDownloadContacts(): Promise<NurtureContact[]> {
       { headers: { "api-key": env.BREVO_API_KEY, accept: "application/json" } },
     );
     if (!res.ok) {
-      const body = await res.text().catch(() => "");
-      throw new Error(`Brevo list-contacts fetch failed (${res.status}): ${body}`);
+      throw new ProviderRequestError("brevo", res.status, `Brevo list-contacts fetch failed (${res.status})`);
     }
     const data = (await res.json()) as {
       contacts: { email: string; attributes: Record<string, unknown> }[];
@@ -233,7 +234,6 @@ export async function advanceSequenceStep(email: string, step: number, today: st
     body: JSON.stringify({ attributes: { SEQUENCE_STEP: step, LAST_SENT_DATE: today } }),
   });
   if (!res.ok) {
-    const body = await res.text().catch(() => "");
-    throw new Error(`Brevo sequence-step update failed (${res.status}): ${body}`);
+    throw new ProviderRequestError("brevo", res.status, `Brevo sequence-step update failed (${res.status})`);
   }
 }

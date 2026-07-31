@@ -1,5 +1,6 @@
 import { z } from "zod";
 import type { ContactFormData } from "@/lib/validation";
+import { ProviderNotConfiguredError, ProviderRequestError } from "@/lib/services/lead-log";
 
 /**
  * Contact-submission delivery via Resend transactional email.
@@ -36,7 +37,7 @@ export function getEmailEnv(): EmailEnv {
   });
   if (!parsed.success) {
     const reason = parsed.error.issues.map((i) => i.message).join("; ");
-    throw new Error(`Email environment misconfigured: ${reason}`);
+    throw new ProviderNotConfiguredError("resend", `Email environment misconfigured: ${reason}`);
   }
   return parsed.data;
 }
@@ -155,8 +156,10 @@ async function postToResend(payload: ResendEmailPayload, apiKey: string): Promis
   });
 
   if (!res.ok) {
-    const body = await res.text().catch(() => "");
-    throw new Error(`Resend send failed (${res.status}): ${body}`);
+    // Deliberately not including the response body: Resend's error payloads
+    // can echo back parts of the request (e.g. the `to`/`from` address),
+    // and this error is caught and logged upstream — see lib/services/lead-log.ts.
+    throw new ProviderRequestError("resend", res.status, `Resend send failed (${res.status})`);
   }
 }
 
