@@ -12,7 +12,7 @@ import { faqSchema, howToSchema, serviceSchema, speakableSchema } from "@/lib/sc
 import { seoPackages, site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "SEO Services | Semantic SEO & Local SEO for Growth-Focused Brands | Seovize",
+  title: "SEO Services | Semantic SEO & Local SEO for Growth-Focused Brands",
   description:
     "Expert SEO services — semantic SEO, technical SEO, local SEO, schema markup, and content strategy by Abdul Ghani, 20+ years experience. Serving U.S. service businesses from $1,250/month.",
   alternates: { canonical: "/services/seo" },
@@ -149,6 +149,35 @@ export default function SeoServicesPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* ── TECHNICAL SEO, APPLIED TO OUR OWN SITE ────────── */}
+      <Section eyebrow="Technical SEO" title="We run seovize.com on the same technical standards.">
+        <div className="grid gap-6 md:grid-cols-2">
+          <p className="text-sm leading-8 text-mist md:text-base">
+            Technical SEO is easy to describe and hard to verify from a services page. This site is built with the
+            Next.js App Router, statically generated where the content allows it, and deployed on Vercel&apos;s edge
+            network — the same architecture we recommend for clients who need real page-speed and crawlability gains,
+            not a plugin bolted onto an existing WordPress build.
+          </p>
+          <div className="rounded-[2rem] border border-line bg-navy p-7">
+            <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.24em] text-mint">Checkable, not claimed</p>
+            <ul className="space-y-3 text-sm text-mist">
+              <li className="flex items-start gap-2.5">
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-mint" />
+                <span>Sitemap dates reflect real content-change history — <code className="text-cloud">seovize.com/sitemap.xml</code></span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-mint" />
+                <span>Legacy URLs use permanent (308) redirects to their current destination, not soft redirects or dead links</span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-mint" />
+                <span>Structured data validates against Google&apos;s Rich Results Test on every page type we ship</span>
+              </li>
+            </ul>
           </div>
         </div>
       </Section>

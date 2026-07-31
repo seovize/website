@@ -11,7 +11,7 @@ import {
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "SEO Services Dallas Texas | Top Dallas SEO Company | Seovize",
+  title: "SEO Services Dallas Texas | Top Dallas SEO Company",
   description:
     "Top Dallas SEO company delivering semantic SEO, local content, and service-area page systems for Dallas–Fort Worth businesses in corporate, real estate, and B2B sectors. Expert strategy by Abdul Ghani, 20+ years experience.",
   alternates: { canonical: "/locations/texas/dallas-seo" },
@@ -118,11 +118,13 @@ const data: CityPageData = {
   ],
   faqs,
   relatedPages: [
+    { label: "SEO Services", href: "/services/seo" },
     { label: "Dallas Social Media Management", href: "/locations/texas/dallas-social-media" },
     { label: "Texas SEO Services Hub", href: "/locations/texas/seo-services" },
     { label: "Houston SEO Services", href: "/locations/texas/houston-seo" },
     { label: "Austin SEO Services", href: "/locations/texas/austin-seo" },
     { label: "Semantic SEO Service", href: "/services/semantic-seo" },
+    { label: "Texas Digital Marketing Report 2026", href: "/research/texas-digital-marketing-report-2026" },
     { label: "Texas Hub", href: "/locations/texas" },
   ],
 };
