@@ -173,6 +173,7 @@ interface Props {
 export default async function TexasDigitalMarketingReportPage({ searchParams }: Props) {
   const params = await searchParams;
   const signupSent = params.report === "sent";
+  const signupFailed = params.report === "error";
 
   return (
     <>
@@ -226,7 +227,11 @@ export default async function TexasDigitalMarketingReportPage({ searchParams }: 
 
           {/* Signup — the report itself stays fully public; this is an opt-in for updates */}
           <div className="relative mt-8">
-            {signupSent ? <ReportSignupForm sent /> : <ReportSignupForm variant="banner" />}
+            {signupSent ? (
+              <ReportSignupForm sent />
+            ) : (
+              <ReportSignupForm variant="banner" failed={signupFailed} />
+            )}
           </div>
         </div>
       </section>

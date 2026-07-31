@@ -2,11 +2,18 @@ import { NextResponse } from "next/server";
 import { contactFormSchema } from "@/lib/validation";
 import { sendContactEmail, sendLeadConfirmation } from "@/lib/services/contact";
 import { upsertLeadContact } from "@/lib/services/brevo";
+import { classifyProviderError, logLeadOutcome, ProviderRequestError } from "@/lib/services/lead-log";
 
 function redirect(request: Request, query: string) {
   return NextResponse.redirect(new URL(`/contact?${query}`, request.url), { status: 303 });
 }
 
+// Source of truth for "success" on this route: the internal lead
+// notification email (Resend) reaching the inbox. That's the only step
+// that actually gets a human to see the lead, so it's what a success
+// message must be conditioned on. Brevo persistence and the optional
+// webhook are best-effort CRM/segmentation — useful, but their failure
+// must never turn a delivered lead into a shown error.
 export async function POST(request: Request) {
   const formData = await request.formData();
 
@@ -14,6 +21,7 @@ export async function POST(request: Request) {
   // (Named distinctly from the real "company" field so legitimate leads who
   // fill in their company name are never mistaken for bots.)
   if (String(formData.get("hp_field") || "").trim() !== "") {
+    logLeadOutcome("/api/contact", "spam_rejected");
     return redirect(request, "success=true");
   }
 
@@ -33,21 +41,26 @@ export async function POST(request: Request) {
   });
 
   if (!parsed.success) {
+    logLeadOutcome("/api/contact", "validation_failed");
     return redirect(request, "error=validation");
   }
 
   try {
     await sendContactEmail(parsed.data);
   } catch (err) {
-    console.error("[contact] email send failed:", err);
+    const outcome = classifyProviderError(err) === "not_configured" ? "email_not_configured" : "email_send_failed";
+    logLeadOutcome("/api/contact", outcome, {
+      provider: "resend",
+      status: err instanceof ProviderRequestError ? err.status : undefined,
+    });
     return redirect(request, "error=send");
   }
 
   // Confirmation auto-reply to the lead — best-effort, never blocks the lead.
   try {
     await sendLeadConfirmation(parsed.data);
-  } catch (err) {
-    console.error("[contact] confirmation auto-reply failed (non-blocking):", err);
+  } catch {
+    console.error("[contact] confirmation auto-reply failed (non-blocking)");
   }
 
   // Persist the lead into Brevo (system of record + nurture segmentation).
@@ -56,7 +69,8 @@ export async function POST(request: Request) {
   try {
     await upsertLeadContact(parsed.data);
   } catch (err) {
-    console.error("[contact] Brevo contact upsert failed (non-blocking):", err);
+    const outcome = classifyProviderError(err) === "not_configured" ? "crm_not_configured" : "crm_upsert_failed";
+    logLeadOutcome("/api/contact", outcome, { provider: "brevo" });
   }
 
   // Best-effort secondary delivery (e.g. CRM/Slack). Never blocks the lead.
@@ -68,10 +82,11 @@ export async function POST(request: Request) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...parsed.data, submittedAt: new Date().toISOString() }),
       });
-    } catch (err) {
-      console.error("[contact] webhook failed (non-blocking):", err);
+    } catch {
+      console.error("[contact] webhook failed (non-blocking)");
     }
   }
 
+  logLeadOutcome("/api/contact", "success");
   return redirect(request, "success=true");
 }
