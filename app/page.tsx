@@ -13,7 +13,7 @@ import { Section } from "@/components/Section";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { TrustStrip } from "@/components/TrustStrip";
 import { faqSchema, speakableSchema } from "@/lib/schema";
-import { caseStudies, founder, homepageFaqs, processSteps, seoPackages, services, site, texasData } from "@/lib/site";
+import { founder, homepageFaqs, processSteps, seoPackages, services, site, texasData } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Seovize | Semantic SEO & Social Media Systems — Texas & U.S.",
@@ -87,7 +87,7 @@ export default function HomePage() {
                   { v: "20+", l: "Years experience" },
                   { v: "6", l: "Service systems" },
                   { v: "4", l: "Texas markets" },
-                  { v: "AEO", l: "AI-optimized" },
+                  { v: "100%", l: "Founder-led" },
                 ].map((s) => (
                   <div key={s.l} className="pr-4 sm:pr-6">
                     <p className="font-mono text-2xl font-bold text-cloud md:text-3xl">{s.v}</p>
@@ -271,11 +271,11 @@ export default function HomePage() {
               <div className="mb-5 h-0.5 w-10 rounded-full bg-sky" />
               <h3 className="font-display text-xl font-black text-cloud">Schema architecture</h3>
               <p className="mt-3 text-sm leading-[1.75] text-mist">
-                FAQPage, Service, LocalBusiness, Person, and Article schema — every page speaks directly
-                to Google&rsquo;s semantic brain.
+                FAQPage, Service, Person, and Article schema — structured data that helps search
+                engines parse what your business is, does, and serves, correctly and consistently.
               </p>
               <div className="mt-6 space-y-3">
-                {["AEO ready", "GEO optimized", "LLM-cited content", "Position 0 targeting"].map((t) => (
+                {["Machine-readable facts", "Consistent entity data", "Rich-result eligible", "No ranking or citation guarantee"].map((t) => (
                   <div key={t} className="flex items-center gap-2.5 text-xs text-mist">
                     <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-sky/60" />
                     {t}
@@ -329,132 +329,6 @@ export default function HomePage() {
               See the full 5-stage engagement process →
             </Link>
           </div>
-        </div>
-      </section>
-
-      {/* ── PROOF ───────────────────────────────────────── */}
-      <section className="px-4 py-16 sm:px-5 md:py-24">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-10 md:mb-14">
-            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-mint">
-              Proof
-            </p>
-            <h2 className="font-display text-3xl font-black leading-tight tracking-tight text-cloud md:text-[3.5rem] md:leading-[1.05]">
-              Results you can verify.
-            </h2>
-            <p className="mt-3 max-w-xl text-base text-mist md:text-lg">
-              Not screenshots you have to trust.
-            </p>
-          </div>
-
-          <div data-reveal className="grid gap-4 md:grid-cols-3">
-            {caseStudies.map((study) => (
-              <article
-                key={study.title}
-                className="group flex flex-col overflow-hidden rounded-2xl border border-line bg-navy shadow-[0_1px_3px_rgba(0,0,0,0.05),0_8px_24px_rgba(0,0,0,0.04)] transition duration-200 hover:-translate-y-0.5 dark:shadow-none"
-              >
-                {/* Metric — mint intelligence accent, restrained scale */}
-                <div className="border-b border-line p-8">
-                  <span className="inline-block rounded-full border border-mint/20 bg-mint/[0.08] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-mint">
-                    {study.tag}
-                  </span>
-                  <p className="font-mono mt-4 text-[2.75rem] font-bold leading-none text-mint">
-                    {study.metric}
-                  </p>
-                </div>
-
-                <div className="flex flex-1 flex-col p-8">
-                  <h3 className="font-display text-xl font-black text-cloud">{study.title}</h3>
-                  <p className="mt-3 flex-1 text-sm leading-[1.75] text-mist">{study.text}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-
-          <div className="mt-8 text-center">
-            <Link href="/case-studies" className="text-sm font-semibold text-mint hover:underline">
-              View all case studies →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ── CLIENT REVIEWS ──────────────────────────────── */}
-      <section className="bg-navy px-4 py-16 sm:px-5 md:py-24">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-10 md:mb-14">
-            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-mint">
-              Client reviews
-            </p>
-            <h2 className="font-display text-3xl font-black leading-tight tracking-tight text-cloud md:text-[3.5rem] md:leading-[1.05]">
-              Real clients. Real results. Verified.
-            </h2>
-            <div className="mt-4 flex flex-wrap items-center gap-3">
-              <div className="flex gap-0.5">
-                {[1, 2, 3, 4, 5].map((i) => (
-                  <svg key={i} className="h-4 w-4 text-mint" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-              </div>
-              <p className="text-sm text-mist">
-                <span className="font-bold text-cloud">4.3 / 5</span> across{" "}
-                <span className="font-bold text-cloud">93</span> completed client projects
-              </p>
-            </div>
-          </div>
-
-          <div className="grid gap-4 md:grid-cols-3">
-            {[
-              {
-                quote: "Outstanding work — Highly Recommend! What stood out immediately was the strategic thinking. They approached the project with a forward-looking perspective that ensured the final result would serve my objectives both now and in the future. Communication was smooth, instructions were clear, and the entire process was very professional.",
-                name: "K. McIver",
-                location: "United States",
-                tag: "Social media management · Repeat client",
-              },
-              {
-                quote: "We are very pleased with the work done and are looking forward to the results. Professional, crisp, a pleasure to work with.",
-                name: "Aaron H.",
-                location: "Israel",
-                tag: "Social media management · Repeat client",
-              },
-              {
-                quote: "Awesome work and designs! I am so happy they delivered great posts and content for my social media. They understood my requests so clearly and were very patient to deliver the best quality. Thank you and looking forward to more projects.",
-                name: "Soha H.",
-                location: "United States",
-                tag: "Social media management · Repeat client",
-              },
-            ].map((r) => (
-              <div
-                key={r.name}
-                className="flex flex-col rounded-[2rem] border border-line bg-obsidian p-8"
-              >
-                <div className="mb-5 flex gap-0.5">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <svg key={i} className="h-3.5 w-3.5 text-mint" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                <p className="flex-1 text-sm leading-[1.8] text-mist">
-                  &ldquo;{r.quote}&rdquo;
-                </p>
-                <div className="mt-6 flex items-center gap-3 border-t border-line pt-5">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-mint/10 font-mono text-sm font-bold text-mint">
-                    {r.name.charAt(0)}
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-cloud">{r.name}</p>
-                    <p className="text-[10px] text-slate-mid">{r.tag} · {r.location}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <p className="mt-6 text-center text-[10px] text-slate-mid">
-            Verified client reviews for social media management engagements
-          </p>
         </div>
       </section>
 

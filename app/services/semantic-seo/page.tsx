@@ -14,30 +14,30 @@ import { founder, seoPackages, site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Semantic SEO Services | Entity Authority & Topical Architecture | Seovize",
   description:
-    "Semantic SEO that builds topical authority, entity recognition, and AI Overview eligibility for service-led and expert-driven brands. Entity maps, topic clusters, schema architecture, and featured snippet optimization — founder-led by Abdul Ghani. From $2,200/mo.",
+    "Semantic SEO that builds topical authority and entity recognition for service-led and expert-driven brands. Entity maps, topic clusters, schema architecture, and featured snippet formatting — founder-led by Abdul Ghani. From $2,200/mo.",
   alternates: { canonical: "/services/semantic-seo" },
 };
 
 const faqs = [
   {
     q: "What is semantic SEO and how is it different from traditional keyword SEO?",
-    a: "Semantic SEO optimizes your entire content ecosystem around topics, entities, and relationships — not individual keywords. Traditional keyword SEO ranks one page for one phrase. Semantic SEO builds topical authority so your site ranks for every question in a subject area, gets cited in AI Overviews, and compounds its organic footprint over time as entity recognition grows.",
+    a: "Semantic SEO optimizes your entire content ecosystem around topics, entities, and relationships — not individual keywords. Traditional keyword SEO ranks one page for one phrase. Semantic SEO builds topical authority so your site can rank for a broader range of questions in a subject area and compounds its organic footprint over time as entity recognition grows. It improves your odds of AI Overview citation by giving Google clearer, more structured content to draw from — it does not guarantee citation, which Google generates algorithmically and no vendor controls.",
   },
   {
     q: "How long does semantic SEO take to produce results?",
-    a: "Entity signals and featured snippet appearances typically come within 30–60 days for new content on established domains. Meaningful topical authority — ranking for dozens of related queries — builds over 4–6 months. The significant compounding effects (expanded keyword footprint, AI Overview citations, branded search growth) emerge between months 6 and 12.",
+    a: "Entity signals and featured snippet appearances typically come within 30–60 days for new content on established domains. Meaningful topical authority — ranking for dozens of related queries — builds over 4–6 months. Compounding effects like expanded keyword footprint and branded search growth typically emerge between months 6 and 12; AI Overview citation may follow but isn't a scheduled or guaranteed outcome.",
   },
   {
     q: "Do I need semantic SEO if I already rank well for my main keywords?",
-    a: "Especially then. If you already hold page-one positions, semantic SEO expands that advantage: capturing intent variations, PAA boxes, AI Overview mentions, and branded queries you don't currently own. Semantic SEO converts a page-one position into a category-defining presence that competitors cannot easily displace.",
+    a: "Often, yes. If you already hold page-one positions, semantic SEO expands that advantage: targeting intent variations, PAA boxes, and branded queries you don't currently own. It converts a page-one position into a broader topical presence that's harder for competitors to displace with keyword-only pages.",
   },
   {
     q: "What is entity SEO and why does it matter in 2026?",
-    a: "Entity SEO establishes your brand, founder, and services as distinct, verifiable entries in Google's Knowledge Graph. In 2026, entity recognition directly influences AI Overview citations, Knowledge Panel appearance, and how broadly Google surfaces your content for related queries — including queries that never mention your brand by name.",
+    a: "Entity SEO establishes your brand, founder, and services as distinct, verifiable entries in Google's Knowledge Graph. Google has stated that entity recognition is one signal among many it uses to understand and surface content — including for AI Overviews and Knowledge Panels — but it is not a direct or guaranteed lever for citation or ranking.",
   },
   {
     q: "How does semantic SEO work with Google AI Overviews and AEO?",
-    a: "Google's AI Overviews pull direct answers from pages with clear entity signals, Speakable schema, and high topical authority. AEO (Answer Engine Optimization) is the practice of formatting content for these answer surfaces — 40–55 word answer paragraphs structured to match the format Google lifts into AI Overviews and voice search responses.",
+    a: "AI Overviews draw from pages that demonstrate clear entity signals and topical authority; Speakable schema and well-structured answer paragraphs make a page easier for Google to parse and quote, but neither guarantees inclusion. AEO (Answer Engine Optimization) is the practice of formatting content — often as 40–55 word direct answers — to match what Google's documentation says performs well in these answer surfaces.",
   },
   {
     q: "Who benefits most from semantic SEO services?",
@@ -60,11 +60,11 @@ const howToSteps = [
   },
   {
     name: "Featured Snippet Production",
-    text: "Write 40–55 word answer paragraphs targeting every key question in your cluster. These structured answers are the specific content format Google lifts into AI Overviews and People Also Ask boxes.",
+    text: "Write 40–55 word answer paragraphs targeting every key question in your cluster — the length and format Google's documentation associates with featured snippets and People Also Ask boxes, improving eligibility without guaranteeing placement.",
   },
   {
     name: "Schema Deployment",
-    text: "Implement Service, FAQPage, HowTo, Person, Organization, Speakable, and BreadcrumbList schema across every page — the machine-readable layer that makes your content eligible for rich results and AI citations.",
+    text: "Implement Service, FAQPage, HowTo, Person, Organization, Speakable, and BreadcrumbList schema across every page — the machine-readable layer that makes your content easier for Google to parse correctly. Schema does not guarantee rich results or AI citation.",
   },
   {
     name: "Authority Compounding",
@@ -100,7 +100,7 @@ export default function SemanticSeoPage() {
       <JsonLd
         data={howToSchema({
           name: "How Seovize Implements Semantic SEO",
-          description: "A 6-step semantic SEO process that builds entity authority, topical clusters, and AI Overview eligibility for service businesses.",
+          description: "A 6-step semantic SEO process that builds entity authority and topical clusters for service businesses.",
           steps: howToSteps,
         })}
       />
@@ -139,7 +139,7 @@ export default function SemanticSeoPage() {
               What is semantic SEO?
             </p>
             <p className="text-base leading-[1.85] text-cloud">
-              Semantic SEO is the practice of building content around topics, entities, and relationships — not individual keywords. It establishes your brand and founder as verified Knowledge Graph entities, builds topical authority through interconnected content clusters, and structures every page for AI Overview eligibility — producing compounding organic authority that individual keyword optimization cannot achieve.
+              Semantic SEO is the practice of building content around topics, entities, and relationships — not individual keywords. It establishes your brand and founder as verified Knowledge Graph entities and builds topical authority through interconnected content clusters — a structurally different approach to compounding organic authority than individual keyword optimization, though outcomes still depend on your market and competition.
             </p>
           </div>
 
@@ -152,7 +152,7 @@ export default function SemanticSeoPage() {
             {[
               { v: "20+", l: "Years SEO expertise" },
               { v: "Entity-first", l: "Architecture approach" },
-              { v: "AEO ready", l: "AI Overview eligible" },
+              { v: "AEO formatted", l: "Answer-engine ready" },
               { v: "@graph", l: "Schema implementation" },
             ].map((s) => (
               <div key={s.l} className="pr-6">
@@ -174,7 +174,7 @@ export default function SemanticSeoPage() {
               {[
                 "Optimizes isolated pages for isolated keywords",
                 "Success metric: single keyword ranking position",
-                "Invisible to AI Overviews and voice search",
+                "Not structured for answer-format surfaces",
                 "Rankings erode with each algorithm update",
                 "Content exists as a collection of unrelated pages",
               ].map((item) => (
@@ -193,7 +193,7 @@ export default function SemanticSeoPage() {
               {[
                 "Optimizes the entire content ecosystem around topics and entities",
                 "Success metric: topical authority and question coverage",
-                "Structured for AI Overview citations and voice answers",
+                "Structured for answer-format eligibility, not guaranteed citation",
                 "Entity-based authority is algorithm-resistant by design",
                 "Pages interconnect as a semantic knowledge graph",
               ].map((item) => (
@@ -263,7 +263,7 @@ export default function SemanticSeoPage() {
                 Machine-readable structured data that tells Google exactly what type of content is on each page, who created it, and how it relates to everything else. The infrastructure layer that makes your content eligible for rich results, AI Overview citations, and voice answer surfaces.
               </p>
               <div className="mt-6 space-y-2">
-                {["Service, FAQPage, HowTo markup", "Speakable schema for AI answers", "Article + Person + Organization", "Rich results eligibility on every page"].map((t) => (
+                {["Service, FAQPage, Speakable markup", "Article + Person + Organization", "Consistent entity data across pages", "No ranking or citation guarantee"].map((t) => (
                   <div key={t} className="flex items-center gap-2.5 text-xs text-mist">
                     <span className="h-1 w-1 shrink-0 rounded-full bg-sky/70" />
                     {t}
@@ -276,17 +276,17 @@ export default function SemanticSeoPage() {
       </section>
 
       {/* ── FEATURED SNIPPET EXAMPLE ─────────────────────── */}
-      <Section eyebrow="AI Overview eligibility" title="What answer-layer content looks like.">
+      <Section eyebrow="Answer-format content" title="What answer-layer content looks like.">
         <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
           <div>
             <p className="text-base leading-[1.85] text-mist">
-              Google&apos;s AI Overviews surface content from pages with three things: high topical authority, clear entity signals, and Speakable schema pointing to the answer section. We build this infrastructure into every page we produce — so your content is structurally eligible for AI-generated answer features, not just traditional blue-link results.
+              Pages with high topical authority, clear entity signals, and Speakable schema marking the answer section are better <em>candidates</em> for AI Overviews and featured snippets — not guaranteed inclusions. We build this infrastructure into every page we produce, giving your content the best structural shot at answer-format placement alongside traditional results.
             </p>
             <p className="mt-5 text-base leading-[1.85] text-mist">
-              The 40–55 word answer paragraph format is not a coincidence. It matches the length Google consistently lifts into AI Overviews. Every semantic SEO engagement Seovize delivers includes answer-formatted paragraphs targeting every key question in your topic cluster.
+              The 40–55 word answer paragraph format follows the length Google&apos;s own documentation associates with snippet and AI Overview extraction. Every semantic SEO engagement Seovize delivers includes answer-formatted paragraphs targeting every key question in your topic cluster — as a candidacy strategy, not a promised result.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              {["Speakable schema", "40–55 word answers", "FAQPage markup", "HowTo schema", "Entity signals"].map((tag) => (
+              {["Speakable schema", "40–55 word answers", "FAQPage markup", "Entity signals"].map((tag) => (
                 <span key={tag} className="rounded-full border border-mint/20 bg-mint/[0.08] px-3 py-1.5 text-[10px] font-semibold text-mint">
                   {tag}
                 </span>
@@ -295,7 +295,7 @@ export default function SemanticSeoPage() {
           </div>
 
           <div className="rounded-[2rem] border border-line bg-navy p-8">
-            <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.22em] text-mint">AI Overview — example format</p>
+            <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.22em] text-mint">Answer-format example</p>
             <div className="rounded-xl border border-mint/15 bg-obsidian p-5">
               <p className="mb-3 text-[11px] font-semibold text-slate-mid">What is semantic SEO?</p>
               <p className="text-sm leading-7 text-cloud">
@@ -303,11 +303,11 @@ export default function SemanticSeoPage() {
               </p>
               <div className="mt-4 flex items-center gap-2">
                 <div className="h-3 w-3 rounded-full bg-mint" />
-                <span className="text-[10px] text-slate-mid">seovize.com — Speakable schema detected</span>
+                <span className="text-[10px] text-slate-mid">seovize.com — Speakable schema present</span>
               </div>
             </div>
             <p className="mt-4 text-xs text-slate-mid">
-              The answer above is formatted to match Google&apos;s AI Overview extraction pattern — 47 words, direct definition, entity-first structure, backed by Speakable schema.
+              The answer above is formatted to the length and structure Google&apos;s documentation describes for snippet and AI Overview extraction — 47 words, direct definition, entity-first structure, Speakable-marked.
             </p>
           </div>
         </div>

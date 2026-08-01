@@ -46,7 +46,7 @@ export default function TexasHubPage() {
             <Link href="/about" className="font-semibold text-cloud underline decoration-mint/40 hover:decoration-mint">
               {founder.name}
             </Link>
-            {" "}— top local SEO expert and social media strategist with {founder.experience} years of digital marketing experience.
+            {" "}— an SEO and social media strategist with {founder.experience} years of digital marketing experience.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link href="/contact" className="inline-flex items-center rounded-full bg-orange px-7 py-3.5 text-sm font-bold text-white shadow-sm transition hover:bg-orange/90">

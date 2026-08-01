@@ -105,7 +105,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/locations/texas/san-antonio-social-media",
   ];
   const medPriority = [
-    "/case-studies",
     "/blog",
     "/industries",
     ...industries.map((i) => i.href),

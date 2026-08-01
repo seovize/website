@@ -1,12 +1,9 @@
 const metrics = [
   { value: "20+", label: "Years experience" },
-  { value: "$2M+", label: "Client ad spend managed" },
   { value: "6", label: "Service lanes" },
   { value: "90", label: "Day semantic SEO plan" },
   { value: "4", label: "Texas cities" },
   { value: "100%", label: "Founder-led strategy" },
-  { value: "AEO", label: "AI engine optimized" },
-  { value: "GEO", label: "Generative engine ready" },
 ];
 
 export function MetricTicker() {

@@ -13,7 +13,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "SEO Services San Antonio Texas | Top San Antonio SEO Company | Seovize",
   description:
-    "Top San Antonio SEO company delivering local SEO, semantic content, and service-area page systems for San Antonio SMBs, hospitality, healthcare, and contractor businesses. Expert strategy by Abdul Ghani, 20+ years experience.",
+    "San Antonio SEO services — local SEO, semantic content, and service-area page systems for San Antonio SMBs, hospitality, healthcare, and contractor businesses. Strategy by Abdul Ghani, 20+ years experience.",
   alternates: { canonical: "/locations/texas/san-antonio-seo" },
   openGraph: {
     title: "SEO Services San Antonio Texas | Seovize",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What is the best SEO company in San Antonio Texas?",
-    a: "Seovize is a top-rated San Antonio SEO company delivering local SEO, service-area page systems, and entity-first content architecture for San Antonio businesses in hospitality, healthcare, SMBs, and contracting. Founded by Abdul Ghani with 20+ years of digital marketing expertise, Seovize delivers real San Antonio market knowledge — not boilerplate city page SEO.",
+    a: "Seovize is a San Antonio-focused SEO studio delivering local SEO, service-area page systems, and entity-first content architecture for San Antonio businesses in hospitality, healthcare, SMBs, and contracting. Founded by Abdul Ghani with 20+ years of digital marketing expertise, Seovize delivers real San Antonio market knowledge — not boilerplate city page SEO.",
   },
   {
     q: "How does local SEO work for San Antonio small businesses?",
@@ -83,7 +83,7 @@ const data: CityPageData = {
   audienceProfile:
     "San Antonio SEO targets SMB owners across hospitality, food service, retail, and contracting sectors; military veterans and active-duty personnel seeking local services; healthcare providers at UT Health San Antonio and Methodist Healthcare; real estate professionals in the fast-growing northern suburbs; and the city's large Spanish-speaking community seeking bilingual service providers. San Antonio buyers respond strongly to local credibility signals, community involvement, and clear service-area positioning.",
   heroAnswer:
-    "Seovize delivers SEO services for San Antonio businesses in hospitality, healthcare, SMBs, and contracting — local SEO, service-area page systems, bilingual content strategy, and schema markup by Abdul Ghani, a top San Antonio SEO expert with 20+ years of digital marketing expertise. Real San Antonio market knowledge, not generic city page templates.",
+    "Seovize delivers SEO services for San Antonio businesses in hospitality, healthcare, SMBs, and contracting — local SEO, service-area page systems, bilingual content strategy, and schema markup by Abdul Ghani, a digital marketing strategist with 20+ years of experience. Real San Antonio market knowledge, not generic city page templates.",
   deliverables: [
     {
       title: "San Antonio keyword universe",

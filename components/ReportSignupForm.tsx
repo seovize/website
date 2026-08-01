@@ -1,8 +1,11 @@
 import { LeadSourceFields } from "@/components/LeadSourceFields";
+import { site } from "@/lib/site";
 
 type ReportSignupFormProps = {
   variant?: "inline" | "banner";
   sent?: boolean;
+  /** True when a previous submission failed to save (e.g. CRM unavailable). Shows an inline error instead of silently claiming success. */
+  failed?: boolean;
 };
 
 /**
@@ -11,7 +14,7 @@ type ReportSignupFormProps = {
  * see project notes on why this isn't a hard content gate). This form exists
  * purely to capture an opt-in lead alongside the already-public content.
  */
-export function ReportSignupForm({ variant = "inline", sent = false }: ReportSignupFormProps) {
+export function ReportSignupForm({ variant = "inline", sent = false, failed = false }: ReportSignupFormProps) {
   if (sent) {
     return (
       <div className="rounded-[2rem] border border-mint/30 bg-mint/[0.06] p-8 text-center">
@@ -44,11 +47,22 @@ export function ReportSignupForm({ variant = "inline", sent = false }: ReportSig
       </div>
       <LeadSourceFields />
 
+      {failed && (
+        <div className="mb-4 rounded-xl border border-orange/40 bg-orange/[0.08] px-4 py-3 text-sm text-cloud">
+          Something went wrong saving your request. Please try again, or email us directly at{" "}
+          <a href={`mailto:${site.email}`} className="font-semibold text-mint hover:underline">
+            {site.email}
+          </a>
+          .
+        </div>
+      )}
+
       {!isBanner && (
         <>
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-sky">Stay updated</p>
           <p className="mt-2 text-sm leading-6 text-mist">
-            Get notified when the 2027 edition publishes — no spam, just the data.
+            Get the report link by email, plus occasional follow-up emails with related Texas SEO and social media
+            insights. Unsubscribe anytime.
           </p>
         </>
       )}

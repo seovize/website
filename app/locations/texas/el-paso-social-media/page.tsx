@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What is the best social media management company in El Paso TX?",
-    a: "Seovize is a top-rated social media management studio serving El Paso businesses with bilingual English/Spanish content strategy. Founded by Abdul Ghani with 20+ years of digital marketing expertise, Seovize delivers premium social media management — culturally informed content, post design, captions in English and Spanish, scheduling, and monthly analytics — for El Paso businesses targeting the Sun City's bicultural audience.",
+    a: "Seovize is an El Paso-focused social media management studio serving businesses with bilingual English/Spanish content strategy. Founded by Abdul Ghani with 20+ years of digital marketing expertise, Seovize delivers social media management — culturally informed content, post design, captions in English and Spanish, scheduling, and monthly analytics — for El Paso businesses targeting the Sun City's bicultural audience.",
   },
   {
     q: "Do you offer bilingual social media management for El Paso businesses?",

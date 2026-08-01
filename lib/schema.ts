@@ -276,7 +276,7 @@ export function cityServiceSchema(opts: {
 }) {
   return {
     "@context": "https://schema.org",
-    "@type": ["ProfessionalService", "LocalBusiness"],
+    "@type": "ProfessionalService",
     name: `Seovize — ${opts.serviceType} in ${opts.city}, Texas`,
     description: opts.description,
     url: opts.url,
