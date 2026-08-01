@@ -5,7 +5,7 @@ import { CTABanner } from "@/components/CTABanner";
 import { Section } from "@/components/Section";
 
 export const metadata: Metadata = {
-  title: "Guides | Seovize",
+  title: "Guides",
   description: "Practical, evidence-based guides on social media management pricing, hiring decisions, and organic vs paid strategy for service businesses.",
   alternates: { canonical: "/guides" },
 };
