@@ -5,15 +5,14 @@ import {
   breadcrumbSchema,
   cityServiceSchema,
   faqSchema,
-  howToSchema,
   speakableSchema,
 } from "@/lib/schema";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "SEO Services Dallas Texas | Top Dallas SEO Company",
+  title: "SEO Services Dallas Texas | Seovize",
   description:
-    "Top Dallas SEO company delivering semantic SEO, local content, and service-area page systems for Dallas–Fort Worth businesses in corporate, real estate, and B2B sectors. Expert strategy by Abdul Ghani, 20+ years experience.",
+    "Dallas SEO services — semantic SEO, local content, and service-area page systems for Dallas–Fort Worth businesses in corporate, real estate, and B2B sectors. Strategy by Abdul Ghani, 20+ years experience.",
   alternates: { canonical: "/locations/texas/dallas-seo" },
   openGraph: {
     title: "SEO Services Dallas Texas | Seovize",
@@ -26,7 +25,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What is the best SEO company in Dallas Texas?",
-    a: "Seovize is a top-rated Dallas SEO company delivering semantic SEO, service-area page systems, and entity-first content architecture for DFW businesses. Founded by Abdul Ghani with 20+ years of digital marketing expertise, Seovize specializes in Dallas corporate, real estate, B2B, and professional services SEO — delivered remotely with real Dallas market knowledge.",
+    a: "Seovize is a Dallas-focused SEO studio delivering semantic SEO, service-area page systems, and entity-first content architecture for DFW businesses. Founded by Abdul Ghani with 20+ years of digital marketing expertise, Seovize specializes in Dallas corporate, real estate, B2B, and professional services SEO — delivered remotely with real Dallas market knowledge.",
   },
   {
     q: "How competitive is SEO in Dallas Texas?",
@@ -34,11 +33,11 @@ const faqs = [
   },
   {
     q: "How does local SEO work for a Dallas service-area business?",
-    a: "Dallas service-area SEO combines dedicated landing pages for DFW neighborhoods (Plano, Frisco, McKinney, Irving, Arlington), LocalBusiness schema with Dallas/Fort Worth areaServed markup, local citation building across DFW directories, and semantic content targeting Dallas buyer intent — all without requiring a physical office in every service area.",
+    a: "Dallas service-area SEO combines content scoped to the specific DFW neighborhoods and suburbs relevant to your business, ProfessionalService schema with Dallas/Fort Worth areaServed markup (no fake street address), local citation building across DFW directories, and semantic content targeting Dallas buyer intent — all without requiring a physical office in every service area. The specific suburbs covered depend on where your business actually operates.",
   },
   {
     q: "Can a Dallas real estate business rank locally with SEO?",
-    a: "Yes. Dallas real estate is one of the highest-value local SEO opportunities in Texas. Seovize builds service-area pages targeting Dallas neighborhoods, suburban markets (Plano, Frisco, Allen), and property types. Combined with entity-first content and real estate schema, this creates a sustainable organic presence that outperforms paid search over time.",
+    a: "Local SEO is a real, well-established channel for Dallas real estate — dedicated service-area content and entity-first structure both help. We don't promise a specific ranking outcome or timeline; results depend on your market, competition, and how many neighborhoods you're realistically targeting.",
   },
   {
     q: "How long does SEO take to work in Dallas?",
@@ -60,12 +59,12 @@ const processSteps = [
     text: "Build semantic content tying your brand, services, founder expertise, and Dallas market context into a structured knowledge graph. Include Dallas-specific entities (DFW Metroplex, Uptown, Deep Ellum, Las Colinas), NLP co-occurrence terms, and Dallas buyer intent signals.",
   },
   {
-    name: "DFW LocalBusiness schema deployment",
-    text: "Deploy ProfessionalService schema with Dallas and Fort Worth areaServed City markup. Layer Service, FAQPage, HowTo, Speakable, and BreadcrumbList schema across all Dallas pages. Validate against Google Rich Results Test and Search Console.",
+    name: "DFW schema deployment",
+    text: "Deploy ProfessionalService schema with Dallas and Fort Worth areaServed City markup (no fake street address). Layer Service, FAQPage, Speakable, and BreadcrumbList schema across all Dallas pages. Validate against Google's Rich Results Test and Search Console — schema improves how Google parses the page, it doesn't guarantee rich-result display.",
   },
   {
-    name: "DFW neighborhood landing page system",
-    text: "Build dedicated pages for key DFW markets: Dallas, Plano, Frisco, McKinney, Irving, Arlington, Fort Worth. Each page has unique market context — not boilerplate copy — targeting the distinct buyer profile for each DFW suburb.",
+    name: "Service-area content scoped to where you operate",
+    text: "Build dedicated content for the specific DFW markets you actually serve — not a blanket page for every suburb regardless of relevance. Each page reflects real market context for that area, not boilerplate copy.",
   },
   {
     name: "Monthly Dallas rank tracking and reporting",
@@ -79,27 +78,27 @@ const data: CityPageData = {
   slug: "dallas-seo",
   market: "Corporate, real estate & DFW B2B hub",
   marketDetail:
-    "Dallas–Fort Worth is one of the most economically dynamic markets in the United States — home to 24 Fortune 500 companies, the fastest-growing real estate market in Texas, and a massive B2B professional services ecosystem. SEO in Dallas is intensely competitive: corporate buyers conduct extensive vendor research, real estate consumers compare dozens of listings and agents, and B2B decision-makers evaluate multiple service providers before contacting any vendor.",
+    "Dallas–Fort Worth is one of the largest metro economies in the United States, with a significant concentration of corporate headquarters, a large real estate sector, and a dense B2B professional services ecosystem. SEO in Dallas is intensely competitive: corporate buyers conduct extensive vendor research, real estate consumers compare dozens of listings and agents, and B2B decision-makers evaluate multiple service providers before contacting any vendor.",
   audienceProfile:
     "Dallas SEO targets corporate marketing teams at DFW Fortune 500 companies, real estate agents and brokers in the Metroplex, B2B professional services buyers, law firm decision-makers, healthcare marketing teams, and the DFW SMB community across Plano, Frisco, McKinney, Allen, and the suburbs. Dallas buyers are research-intensive and respond to E-E-A-T signals, case studies, and expert authority content.",
   heroAnswer:
-    "Seovize delivers SEO services for Dallas businesses in corporate, real estate, B2B, and professional services — semantic content architecture, DFW service-area page systems, entity-first optimization, and schema markup by Abdul Ghani, a top Dallas SEO expert with 20+ years of digital marketing expertise. Remote delivery, real DFW market knowledge.",
+    "Seovize delivers SEO services for Dallas businesses in corporate, real estate, B2B, and professional services — semantic content architecture, DFW service-area page systems, entity-first optimization, and schema markup by Abdul Ghani, a digital marketing strategist with 20+ years of experience. Remote delivery, real DFW market knowledge.",
   deliverables: [
     {
       title: "DFW keyword universe",
       desc: "Comprehensive keyword map covering Dallas corporate, real estate, B2B, legal, and professional services terms — segmented by DFW service area, buyer intent, and competitive difficulty.",
     },
     {
-      title: "DFW service-area page system",
-      desc: "Individual landing pages for Dallas, Plano, Frisco, McKinney, Irving, Arlington, Fort Worth — each with unique content and LocalBusiness schema targeting the specific market area.",
+      title: "DFW service-area content",
+      desc: "Dedicated content for the DFW markets relevant to your business, each with unique copy and ProfessionalService schema (serviceArea only — no fake address) targeting the specific market area.",
     },
     {
       title: "Entity-first content architecture",
       desc: "Content that connects your brand, services, and Dallas market context into a knowledge graph. Every page covers the full semantic topic space — not just target keywords.",
     },
     {
-      title: "Dallas LocalBusiness schema",
-      desc: "ProfessionalService schema with Dallas/DFW areaServed markup, plus FAQPage, HowTo, Service, and BreadcrumbList schema across all Dallas pages.",
+      title: "Dallas structured data",
+      desc: "ProfessionalService schema with Dallas/DFW areaServed markup, plus FAQPage, Service, and BreadcrumbList schema across all Dallas pages — no LocalBusiness address data, since Seovize has no physical Dallas office.",
     },
     {
       title: "DFW citation building",
@@ -113,7 +112,7 @@ const data: CityPageData = {
   processSteps,
   stats: [
     { stat: "20+", label: "Years SEO expertise", note: "Applied to Dallas–Fort Worth market strategy" },
-    { stat: "DFW", label: "Service-area coverage", note: "Dallas, Fort Worth, and all Metroplex suburbs" },
+    { stat: "DFW", label: "Service-area coverage", note: "Dallas–Fort Worth Metroplex, remote delivery" },
     { stat: "100%", label: "Founder-led strategy", note: "No junior account managers" },
   ],
   faqs,
@@ -141,13 +140,6 @@ export default function DallasSeoPage() {
         })}
       />
       <JsonLd data={faqSchema(faqs)} />
-      <JsonLd
-        data={howToSchema({
-          name: "How to get SEO results for a Dallas Texas business",
-          description: "A structured process for ranking Dallas businesses in organic search.",
-          steps: processSteps,
-        })}
-      />
       <JsonLd data={speakableSchema(`${site.domain}/locations/texas/dallas-seo`)} />
       <JsonLd
         data={breadcrumbSchema([

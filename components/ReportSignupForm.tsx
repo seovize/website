@@ -61,7 +61,8 @@ export function ReportSignupForm({ variant = "inline", sent = false, failed = fa
         <>
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-sky">Stay updated</p>
           <p className="mt-2 text-sm leading-6 text-mist">
-            Get notified when the 2027 edition publishes — no spam, just the data.
+            Get the report link by email, plus occasional follow-up emails with related Texas SEO and social media
+            insights. Unsubscribe anytime.
           </p>
         </>
       )}

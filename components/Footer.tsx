@@ -5,7 +5,6 @@ const footerServices = services.slice(0, 5);
 
 const footerLinks = [
   { label: "About", href: "/about" },
-  { label: "Case Studies", href: "/case-studies" },
   { label: "Pricing", href: "/pricing" },
   { label: "Blog", href: "/blog" },
   { label: "Texas Report 2026", href: "/research/texas-digital-marketing-report-2026" },

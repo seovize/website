@@ -13,7 +13,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Social Media Management Austin TX | Austin Social Media Agency | Seovize",
   description:
-    "Premium social media management for Austin tech, SaaS, startup, and creative brands. LinkedIn authority content, Instagram storytelling, reels, SEO captions, and analytics by Abdul Ghani — top Austin social media manager with 20+ years experience.",
+    "Social media management for Austin tech, SaaS, startup, and creative brands. LinkedIn authority content, Instagram storytelling, reels, SEO captions, and analytics by Abdul Ghani, 20+ years experience.",
   alternates: { canonical: "/locations/texas/austin-social-media" },
   openGraph: {
     title: "Social Media Management Austin TX | Seovize",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What is the best social media management company in Austin TX?",
-    a: "Seovize is a top-rated social media management studio serving Austin tech, SaaS, startup, and creative economy brands. Founded by Abdul Ghani with 20+ years of digital marketing expertise, Seovize delivers premium Austin social media management — LinkedIn authority content, Instagram storytelling, reels, SEO-optimized captions, scheduling, and monthly analytics — for growth-focused Austin brands.",
+    a: "Seovize is an Austin-focused social media management studio serving tech, SaaS, startup, and creative economy brands. Founded by Abdul Ghani with 20+ years of digital marketing expertise, Seovize delivers Austin social media management — LinkedIn authority content, Instagram storytelling, reels, SEO-optimized captions, scheduling, and monthly analytics — for growth-focused Austin brands.",
   },
   {
     q: "Which social media platforms work best for Austin tech and SaaS companies?",
@@ -83,7 +83,7 @@ const data: CityPageData = {
   audienceProfile:
     "Austin social media audiences include SaaS buyers and product decision-makers, startup founders and their teams, developer and engineering communities, creative professionals and agency buyers, Austin tech investors and advisors, University of Texas students and alumni, and Austin's large young professional consumer community. Each segment requires distinct content tone, platform selection, and publishing strategy.",
   heroAnswer:
-    "Seovize delivers social media management for Austin businesses in tech, SaaS, startups, and creative economy brands — LinkedIn authority content, Instagram storytelling, post design, reels, SEO-optimized captions, and monthly analytics by Abdul Ghani, a top Austin social media manager with 20+ years of digital marketing expertise.",
+    "Seovize delivers social media management for Austin businesses in tech, SaaS, startups, and creative economy brands — LinkedIn authority content, Instagram storytelling, post design, reels, SEO-optimized captions, and monthly analytics by Abdul Ghani, a digital marketing strategist with 20+ years of experience.",
   deliverables: [
     {
       title: "Austin startup content calendar",

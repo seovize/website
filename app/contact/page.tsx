@@ -87,9 +87,9 @@ export default async function ContactPage({ searchParams }: Props) {
               <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
                 {[
                   { v: "20+", l: "Years experience" },
-                  { v: "93", l: "Client projects" },
+                  { v: "100%", l: "Founder-led" },
                   { v: "< 1d", l: "Response time" },
-                  { v: "4.3★", l: "Avg client rating" },
+                  { v: "Free", l: "Initial audit" },
                 ].map((s) => (
                   <div key={s.l} className="rounded-2xl border border-line bg-navy px-4 py-4 text-center">
                     <p className="font-mono text-xl font-bold text-cloud">{s.v}</p>

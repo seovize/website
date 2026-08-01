@@ -13,7 +13,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "SEO Services Houston Texas | Top Houston SEO Company | Seovize",
   description:
-    "Top Houston SEO company delivering semantic SEO, local SEO, and service-area page systems for Houston businesses in energy, healthcare, and professional services. Expert strategy by Abdul Ghani, 20+ years experience.",
+    "Houston SEO services — semantic SEO, local SEO, and service-area page systems for Houston businesses in energy, healthcare, and professional services. Strategy by Abdul Ghani, 20+ years experience.",
   alternates: { canonical: "/locations/texas/houston-seo" },
   openGraph: {
     title: "SEO Services Houston Texas | Seovize",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What is the best SEO company in Houston Texas?",
-    a: "Seovize is a top-rated Houston SEO company delivering semantic SEO, local content, and service-area page systems for Houston businesses. Founded by Abdul Ghani with 20+ years of digital marketing expertise, Seovize specializes in entity-first content architecture and Houston-specific SEO for energy, healthcare, professional services, and SMB sectors.",
+    a: "Seovize is a Houston-focused SEO studio delivering semantic SEO, local content, and service-area page systems for Houston businesses. Founded by Abdul Ghani with 20+ years of digital marketing expertise, Seovize specializes in entity-first content architecture and Houston-specific SEO for energy, healthcare, professional services, and SMB sectors.",
   },
   {
     q: "How does local SEO work for Houston businesses?",
@@ -83,7 +83,7 @@ const data: CityPageData = {
   audienceProfile:
     "Houston SEO targets B2B decision-makers in the energy sector, healthcare administrators, medical practice managers, law firm marketing teams, real estate professionals, and professional services buyers. Houston buyers conduct deep research before engaging — long-form content, authoritative expertise signals, and structured data all drive higher trust and conversion rates than in consumer markets.",
   heroAnswer:
-    "Seovize delivers SEO services for Houston businesses in energy, healthcare, and professional services — semantic content architecture, service-area page systems, entity-first optimization, and schema markup by Abdul Ghani, a top Houston SEO expert with 20+ years of digital marketing expertise. Remote delivery, real Houston market knowledge.",
+    "Seovize delivers SEO services for Houston businesses in energy, healthcare, and professional services — semantic content architecture, service-area page systems, entity-first optimization, and schema markup by Abdul Ghani, a digital marketing strategist with 20+ years of experience. Remote delivery, real Houston market knowledge.",
   deliverables: [
     {
       title: "Houston keyword universe",

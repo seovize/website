@@ -13,7 +13,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "SEO Services Austin Texas | Top Austin SEO Company | Seovize",
   description:
-    "Top Austin SEO company delivering semantic SEO, content architecture, and service-area page systems for Austin tech, SaaS, and startup brands. Expert strategy by Abdul Ghani, 20+ years experience.",
+    "Austin SEO services — semantic SEO, content architecture, and service-area page systems for Austin tech, SaaS, and startup brands. Strategy by Abdul Ghani, 20+ years experience.",
   alternates: { canonical: "/locations/texas/austin-seo" },
   openGraph: {
     title: "SEO Services Austin Texas | Seovize",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What is the best SEO company in Austin Texas?",
-    a: "Seovize is a top-rated Austin SEO company delivering semantic SEO, entity-first content architecture, and service-area page systems for Austin tech, SaaS, startup, and creative economy brands. Founded by Abdul Ghani with 20+ years of digital marketing expertise, Seovize builds SEO systems that match Austin's research-first, skeptic-buyer culture — no keyword stuffing, real topical authority.",
+    a: "Seovize is an Austin-focused SEO studio delivering semantic SEO, entity-first content architecture, and service-area page systems for Austin tech, SaaS, startup, and creative economy brands. Founded by Abdul Ghani with 20+ years of digital marketing expertise, Seovize builds SEO systems that match Austin's research-first, skeptic-buyer culture — no keyword stuffing, real topical authority.",
   },
   {
     q: "How does SEO work for Austin tech and SaaS companies?",
@@ -83,7 +83,7 @@ const data: CityPageData = {
   audienceProfile:
     "Austin SEO targets SaaS founders and product marketing teams, tech startup growth leads, B2B buyers at Austin enterprise companies, creative agency decision-makers, real estate investors in the East Austin market, and University of Texas-adjacent education and nonprofit organizations. Austin buyers have higher content expectations than most markets — thin content and keyword stuffing are immediately dismissed.",
   heroAnswer:
-    "Seovize delivers SEO services for Austin businesses in tech, SaaS, startups, and creative economy brands — semantic content architecture, topical authority systems, entity-first optimization, and schema markup by Abdul Ghani, a top Austin SEO expert with 20+ years of digital marketing expertise. Built for Austin's research-first buyer culture.",
+    "Seovize delivers SEO services for Austin businesses in tech, SaaS, startups, and creative economy brands — semantic content architecture, topical authority systems, entity-first optimization, and schema markup by Abdul Ghani, a digital marketing strategist with 20+ years of experience. Built for Austin's research-first buyer culture.",
   deliverables: [
     {
       title: "Austin topical authority map",

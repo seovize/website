@@ -2,7 +2,9 @@ import { NextResponse } from "next/server";
 import { reportSignupSchema } from "@/lib/validation";
 import { upsertReportSignup } from "@/lib/services/brevo";
 import { sendReportSignupConfirmation } from "@/lib/services/report-signup";
-import { classifyProviderError, logLeadOutcome } from "@/lib/services/lead-log";
+import { classifyProviderError, logLeadOutcome, logProviderOutcome, withProviderTimeout } from "@/lib/services/lead-log";
+
+const PROVIDER_TIMEOUT_MS = 8000;
 
 function redirect(request: Request, query: string) {
   const referer = request.headers.get("referer");
@@ -44,21 +46,28 @@ export async function POST(request: Request) {
   }
 
   try {
-    await upsertReportSignup(parsed.data);
+    await withProviderTimeout("brevo", upsertReportSignup(parsed.data), PROVIDER_TIMEOUT_MS);
+    logProviderOutcome("/api/report-signup", "brevo", "primary", "succeeded");
   } catch (err) {
-    const outcome = classifyProviderError(err) === "not_configured" ? "crm_not_configured" : "crm_upsert_failed";
-    logLeadOutcome("/api/report-signup", outcome, { provider: "brevo" });
+    const outcome = classifyProviderError(err);
+    const status = (err as { status?: number })?.status;
+    logProviderOutcome("/api/report-signup", "brevo", "primary", outcome, status);
+    logLeadOutcome("/api/report-signup", "failure");
     return redirect(request, "report=error");
   }
+
+  logLeadOutcome("/api/report-signup", "success");
 
   // Confirmation email — best-effort, never blocks success once the lead is
   // already captured in Brevo above.
   try {
-    await sendReportSignupConfirmation(parsed.data);
-  } catch {
-    console.error("[report-signup] confirmation email failed (non-blocking)");
+    await withProviderTimeout("resend", sendReportSignupConfirmation(parsed.data), PROVIDER_TIMEOUT_MS);
+    logProviderOutcome("/api/report-signup", "resend", "secondary", "succeeded");
+  } catch (err) {
+    const outcome = classifyProviderError(err);
+    const status = (err as { status?: number })?.status;
+    logProviderOutcome("/api/report-signup", "resend", "secondary", outcome, status);
   }
 
-  logLeadOutcome("/api/report-signup", "success");
   return redirect(request, "report=sent");
 }
