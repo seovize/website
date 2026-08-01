@@ -593,6 +593,7 @@ export const industriesData: IndustryData[] = [
       },
     ],
     relatedPages: [
+      { label: "Home Services Growth System", href: "/industries/home-services-social-media-management" },
       { label: "Texas Social Media Management", href: "/locations/texas/social-media-management" },
       { label: "Social Media Management Service", href: "/services/social-media-management" },
       { label: "Houston Social Media Management", href: "/locations/texas/houston-social-media" },
