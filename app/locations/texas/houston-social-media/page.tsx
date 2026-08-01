@@ -24,8 +24,8 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    q: "What is the best social media management company in Houston TX?",
-    a: "Seovize is a Houston-focused social media management studio serving businesses in energy, healthcare, hospitality, and professional services. Founded by Abdul Ghani with 20+ years of digital marketing expertise, Seovize delivers social media management — post design, reels, SEO-optimized captions, scheduling, and monthly analytics reporting — for Houston brands.",
+    q: "Is Seovize based in Houston, or is this remote service?",
+    a: "Seovize is remote — there's no Houston office. Given how spread out Houston's metro actually is (energy corridor, Texas Medical Center, downtown, the suburbs), most clients don't need in-person meetings anyway; the work is calendar reviews, content approvals and monthly reporting handled over video and shared docs. If your business specifically needs someone on-site for content capture, that's worth raising on the first call before signing anything.",
   },
   {
     q: "Which social media platforms work best for Houston businesses?",
@@ -89,7 +89,7 @@ const data: CityPageData = {
       desc: "Monthly social media calendar mapped to Houston market themes, energy sector news cycles, Texas Medical Center events, and your specific buyer journey — not generic awareness content.",
     },
     {
-      title: "Custom post design",
+      title: "Sector-matched post design",
       desc: "Brand-consistent graphics designed for Houston's professional audiences. Credibility-forward for B2B brands; high-production creative for hospitality, retail, and lifestyle brands.",
     },
     {
@@ -97,7 +97,7 @@ const data: CityPageData = {
       desc: "Thought leadership posts, executive positioning content, and sector expertise articles for Houston energy, healthcare, and professional services B2B audiences — the platform where Houston's decision-makers spend time.",
     },
     {
-      title: "SEO-optimized captions",
+      title: "Houston-tagged captions",
       desc: "Captions with semantic intent, Houston location tags, energy sector and healthcare keyword integration, and a strategic hashtag system covering niche industry and city-level reach.",
     },
     {
@@ -105,7 +105,7 @@ const data: CityPageData = {
       desc: "Scripts, direction, and editing for Instagram Reels — particularly effective for Houston hospitality, real estate, and lifestyle brands. Growth and Authority plans include monthly reels production.",
     },
     {
-      title: "Monthly analytics report",
+      title: "Houston market-fit reporting",
       desc: "Reach, engagement, follower growth, link clicks, and lead attribution tracking for Houston audiences — with content performance insights that shape the next month's strategy.",
     },
   ],

@@ -26,16 +26,12 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    q: "What does a professional social media manager do for service businesses?",
-    a: "A professional social media manager creates monthly content calendars, designs branded posts, writes SEO-optimized captions, schedules content at peak engagement times, manages community responses, and delivers monthly analytics reporting. For service businesses, professional social media management replaces the need to hire and manage an in-house content team.",
-  },
-  {
     q: "Which social media platforms do you manage?",
     a: "Seovize manages Instagram, Facebook, LinkedIn, TikTok, and X (Twitter). Most plans focus on 2–3 platforms matched to your audience — Instagram and Facebook for B2C service businesses, LinkedIn for B2B and professional services, and Instagram Reels for visual and lifestyle brands.",
   },
   {
     q: "Do you create short-form video and Instagram Reels?",
-    a: "Yes. Our Growth and Authority plans include monthly Reels production — from concept to edited final video. Reels generate 3–5x more organic reach than static posts on Instagram in 2026 and are the primary driver of new follower acquisition for most accounts.",
+    a: "Yes. Our Growth and Authority plans include monthly Reels production — from concept to edited final video. Short-form video reaches a meaningfully larger non-follower audience than static posts on Instagram, which is why it's usually the format that drives new follower growth fastest — though the exact multiplier varies too much by account and niche for us to quote a fixed number.",
   },
   {
     q: "How is your social media management different from hiring a freelancer?",
@@ -119,6 +115,24 @@ export default function SocialMediaPage() {
         </div>
       </section>
 
+      {/* ── ANSWER-FIRST: WHAT IS SOCIAL MEDIA MANAGEMENT ──── */}
+      <Section eyebrow="Direct answer">
+        <h2 className="font-display text-2xl font-black text-cloud md:text-3xl">What is social media management?</h2>
+        <p className="mt-4 max-w-3xl text-base leading-8 text-mist">
+          Social media management is the ongoing work of planning, creating, publishing and monitoring content on a business&apos;s social accounts — separate from paid advertising. At Seovize this means a monthly content calendar, designed posts and captions, scheduled publishing, response to comments and messages, and a monthly report on what worked.
+        </p>
+        <ul className="mt-5 max-w-2xl space-y-2 text-sm text-mist">
+          <li>— Strategy: content pillars and platform mix set before any posting starts</li>
+          <li>— Content: designed graphics, written captions, short-form video where included in your plan</li>
+          <li>— Publishing: scheduled and posted by Seovize on the approved calendar</li>
+          <li>— Community management: comment and DM responses during business hours</li>
+          <li>— Reporting: a monthly review of reach, engagement and what changes next month</li>
+        </ul>
+        <p className="mt-4 text-sm text-mist">
+          See <Link href="/guides/organic-social-vs-paid-social" className="font-semibold text-mint hover:underline">how this differs from paid social advertising</Link>.
+        </p>
+      </Section>
+
       {/* ── PLATFORM BREAKDOWN ────────────────────────────── */}
       <Section eyebrow="Platform strategy" title="The right platform mix for your business type.">
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -126,7 +140,7 @@ export default function SocialMediaPage() {
             { platform: "Instagram", best: "B2C service businesses, hospitality, med spas, real estate, restaurants", format: "Feed posts, Reels, Stories", reach: "Highest organic reach for visual brands in 2026" },
             { platform: "Facebook", best: "Texas SMBs, 35–65 demographics, community-oriented brands, local service businesses", format: "Feed posts, groups, event promotion", reach: "Strong for community groups and local ad targeting" },
             { platform: "LinkedIn", best: "B2B consultants, professional services, corporate-market businesses in Dallas and Houston", format: "Articles, thought leadership posts, company updates", reach: "Highest-value professional audience in Texas corporate markets" },
-            { platform: "Instagram Reels", best: "All visual businesses — Reels reach non-followers at 3–5x the rate of static posts", format: "15–90 second vertical video", reach: "Primary new-audience discovery channel on Instagram in 2026" },
+            { platform: "Instagram Reels", best: "All visual businesses — Reels reach a larger share of non-followers than static posts", format: "15–90 second vertical video", reach: "The main new-audience discovery format on Instagram, not a replacement for a feed strategy" },
             { platform: "TikTok", best: "Younger demographics, hospitality, lifestyle brands, restaurants with a strong visual story", format: "Short-form vertical video", reach: "Fastest-growing platform for 18–34 Texas audience" },
             { platform: "Google Business Profile", best: "All local and service-area businesses", format: "Weekly posts, updates, offers", reach: "Improves local search pack visibility — often overlooked by competitors" },
           ].map((p) => (
@@ -139,6 +153,30 @@ export default function SocialMediaPage() {
               <p className="mt-3 text-[11px] text-slate-mid">{p.reach}</p>
             </div>
           ))}
+        </div>
+      </Section>
+
+      {/* ── WHO IT'S FOR ──────────────────────────────────── */}
+      <Section eyebrow="Fit" title="Who this is built for — and who it isn't.">
+        <div className="grid gap-4 md:grid-cols-2">
+          <div className="rounded-2xl border border-mint/20 bg-mint/[0.04] p-6">
+            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-mint">Good fit</p>
+            <ul className="mt-3 space-y-2 text-sm leading-6 text-mist">
+              <li>— Local or regional service businesses with a real service area and a way to capture leads</li>
+              <li>— Businesses that can supply raw photos, video or updates monthly, even informally</li>
+              <li>— Owners who want senior strategy, not a rotating junior account team</li>
+              <li>— Businesses building visibility over months, not expecting overnight lead volume</li>
+            </ul>
+          </div>
+          <div className="rounded-2xl border border-line bg-navy p-6">
+            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-mid">Not a good fit</p>
+            <ul className="mt-3 space-y-2 text-sm leading-6 text-mist">
+              <li>— National e-commerce brands needing a full creative production studio</li>
+              <li>— Businesses that can&apos;t supply any raw content, photos or updates at all</li>
+              <li>— Anyone expecting a fixed follower or lead count guaranteed in writing</li>
+              <li>— Businesses that need same-day crisis community management coverage</li>
+            </ul>
+          </div>
         </div>
       </Section>
 
@@ -191,6 +229,26 @@ export default function SocialMediaPage() {
             </div>
           ))}
         </div>
+      </Section>
+
+      {/* ── ONBOARDING ────────────────────────────────────── */}
+      <Section variant="navy" eyebrow="Getting started" title="What onboarding actually looks like.">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {[
+            { step: "1. Discovery call", desc: "We talk through your services, service area, current platforms and what content you already have to work with." },
+            { step: "2. Platform and pillar setup", desc: "We confirm the platform mix and content pillars, and request account access or admin rights where needed." },
+            { step: "3. First calendar for review", desc: "We build the first month's calendar and send it for your approval before anything publishes." },
+            { step: "4. Publishing begins", desc: "Once approved, Seovize handles design, captioning and scheduling — you don't need to log in and post anything yourself." },
+          ].map((s) => (
+            <div key={s.step} className="rounded-2xl border border-line bg-obsidian p-6">
+              <p className="font-display text-sm font-black text-mint">{s.step}</p>
+              <p className="mt-2 text-sm leading-6 text-mist">{s.desc}</p>
+            </div>
+          ))}
+        </div>
+        <p className="mt-6 text-sm text-slate-mid">
+          Exact onboarding timing depends on how quickly platform access and the first round of content are provided — this isn&apos;t a fixed countdown, it moves at the pace you can supply what&apos;s needed.
+        </p>
       </Section>
 
       {/* ── EXCLUSIONS ───────────────────────────────────── */}

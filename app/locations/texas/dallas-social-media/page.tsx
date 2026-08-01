@@ -24,8 +24,8 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    q: "What is the best social media management company in Dallas TX?",
-    a: "Seovize is a Dallas-focused social media management studio serving businesses in corporate, real estate, B2B, and professional services. Founded by Abdul Ghani with 20+ years of digital marketing expertise, Seovize delivers social media management — post design, LinkedIn authority content, reels, SEO-optimized captions, scheduling, and monthly analytics — for DFW brands.",
+    q: "Does Seovize have an office in Dallas?",
+    a: "No — Seovize is a remote studio, not a Dallas-based agency with a physical office. For DFW's corporate and B2B buyers, that matters less than it might elsewhere: strategy, reporting and communication happen over video call and shared documents, the same way most Dallas companies already coordinate with vendors and remote teams. We don't claim a local address we don't have.",
   },
   {
     q: "Which social media platforms work best for Dallas businesses?",
@@ -93,11 +93,11 @@ const data: CityPageData = {
       desc: "Executive thought leadership, corporate brand storytelling, and B2B authority content for Dallas's LinkedIn-dominated corporate and professional services audience.",
     },
     {
-      title: "Custom post design",
+      title: "Corporate-grade post design",
       desc: "Professional, brand-consistent graphics designed for DFW's corporate audience. Credibility-forward for B2B brands; high-production visual content for real estate and hospitality.",
     },
     {
-      title: "SEO-optimized captions",
+      title: "DFW-tagged captions",
       desc: "Captions with Dallas location tags, corporate keyword integration, real estate terminology, and a strategic hashtag system covering Dallas business, DFW real estate, and industry-specific reach.",
     },
     {
@@ -105,7 +105,7 @@ const data: CityPageData = {
       desc: "Property listing posts, neighborhood features, market insight content, and Instagram Reels tours for Dallas real estate agents and brokers — designed around the DFW buyer journey.",
     },
     {
-      title: "Monthly analytics reporting",
+      title: "DFW lead-attribution reporting",
       desc: "Reach, engagement, follower growth, and lead attribution tracking for Dallas audiences — with insights that shape the next month's DFW content strategy.",
     },
   ],

@@ -24,8 +24,8 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    q: "What is the best social media management company in San Antonio TX?",
-    a: "Seovize is a San Antonio-focused social media management studio serving businesses in hospitality, healthcare, SMBs, contracting, and military-adjacent sectors. Founded by Abdul Ghani with 20+ years of digital marketing expertise, Seovize delivers San Antonio social media management — community-driven content, Instagram storytelling, reels, and monthly analytics — for San Antonio brands.",
+    q: "Is Seovize a local San Antonio business?",
+    a: "No — Seovize serves San Antonio businesses remotely, without a physical San Antonio office. For the community-first content this market rewards, that means we depend on you for the photos, video and local context that make the content genuinely San Antonio, not generic — we're not walking your storefront ourselves. What we bring is the strategy, design, writing and scheduling built around what you send us.",
   },
   {
     q: "Which social media platforms work best for San Antonio businesses?",
@@ -89,7 +89,7 @@ const data: CityPageData = {
       desc: "Monthly social media calendar reflecting San Antonio community themes — River Walk events, Fiesta San Antonio, military appreciation content, and local business milestones — not generic brand awareness content.",
     },
     {
-      title: "Custom post design",
+      title: "Community-forward post design",
       desc: "Brand-consistent graphics designed for San Antonio's community-forward aesthetic — warm, local, culturally resonant visuals for hospitality and SMBs; professional design for healthcare and B2B brands.",
     },
     {
@@ -97,11 +97,11 @@ const data: CityPageData = {
       desc: "Short-form video content for San Antonio's visual-first hospitality, restaurant, and lifestyle audiences — River Walk scenes, food storytelling, event coverage, and behind-the-scenes business content.",
     },
     {
-      title: "SEO-optimized captions",
+      title: "San Antonio-tagged captions",
       desc: "Captions with San Antonio location tags, community event hashtags, and hospitality and SMB keyword integration across Instagram and Facebook.",
     },
     {
-      title: "Monthly analytics reporting",
+      title: "San Antonio engagement reporting",
       desc: "Reach, engagement, follower growth, and lead attribution tracking for San Antonio audiences — with insights that shape next month's community-driven content strategy.",
     },
   ],

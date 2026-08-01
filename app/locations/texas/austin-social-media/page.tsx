@@ -24,8 +24,8 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    q: "What is the best social media management company in Austin TX?",
-    a: "Seovize is an Austin-focused social media management studio serving tech, SaaS, startup, and creative economy brands. Founded by Abdul Ghani with 20+ years of digital marketing expertise, Seovize delivers Austin social media management — LinkedIn authority content, Instagram storytelling, reels, SEO-optimized captions, scheduling, and monthly analytics — for growth-focused Austin brands.",
+    q: "Do you have a team on the ground in Austin?",
+    a: "No — Seovize works with Austin businesses remotely, which is a normal arrangement for Austin's own tech and SaaS companies, most of which already run distributed teams. Strategy calls, content review and reporting happen over video and shared tools. We don't list an Austin address to seem local when the work is genuinely done remotely.",
   },
   {
     q: "Which social media platforms work best for Austin tech and SaaS companies?",
@@ -97,7 +97,7 @@ const data: CityPageData = {
       desc: "Clean, modern, brand-consistent graphics matching Austin's design-forward tech culture — not recycled templates that undermine credibility with Austin's sophisticated audience.",
     },
     {
-      title: "SEO-optimized captions",
+      title: "Austin-tagged captions",
       desc: "Captions with Austin location tags, tech sector keyword integration, and a strategic hashtag system covering Austin tech, SaaS, startup, and creative economy audiences.",
     },
     {
@@ -105,7 +105,7 @@ const data: CityPageData = {
       desc: "Founder narratives, product launch content, company milestone storytelling, and behind-the-scenes content that builds authentic connection with Austin's startup community.",
     },
     {
-      title: "Monthly analytics reporting",
+      title: "Austin growth-signal reporting",
       desc: "Reach, engagement, follower growth, and lead attribution tracking for Austin audiences — with content performance insights that shape next month's Austin-specific strategy.",
     },
   ],
