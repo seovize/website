@@ -141,6 +141,30 @@ export const services = [
     ],
   },
   {
+    slug: "paid-social-advertising",
+    title: "Paid Social Advertising",
+    eyebrow: "Paid media",
+    description:
+      "Meta and paid-social campaign management focused on qualified local leads, creative testing and clear reporting — scoped and billed separately from organic social and local SEO.",
+    outcomes: ["Pixel + conversion tracking set up first", "Tested creative before scaling spend", "Transparent cost-per-lead reporting"],
+    price: "Management fee + ad spend, quoted per market",
+    href: "/services/paid-social-advertising",
+    icon: "ads",
+    deliverables: [
+      "Meta Pixel implementation and conversion tracking",
+      "Custom audience setup based on your real customer profile",
+      "Creative testing across multiple variations before scaling",
+      "Instant Form vs website-form strategy matched to your sales process",
+      "Monthly reporting: spend, cost per lead, creative performance",
+      "Lead-quality feedback loop where CRM or sales data is shared",
+    ],
+    faqs: [
+      { q: "Is ad spend included in the management fee?", a: "No — ad spend is billed directly by Meta and is always shown separately from the management fee." },
+      { q: "Do you guarantee a specific ROAS?", a: "No. Results depend on offer, market and creative performance. We report actual cost-per-lead rather than promising a universal return." },
+      { q: "Can this run alongside organic social media management?", a: "Yes — they're scoped and billed as separate services so it's clear what each budget is producing." },
+    ],
+  },
+  {
     slug: "content-marketing",
     title: "Content Marketing",
     eyebrow: "Authority content",

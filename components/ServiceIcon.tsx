@@ -79,6 +79,18 @@ function WebDesignIcon({ className }: Props) {
   );
 }
 
+function AdsIcon({ className }: Props) {
+  return (
+    <svg viewBox="0 0 48 48" fill="none" aria-hidden="true" className={className}>
+      <rect x="5" y="10" width="26" height="20" rx="3" stroke="currentColor" strokeWidth="2.5"/>
+      <path d="M14 20l4-4 4 4 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M22 10V6M31 20h4M31 12l3-3M31 28l3 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" opacity=".5"/>
+      <circle cx="38" cy="36" r="6" stroke="currentColor" strokeWidth="2"/>
+      <path d="M38 33.5v5M35.5 36h5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+    </svg>
+  );
+}
+
 import type { ReactElement } from "react";
 
 const iconMap: Record<string, (p: Props) => ReactElement> = {
@@ -88,6 +100,7 @@ const iconMap: Record<string, (p: Props) => ReactElement> = {
   "local-seo": LocalSeoIcon,
   "content-marketing": ContentIcon,
   "website-design": WebDesignIcon,
+  "paid-social-advertising": AdsIcon,
 };
 
 type ServiceIconProps = {

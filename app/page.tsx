@@ -273,15 +273,25 @@ export default function HomePage() {
               </p>
             </Link>
 
-            <div className="rounded-2xl border border-line bg-navy p-7 opacity-80 dark:shadow-none">
-              <div className="mb-5 h-0.5 w-10 rounded-full bg-orange/60" />
+            <Link
+              href="/services/paid-social-advertising"
+              className="group rounded-2xl border border-line bg-navy p-7 shadow-[0_1px_3px_rgba(0,0,0,0.05),0_8px_24px_rgba(0,0,0,0.04)] transition hover:-translate-y-0.5 dark:shadow-none"
+            >
+              <div className="mb-5 flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-orange/10 text-sm font-black text-orange">
+                  3
+                </div>
+                <p className="font-mono text-xs font-bold text-orange">Paid media</p>
+              </div>
               <h3 className="font-display text-xl font-black text-cloud">Paid Social Advertising</h3>
               <p className="mt-3 text-sm leading-[1.75] text-mist">
-                Meta and paid-social campaign management for qualified local leads. In development —
-                published once campaign process and reporting capability are confirmed.
+                Meta campaign management focused on qualified local leads — creative testing and clear
+                reporting, billed separately from organic social.
               </p>
-              <p className="mt-6 text-xs font-semibold text-slate-mid">Coming soon</p>
-            </div>
+              <p className="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-orange">
+                See the service <span aria-hidden="true">→</span>
+              </p>
+            </Link>
           </div>
         </div>
       </section>
