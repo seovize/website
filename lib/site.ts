@@ -247,27 +247,6 @@ export const processSteps = [
   },
 ];
 
-export const caseStudies = [
-  {
-    title: "Local Service SEO Architecture",
-    metric: "+70% modeled organic growth window",
-    text: "A semantic service-page rebuild designed to improve crawlability, topic coverage, and buyer clarity across local landing pages.",
-    tag: "SEO",
-  },
-  {
-    title: "Social Content System",
-    metric: "30-day creative calendar",
-    text: "Premium post design, SEO captions, reels direction, scheduling, and monthly reporting for consistent brand visibility.",
-    tag: "Social Media",
-  },
-  {
-    title: "Conversion Website Rebuild",
-    metric: "Next.js + Vercel stack",
-    text: "A fast marketing site with metadata, sitemap, robots, structured content, and focused CTAs for qualified leads.",
-    tag: "Web Design",
-  },
-];
-
 export const industries = [
   {
     slug: "law-firms",
@@ -458,7 +437,7 @@ export const founder = {
   title: "Founder & Senior SEO Specialist",
   linkedin: "https://www.linkedin.com/in/sardarabdulghani",
   experience: "20+",
-  snippet: "Abdul Ghani is an expert digital marketing strategist, semantic SEO specialist, and the founder of Seovize. Recognized as a top local SEO expert serving Texas businesses remotely, he specializes in entity-first content architecture, Google Ads optimization, Meta Ads, and social media management for service-led and expert-driven brands.",
+  snippet: "Abdul Ghani is a digital marketing strategist and semantic SEO specialist, and the founder of Seovize. He serves Texas businesses remotely, specializing in entity-first content architecture, Google Ads optimization, Meta Ads, and social media management for service-led and expert-driven brands.",
   bio: "Abdul Ghani is a digital marketing specialist with 20+ years of experience in semantic SEO, local search optimization, Google Ads, Meta advertising, and social media management. He founded Seovize to bring entity-first SEO strategy and premium social media systems to U.S. growth-focused brands — with a particular focus on helping Texas businesses build search authority and social presence without relying on outdated keyword tactics.",
   expertise: [
     { area: "Semantic SEO", desc: "Entity mapping, topic cluster architecture, NLP-optimized content, structured data, and internal link graph systems designed for long-term search authority that survives algorithm updates." },

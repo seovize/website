@@ -13,7 +13,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Social Media Management Houston TX | Houston Social Media Agency | Seovize",
   description:
-    "Premium social media management for Houston businesses in energy, healthcare, and professional services. Post design, reels, SEO captions, scheduling, and analytics by Abdul Ghani — top Houston social media manager with 20+ years experience.",
+    "Social media management for Houston businesses in energy, healthcare, and professional services. Post design, reels, SEO captions, scheduling, and analytics by Abdul Ghani, 20+ years experience.",
   alternates: { canonical: "/locations/texas/houston-social-media" },
   openGraph: {
     title: "Social Media Management Houston TX | Seovize",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What is the best social media management company in Houston TX?",
-    a: "Seovize is a top-rated social media management studio serving Houston businesses in energy, healthcare, hospitality, and professional services. Founded by Abdul Ghani with 20+ years of digital marketing expertise, Seovize delivers premium social media management — post design, reels, SEO-optimized captions, scheduling, and monthly analytics reporting — for Houston brands.",
+    a: "Seovize is a Houston-focused social media management studio serving businesses in energy, healthcare, hospitality, and professional services. Founded by Abdul Ghani with 20+ years of digital marketing expertise, Seovize delivers social media management — post design, reels, SEO-optimized captions, scheduling, and monthly analytics reporting — for Houston brands.",
   },
   {
     q: "Which social media platforms work best for Houston businesses?",
@@ -83,7 +83,7 @@ const data: CityPageData = {
   audienceProfile:
     "Houston social media audiences include energy sector professionals (engineers, executives, procurement teams), Texas Medical Center-adjacent healthcare buyers, real estate professionals in the Galleria and Woodlands markets, restaurant and hospitality consumers in Midtown and downtown, and Houston's growing tech and startup community. Each segment requires a distinct content approach and platform mix.",
   heroAnswer:
-    "Seovize delivers social media management for Houston businesses in energy, healthcare, hospitality, and professional services — premium content strategy, post design, LinkedIn authority content, reels, SEO-optimized captions, and monthly analytics by Abdul Ghani, a top Houston social media manager with 20+ years of digital marketing expertise.",
+    "Seovize delivers social media management for Houston businesses in energy, healthcare, hospitality, and professional services — content strategy, post design, LinkedIn authority content, reels, SEO-optimized captions, and monthly analytics by Abdul Ghani, a digital marketing strategist with 20+ years of experience.",
   deliverables: [
     {
       title: "Houston content calendar",

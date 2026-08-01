@@ -145,12 +145,19 @@ export function buildConfirmationPayload(data: ContactFormData, env: EmailEnv): 
   };
 }
 
-async function postToResend(payload: ResendEmailPayload, apiKey: string): Promise<void> {
+async function postToResend(payload: ResendEmailPayload, apiKey: string, idempotencyKey?: string): Promise<void> {
   const res = await fetch(RESEND_ENDPOINT, {
     method: "POST",
     headers: {
       Authorization: `Bearer ${apiKey}`,
       "Content-Type": "application/json",
+      // Resend deduplicates POST /emails requests carrying the same
+      // Idempotency-Key for 24h — see
+      // resend.com/docs/dashboard/emails/idempotency-keys. Only set when the
+      // caller supplies one (the internal lead notification uses a key
+      // derived from the submission content; the lead's own confirmation
+      // auto-reply doesn't need one).
+      ...(idempotencyKey ? { "Idempotency-Key": idempotencyKey } : {}),
     },
     body: JSON.stringify(payload),
   });
@@ -163,10 +170,15 @@ async function postToResend(payload: ResendEmailPayload, apiKey: string): Promis
   }
 }
 
-/** Send the internal lead notification. Throws on misconfiguration or a non-2xx Resend response. */
-export async function sendContactEmail(data: ContactFormData): Promise<void> {
+/**
+ * Send the internal lead notification. Throws on misconfiguration or a
+ * non-2xx Resend response. `idempotencyKey`, when provided, makes a repeat
+ * call with the same key a no-op on Resend's side within a 24h window —
+ * see contentIdempotencyKey() in lib/services/lead-log.ts.
+ */
+export async function sendContactEmail(data: ContactFormData, idempotencyKey?: string): Promise<void> {
   const env = getEmailEnv();
-  await postToResend(buildResendPayload(data, env), env.RESEND_API_KEY);
+  await postToResend(buildResendPayload(data, env), env.RESEND_API_KEY, idempotencyKey);
 }
 
 /** Send the confirmation auto-reply to the lead. Throws on failure (caller decides if non-blocking). */

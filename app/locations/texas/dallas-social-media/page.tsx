@@ -13,7 +13,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Social Media Management Dallas TX | Dallas Social Media Agency | Seovize",
   description:
-    "Premium social media management for Dallas businesses in corporate, real estate, and DFW B2B sectors. Post design, LinkedIn authority content, reels, SEO captions, and analytics by Abdul Ghani — top Dallas social media manager with 20+ years experience.",
+    "Social media management for Dallas businesses in corporate, real estate, and DFW B2B sectors. Post design, LinkedIn authority content, reels, SEO captions, and analytics by Abdul Ghani, 20+ years experience.",
   alternates: { canonical: "/locations/texas/dallas-social-media" },
   openGraph: {
     title: "Social Media Management Dallas TX | Seovize",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What is the best social media management company in Dallas TX?",
-    a: "Seovize is a top-rated social media management studio serving Dallas businesses in corporate, real estate, B2B, and professional services. Founded by Abdul Ghani with 20+ years of digital marketing expertise, Seovize delivers premium social media management — post design, LinkedIn authority content, reels, SEO-optimized captions, scheduling, and monthly analytics — for DFW brands.",
+    a: "Seovize is a Dallas-focused social media management studio serving businesses in corporate, real estate, B2B, and professional services. Founded by Abdul Ghani with 20+ years of digital marketing expertise, Seovize delivers social media management — post design, LinkedIn authority content, reels, SEO-optimized captions, scheduling, and monthly analytics — for DFW brands.",
   },
   {
     q: "Which social media platforms work best for Dallas businesses?",
@@ -83,7 +83,7 @@ const data: CityPageData = {
   audienceProfile:
     "Dallas social media audiences include corporate marketing teams at DFW Fortune 500 companies, real estate agents and buyers in the Metroplex, B2B professional services decision-makers, restaurant and hospitality consumers in Uptown and Deep Ellum, and Dallas's growing startup and creative economy. Each segment requires a distinct platform, content tone, and publishing cadence.",
   heroAnswer:
-    "Seovize delivers social media management for Dallas businesses in corporate, real estate, B2B, and professional services — premium content strategy, LinkedIn authority content, post design, reels, SEO-optimized captions, and monthly analytics by Abdul Ghani, a top Dallas social media manager with 20+ years of digital marketing expertise.",
+    "Seovize delivers social media management for Dallas businesses in corporate, real estate, B2B, and professional services — content strategy, LinkedIn authority content, post design, reels, SEO-optimized captions, and monthly analytics by Abdul Ghani, a digital marketing strategist with 20+ years of experience.",
   deliverables: [
     {
       title: "DFW content calendar",

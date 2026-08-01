@@ -28,8 +28,7 @@ export function FounderSection() {
               {[
                 `${founder.experience}+ years experience`,
                 "Entity-first SEO",
-                "Texas market expert",
-                "Google Ads certified",
+                "Texas market focus",
                 "Founder-audited strategy",
               ].map((c) => (
                 <span

@@ -13,7 +13,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Social Media Management San Antonio TX | San Antonio Social Media Agency | Seovize",
   description:
-    "Premium social media management for San Antonio businesses in hospitality, SMBs, and military-adjacent sectors. Community-driven content, bilingual posts, reels, and analytics by Abdul Ghani — top San Antonio social media manager with 20+ years experience.",
+    "Social media management for San Antonio businesses in hospitality, SMBs, and military-adjacent sectors. Community-driven content, bilingual posts, reels, and analytics by Abdul Ghani, 20+ years experience.",
   alternates: { canonical: "/locations/texas/san-antonio-social-media" },
   openGraph: {
     title: "Social Media Management San Antonio TX | Seovize",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What is the best social media management company in San Antonio TX?",
-    a: "Seovize is a top-rated social media management studio serving San Antonio businesses in hospitality, healthcare, SMBs, contracting, and military-adjacent sectors. Founded by Abdul Ghani with 20+ years of digital marketing expertise, Seovize delivers premium San Antonio social media management — community-driven content, bilingual posts, Instagram storytelling, reels, and monthly analytics — for San Antonio brands.",
+    a: "Seovize is a San Antonio-focused social media management studio serving businesses in hospitality, healthcare, SMBs, contracting, and military-adjacent sectors. Founded by Abdul Ghani with 20+ years of digital marketing expertise, Seovize delivers San Antonio social media management — community-driven content, bilingual posts, Instagram storytelling, reels, and monthly analytics — for San Antonio brands.",
   },
   {
     q: "Which social media platforms work best for San Antonio businesses?",
@@ -83,7 +83,7 @@ const data: CityPageData = {
   audienceProfile:
     "San Antonio social media audiences include tourists and visitors engaging with River Walk and Alamo attractions, local residents in the SMB and service-economy community, military families at Joint Base San Antonio, Spanish-speaking consumers seeking bilingual service providers, healthcare patients engaging with local providers, and the creative community in the Pearl and Southtown neighborhoods. Each segment responds to distinct content types and cultural references.",
   heroAnswer:
-    "Seovize delivers social media management for San Antonio businesses in hospitality, SMBs, healthcare, and military-adjacent sectors — community-driven content strategy, bilingual posts, Instagram storytelling, reels, SEO-optimized captions, and monthly analytics by Abdul Ghani, a top San Antonio social media manager with 20+ years of digital marketing expertise.",
+    "Seovize delivers social media management for San Antonio businesses in hospitality, SMBs, healthcare, and military-adjacent sectors — community-driven content strategy, bilingual posts, Instagram storytelling, reels, SEO-optimized captions, and monthly analytics by Abdul Ghani, a digital marketing strategist with 20+ years of experience.",
   deliverables: [
     {
       title: "San Antonio community content calendar",

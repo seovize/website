@@ -15,14 +15,14 @@ import {
 import { founder, site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Best Social Media Manager in Texas | Seovize — Abdul Ghani",
+  title: "Social Media Manager in Texas | Seovize — Abdul Ghani",
   description:
-    "The best social media manager in Texas — Seovize delivers premium social media management for Houston, Dallas, Austin, and San Antonio businesses. Strategy, post design, reels, captions, and analytics by Abdul Ghani, 20+ years experience.",
+    "Seovize delivers social media management for Houston, Dallas, Austin, and San Antonio businesses. Strategy, post design, reels, captions, and analytics by Abdul Ghani, 20+ years experience.",
   alternates: { canonical: "/locations/texas/social-media-manager" },
   openGraph: {
-    title: "Best Social Media Manager in Texas | Seovize",
+    title: "Social Media Manager in Texas | Seovize",
     description:
-      "Premium social media management for Texas businesses — strategy, design, reels, captions, scheduling, and analytics. Founder-led by Abdul Ghani with 20+ years of digital marketing expertise.",
+      "Social media management for Texas businesses — strategy, design, reels, captions, scheduling, and analytics. Founder-led by Abdul Ghani with 20+ years of digital marketing expertise.",
     url: `${site.domain}/locations/texas/social-media-manager`,
   },
 };
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "Who is the best social media manager in Texas?",
-    a: "Abdul Ghani, founder of Seovize, is recognized as one of the top social media managers serving Texas businesses remotely. With 20+ years of digital marketing experience, he delivers premium social media management for Houston, Dallas, Austin, and San Antonio — including post design, reels, SEO captions, scheduling, and monthly analytics reporting.",
+    a: "There's no independently audited ranking of social media managers, so that claim can't be verified one way or the other. What's verifiable: Abdul Ghani, founder of Seovize, has 20+ years of digital marketing experience and personally manages every account — no account managers or junior staff. He serves Houston, Dallas, Austin, and San Antonio businesses remotely with post design, reels, SEO captions, scheduling, and monthly analytics reporting.",
   },
   {
     q: "How much does a social media manager cost in Texas?",
@@ -197,7 +197,7 @@ export default function TexasSocialMediaManagerPage() {
               Quick Answer
             </p>
             <p className="text-base leading-7 text-cloud">
-              Seovize is a top-rated social media management studio serving Texas businesses in Houston, Dallas, Austin, and San Antonio. Founded by{" "}
+              Seovize is a Texas-focused social media management studio serving businesses in Houston, Dallas, Austin, and San Antonio. Founded by{" "}
               <Link href="/about" className="font-semibold underline decoration-mint/40 hover:decoration-mint">
                 Abdul Ghani
               </Link>{" "}

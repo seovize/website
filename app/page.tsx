@@ -13,7 +13,7 @@ import { Section } from "@/components/Section";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { TrustStrip } from "@/components/TrustStrip";
 import { faqSchema, speakableSchema } from "@/lib/schema";
-import { caseStudies, founder, homepageFaqs, processSteps, seoPackages, services, site, texasData } from "@/lib/site";
+import { founder, homepageFaqs, processSteps, seoPackages, services, site, texasData } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Seovize | Semantic SEO & Social Media Systems — Texas & U.S.",
@@ -87,7 +87,7 @@ export default function HomePage() {
                   { v: "20+", l: "Years experience" },
                   { v: "6", l: "Service systems" },
                   { v: "4", l: "Texas markets" },
-                  { v: "AEO", l: "AI-optimized" },
+                  { v: "100%", l: "Founder-led" },
                 ].map((s) => (
                   <div key={s.l} className="pr-4 sm:pr-6">
                     <p className="font-mono text-2xl font-bold text-cloud md:text-3xl">{s.v}</p>
@@ -271,11 +271,11 @@ export default function HomePage() {
               <div className="mb-5 h-0.5 w-10 rounded-full bg-sky" />
               <h3 className="font-display text-xl font-black text-cloud">Schema architecture</h3>
               <p className="mt-3 text-sm leading-[1.75] text-mist">
-                FAQPage, Service, LocalBusiness, Person, and Article schema — every page speaks directly
-                to Google&rsquo;s semantic brain.
+                FAQPage, Service, Person, and Article schema — structured data that helps search
+                engines parse what your business is, does, and serves, correctly and consistently.
               </p>
               <div className="mt-6 space-y-3">
-                {["AEO ready", "GEO optimized", "LLM-cited content", "Position 0 targeting"].map((t) => (
+                {["Machine-readable facts", "Consistent entity data", "Rich-result eligible", "No ranking or citation guarantee"].map((t) => (
                   <div key={t} className="flex items-center gap-2.5 text-xs text-mist">
                     <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-sky/60" />
                     {t}
@@ -327,53 +327,6 @@ export default function HomePage() {
           <div className="mt-8 text-center">
             <Link href="/our-process" className="text-sm font-semibold text-mint hover:underline">
               See the full 5-stage engagement process →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ── PROOF ───────────────────────────────────────── */}
-      <section className="px-4 py-16 sm:px-5 md:py-24">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-10 md:mb-14">
-            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-mint">
-              Proof
-            </p>
-            <h2 className="font-display text-3xl font-black leading-tight tracking-tight text-cloud md:text-[3.5rem] md:leading-[1.05]">
-              How Seovize approaches proof.
-            </h2>
-            <p className="mt-3 max-w-xl text-base text-mist md:text-lg">
-              What each engagement type looks like — not screenshots asking you to take our word for it.
-            </p>
-          </div>
-
-          <div data-reveal className="grid gap-4 md:grid-cols-3">
-            {caseStudies.map((study) => (
-              <article
-                key={study.title}
-                className="group flex flex-col overflow-hidden rounded-2xl border border-line bg-navy shadow-[0_1px_3px_rgba(0,0,0,0.05),0_8px_24px_rgba(0,0,0,0.04)] transition duration-200 hover:-translate-y-0.5 dark:shadow-none"
-              >
-                {/* Metric — mint intelligence accent, restrained scale */}
-                <div className="border-b border-line p-8">
-                  <span className="inline-block rounded-full border border-mint/20 bg-mint/[0.08] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-mint">
-                    {study.tag}
-                  </span>
-                  <p className="font-mono mt-4 text-[2.75rem] font-bold leading-none text-mint">
-                    {study.metric}
-                  </p>
-                </div>
-
-                <div className="flex flex-1 flex-col p-8">
-                  <h3 className="font-display text-xl font-black text-cloud">{study.title}</h3>
-                  <p className="mt-3 flex-1 text-sm leading-[1.75] text-mist">{study.text}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-
-          <div className="mt-8 text-center">
-            <Link href="/case-studies" className="text-sm font-semibold text-mint hover:underline">
-              View all case studies →
             </Link>
           </div>
         </div>
