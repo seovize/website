@@ -5,7 +5,6 @@ import {
   breadcrumbSchema,
   cityServiceSchema,
   faqSchema,
-  howToSchema,
   speakableSchema,
 } from "@/lib/schema";
 import { site } from "@/lib/site";
@@ -139,13 +138,6 @@ export default function HoustonSocialMediaPage() {
         })}
       />
       <JsonLd data={faqSchema(faqs)} />
-      <JsonLd
-        data={howToSchema({
-          name: "How to manage social media for a Houston Texas business",
-          description: "A structured process for building social media presence for Houston businesses.",
-          steps: processSteps,
-        })}
-      />
       <JsonLd data={speakableSchema(`${site.domain}/locations/texas/houston-social-media`)} />
       <JsonLd
         data={breadcrumbSchema([
