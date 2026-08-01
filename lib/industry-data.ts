@@ -21,7 +21,7 @@ export const industriesData: IndustryData[] = [
     slug: "restaurants",
     industry: "Restaurant",
     plural: "Restaurants",
-    metaTitle: "Social Media Management for Restaurants in Texas | Seovize",
+    metaTitle: "Social Media Management for Restaurants in Texas",
     metaDescription:
       "Social media management for Texas restaurants — appetite-first content strategy, food photography direction, menu reveals, local event marketing, and Instagram growth. Houston, Dallas, Austin, San Antonio. From $1,100/mo.",
     tagline: "Turn followers into regulars. Turn your tables into content.",
@@ -138,7 +138,7 @@ export const industriesData: IndustryData[] = [
     slug: "med-spas",
     industry: "Med Spa",
     plural: "Med Spas",
-    metaTitle: "Social Media Management for Med Spas in Texas | Seovize",
+    metaTitle: "Social Media Management for Med Spas in Texas",
     metaDescription:
       "Social media management for Texas med spas — compliant before/after content, treatment education, Instagram growth, and luxury brand positioning. Houston, Dallas, Austin, San Antonio. From $1,100/mo.",
     tagline: "Build trust. Showcase transformation. Book the consultation.",
@@ -255,7 +255,7 @@ export const industriesData: IndustryData[] = [
     slug: "real-estate",
     industry: "Real Estate",
     plural: "Real Estate Agents & Brokers",
-    metaTitle: "Social Media Management for Real Estate Agents in Texas | Seovize",
+    metaTitle: "Social Media Management for Real Estate Agents in Texas",
     metaDescription:
       "Social media management for Texas real estate agents and brokers — property listing content, neighborhood spotlights, market insight posts, and LinkedIn authority building. Houston, Dallas, Austin, San Antonio. From $1,100/mo.",
     tagline: "The Instagram scroll is the new property preview. Own it.",
@@ -372,7 +372,7 @@ export const industriesData: IndustryData[] = [
     slug: "law-firms",
     industry: "Law Firm",
     plural: "Law Firms",
-    metaTitle: "Social Media Management for Law Firms in Texas | Seovize",
+    metaTitle: "Social Media Management for Law Firms in Texas",
     metaDescription:
       "Social media management for Texas law firms — Bar-compliant content, LinkedIn authority building, educational legal content, and community presence. Houston, Dallas, Austin, San Antonio attorneys. From $1,100/mo.",
     tagline: "Authority first. Education always. Clients follow.",
@@ -489,7 +489,7 @@ export const industriesData: IndustryData[] = [
     slug: "contractors",
     industry: "Contractor",
     plural: "Contractors",
-    metaTitle: "Social Media Management for Contractors in Texas | Seovize",
+    metaTitle: "Social Media Management for Contractors in Texas",
     metaDescription:
       "Social media management for Texas contractors — before/after project content, Facebook lead generation, Google Business integration, and year-round pipeline building. Roofing, HVAC, remodeling, plumbing. From $1,100/mo.",
     tagline: "Show the work. Build the pipeline. Stay busy year-round.",
@@ -606,7 +606,7 @@ export const industriesData: IndustryData[] = [
     slug: "consultants",
     industry: "Consultant",
     plural: "Consultants",
-    metaTitle: "Social Media Management for Consultants in Texas | Seovize",
+    metaTitle: "Social Media Management for Consultants in Texas",
     metaDescription:
       "Social media management for Texas consultants and advisory firms — LinkedIn authority content, thought leadership, client success storytelling, and professional brand building. Management, strategy, HR, finance, and IT consultants. From $1,100/mo.",
     tagline: "Your expertise is the product. Social media is the proof.",

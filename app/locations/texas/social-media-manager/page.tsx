@@ -15,7 +15,7 @@ import {
 import { founder, site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Social Media Manager in Texas | Seovize — Abdul Ghani",
+  title: "Social Media Manager in Texas — Abdul Ghani",
   description:
     "Seovize delivers social media management for Houston, Dallas, Austin, and San Antonio businesses. Strategy, post design, reels, captions, and analytics by Abdul Ghani, 20+ years experience.",
   alternates: { canonical: "/locations/texas/social-media-manager" },

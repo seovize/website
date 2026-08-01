@@ -10,7 +10,7 @@ import {
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "SEO Services Dallas Texas | Seovize",
+  title: "SEO Services Dallas Texas",
   description:
     "Dallas SEO services — semantic SEO, local content, and service-area page systems for Dallas–Fort Worth businesses in corporate, real estate, and B2B sectors. Strategy by Abdul Ghani, 20+ years experience.",
   alternates: { canonical: "/locations/texas/dallas-seo" },

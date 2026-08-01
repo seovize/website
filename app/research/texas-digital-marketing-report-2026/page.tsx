@@ -8,7 +8,7 @@ import { breadcrumbSchema, speakableSchema } from "@/lib/schema";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Texas Small Business Digital Marketing Report 2026 | Seovize Research",
+  title: "Texas Small Business Digital Marketing Report 2026",
   description:
     "Original research: social media adoption, platform performance, SEO benchmarks, and content strategy data for Texas small businesses across Houston, Dallas, Austin, and San Antonio. Published by Seovize, 2026.",
   alternates: { canonical: "/research/texas-digital-marketing-report-2026" },

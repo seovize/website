@@ -10,7 +10,7 @@ import { faqSchema } from "@/lib/schema";
 import { seoPackages, socialPackages } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "SEO & Social Media Pricing | Seovize Texas",
+  title: "SEO & Social Media Pricing | Texas",
   description:
     "Transparent SEO and social media management pricing for Texas businesses. SEO from $1,250/mo · Social from $1,100/mo · Semantic SEO from $2,200/mo. No discovery call just to see a number.",
   alternates: { canonical: "/pricing" },

@@ -12,7 +12,7 @@ import { breadcrumbSchema, faqSchema, howToSchema, serviceSchema, speakableSchem
 import { founder, seoPackages, site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Local SEO Services | Service-Area & GBP Optimization for Texas Businesses | Seovize",
+  title: "Local SEO Services | Service-Area & GBP Optimization for Texas Businesses",
   description:
     "Local SEO for service businesses in Texas and across the U.S. — Google Business Profile optimization, service-area pages, LocalBusiness schema with areaServed, citation building, and review systems. No fake address required. From $950/mo.",
   alternates: { canonical: "/services/local-seo" },

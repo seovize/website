@@ -11,7 +11,7 @@ import {
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Social Media Management Houston TX | Houston Social Media Agency | Seovize",
+  title: "Social Media Management Houston TX | Houston Social Media Agency",
   description:
     "Social media management for Houston businesses in energy, healthcare, and professional services. Post design, reels, SEO captions, scheduling, and analytics by Abdul Ghani, 20+ years experience.",
   alternates: { canonical: "/locations/texas/houston-social-media" },

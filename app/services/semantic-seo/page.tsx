@@ -12,7 +12,7 @@ import { breadcrumbSchema, faqSchema, howToSchema, serviceSchema, speakableSchem
 import { founder, seoPackages, site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Semantic SEO Services | Entity Authority & Topical Architecture | Seovize",
+  title: "Semantic SEO Services | Entity Authority & Topical Architecture",
   description:
     "Semantic SEO that builds topical authority and entity recognition for service-led and expert-driven brands. Entity maps, topic clusters, schema architecture, and featured snippet formatting — founder-led by Abdul Ghani. From $2,200/mo.",
   alternates: { canonical: "/services/semantic-seo" },
@@ -142,6 +142,11 @@ export default function SemanticSeoPage() {
               Semantic SEO is the practice of building content around topics, entities, and relationships — not individual keywords. It establishes your brand and founder as verified Knowledge Graph entities and builds topical authority through interconnected content clusters — a structurally different approach to compounding organic authority than individual keyword optimization, though outcomes still depend on your market and competition.
             </p>
           </div>
+
+          <p className="mt-4 max-w-3xl text-sm text-slate-mid">
+            Looking for the full-service SEO engagement (technical + on-page + local, with this methodology built in)?
+            See <Link href="/services/seo" className="font-semibold text-mint hover:underline">SEO services</Link>.
+          </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
             <Button href="/contact" size="lg">Get a semantic SEO roadmap →</Button>

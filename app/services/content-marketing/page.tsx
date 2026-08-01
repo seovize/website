@@ -12,7 +12,7 @@ import { breadcrumbSchema, faqSchema, howToSchema, serviceSchema, speakableSchem
 import { founder, seoPackages, site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Content Marketing Services | Topical Authority & Compounding Organic Traffic | Seovize",
+  title: "Content Marketing Services | Topical Authority & Compounding Organic Traffic",
   description:
     "SEO content marketing for service businesses — pillar pages, topic cluster articles, comparison content, and featured snippet optimization that builds compounding organic traffic month over month. Expert-written by Abdul Ghani. From $800/mo.",
   alternates: { canonical: "/services/content-marketing" },

@@ -9,7 +9,7 @@ import { breadcrumbSchema, faqSchema, speakableSchema } from "@/lib/schema";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "SEO Agency vs Freelancer: Which Is Right for Your Business? | Seovize",
+  title: "SEO Agency vs Freelancer: Which Is Right for Your Business?",
   description: "Comparing SEO agency vs freelancer for your Texas or U.S. business? Understand the real trade-offs, what each option delivers, and why a founder-led studio beats both for most growth brands.",
   alternates: { canonical: "/compare/seo-agency-vs-freelancer" },
 };

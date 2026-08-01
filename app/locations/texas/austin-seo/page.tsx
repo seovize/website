@@ -5,13 +5,12 @@ import {
   breadcrumbSchema,
   cityServiceSchema,
   faqSchema,
-  howToSchema,
   speakableSchema,
 } from "@/lib/schema";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "SEO Services Austin Texas | Top Austin SEO Company | Seovize",
+  title: "SEO Services Austin Texas",
   description:
     "Austin SEO services — semantic SEO, content architecture, and service-area page systems for Austin tech, SaaS, and startup brands. Strategy by Abdul Ghani, 20+ years experience.",
   alternates: { canonical: "/locations/texas/austin-seo" },
@@ -60,8 +59,8 @@ const processSteps = [
     text: "Build semantic content tying your brand, founder expertise, services, and Austin market context into a structured knowledge graph. Austin's research-first buyers demand genuine topical depth — every page must demonstrate expert authority through comprehensive coverage.",
   },
   {
-    name: "Austin LocalBusiness and structured data deployment",
-    text: "Deploy ProfessionalService schema targeting Austin with areaServed City markup. For SaaS and tech brands, layer in Software Application or Product schema where applicable. Add FAQPage, HowTo, Speakable, and BreadcrumbList across all Austin pages.",
+    name: "Austin structured data deployment",
+    text: "Deploy ProfessionalService schema targeting Austin with areaServed City markup (no fake address). For SaaS and tech brands, layer in Software Application or Product schema where applicable. Add FAQPage, Speakable, and BreadcrumbList across all Austin pages.",
   },
   {
     name: "Austin content cluster and pillar page system",
@@ -98,8 +97,8 @@ const data: CityPageData = {
       desc: "Content that connects your brand, founder expertise, product category, and Austin market context into a structured knowledge graph — the foundation of durable Austin rankings.",
     },
     {
-      title: "Austin LocalBusiness and tech schema",
-      desc: "ProfessionalService or SoftwareApplication schema targeting Austin, plus FAQPage, HowTo, Article, Speakable, and BreadcrumbList schema across all Austin pages.",
+      title: "Austin structured data",
+      desc: "ProfessionalService or SoftwareApplication schema targeting Austin, plus FAQPage, Article, Speakable, and BreadcrumbList schema across all Austin pages — no LocalBusiness address data.",
     },
     {
       title: "Austin pillar and cluster page system",
@@ -139,13 +138,6 @@ export default function AustinSeoPage() {
         })}
       />
       <JsonLd data={faqSchema(faqs)} />
-      <JsonLd
-        data={howToSchema({
-          name: "How to get SEO results for an Austin Texas business",
-          description: "A structured process for ranking Austin tech, SaaS, and startup businesses in organic search.",
-          steps: processSteps,
-        })}
-      />
       <JsonLd data={speakableSchema(`${site.domain}/locations/texas/austin-seo`)} />
       <JsonLd
         data={breadcrumbSchema([

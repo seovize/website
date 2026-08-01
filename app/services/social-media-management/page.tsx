@@ -12,7 +12,7 @@ import { faqSchema, howToSchema, serviceSchema, speakableSchema } from "@/lib/sc
 import { seoPackages, site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Social Media Management | Premium Content & Strategy for Growth Brands | Seovize",
+  title: "Social Media Management | Premium Content & Strategy for Growth Brands",
   description:
     "Professional social media management — content planning, post design, captions, reels, scheduling, and analytics by Abdul Ghani. Premium strategy for Texas and U.S. service businesses from $1,100/month.",
   alternates: { canonical: "/services/social-media-management" },

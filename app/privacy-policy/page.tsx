@@ -4,7 +4,7 @@ import { Section } from "@/components/Section";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Seovize",
+  title: "Privacy Policy",
   description:
     "How Seovize collects, uses, and stores information submitted through seovize.com — contact forms, email delivery, and analytics.",
   alternates: { canonical: "/privacy-policy" },

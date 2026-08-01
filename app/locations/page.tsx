@@ -5,7 +5,7 @@ import { CTABanner } from "@/components/CTABanner";
 import { Section } from "@/components/Section";
 
 export const metadata: Metadata = {
-  title: "Locations | Texas SEO & Social Media by Seovize",
+  title: "Locations | Texas SEO & Social Media",
   description: "Seovize serves Texas businesses in Houston, Dallas, Austin, and San Antonio with remote SEO, semantic SEO, and social media management systems.",
   alternates: { canonical: "/locations/texas" },
 };
