@@ -122,7 +122,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // is linked from anywhere on the site (orphaned), so they fail the
     // "linked from the site" inclusion bar until that's fixed separately.
     "/privacy-policy",
-    "/research/texas-digital-marketing-report-2026",
     "/our-process",
   ];
 
