@@ -182,7 +182,7 @@ export default function HomeServicesIndustryPage() {
           </div>
           <div className="rounded-2xl border border-line bg-obsidian p-6">
             <p className="font-display text-lg font-bold text-cloud">Meta lead ads</p>
-            <p className="mt-2 text-sm leading-7 text-mist">Where a business wants to accelerate lead volume beyond organic reach, Meta lead ads run as a distinct, budgeted engagement with its own reporting — never bundled silently into an organic content package.</p>
+            <p className="mt-2 text-sm leading-7 text-mist">Where a business wants to accelerate lead volume beyond organic reach, <Link href="/services/paid-social-advertising" className="text-mint hover:underline">paid social campaigns</Link> run as a distinct, budgeted engagement with its own reporting — never bundled silently into an organic content package.</p>
           </div>
         </div>
       </Section>

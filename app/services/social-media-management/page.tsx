@@ -43,7 +43,7 @@ const faqs = [
   },
   {
     q: "Do you provide bilingual social media management for Texas businesses?",
-    a: "Yes. For Texas markets with significant Spanish-speaking audiences — particularly San Antonio and Houston — Seovize builds bilingual content strategies with English and Spanish posts, captions, and hashtag systems targeting both language communities.",
+    a: "Bilingual content is scoped per engagement rather than offered as a default capability — we won't claim Spanish-language delivery without confirming it's genuinely staffed for your account. If it matters for your market, raise it during the initial call and we'll give you a straight answer.",
   },
   {
     q: "How quickly will we see results from social media management?",
@@ -262,11 +262,33 @@ export default function SocialMediaPage() {
       <Section variant="navy" eyebrow="Pricing" title="Choose the right social growth level.">
         <PricingCards items={socialPackages} />
         <p className="mt-6 text-sm text-slate-mid">
-          Curious what changes the price? See{" "}
+          Curious{" "}
+          <Link href="/guides/social-media-management-pricing" className="font-semibold text-mint hover:underline">
+            what affects social media management pricing
+          </Link>
+          , or deciding between a{" "}
+          <Link href="/guides/hire-social-media-manager-vs-agency" className="font-semibold text-mint hover:underline">
+            manager, freelancer or agency
+          </Link>
+          ? Or see{" "}
           <Link href="/pricing" className="font-semibold text-mint hover:underline">
             full pricing details →
           </Link>
         </p>
+      </Section>
+
+      {/* ── INDUSTRIES ───────────────────────────────────── */}
+      <Section eyebrow="Industries" title="Built for how your industry actually works.">
+        <Link
+          href="/industries/home-services-social-media-management"
+          className="group flex flex-col gap-2 rounded-2xl border border-line bg-navy p-6 transition hover:border-mint/40 sm:flex-row sm:items-center sm:justify-between"
+        >
+          <div>
+            <p className="font-display text-lg font-bold text-cloud group-hover:text-mint">Social media for home service companies</p>
+            <p className="mt-1 text-sm text-mist">Contractors, HVAC, cleaning, roofing — before/after proof, reviews and seasonal planning.</p>
+          </div>
+          <span className="text-sm font-semibold text-mint">See the system →</span>
+        </Link>
       </Section>
 
       {/* ── FAQ ──────────────────────────────────────────── */}

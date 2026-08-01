@@ -127,6 +127,9 @@ export default function OrganicVsPaidGuidePage() {
           <Link href="/services/social-media-management" className="text-sm font-semibold text-mint hover:underline">
             Organic social media management →
           </Link>
+          <Link href="/services/paid-social-advertising" className="text-sm font-semibold text-mint hover:underline">
+            Paid social campaign management →
+          </Link>
           <Link href="/guides/social-media-management-pricing" className="text-sm font-semibold text-mint hover:underline">
             See pricing breakdown →
           </Link>

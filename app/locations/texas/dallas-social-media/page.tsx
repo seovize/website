@@ -117,11 +117,13 @@ const data: CityPageData = {
   ],
   faqs,
   relatedPages: [
+    { label: "Social Media Management Service", href: "/services/social-media-management" },
+    { label: "Local SEO Support", href: "/services/local-seo" },
+    { label: "Texas Digital Marketing Research", href: "/research/texas-digital-marketing-report-2026" },
     { label: "Dallas SEO Services", href: "/locations/texas/dallas-seo" },
     { label: "Texas Social Media Manager", href: "/locations/texas/social-media-manager" },
     { label: "Houston Social Media Management", href: "/locations/texas/houston-social-media" },
     { label: "Austin Social Media Management", href: "/locations/texas/austin-social-media" },
-    { label: "Social Media Management Service", href: "/services/social-media-management" },
     { label: "Texas Hub", href: "/locations/texas" },
   ],
 };
