@@ -59,6 +59,29 @@ const pillars = [
   },
 ];
 
+const contentSources = [
+  { source: "Completed job", desc: "The default trigger — every finished job is a candidate post." },
+  { source: "Before-and-after", desc: "The subset of completed jobs with a real visual transformation worth documenting." },
+  { source: "Technician explanation", desc: "A tech explaining what they found, why it matters, or how a repair works — in their own words." },
+  { source: "Customer question", desc: "A question asked on three different calls this month is a question your next customer has too." },
+  { source: "Seasonal warning", desc: "The 2-4 week window before your category's real seasonal spike — not generic calendar dates." },
+  { source: "Maintenance tip", desc: "Something a homeowner can check themselves before deciding to call — builds trust before the sale." },
+  { source: "Review", desc: "A real, permission-based customer review, shared as its own post rather than buried in a widget." },
+  { source: "Service-area update", desc: "A new neighborhood, city, or service-area expansion worth telling existing followers about." },
+  { source: "Team or process", desc: "Who does the work and how — licensing, background checks, or how a job actually gets scheduled." },
+  { source: "Emergency response", desc: "How the business handles urgent calls — relevant for HVAC, plumbing, roofing storm response." },
+];
+
+const monthlyWorkflow = [
+  { step: "Asset collection", desc: "Photos, video and notes from the month's jobs come in through one intake channel, not scattered texts." },
+  { step: "Content planning", desc: "Raw material is sorted against the content-source map and slotted into next month's calendar." },
+  { step: "Approval", desc: "The draft calendar goes to the business owner for review before anything is scheduled." },
+  { step: "Publishing", desc: "Approved content publishes on the agreed platform mix and schedule." },
+  { step: "Comment handling", desc: "Comments and messages get a response during business hours — not left unanswered for days." },
+  { step: "Review follow-up", desc: "Completed jobs from the month get a review request, tracked separately from content publishing." },
+  { step: "Next-month adjustment", desc: "What got engagement and what didn't shapes next month's content mix — not a fixed template repeated forever." },
+];
+
 const measurement = [
   { metric: "Profile visits → website clicks", detail: "Tracks whether social content is actually driving people toward a conversion path, not just views." },
   { metric: "Message and call inquiries", detail: "The direct lead signal from social — tracked monthly against the content that generated it." },
@@ -153,12 +176,46 @@ export default function HomeServicesIndustryPage() {
         </div>
       </Section>
 
-      <Section eyebrow="Before/after process" title="How a completed job becomes content.">
-        <ol className="max-w-2xl space-y-4 text-sm leading-7 text-mist">
-          <li><span className="font-semibold text-cloud">1. Capture at the job site.</span> A simple, repeatable shot list (before, in-progress, after) the crew can follow without slowing down the job.</li>
-          <li><span className="font-semibold text-cloud">2. Submit through one channel.</span> Photos and short context (service type, general area, timeframe) sent through a single intake point instead of scattered across phones.</li>
-          <li><span className="font-semibold text-cloud">3. Production and review.</span> Turned into on-brand before/after posts with accurate service details — no invented specifics, no stock imagery presented as real work.</li>
-          <li><span className="font-semibold text-cloud">4. Publish and connect to reviews.</span> Posted alongside a review request to the customer, so proof and reputation build together instead of as separate efforts.</li>
+      <Section eyebrow="Content-source map" title="Ten places content comes from — not a blank page every month.">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+          {contentSources.map((c, i) => (
+            <div key={c.source} className="rounded-2xl border border-line bg-obsidian p-5">
+              <p className="font-mono text-xs text-mint">{String(i + 1).padStart(2, "0")}</p>
+              <p className="mt-1 font-display text-sm font-black text-cloud">{c.source}</p>
+              <p className="mt-2 text-xs leading-5 text-mist">{c.desc}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <Section variant="navy" eyebrow="Jobsite capture checklist" title="What the crew actually needs to shoot.">
+        <p className="max-w-2xl text-sm leading-7 text-mist">
+          A repeatable, safety-first shot list — not a professional photo shoot, just consistent phone
+          photos and short clips a crew can capture without slowing the job down.
+        </p>
+        <ul className="mt-5 max-w-2xl space-y-3 text-sm leading-7 text-mist">
+          <li>— <span className="font-semibold text-cloud">Before shot first, always.</span> Take it before any tools come out — it&apos;s the one shot you can&apos;t get later.</li>
+          <li>— <span className="font-semibold text-cloud">Keep people and plates out of frame</span> unless the customer has agreed to be shown — protect their privacy by default.</li>
+          <li>— <span className="font-semibold text-cloud">Never compromise safety for a photo.</span> No shots from unsafe positions, no removing safety gear to get a better angle.</li>
+          <li>— <span className="font-semibold text-cloud">Note the basics as you go.</span> Service type, general area (not a home address), and what changed — three lines of text is enough.</li>
+          <li>— <span className="font-semibold text-cloud">After shot, same angle as before.</span> Matching angles are what make a before/after actually read as one.</li>
+          <li>— <span className="font-semibold text-cloud">Submit same day if possible.</span> Details fade fast; a same-day submission needs far less follow-up later.</li>
+        </ul>
+      </Section>
+
+      <Section eyebrow="Monthly workflow" title="How the month actually runs.">
+        <ol className="grid gap-4 md:grid-cols-2">
+          {monthlyWorkflow.map((w, i) => (
+            <li key={w.step} className="flex gap-4 rounded-2xl border border-line bg-obsidian p-5">
+              <span className="font-mono grid h-8 w-8 shrink-0 place-items-center rounded-full border border-mint/40 text-xs font-bold text-mint">
+                {i + 1}
+              </span>
+              <div>
+                <p className="font-display text-sm font-black text-cloud">{w.step}</p>
+                <p className="mt-1 text-sm leading-6 text-mist">{w.desc}</p>
+              </div>
+            </li>
+          ))}
         </ol>
       </Section>
 
@@ -187,7 +244,17 @@ export default function HomeServicesIndustryPage() {
         </div>
       </Section>
 
-      <Section eyebrow="Measurement" title="What actually gets reported.">
+      <Section eyebrow="Lead pathway" title="How this actually turns into an inquiry.">
+        <ol className="max-w-2xl space-y-4 text-sm leading-7 text-mist">
+          <li><span className="font-semibold text-cloud">1. Social content builds familiarity.</span> A homeowner sees consistent, real proof of work before they ever need you — so you&apos;re not a cold name when they do.</li>
+          <li><span className="font-semibold text-cloud">2. Reviews build trust.</span> By the time they&apos;re comparing options, real reviews answer the &ldquo;can I trust this company&rdquo; question social content alone can&apos;t.</li>
+          <li><span className="font-semibold text-cloud">3. Local SEO captures active demand.</span> When they search for the service right now, local SEO work determines whether you show up at all.</li>
+          <li><span className="font-semibold text-cloud">4. Paid social adds reach on top,</span> where a business chooses to run it — targeted at people who match your service area and haven&apos;t seen the organic content yet.</li>
+          <li><span className="font-semibold text-cloud">5. A form or call closes the loop.</span> Every step above only matters if the conversion path at the end actually works and gets answered.</li>
+        </ol>
+      </Section>
+
+      <Section variant="navy" eyebrow="Measurement" title="What actually gets reported.">
         <div className="grid gap-4 md:grid-cols-2">
           {measurement.map((m) => (
             <div key={m.metric} className="rounded-2xl border border-line bg-navy p-6">
@@ -198,7 +265,7 @@ export default function HomeServicesIndustryPage() {
         </div>
       </Section>
 
-      <Section variant="navy" eyebrow="FAQ" title="Questions home service owners ask.">
+      <Section eyebrow="FAQ" title="Questions home service owners ask.">
         <div className="max-w-3xl">
           <FAQAccordion faqs={faqs} />
         </div>
