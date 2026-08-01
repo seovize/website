@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/Button";
 import { CTABanner } from "@/components/CTABanner";
-import { EntityGraph } from "@/components/EntityGraph";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { FounderSection } from "@/components/FounderSection";
 import { JsonLd } from "@/components/JsonLd";
@@ -13,12 +12,12 @@ import { Section } from "@/components/Section";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { TrustStrip } from "@/components/TrustStrip";
 import { faqSchema, speakableSchema } from "@/lib/schema";
-import { founder, homepageFaqs, processSteps, seoPackages, services, site, texasData } from "@/lib/site";
+import { founder, homepageFaqs, processSteps, services, site, socialPackages, texasData } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Seovize | Semantic SEO & Social Media Systems — Texas & U.S.",
+  title: "Social Media Management & Local SEO for Texas Service Businesses",
   description:
-    "Abdul Ghani's Seovize delivers semantic SEO, local SEO, and social media systems for U.S. brands. Founder-led strategy, 20+ years experience, serving Texas and nationwide.",
+    "Social media management, local SEO and paid lead-generation systems for Texas service businesses. Build visibility, trust and a measurable lead path.",
   alternates: { canonical: "/" },
   verification: { google: "LYLtdnAUVec_Ay6HIpaC6juwzMZoKhkY6-i7nF-ANak" },
 };
@@ -41,7 +40,7 @@ export default function HomePage() {
                 {[
                   { label: "20+ Years Experience", color: "bg-mint" },
                   { label: "Founder-Led Strategy", color: "bg-mint" },
-                  { label: "Texas SEO Expert", color: "bg-sky" },
+                  { label: "Texas Service Businesses", color: "bg-sky" },
                 ].map((b) => (
                   <span
                     key={b.label}
@@ -55,28 +54,27 @@ export default function HomePage() {
 
               {/* H1 — fluid from 2.2rem (375px) to 5.8rem (1280px+), no forced breaks */}
               <h1 className="font-display text-[clamp(2.2rem,7.2vw,5.8rem)] font-black leading-[1.0] tracking-[-0.02em] text-cloud">
-                Build authority.{" "}
-                <span className="text-mint">Capture demand.</span>{" "}
-                Win Texas.
+                Grow your local service business with{" "}
+                <span className="text-mint">social, search and paid leads.</span>
               </h1>
 
               <div className="speakable mt-6 max-w-2xl rounded-2xl border border-mint/20 bg-navy px-6 py-5">
                 <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-mint mb-2">What is Seovize?</p>
                 <p className="text-base leading-[1.8] text-cloud">
-                  Seovize is a semantic SEO and social media management studio founded by{" "}
+                  Seovize is a social media management, local SEO and paid lead-generation studio founded by{" "}
                   <Link href="/about" className="font-semibold text-mint hover:underline">
                     {founder.name}
                   </Link>
-                  {" "}— a Texas SEO expert with {founder.experience}+ years of experience. We build topical authority, local search visibility, and social content systems for service businesses and growth brands across Texas and the U.S.
+                  , a digital marketing strategist with {founder.experience} years of experience. A focused growth system that helps Texas local service businesses get found, stay visible and capture demand — built and run personally, not handed off to junior staff.
                 </p>
               </div>
 
               {/* CTAs — stacked on mobile, row on sm+ */}
               <div className="mt-7 flex flex-col gap-3 sm:flex-row md:mt-9">
                 <Button href="/contact" size="lg" className="justify-center sm:justify-start">
-                  Get a Free Audit →
+                  Request a Growth Audit →
                 </Button>
-                <Button href="/services/semantic-seo" variant="secondary" size="lg" className="justify-center sm:justify-start">
+                <Button href="/services/social-media-management" variant="secondary" size="lg" className="justify-center sm:justify-start">
                   See how it works
                 </Button>
               </div>
@@ -119,11 +117,11 @@ export default function HomePage() {
                 Texas markets
               </p>
               <h2 className="font-display text-3xl font-black leading-tight tracking-tight text-cloud md:text-[3.5rem] md:leading-[1.05]">
-                Four cities. One authority system.
+                Four cities. One remote growth system.
               </h2>
             </div>
             <Link
-              href="/locations/texas"
+              href="/locations/texas/social-media-management"
               className="hidden shrink-0 text-sm font-semibold text-mint hover:underline md:block"
             >
               Full Texas strategy →
@@ -135,7 +133,7 @@ export default function HomePage() {
             {texasData.cities.map((city, i) => (
               <Link
                 key={city.slug}
-                href={`/locations/texas/${city.slug}-seo`}
+                href={`/locations/texas/${city.slug}-social-media`}
                 className="group relative overflow-hidden bg-obsidian p-8 transition-colors duration-200 hover:bg-navy"
               >
                 {/* Refined index — small mint tabular marker, not a giant ghost numeral */}
@@ -156,7 +154,7 @@ export default function HomePage() {
           </div>
 
           <div className="mt-5 text-center md:hidden">
-            <Link href="/locations/texas" className="text-sm font-semibold text-mint hover:underline">
+            <Link href="/locations/texas/social-media-management" className="text-sm font-semibold text-mint hover:underline">
               Full Texas strategy →
             </Link>
           </div>
@@ -173,10 +171,11 @@ export default function HomePage() {
               What we build
             </p>
             <h2 className="font-display text-3xl font-black leading-tight tracking-tight text-cloud md:text-[3.5rem] md:leading-[1.05]">
-              Six services. One growth system.
+              Every service that grows a local business.
             </h2>
             <p className="mt-4 max-w-xl text-base leading-[1.75] text-mist md:mt-5 md:text-lg">
-              SEO informs content. Content fuels social. Social signals support search. Everything
+              Social builds visibility. Local SEO makes you findable. Content and captions connect
+              both. Everything
               connects — no silos, no guesswork.
             </p>
           </div>
@@ -214,81 +213,75 @@ export default function HomePage() {
       {/* ── FOUNDER E-E-A-T ─────────────────────────────── */}
       <FounderSection />
 
-      {/* ── SEMANTIC SEO FEATURE ────────────────────────── */}
+      {/* ── 3-PART GROWTH SYSTEM ────────────────────────── */}
       <section className="px-4 py-16 sm:px-5 md:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 md:mb-14">
             <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-mint">
-              Semantic SEO
+              How it fits together
             </p>
             <h2 className="font-display text-3xl font-black leading-tight tracking-tight text-cloud md:text-[3.5rem] md:leading-[1.05]">
-              Entity authority that outlasts algorithm updates.
+              One growth system, three connected parts.
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-[1.75] text-mist md:mt-5 md:text-lg">
-              We build content around entities and topic clusters — not keywords — so Google understands
-              your expertise, trust, and geographic focus at a structural level.
+              Social media builds visibility and trust. Local SEO makes you findable when someone&apos;s
+              ready to buy. Paid social fills the gap while the organic system compounds. Each is a
+              distinct service with its own scope — not one page pretending to be three.
             </p>
           </div>
 
-          <div data-reveal className="grid gap-4 lg:grid-cols-[1.5fr_1fr_1fr]">
-            <div className="rounded-2xl border border-line bg-navy p-8 shadow-[0_1px_3px_rgba(0,0,0,0.05),0_8px_24px_rgba(0,0,0,0.04)] dark:shadow-none">
+          <div data-reveal className="grid gap-4 lg:grid-cols-3">
+            <Link
+              href="/services/social-media-management"
+              className="group rounded-2xl border border-line bg-navy p-8 shadow-[0_1px_3px_rgba(0,0,0,0.05),0_8px_24px_rgba(0,0,0,0.04)] transition hover:-translate-y-0.5 dark:shadow-none"
+            >
               <div className="mb-5 flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-mint/10 text-sm font-black text-mint">
-                  E
+                  1
                 </div>
-                <p className="font-mono text-xs font-bold text-mint">Entity mapping</p>
+                <p className="font-mono text-xs font-bold text-mint">Organic social</p>
               </div>
               <h3 className="font-display text-2xl font-black text-cloud">
-                Who you are. What you do. Where you serve.
+                Social Media Management
               </h3>
               <p className="mt-4 text-sm leading-[1.75] text-mist">
-                Your brand, services, founder, and service areas — structured as semantic entities so
-                search engines can verify, connect, and rank each claim with confidence.
+                Strategy, content creation, publishing, community management and reporting — a
+                complete organic system, not random posting.
               </p>
-              <div className="mt-6 rounded-xl border border-line bg-obsidian p-4">
-                <EntityGraph />
-              </div>
-            </div>
-
-            <div className="rounded-2xl border border-line bg-navy p-7 shadow-[0_1px_3px_rgba(0,0,0,0.05),0_8px_24px_rgba(0,0,0,0.04)] dark:shadow-none">
-              <div className="mb-5 h-0.5 w-10 rounded-full bg-mint" />
-              <h3 className="font-display text-xl font-black text-cloud">Topic clusters</h3>
-              <p className="mt-3 text-sm leading-[1.75] text-mist">
-                Interconnected content networks that reinforce authority across every sub-topic your
-                buyers search.
+              <p className="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-mint">
+                See the service <span aria-hidden="true">→</span>
               </p>
-              <div className="mt-6 space-y-3">
-                {["Pillar page", "Supporting articles", "Internal link graph", "FAQ layer"].map((t) => (
-                  <div key={t} className="flex items-center gap-2.5 text-xs text-mist">
-                    <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-mint/60" />
-                    {t}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="rounded-2xl border border-line bg-navy p-7 shadow-[0_1px_3px_rgba(0,0,0,0.05),0_8px_24px_rgba(0,0,0,0.04)] dark:shadow-none">
-              <div className="mb-5 h-0.5 w-10 rounded-full bg-sky" />
-              <h3 className="font-display text-xl font-black text-cloud">Schema architecture</h3>
-              <p className="mt-3 text-sm leading-[1.75] text-mist">
-                FAQPage, Service, Person, and Article schema — structured data that helps search
-                engines parse what your business is, does, and serves, correctly and consistently.
-              </p>
-              <div className="mt-6 space-y-3">
-                {["Machine-readable facts", "Consistent entity data", "Rich-result eligible", "No ranking or citation guarantee"].map((t) => (
-                  <div key={t} className="flex items-center gap-2.5 text-xs text-mist">
-                    <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-sky/60" />
-                    {t}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-8 text-center">
-            <Link href="/services/semantic-seo" className="text-sm font-semibold text-mint hover:underline">
-              Explore semantic SEO implementation →
             </Link>
+
+            <Link
+              href="/services/local-seo"
+              className="group rounded-2xl border border-line bg-navy p-7 shadow-[0_1px_3px_rgba(0,0,0,0.05),0_8px_24px_rgba(0,0,0,0.04)] transition hover:-translate-y-0.5 dark:shadow-none"
+            >
+              <div className="mb-5 flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-sky/10 text-sm font-black text-sky">
+                  2
+                </div>
+                <p className="font-mono text-xs font-bold text-sky">Search visibility</p>
+              </div>
+              <h3 className="font-display text-xl font-black text-cloud">Local SEO</h3>
+              <p className="mt-3 text-sm leading-[1.75] text-mist">
+                Website and local-search optimization grounded in relevance and honest service-area
+                positioning — no fake offices, no map-pack guarantees.
+              </p>
+              <p className="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-sky">
+                See the service <span aria-hidden="true">→</span>
+              </p>
+            </Link>
+
+            <div className="rounded-2xl border border-line bg-navy p-7 opacity-80 dark:shadow-none">
+              <div className="mb-5 h-0.5 w-10 rounded-full bg-orange/60" />
+              <h3 className="font-display text-xl font-black text-cloud">Paid Social Advertising</h3>
+              <p className="mt-3 text-sm leading-[1.75] text-mist">
+                Meta and paid-social campaign management for qualified local leads. In development —
+                published once campaign process and reporting capability are confirmed.
+              </p>
+              <p className="mt-6 text-xs font-semibold text-slate-mid">Coming soon</p>
+            </div>
           </div>
         </div>
       </section>
@@ -338,10 +331,10 @@ export default function HomePage() {
         title="Transparent packages. No discovery call just to get a number."
         variant="navy"
       >
-        <PricingCards items={seoPackages} service="SEO Services" />
+        <PricingCards items={socialPackages} service="Social Media Management" />
         <div className="mt-8 text-center">
           <Link href="/pricing" className="text-sm font-semibold text-mint hover:underline">
-            See all packages including Social Media →
+            See all packages including SEO →
           </Link>
         </div>
       </Section>

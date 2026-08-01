@@ -19,14 +19,14 @@ import {
 import { founder, site, socialPackages } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Social Media Management for Small Businesses in Texas | Seovize",
+  title: "Texas Social Media Management for Local Service Businesses",
   description:
-    "Done-for-you social media management for Texas small businesses — content strategy, custom post design, SEO captions, reels, scheduling, and monthly reporting. Plans from $1,100/mo, founder-led by Abdul Ghani. Serving Houston, Dallas, Austin, San Antonio, and all of Texas.",
+    "Social media strategy, content systems and local lead support for service businesses in Dallas, Houston, Austin and San Antonio.",
   alternates: { canonical: "/locations/texas/social-media-management" },
   openGraph: {
-    title: "Social Media Management for Small Businesses in Texas | Seovize",
+    title: "Texas Social Media Management for Local Service Businesses | Seovize",
     description:
-      "Founder-led social media management for Texas small businesses — strategy, design, SEO captions, reels, scheduling, and reporting from $1,100/mo. Serving all of Texas.",
+      "Social media strategy, content systems and local lead support for Texas service businesses — a Texas-focused remote management system, not a copied location template.",
     url: `${site.domain}/locations/texas/social-media-management`,
   },
 };
@@ -357,8 +357,8 @@ export default function TexasSocialMediaManagementPage() {
             ))}
           </div>
           <p className="mt-6 text-sm text-slate-mid">
-            Outside these metros? We serve Fort Worth, El Paso, Arlington, Plano, Corpus Christi, and small businesses
-            in communities across the entire state.
+            Outside these four metros? Seovize also serves Fort Worth and El Paso directly, and delivers
+            remotely to service businesses across the rest of Texas — the process is the same everywhere.
           </p>
         </div>
       </section>

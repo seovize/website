@@ -8,18 +8,18 @@ import { JsonLd } from "@/components/JsonLd";
 import { Section } from "@/components/Section";
 import { Button } from "@/components/Button";
 import { PricingCards } from "@/components/PricingCards";
-import { faqSchema, howToSchema, serviceSchema, speakableSchema } from "@/lib/schema";
-import { seoPackages, site } from "@/lib/site";
+import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
+import { socialPackages, site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Social Media Management | Premium Content & Strategy for Growth Brands | Seovize",
+  title: "Social Media Management for Local Service Businesses",
   description:
-    "Professional social media management — content planning, post design, captions, reels, scheduling, and analytics by Abdul Ghani. Premium strategy for Texas and U.S. service businesses from $1,100/month.",
+    "Strategy, content creation, publishing, community management and reporting for local service businesses across Texas and the U.S.",
   alternates: { canonical: "/services/social-media-management" },
   openGraph: {
-    title: "Social Media Management | Seovize — Premium Content & Strategy",
+    title: "Social Media Management for Local Service Businesses | Seovize",
     description:
-      "Premium social media management for service businesses — content planning, custom post design, captions, reels, and monthly analytics. Founder-led by Abdul Ghani, 20+ years experience.",
+      "A complete organic social system for service businesses that need consistent visibility and trust — strategy, content, publishing, community management and reporting.",
     url: `${site.domain}/services/social-media-management`,
   },
 };
@@ -77,15 +77,13 @@ export default function SocialMediaPage() {
       <JsonLd data={serviceSchema("social-media-management")} />
       <JsonLd data={faqSchema(faqs)} />
       <JsonLd
-        data={howToSchema({
-          name: "How to manage social media for a service business",
-          description: "The Seovize social media management process — from brand audit to monthly compounding reach.",
-          steps: howToSteps,
-        })}
+        data={breadcrumbSchema([
+          { name: "Home", url: site.domain },
+          { name: "Social Media Management", url: `${site.domain}/services/social-media-management` },
+        ])}
       />
-      <JsonLd data={speakableSchema(`${site.domain}/services/social-media-management`)} />
 
-      <Breadcrumbs items={[{ name: "Services", href: "/services/seo" }, { name: "Social Media Management", href: "/services/social-media-management" }]} />
+      <Breadcrumbs items={[{ name: "Social Media Management", href: "/services/social-media-management" }]} />
 
       {/* ── HERO ──────────────────────────────────────────── */}
       <section className="noise relative overflow-hidden px-5 pb-16 pt-20 md:pt-28">
@@ -93,26 +91,26 @@ export default function SocialMediaPage() {
         <div className="relative z-10 mx-auto max-w-5xl">
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-mint">Social Media Management</p>
           <h1 className="font-display text-5xl font-black leading-[1.0] tracking-tight text-cloud md:text-7xl">
-            Premium social media<br />
-            <span className="text-sky">built to grow.</span>
+            Social Media Management<br />
+            <span className="text-sky">for Local Service Businesses.</span>
           </h1>
 
-          <div className="speakable mt-8 max-w-3xl rounded-[1.5rem] border border-sky/20 bg-navy px-7 py-6">
-            <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.24em] text-sky">What is social media management?</p>
+          <div className="mt-8 max-w-3xl rounded-[1.5rem] border border-sky/20 bg-navy px-7 py-6">
+            <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.24em] text-sky">What&apos;s included?</p>
             <p className="text-base leading-8 text-cloud">
-              Professional social media management is a complete system — monthly content calendars, custom post design, SEO-optimized captions, Reels production, scheduling, community engagement, and monthly analytics reporting — that replaces ad-hoc posting with a consistent brand presence that compounds over time.
+              A complete organic social system — not random posting. Strategy, content creation, publishing, community management and reporting, built for local service businesses that need consistent visibility and trust.
             </p>
           </div>
 
           <p className="mt-7 max-w-3xl text-lg leading-8 text-mist">
-            Seovize manages social media for service businesses, Texas brands, and professional practices. Every content strategy is personally designed by Abdul Ghani — 20+ years of digital marketing expertise, zero generic templates, real platform knowledge, and SEO-informed content systems that build search visibility alongside social reach.
+            Seovize manages social media for local service businesses across Texas and the U.S. Every content strategy is personally designed by Abdul Ghani — no account managers, no generic templates, real platform knowledge applied to your specific business.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Button href="/contact">Get a Social Strategy Call</Button>
+            <Button href="/contact">Discuss Social Media Management</Button>
             <Button href="/pricing" variant="secondary">See packages & pricing</Button>
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
-            {["Instagram management", "Facebook strategy", "LinkedIn content", "Instagram Reels", "Custom post design", "Monthly analytics"].map((t) => (
+            {["Content strategy", "Content creation", "Publishing", "Community management", "Reporting"].map((t) => (
               <span key={t} className="rounded-full border border-line bg-navy/50 px-3 py-1.5 text-[11px] font-medium text-mist">
                 {t}
               </span>
@@ -174,52 +172,44 @@ export default function SocialMediaPage() {
         </div>
       </Section>
 
-      {/* ── REELS SECTION ────────────────────────────────── */}
-      <Section variant="navy" eyebrow="Instagram Reels" title="Short-form video is non-negotiable in 2026.">
-        <div className="grid gap-6 md:grid-cols-2">
-          <div>
-            <p className="text-sm leading-8 text-mist">
-              Instagram Reels generate 3–5x more organic reach than static posts for most accounts in 2026. They are the primary mechanism through which Instagram surfaces accounts to non-followers — meaning Reels are not optional for businesses trying to grow their audience beyond their existing followers.
-            </p>
-            <p className="mt-5 text-sm leading-8 text-mist">
-              Seovize Growth and Authority plans include monthly Reels production: concept development, scripting direction, editing, captions, and hashtag strategy. For Texas service businesses — contractors showing project transformations, med spas showing before/after results, restaurants showcasing dishes — Reels are the fastest path to meaningful Instagram audience growth.
-            </p>
-            <div className="mt-6 space-y-3">
-              {[
-                "Process and transformation videos (before/after, how it works)",
-                "Behind-the-scenes business content",
-                "Client testimonial video formats",
-                "Texas community and local event content",
-                "Expert tips and education (establishes authority)",
-              ].map((r) => (
-                <div key={r} className="flex items-start gap-3 text-sm text-mist">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-sky" />
-                  {r}
-                </div>
-              ))}
+      {/* ── CONTENT INPUTS ───────────────────────────────── */}
+      <Section eyebrow="What we need from you" title="Content inputs that make this work.">
+        <p className="max-w-3xl text-sm leading-8 text-mist">
+          Social content is only as good as what it has to work with. This is what a typical engagement
+          needs from your side — usually less than an hour a month once the system is running.
+        </p>
+        <div className="mt-6 grid gap-4 md:grid-cols-2">
+          {[
+            { title: "Photos and video from completed jobs", desc: "Phone photos are fine. Before/after shots, finished work, team on-site — raw material, not polished assets." },
+            { title: "Approval turnaround", desc: "A monthly content calendar reviewed and approved within an agreed window, so publishing stays on schedule." },
+            { title: "Business updates", desc: "New services, promotions, or team changes worth reflecting in that month's content." },
+            { title: "Direct brand feedback", desc: "Voice and tone corrections in month one calibrate every month after — early feedback saves rework later." },
+          ].map((item) => (
+            <div key={item.title} className="rounded-2xl border border-line bg-navy p-6">
+              <h3 className="font-display text-base font-black text-cloud">{item.title}</h3>
+              <p className="mt-2 text-sm leading-6 text-mist">{item.desc}</p>
             </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* ── EXCLUSIONS ───────────────────────────────────── */}
+      <Section variant="navy" eyebrow="What's not included" title="Scope boundaries, stated up front.">
+        <div className="grid gap-4 md:grid-cols-2">
+          <div className="rounded-2xl border border-line bg-obsidian p-6">
+            <p className="text-sm leading-7 text-mist">
+              Organic social media management does not include paid ad spend or campaign management —
+              that&apos;s a separate service with its own scope, budget and reporting process. It also
+              doesn&apos;t include full video production (on-site filming crews) or graphic design work
+              outside the social content system, such as print materials or full website builds.
+            </p>
           </div>
-          <div className="rounded-[2rem] border border-sky/20 bg-obsidian p-7">
-            <p className="mb-5 font-mono text-xs font-bold uppercase tracking-widest text-sky">Reels reach vs. static posts</p>
-            <div className="space-y-4">
-              {[
-                { label: "Static post (12 posts/mo)", reach: "~2–4x follower count", bar: "w-1/4" },
-                { label: "Carousels (10 per month)", reach: "~3–6x follower count", bar: "w-2/5" },
-                { label: "Reels (8 per month)", reach: "~10–20x follower count", bar: "w-3/4" },
-                { label: "Reels + Static + Carousels", reach: "Maximum platform reach", bar: "w-full" },
-              ].map((r) => (
-                <div key={r.label}>
-                  <div className="flex items-center justify-between text-xs text-mist">
-                    <span>{r.label}</span>
-                    <span className="font-mono text-sky">{r.reach}</span>
-                  </div>
-                  <div className="mt-1.5 h-1.5 w-full rounded-full bg-line">
-                    <div className={`h-1.5 rounded-full bg-sky ${r.bar}`} />
-                  </div>
-                </div>
-              ))}
-            </div>
-            <p className="mt-5 text-[11px] text-slate-mid">Estimates based on typical engagement rates for service business accounts (1,000–10,000 followers).</p>
+          <div className="rounded-2xl border border-line bg-obsidian p-6">
+            <p className="text-sm leading-7 text-mist">
+              Reach, follower growth and engagement depend on your industry, market and starting point —
+              no fixed multiplier or guaranteed number applies across accounts. Video volume, platform
+              mix and reporting depth vary by plan; specifics are confirmed before an engagement starts.
+            </p>
           </div>
         </div>
       </Section>
@@ -260,7 +250,7 @@ export default function SocialMediaPage() {
               The difference shows in the details: captions written with SEO keyword intent, not just trending phrases. Hashtag systems built on real search behavior data. Post timing based on your account&apos;s historical engagement patterns, not generic recommendations. Content that reflects your brand&apos;s actual voice — not a social media manager&apos;s interpretation of it.
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
-              {["Content strategy", "Instagram Reels", "Caption copywriting", "Meta Ads", "Community management", "Analytics reporting", "Brand voice development", "Bilingual content"].map((k) => (
+              {["Content strategy", "Instagram Reels", "Caption copywriting", "Community management", "Analytics reporting", "Brand voice development"].map((k) => (
                 <span key={k} className="rounded-full border border-line px-3 py-1.5 text-[10px] text-slate-mid">{k}</span>
               ))}
             </div>
@@ -270,7 +260,13 @@ export default function SocialMediaPage() {
 
       {/* ── PRICING ──────────────────────────────────────── */}
       <Section variant="navy" eyebrow="Pricing" title="Choose the right social growth level.">
-        <PricingCards items={seoPackages} />
+        <PricingCards items={socialPackages} />
+        <p className="mt-6 text-sm text-slate-mid">
+          Curious what changes the price? See{" "}
+          <Link href="/pricing" className="font-semibold text-mint hover:underline">
+            full pricing details →
+          </Link>
+        </p>
       </Section>
 
       {/* ── FAQ ──────────────────────────────────────────── */}

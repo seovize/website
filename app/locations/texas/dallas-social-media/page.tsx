@@ -5,20 +5,19 @@ import {
   breadcrumbSchema,
   cityServiceSchema,
   faqSchema,
-  howToSchema,
   speakableSchema,
 } from "@/lib/schema";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Social Media Management Dallas TX | Dallas Social Media Agency | Seovize",
+  title: "Dallas Social Media Management for Local Service Businesses",
   description:
-    "Social media management for Dallas businesses in corporate, real estate, and DFW B2B sectors. Post design, LinkedIn authority content, reels, SEO captions, and analytics by Abdul Ghani, 20+ years experience.",
+    "Organic social media management, content creation and lead-focused strategy for Dallas–Fort Worth service businesses. Remote delivery.",
   alternates: { canonical: "/locations/texas/dallas-social-media" },
   openGraph: {
-    title: "Social Media Management Dallas TX | Seovize",
+    title: "Dallas Social Media Management for Local Service Businesses | Seovize",
     description:
-      "Dallas social media management — premium content strategy, post design, LinkedIn authority content, and analytics for DFW corporate, real estate, and B2B brands.",
+      "A DFW-focused content and visibility system for home services, wellness and professional businesses — delivered remotely, no local office implied.",
     url: `${site.domain}/locations/texas/dallas-social-media`,
   },
 };
@@ -139,13 +138,6 @@ export default function DallasSocialMediaPage() {
         })}
       />
       <JsonLd data={faqSchema(faqs)} />
-      <JsonLd
-        data={howToSchema({
-          name: "How to manage social media for a Dallas Texas business",
-          description: "A structured process for building social media presence in the DFW market.",
-          steps: processSteps,
-        })}
-      />
       <JsonLd data={speakableSchema(`${site.domain}/locations/texas/dallas-social-media`)} />
       <JsonLd
         data={breadcrumbSchema([
