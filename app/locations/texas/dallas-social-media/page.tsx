@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     q: "Which social media platforms work best for Dallas businesses?",
-    a: "LinkedIn is the highest-ROI platform for Dallas's corporate and B2B brands — DFW hosts 24 Fortune 500 companies whose buyers actively research on LinkedIn. Instagram and Facebook work well for Dallas real estate, hospitality, restaurants, and retail. Most Dallas B2B brands benefit from LinkedIn as the primary platform plus Instagram for brand personality content.",
+    a: "LinkedIn is the highest-ROI platform for Dallas's corporate and B2B brands — DFW is home to a large concentration of Fortune 500 headquarters whose buyers actively research vendors on LinkedIn. Instagram and Facebook work well for Dallas real estate, hospitality, restaurants, and retail. Most Dallas B2B brands benefit from LinkedIn as the primary platform plus Instagram for brand personality content.",
   },
   {
     q: "How much does social media management cost in Dallas Texas?",
@@ -78,7 +78,7 @@ const data: CityPageData = {
   slug: "dallas-social-media",
   market: "Corporate, real estate & DFW B2B hub",
   marketDetail:
-    "Dallas's social media landscape is shaped by its corporate identity — 24 Fortune 500 companies, a massive real estate market, and sophisticated B2B buyers who engage heavily on LinkedIn. Dallas consumers also respond strongly to Instagram for real estate, hospitality, and lifestyle brands. The DFW Metroplex's diverse demographics create opportunities for Spanish-language social content targeting Dallas's large Hispanic community.",
+    "Dallas's social media landscape is shaped by its corporate identity — a large concentration of Fortune 500 headquarters, a massive real estate market, and sophisticated B2B buyers who engage heavily on LinkedIn. Dallas consumers also respond strongly to Instagram for real estate, hospitality, and lifestyle brands.",
   audienceProfile:
     "Dallas social media audiences include corporate marketing teams at DFW Fortune 500 companies, real estate agents and buyers in the Metroplex, B2B professional services decision-makers, restaurant and hospitality consumers in Uptown and Deep Ellum, and Dallas's growing startup and creative economy. Each segment requires a distinct platform, content tone, and publishing cadence.",
   heroAnswer:

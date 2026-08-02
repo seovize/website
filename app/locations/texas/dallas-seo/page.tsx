@@ -123,7 +123,6 @@ const data: CityPageData = {
     { label: "Houston SEO Services", href: "/locations/texas/houston-seo" },
     { label: "Austin SEO Services", href: "/locations/texas/austin-seo" },
     { label: "Semantic SEO Service", href: "/services/semantic-seo" },
-    { label: "Texas Digital Marketing Report 2026", href: "/research/texas-digital-marketing-report-2026" },
     { label: "Texas Hub", href: "/locations/texas" },
   ],
 };
