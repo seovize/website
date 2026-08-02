@@ -180,6 +180,19 @@ export default function SocialMediaPage() {
         </div>
       </Section>
 
+      {/* ── ANSWER-FIRST: POSTING FREQUENCY ──────────────── */}
+      <Section variant="navy" eyebrow="Direct answer">
+        <h2 className="font-display text-2xl font-black text-cloud md:text-3xl">How often should a local business post on social media?</h2>
+        <p className="mt-4 max-w-3xl text-base leading-8 text-mist">
+          Most local service businesses see the best results posting 3–4 times per week per platform once a content system is in place — enough to stay visible without demanding daily production. Consistency over months matters more than volume in any single week; a business that posts twice a week every week outperforms one that posts daily for two weeks then goes quiet.
+        </p>
+        <ul className="mt-5 max-w-2xl space-y-2 text-sm text-mist">
+          <li>— Starting out: 2–3 posts per week is a sustainable baseline</li>
+          <li>— Established accounts: 3–5 posts per week plus Reels where included in your plan</li>
+          <li>— The failure mode to avoid: bursts of activity followed by silence</li>
+        </ul>
+      </Section>
+
       {/* ── DELIVERABLES ─────────────────────────────────── */}
       <Section variant="navy" eyebrow="Deliverables" title="Everything included in social media management.">
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">

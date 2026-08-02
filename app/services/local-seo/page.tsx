@@ -164,6 +164,22 @@ export default function LocalSeoPage() {
         </div>
       </section>
 
+      {/* ── ANSWER-FIRST: LOCAL SEO + SOCIAL ──────────────── */}
+      <Section eyebrow="Direct answer">
+        <h2 className="font-display text-2xl font-black text-cloud md:text-3xl">How do local SEO and social media work together?</h2>
+        <p className="mt-4 max-w-3xl text-base leading-8 text-mist">
+          Local SEO and social media reinforce each other through shared signals: consistent business name, address and service-area information across both; location-specific content that supports local relevance; and reviews that build trust in both search results and social proof. Neither replaces the other — local SEO captures people actively searching, social media builds familiarity before they search.
+        </p>
+        <ul className="mt-5 max-w-2xl space-y-2 text-sm text-mist">
+          <li>— Consistent NAP (name, address, service area) across Google Business Profile, website and social profiles</li>
+          <li>— Location-specific content shared across both channels, not written twice from scratch</li>
+          <li>— Review requests that feed both Google Business Profile and social proof</li>
+        </ul>
+        <p className="mt-4 text-sm text-mist">
+          See how this plays out for a specific industry in the <Link href="/industries/home-services-social-media-management" className="font-semibold text-mint hover:underline">home services growth system</Link>.
+        </p>
+      </Section>
+
       {/* ── HOW LOCAL RANKING WORKS ──────────────────────── */}
       <Section eyebrow="How Google ranks local results" title="Three factors. One competitive edge.">
         <div className="grid gap-4 md:grid-cols-3">
