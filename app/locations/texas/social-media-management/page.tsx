@@ -11,7 +11,6 @@ import { Section } from "@/components/Section";
 import {
   breadcrumbSchema,
   faqSchema,
-  howToSchema,
   localBusinessSchema,
   offerCatalogServiceSchema,
   speakableSchema,
@@ -170,14 +169,6 @@ export default function TexasSocialMediaManagementPage() {
       />
       <JsonLd data={localBusinessSchema()} />
       <JsonLd data={faqSchema(faqs)} />
-      <JsonLd
-        data={howToSchema({
-          name: "How social media management works for a Texas small business",
-          description:
-            "A 6-step done-for-you process Seovize uses to manage social media for small businesses across Texas — from strategy to monthly reporting.",
-          steps: howToSteps,
-        })}
-      />
       <JsonLd data={speakableSchema(`${site.domain}/locations/texas/social-media-management`)} />
       <JsonLd
         data={breadcrumbSchema([
