@@ -11,7 +11,7 @@ import {
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Social Media Management Austin TX | Austin Social Media Agency | Seovize",
+  title: "Social Media Management Austin TX | Austin Social Media Agency",
   description:
     "Social media management for Austin tech, SaaS, startup, and creative brands. LinkedIn authority content, Instagram storytelling, reels, SEO captions, and analytics by Abdul Ghani, 20+ years experience.",
   alternates: { canonical: "/locations/texas/austin-social-media" },

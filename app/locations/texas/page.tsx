@@ -10,7 +10,7 @@ import { faqSchema, localBusinessSchema } from "@/lib/schema";
 import { founder, texasData } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "SEO & Social Media Management for Texas Businesses | Seovize",
+  title: "SEO & Social Media Management for Texas Businesses",
   description:
     "Seovize delivers semantic SEO, local SEO, and social media management for Texas businesses in Houston, Dallas, Austin, and San Antonio. Founded by Abdul Ghani, 20+ years experience.",
   alternates: { canonical: "/locations/texas" },

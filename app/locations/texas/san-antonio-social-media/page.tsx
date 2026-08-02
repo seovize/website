@@ -11,7 +11,7 @@ import {
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Social Media Management San Antonio TX | San Antonio Social Media Agency | Seovize",
+  title: "Social Media Management San Antonio TX | San Antonio Social Media Agency",
   description:
     "Social media management for San Antonio businesses in hospitality, SMBs, and military-adjacent sectors. Community-driven content, bilingual posts, reels, and analytics by Abdul Ghani, 20+ years experience.",
   alternates: { canonical: "/locations/texas/san-antonio-social-media" },

@@ -5,13 +5,12 @@ import {
   breadcrumbSchema,
   cityServiceSchema,
   faqSchema,
-  howToSchema,
   speakableSchema,
 } from "@/lib/schema";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "SEO Services San Antonio Texas | Top San Antonio SEO Company | Seovize",
+  title: "SEO Services San Antonio Texas",
   description:
     "San Antonio SEO services — local SEO, semantic content, and service-area page systems for San Antonio SMBs, hospitality, healthcare, and contractor businesses. Strategy by Abdul Ghani, 20+ years experience.",
   alternates: { canonical: "/locations/texas/san-antonio-seo" },
@@ -30,11 +29,11 @@ const faqs = [
   },
   {
     q: "How does local SEO work for San Antonio small businesses?",
-    a: "San Antonio local SEO combines dedicated service-area pages targeting San Antonio neighborhoods (Stone Oak, Alamo Heights, Southtown, Helotes), LocalBusiness schema with San Antonio areaServed markup, local citation building across San Antonio directories, and Google Business Profile optimization for businesses with legitimate GBP eligibility.",
+    a: "San Antonio local SEO combines service-area content scoped to the San Antonio neighborhoods a business actually serves, ProfessionalService schema with San Antonio areaServed markup (no fake address), local citation building across San Antonio directories, and Google Business Profile optimization for businesses with legitimate GBP eligibility.",
   },
   {
     q: "Can San Antonio businesses rank locally without a physical storefront?",
-    a: "Yes. Many San Antonio service businesses — contractors, consultants, cleaning services, home services — operate across San Antonio without a central storefront. Seovize builds ethical service-area SEO using LocalBusiness schema with areaServed (no fake address), service-area landing pages for San Antonio neighborhoods, and citation strategies designed for mobile and remote service businesses.",
+    a: "Yes. Many San Antonio service businesses — contractors, consultants, cleaning services, home services — operate across San Antonio without a central storefront. Seovize builds ethical service-area SEO using ProfessionalService schema with areaServed (no fake address), service-area content scoped to real coverage areas, and citation strategies designed for mobile and remote service businesses.",
   },
   {
     q: "Do you provide bilingual SEO for San Antonio businesses?",
@@ -60,12 +59,12 @@ const processSteps = [
     text: "Build semantic content connecting your brand, services, and San Antonio market context — the Alamo City identity, military community, River Walk tourism, and Texas Medical Center South's healthcare network. San Antonio-specific entities strengthen relevance signals for local search.",
   },
   {
-    name: "San Antonio LocalBusiness schema deployment",
-    text: "Deploy ProfessionalService schema with San Antonio areaServed City markup, plus neighborhood-level service area targeting for Stone Oak, Alamo Heights, Helotes, and other San Antonio MSA areas. Add FAQPage, HowTo, Speakable, and BreadcrumbList schema across all San Antonio pages.",
+    name: "San Antonio structured data deployment",
+    text: "Deploy ProfessionalService schema with San Antonio areaServed City markup (no fake address). Add FAQPage, Speakable, and BreadcrumbList schema across all San Antonio pages — schema improves how Google parses the page, it doesn't guarantee rich-result display.",
   },
   {
-    name: "San Antonio neighborhood landing pages",
-    text: "Build service-area pages for San Antonio's key neighborhoods and suburbs: North San Antonio, Stone Oak, Alamo Heights, Southtown, Helotes, Schertz, New Braunfels. Each page has unique market context — not the same boilerplate copy repeated across every San Antonio neighborhood.",
+    name: "Service-area content scoped to where you operate",
+    text: "Build content for the specific San Antonio neighborhoods and suburbs a business actually serves — not a blanket page for every neighborhood regardless of relevance. Each page reflects real market context, not boilerplate copy.",
   },
   {
     name: "Monthly San Antonio rank tracking and optimization",
@@ -90,16 +89,16 @@ const data: CityPageData = {
       desc: "Comprehensive keyword map covering San Antonio hospitality, healthcare, contracting, SMB, and bilingual (English/Spanish) search terms — segmented by neighborhood, buyer intent, and competition level.",
     },
     {
-      title: "San Antonio service-area page system",
-      desc: "Individual landing pages for San Antonio neighborhoods and suburbs — Stone Oak, Alamo Heights, Southtown, Helotes, Schertz, New Braunfels — each with unique content and LocalBusiness schema.",
+      title: "San Antonio service-area content",
+      desc: "Dedicated content for the San Antonio neighborhoods and suburbs relevant to your business, each with unique copy and ProfessionalService schema (serviceArea only — no fake address).",
     },
     {
       title: "Bilingual content strategy",
       desc: "Spanish-language service pages, bilingual meta optimization, and Spanish-language citation building for San Antonio's large Hispanic community — a significant organic search opportunity most agencies ignore.",
     },
     {
-      title: "San Antonio LocalBusiness schema",
-      desc: "ProfessionalService schema with San Antonio areaServed markup, plus FAQPage, HowTo, Service, and BreadcrumbList schema across all San Antonio pages.",
+      title: "San Antonio structured data",
+      desc: "ProfessionalService schema with San Antonio areaServed markup, plus FAQPage, Service, and BreadcrumbList schema across all San Antonio pages — no LocalBusiness address data.",
     },
     {
       title: "San Antonio citation building",
@@ -139,13 +138,6 @@ export default function SanAntonioSeoPage() {
         })}
       />
       <JsonLd data={faqSchema(faqs)} />
-      <JsonLd
-        data={howToSchema({
-          name: "How to get SEO results for a San Antonio Texas business",
-          description: "A structured process for ranking San Antonio businesses in local and organic search.",
-          steps: processSteps,
-        })}
-      />
       <JsonLd data={speakableSchema(`${site.domain}/locations/texas/san-antonio-seo`)} />
       <JsonLd
         data={breadcrumbSchema([

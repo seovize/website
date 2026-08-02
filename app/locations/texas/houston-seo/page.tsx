@@ -5,13 +5,12 @@ import {
   breadcrumbSchema,
   cityServiceSchema,
   faqSchema,
-  howToSchema,
   speakableSchema,
 } from "@/lib/schema";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "SEO Services Houston Texas | Top Houston SEO Company | Seovize",
+  title: "SEO Services Houston Texas",
   description:
     "Houston SEO services — semantic SEO, local SEO, and service-area page systems for Houston businesses in energy, healthcare, and professional services. Strategy by Abdul Ghani, 20+ years experience.",
   alternates: { canonical: "/locations/texas/houston-seo" },
@@ -30,7 +29,7 @@ const faqs = [
   },
   {
     q: "How does local SEO work for Houston businesses?",
-    a: "Houston local SEO combines service-area page systems targeting specific Houston neighborhoods and buyer intent, LocalBusiness schema markup, Google Business Profile optimization (where eligible), local citation building across Houston directories, and semantic content clusters covering Houston's energy, healthcare, and professional services markets.",
+    a: "Houston local SEO combines service-area page systems targeting specific Houston neighborhoods and buyer intent, ProfessionalService schema with areaServed markup (no fake address), Google Business Profile optimization (where eligible), local citation building across Houston directories, and semantic content clusters covering Houston's energy, healthcare, and professional services markets.",
   },
   {
     q: "How much does SEO cost for a Houston business?",
@@ -38,7 +37,7 @@ const faqs = [
   },
   {
     q: "Can a Houston service-area business rank locally without a storefront?",
-    a: "Yes. Many Houston businesses operate remotely or across multiple service areas. Seovize builds ethical service-area SEO using LocalBusiness schema with areaServed fields, dedicated Houston landing pages, and citation strategies designed for mobile and remote service businesses — no fake address required.",
+    a: "Yes. Many Houston businesses operate remotely or across multiple service areas. Seovize builds ethical service-area SEO using ProfessionalService schema with areaServed fields, dedicated Houston landing pages, and citation strategies designed for mobile and remote service businesses — no fake address required.",
   },
   {
     q: "How long does SEO take to work in Houston?",
@@ -60,8 +59,8 @@ const processSteps = [
     text: "Build entity-first content tying your brand, services, Abdul Ghani's expertise, and Houston market context into a structured knowledge graph. Include NLP co-occurrence terms, Houston-specific entities, and semantic headings aligned to buyer intent.",
   },
   {
-    name: "LocalBusiness and Service schema implementation",
-    text: "Deploy LocalBusiness ProfessionalService schema targeting Houston with areaServed City markup. Add FAQPage, HowTo, Speakable, and BreadcrumbList schema across all Houston pages. Validate with Google Rich Results Test.",
+    name: "Structured data deployment",
+    text: "Deploy ProfessionalService schema targeting Houston with areaServed City markup (no fake address). Add FAQPage, Speakable, and BreadcrumbList schema across all Houston pages. Validate with Google Rich Results Test — schema improves parsing, it doesn't guarantee rich-result display.",
   },
   {
     name: "Houston service-area page creation",
@@ -98,8 +97,8 @@ const data: CityPageData = {
       desc: "Content that connects your brand, services, and Houston market context into a knowledge graph Google can verify and rank — not keyword stuffing.",
     },
     {
-      title: "LocalBusiness schema (Houston)",
-      desc: "ProfessionalService schema with Houston-specific areaServed markup, plus FAQPage, HowTo, Service, and BreadcrumbList schema across all Houston pages.",
+      title: "Houston structured data",
+      desc: "ProfessionalService schema with Houston-specific areaServed markup, plus FAQPage, Service, and BreadcrumbList schema across all Houston pages — no LocalBusiness address data.",
     },
     {
       title: "Houston citation building",
@@ -140,13 +139,6 @@ export default function HoustonSeoPage() {
         })}
       />
       <JsonLd data={faqSchema(faqs)} />
-      <JsonLd
-        data={howToSchema({
-          name: "How to get SEO results for a Houston Texas business",
-          description: "A structured process for ranking Houston businesses in organic search.",
-          steps: processSteps,
-        })}
-      />
       <JsonLd data={speakableSchema(`${site.domain}/locations/texas/houston-seo`)} />
       <JsonLd
         data={breadcrumbSchema([

@@ -1,0 +1,20 @@
+# Seovize — Claim Ledger, This Phase (Phase 9)
+
+Sprint 2.1 (merged into this branch's history via `seo/commercial-growth-sprint-2`) already produced a full site-wide claim ledger covering fabricated stats, unsupported superlatives, and schema/AI-Overview overclaiming. This phase's ledger covers only **new or changed claims introduced in Phases 6–7** — it does not re-litigate what Sprint 2.1 already resolved.
+
+| Claim | URL | Evidence source | Status | Action |
+|---|---|---|---|---|
+| "SEO Services Houston Texas \| Top Houston SEO Company" (title tag) | `/locations/texas/houston-seo` | None — no award, ranking, or third-party recognition source anywhere in the codebase or provided by the owner | Unsupported | **Removed this phase** — title changed to "SEO Services Houston Texas \| Seovize" |
+| "SEO Services Austin Texas \| Top Austin SEO Company" (title tag) | `/locations/texas/austin-seo` | Same | Unsupported | **Removed this phase** |
+| "SEO Services San Antonio Texas \| Top San Antonio SEO Company" (title tag) | `/locations/texas/san-antonio-seo` | Same | Unsupported | **Removed this phase** |
+| "LocalBusiness schema" as a named deliverable (Houston, Austin, San Antonio deliverables/process copy) | Same three pages | Codebase: `cityServiceSchema()` in `lib/schema.ts` was changed to emit `"@type": "ProfessionalService"` only (LocalBusiness removed) in Sprint 2.1 — but the on-page copy for these 3 cities still described a "LocalBusiness schema" deliverable that no longer matched what the code actually emits | False (copy no longer matched code — a claim/implementation mismatch, not just an overclaim) | **Corrected this phase** — copy now says "ProfessionalService schema... no LocalBusiness address data," matching the actual JSON-LD |
+| HowTo schema as a "structured process for ranking in organic search" (JSON-LD `howToSchema()` call) | Houston, Austin, San Antonio SEO pages | Google restricted HowTo rich results broadly in 2023 (per Sprint 2.1's research) — the schema wasn't false, but describing it as part of the site's rich-result strategy repeats the corrected-in-Dallas-but-not-propagated overclaim | Unsupported (methodology overclaim, same category Sprint 2.1 fixed for Dallas) | **Removed this phase** — `howToSchema` JSON-LD calls and imports removed from all three, matching the Dallas fix |
+| New cross-link copy: "delivered as one coordinated engagement by Abdul Ghani, not split across specialists who don't talk to each other" | `/services/seo` | Verifiable — Seovize is confirmed single-founder-led throughout this codebase (no account-manager or multi-specialist claims exist anywhere) | Verified and publishable | Kept as written |
+| New keyword-database/architecture claim: "every US query with any recorded impressions is a variant of 'Dallas SEO'" | `docs/seo/keyword-database.md` (internal doc, not site copy) | Live GSC pull, 2026-08-01, US filter, 3 months — 18/18 queries confirmed Dallas-cluster | Verified and publishable (as an internal research finding; not site-facing copy so no public claim implication) | Kept — this is documentation, not a claim shown to visitors |
+| "Requested indexing" actions taken for Austin/Houston/San Antonio SEO pages | GSC (external system, not site copy) | Directly performed and confirmed this session (screenshots of "Indexing requested" confirmation for all 3) | Verified and publishable (internal record) | Logged in `docs/seo/technical-audit.md` |
+
+## What was checked and found clean (no new issues)
+
+- The new San Antonio-specific bilingual/community claims in `content-briefs.md` reuse only what already exists on the live `san-antonio-social-media` page (no new unverifiable claims invented for the brief).
+- No new numeric stats, ratings, review counts, or "X clients served"-style claims were introduced anywhere in Phase 6's edits.
+- The `/services/seo` ↔ `/services/semantic-seo` differentiation copy added in Phase 6 makes no claims about outcomes, rankings, or results — it's purely structural/navigational copy.

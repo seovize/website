@@ -11,7 +11,7 @@ import {
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Social Media Management Dallas TX | Dallas Social Media Agency | Seovize",
+  title: "Social Media Management Dallas TX | Dallas Social Media Agency",
   description:
     "Social media management for Dallas businesses in corporate, real estate, and DFW B2B sectors. Post design, LinkedIn authority content, reels, SEO captions, and analytics by Abdul Ghani, 20+ years experience.",
   alternates: { canonical: "/locations/texas/dallas-social-media" },

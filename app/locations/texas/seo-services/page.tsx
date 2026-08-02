@@ -16,7 +16,7 @@ import {
 import { founder, site, texasData } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Local SEO Expert in Texas | SEO Services for Texas Businesses | Seovize",
+  title: "Local SEO Expert in Texas | SEO Services for Texas Businesses",
   description:
     "SEO services for Texas businesses in Houston, Dallas, Austin, and San Antonio. Semantic SEO, service-area page systems, and entity-first content architecture by Abdul Ghani — 20+ years experience.",
   alternates: { canonical: "/locations/texas/seo-services" },

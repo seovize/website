@@ -12,22 +12,22 @@ import { faqSchema, serviceSchema, speakableSchema } from "@/lib/schema";
 import { seoPackages, site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "SEO Services | Semantic SEO & Local SEO for Growth-Focused Brands",
+  title: "SEO Services | Technical, Content & Local SEO for Growth-Focused Brands",
   description:
-    "Expert SEO services — semantic SEO, technical SEO, local SEO, schema markup, and content strategy by Abdul Ghani, 20+ years experience. Serving U.S. service businesses from $1,250/month.",
+    "Expert SEO services — technical SEO, on-page optimization, local SEO, schema markup, and content strategy by Abdul Ghani, 20+ years experience. Serving U.S. service businesses from $1,250/month.",
   alternates: { canonical: "/services/seo" },
   openGraph: {
-    title: "SEO Services | Seovize — Semantic SEO Specialist",
+    title: "SEO Services | Seovize",
     description:
-      "Semantic SEO, technical SEO, local SEO, and content strategy for service businesses. Founder-led by Abdul Ghani with 20+ years of digital marketing expertise.",
+      "Technical SEO, on-page optimization, local SEO, and content strategy for service businesses. Founder-led by Abdul Ghani with 20+ years of digital marketing expertise.",
     url: `${site.domain}/services/seo`,
   },
 };
 
 const faqs = [
   {
-    q: "What is semantic SEO and how is it different from traditional SEO?",
-    a: "Semantic SEO optimizes for topics, entities, and relationships — not just keywords. Traditional SEO targeted individual keyword phrases. Semantic SEO builds topical authority across interconnected content clusters, establishes your brand and founder as named entities in Google's Knowledge Graph, and uses schema markup to make every page machine-readable. In 2026, semantic SEO is the primary driver of organic ranking for service businesses.",
+    q: "What's included in a Seovize SEO engagement, and how is it different from just 'semantic SEO'?",
+    a: "This SEO service is the full system: technical SEO, on-page optimization, content strategy, local SEO, and schema markup, delivered together. Entity-first, topical-authority methodology — what Seovize calls semantic SEO — is part of how the content and schema work is done; if you specifically want that methodology explained in depth, see the dedicated semantic SEO service page. Most clients don't need to choose between the two — this page is the default engagement.",
   },
   {
     q: "How long does SEO take to show results?",
@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     q: "Do you provide local SEO for Texas businesses without a physical address?",
-    a: "Yes. Seovize specializes in service-area SEO for businesses that operate remotely or across multiple locations. We use LocalBusiness schema with areaServed markup (no fake address required), dedicated service-area landing pages for each city, and ethical citation strategies designed for remote and mobile service businesses.",
+    a: "Yes. Seovize specializes in service-area SEO for businesses that operate remotely or across multiple locations. We use ProfessionalService schema with areaServed markup (no fake address required), dedicated service-area landing pages for each city, and ethical citation strategies designed for remote and mobile service businesses.",
   },
   {
     q: "What does an SEO engagement include each month?",
@@ -86,19 +86,20 @@ export default function SeoServicesPage() {
         <div className="relative z-10 mx-auto max-w-5xl">
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-mint">SEO Services</p>
           <h1 className="font-display text-5xl font-black leading-[1.0] tracking-tight text-cloud md:text-7xl">
-            Semantic SEO that builds<br />
-            <span className="text-mint">lasting authority.</span>
+            SEO built as<br />
+            <span className="text-mint">one system, not six vendors.</span>
           </h1>
 
           <div className="speakable mt-8 max-w-3xl rounded-[1.5rem] border border-mint/20 bg-navy px-7 py-6">
-            <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.24em] text-mint">What is semantic SEO?</p>
+            <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.24em] text-mint">What does Seovize&apos;s SEO service include?</p>
             <p className="text-base leading-8 text-cloud">
-              Semantic SEO is the practice of building topical authority through interconnected content clusters, entity establishment, and structured schema markup — so Google understands not just what your pages say, but who you are and why you are the most credible source for your service category.
+              Technical SEO, on-page optimization, content strategy, local SEO, and schema markup — delivered as one coordinated engagement by Abdul Ghani, not split across specialists who don&apos;t talk to each other. If you want the entity-first, topical-authority methodology in more depth, see{" "}
+              <Link href="/services/semantic-seo" className="font-semibold text-mint hover:underline">semantic SEO</Link>.
             </p>
           </div>
 
           <p className="mt-7 max-w-3xl text-lg leading-8 text-mist">
-            Seovize builds semantic SEO systems for service businesses, professional practices, and authority-driven brands. Every engagement is personally designed by Abdul Ghani — 20+ years of SEO expertise applied directly to your business. No account managers. No templated playbooks. Real authority architecture.
+            Seovize builds SEO systems for service businesses, professional practices, and authority-driven brands. Every engagement is personally designed by Abdul Ghani — 20+ years of SEO expertise applied directly to your business. No account managers. No templated playbooks.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Button href="/contact">Get an SEO Roadmap</Button>

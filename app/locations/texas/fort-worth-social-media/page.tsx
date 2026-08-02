@@ -11,7 +11,7 @@ import {
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Social Media Management Fort Worth TX | Fort Worth Social Media Agency | Seovize",
+  title: "Social Media Management Fort Worth TX | Fort Worth Social Media Agency",
   description:
     "Social media management for Fort Worth small businesses — manufacturing, healthcare, TCU community, and West Texas cultural brands. Custom content strategy, post design, reels, and analytics by Abdul Ghani, Fort Worth social media expert with 20+ years experience.",
   alternates: { canonical: "/locations/texas/fort-worth-social-media" },

@@ -19,7 +19,7 @@ import {
 import { founder, site, socialPackages } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Social Media Management for Small Businesses in Texas | Seovize",
+  title: "Social Media Management for Small Businesses in Texas",
   description:
     "Done-for-you social media management for Texas small businesses — content strategy, custom post design, SEO captions, reels, scheduling, and monthly reporting. Plans from $1,100/mo, founder-led by Abdul Ghani. Serving Houston, Dallas, Austin, San Antonio, and all of Texas.",
   alternates: { canonical: "/locations/texas/social-media-management" },

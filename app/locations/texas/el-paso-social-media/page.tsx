@@ -11,7 +11,7 @@ import {
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Social Media Management El Paso TX | El Paso Social Media Agency | Seovize",
+  title: "Social Media Management El Paso TX | El Paso Social Media Agency",
   description:
     "Social media management for El Paso small businesses — bilingual content strategy, healthcare, military community, border trade, and retail brands. Spanish and English social media by Abdul Ghani, El Paso social media expert with 20+ years experience.",
   alternates: { canonical: "/locations/texas/el-paso-social-media" },

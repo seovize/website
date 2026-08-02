@@ -6,7 +6,7 @@ import { Section } from "@/components/Section";
 import { industries } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Industries We Serve | Seovize",
+  title: "Industries We Serve",
   description: "Seovize delivers semantic SEO, social media management, and content marketing for law firms, real estate, med spas, consultants, contractors, and restaurants.",
   alternates: { canonical: "/industries" },
 };
