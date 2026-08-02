@@ -67,7 +67,11 @@ export function Footer() {
 
           <div>
             <p className="mb-5 text-xs font-bold uppercase tracking-[0.28em] text-cloud">Contact</p>
-            <a href={`mailto:${site.email}`} className="break-all text-sm transition hover:text-mint">{site.email}</a>
+            <a href={`mailto:${site.email}`} className="text-sm transition hover:text-mint">
+              {site.email.split("@")[0]}
+              <wbr />
+              {`@${site.email.split("@")[1]}`}
+            </a>
             <div className="mt-5">
               <Link
                 href="/contact"
