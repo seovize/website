@@ -57,7 +57,7 @@ export default function ContentIdeasGuidePage() {
           url,
           datePublished: "2026-08-02",
           dateModified: "2026-08-02",
-          author: { "@type": "Person", name: "Abdul Ghani" },
+          author: { "@type": "Person", name: "Abdul Ghani", url: `${site.domain}/about`, sameAs: "https://www.linkedin.com/in/sardarabdulghani" },
           publisher: { "@type": "Organization", name: site.name, url: site.domain },
         }}
       />
@@ -78,6 +78,9 @@ export default function ContentIdeasGuidePage() {
           <h1 className="font-display text-4xl font-black tracking-tight text-cloud md:text-6xl">
             Social media content ideas for home service businesses
           </h1>
+          <p className="mt-4 text-xs text-slate-mid">
+            By <Link href="/about" className="font-semibold text-mist hover:text-mint hover:underline">Abdul Ghani</Link> · Published Aug 2, 2026
+          </p>
           <div className="speakable mt-6 max-w-2xl rounded-2xl border border-mint/20 bg-navy px-6 py-5">
             <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-mint mb-2">Quick answer</p>
             <p className="text-base leading-[1.8] text-cloud">
