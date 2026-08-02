@@ -11,7 +11,7 @@ import { breadcrumbSchema, faqSchema, howToSchema, serviceSchema, speakableSchem
 import { founder, site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Website Design | Next.js Sites Built for Speed, SEO, and Qualified Demand | Seovize",
+  title: "Website Design | Next.js Sites Built for Speed, SEO, and Qualified Demand",
   description:
     "Conversion-ready Next.js websites for service businesses — designed around buyer journeys, built with SEO schema from day one, and deployed on Vercel's edge network. Core Web Vitals 90+ before launch. Custom quote.",
   alternates: { canonical: "/services/website-design" },
