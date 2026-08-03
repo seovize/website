@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTABanner } from "@/components/CTABanner";
@@ -18,6 +19,7 @@ export interface CityPageData {
   stats: { stat: string; label: string; note: string }[];
   faqs: { q: string; a: string }[];
   relatedPages: { label: string; href: string }[];
+  connectedSystems?: { title: string; desc: ReactNode }[];
 }
 
 export function CityServicePage({ data }: { data: CityPageData }) {
@@ -161,6 +163,20 @@ export function CityServicePage({ data }: { data: CityPageData }) {
                   {s.label}
                 </p>
                 <p className="mt-1 text-xs text-mist">{s.note}</p>
+              </div>
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {/* ── Connected systems (local SEO / paid social relationship) ───── */}
+      {data.connectedSystems && data.connectedSystems.length > 0 && (
+        <Section variant="navy" eyebrow="How this connects" title="Not a standalone service — part of a system.">
+          <div className="grid gap-5 md:grid-cols-2">
+            {data.connectedSystems.map((c) => (
+              <div key={c.title} className="rounded-[2rem] border border-line bg-obsidian p-7">
+                <h3 className="font-display text-lg font-black text-cloud">{c.title}</h3>
+                <p className="mt-2 text-sm leading-7 text-mist">{c.desc}</p>
               </div>
             ))}
           </div>

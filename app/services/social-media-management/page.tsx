@@ -283,6 +283,13 @@ export default function SocialMediaPage() {
             </p>
           </div>
         </div>
+        <p className="mt-4 max-w-3xl text-sm leading-7 text-mist">
+          This is also not a local SEO service — social posts and Google Business Profile optimization are
+          different disciplines with different mechanics, even though they reinforce each other (consistent
+          business information, local content, and reviews feed both). See{" "}
+          <Link href="/services/local-seo" className="font-semibold text-mint hover:underline">how local SEO and social media work together</Link>{" "}
+          if active local-search demand is the goal.
+        </p>
       </Section>
 
       {/* ── FOUNDER SIGNAL ───────────────────────────────── */}

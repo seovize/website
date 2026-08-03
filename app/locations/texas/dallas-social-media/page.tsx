@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { CityServicePage, type CityPageData } from "@/components/CityServicePage";
 import { JsonLd } from "@/components/JsonLd";
 import {
@@ -116,6 +117,31 @@ const data: CityPageData = {
     { stat: "100%", label: "Custom content", note: "No templates — real design systems per brand" },
   ],
   faqs,
+  connectedSystems: [
+    {
+      title: "Local SEO relationship",
+      desc: (
+        <>
+          Social content and local search are separate disciplines that reinforce each other — consistent
+          business information, DFW-specific location content, and review signals feed both. This page
+          covers the social system only; see{" "}
+          <Link href="/services/local-seo" className="text-mint hover:underline">local SEO for service businesses</Link>{" "}
+          for the technical and on-site side.
+        </>
+      ),
+    },
+    {
+      title: "Paid social — separate, optional",
+      desc: (
+        <>
+          Organic social builds durable presence over months. Where a Dallas business wants faster, targeted
+          reach on top of that, {" "}
+          <Link href="/services/paid-social-advertising" className="text-mint hover:underline">paid social advertising</Link>{" "}
+          runs as its own budgeted engagement with its own reporting — never bundled silently into the organic fee.
+        </>
+      ),
+    },
+  ],
   relatedPages: [
     { label: "Social Media Management Service", href: "/services/social-media-management" },
     { label: "Local SEO Support", href: "/services/local-seo" },
