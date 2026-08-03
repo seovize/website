@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     q: "How is your social media management different from hiring a freelancer?",
-    a: "Seovize is founder-led by Abdul Ghani — a 20+ year digital marketing specialist. Unlike a freelancer managing 15 clients simultaneously, every strategy at Seovize is personally designed with genuine market expertise, branded design systems, and SEO-informed caption writing that improves both social reach and search visibility.",
+    a: "Seovize is founder-led by Abdul Ghani — a 20+ year digital marketing specialist. A freelancer juggling a large, mixed client roster has less time per account than a founder-led studio built around fewer, more attended relationships; every strategy at Seovize is personally designed with genuine market expertise, branded design systems, and SEO-informed caption writing that improves both social reach and search visibility.",
   },
   {
     q: "Do you provide bilingual social media management for Texas businesses?",

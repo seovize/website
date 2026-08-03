@@ -34,7 +34,7 @@ const faqs = [
   },
   {
     q: "How much does social media management cost in Dallas Texas?",
-    a: "Social media management for Dallas businesses ranges from $1,100/mo (Seovize Social Launch — 12 posts, design, captions, scheduling, reporting) to $3,600/mo (Social Authority — 30 posts, 8 reels, campaign themes, KPI dashboard). Large Dallas agencies typically charge $3,000–$8,000+/mo. Seovize provides senior-level strategy at mid-market rates.",
+    a: "Social media management for Dallas businesses ranges from $1,100/mo (Seovize Social Launch — 12 posts, design, captions, scheduling, reporting) to $3,600/mo (Social Authority — 30 posts, 8 reels, campaign themes, KPI dashboard). Larger Dallas agencies typically charge more for comparable scope, without publishing exact figures. Seovize publishes its rates rather than requiring a call to get a number.",
   },
   {
     q: "Can you manage LinkedIn content for Dallas corporate and B2B brands?",

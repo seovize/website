@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     q: "How much does social media management cost for a Houston business?",
-    a: "Social media management for Houston businesses typically ranges from $1,100/mo (Seovize Social Launch — 12 posts, design, captions, scheduling) to $3,600/mo (Social Authority — 30 posts, 8 reels, campaign themes, KPI dashboard). Freelancers may charge $500–$1,500/mo with limited capacity. Large Houston agencies start at $3,000–$6,000+/mo.",
+    a: "Social media management for Houston businesses typically ranges from $1,100/mo (Seovize Social Launch — 12 posts, design, captions, scheduling) to $3,600/mo (Social Authority — 30 posts, 8 reels, campaign themes, KPI dashboard). Freelancers are often cheaper but capacity-limited; larger Houston agencies typically charge more for comparable scope. Seovize publishes its rates rather than requiring a call to get a number.",
   },
   {
     q: "Can you create LinkedIn content for Houston energy and healthcare businesses?",
