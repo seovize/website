@@ -5,7 +5,7 @@ import { CTABanner } from "@/components/CTABanner";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { JsonLd } from "@/components/JsonLd";
 import { Section } from "@/components/Section";
-import { breadcrumbSchema, faqSchema, speakableSchema } from "@/lib/schema";
+import { faqSchema, speakableSchema } from "@/lib/schema";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -130,13 +130,6 @@ export default function HomeServicesIndustryPage() {
       />
       <JsonLd data={faqSchema(faqs)} />
       <JsonLd data={speakableSchema(url)} />
-      <JsonLd
-        data={breadcrumbSchema([
-          { name: "Home", url: site.domain },
-          { name: "Industries", url: `${site.domain}/industries` },
-          { name: "Home Services", url },
-        ])}
-      />
       <Breadcrumbs items={[{ name: "Industries", href: "/industries" }, { name: "Home Services", href: "/industries/home-services-social-media-management" }]} />
 
       <section className="noise px-5 pb-16 pt-16 md:pt-20">

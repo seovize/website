@@ -8,7 +8,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { Section } from "@/components/Section";
 import { Button } from "@/components/Button";
 import { PricingCards } from "@/components/PricingCards";
-import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
+import { faqSchema, serviceSchema } from "@/lib/schema";
 import { socialPackages, site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -72,12 +72,6 @@ export default function SocialMediaPage() {
     <>
       <JsonLd data={serviceSchema("social-media-management")} />
       <JsonLd data={faqSchema(faqs)} />
-      <JsonLd
-        data={breadcrumbSchema([
-          { name: "Home", url: site.domain },
-          { name: "Social Media Management", url: `${site.domain}/services/social-media-management` },
-        ])}
-      />
 
       <Breadcrumbs items={[{ name: "Social Media Management", href: "/services/social-media-management" }]} />
 

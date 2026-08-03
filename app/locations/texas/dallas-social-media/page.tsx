@@ -3,7 +3,6 @@ import Link from "next/link";
 import { CityServicePage, type CityPageData } from "@/components/CityServicePage";
 import { JsonLd } from "@/components/JsonLd";
 import {
-  breadcrumbSchema,
   cityServiceSchema,
   faqSchema,
   speakableSchema,
@@ -166,13 +165,6 @@ export default function DallasSocialMediaPage() {
       />
       <JsonLd data={faqSchema(faqs)} />
       <JsonLd data={speakableSchema(`${site.domain}/locations/texas/dallas-social-media`)} />
-      <JsonLd
-        data={breadcrumbSchema([
-          { name: "Home", url: site.domain },
-          { name: "Texas", url: `${site.domain}/locations/texas` },
-          { name: "Dallas Social Media", url: `${site.domain}/locations/texas/dallas-social-media` },
-        ])}
-      />
       <CityServicePage data={data} />
     </>
   );

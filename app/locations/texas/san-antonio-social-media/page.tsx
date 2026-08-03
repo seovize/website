@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { CityServicePage, type CityPageData } from "@/components/CityServicePage";
 import { JsonLd } from "@/components/JsonLd";
 import {
-  breadcrumbSchema,
   cityServiceSchema,
   faqSchema,
   speakableSchema,
@@ -135,13 +134,6 @@ export default function SanAntonioSocialMediaPage() {
       />
       <JsonLd data={faqSchema(faqs)} />
       <JsonLd data={speakableSchema(`${site.domain}/locations/texas/san-antonio-social-media`)} />
-      <JsonLd
-        data={breadcrumbSchema([
-          { name: "Home", url: site.domain },
-          { name: "Texas", url: `${site.domain}/locations/texas` },
-          { name: "San Antonio Social Media", url: `${site.domain}/locations/texas/san-antonio-social-media` },
-        ])}
-      />
       <CityServicePage data={data} />
     </>
   );
