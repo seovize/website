@@ -12,6 +12,23 @@
  * Step 0 (Day 0) is the immediate confirmation email sent synchronously by
  * app/api/report-signup/route.ts at signup time — it is NOT part of this
  * schedule. This schedule covers steps 1-6, sent by the daily cron job.
+ *
+ * CORRECTED (2026-08-11): Sprint 2.1's site-wide claim audit and the 2026-08-02
+ * report retraction both swept `app/` only, so this file kept shipping the exact
+ * claims those passes removed — to real recipients, daily, via Vercel Cron.
+ * Three fabricated statistics in step 1 (a "12% of Texas SMB sites use FAQ
+ * schema" figure, and two "roughly a third" ranking-weight figures) had no
+ * source and were the same class of invented number that forced the report
+ * retraction. Steps 2 and 4 asserted that semantic SEO is "mechanically" and
+ * "literally" what gets you cited in AI Overviews — the precise causality
+ * overclaim Sprint 2.1 corrected on /services/semantic-seo. Step 6 invited
+ * readers to reflect on a report whose contents no longer exist and promised a
+ * "next edition" that was never a real programme.
+ *
+ * Rule this file forgot: every claim surface ships, not just the ones under
+ * `app/`. Anything added here is subject to the same evidence bar as page copy —
+ * no statistic without a real, citable source, and no guaranteed-citation
+ * language about AI answer surfaces.
  */
 
 export interface NurtureStep {
@@ -22,7 +39,6 @@ export interface NurtureStep {
   buildHtml: (firstName: string) => string;
 }
 
-const REPORT_URL = "https://seovize.com/research/texas-digital-marketing-report-2026";
 const CONTACT_URL = "https://seovize.com/contact";
 
 function wrapHtml(bodyHtml: string): string {
@@ -39,14 +55,14 @@ export const nurtureSchedule: NurtureStep[] = [
     day: 2,
     subject: "The 3 mistakes costing Texas businesses the most traffic",
     buildText: (name) =>
-      `Hi ${name},\n\nA few patterns show up over and over in the Texas businesses we audit:\n\n1. Keyword-stuffed pages with no real topical depth — Google (and now AI search) rewards genuine coverage of a subject, not a page repeating "SEO Dallas" ten times.\n2. No schema markup at all — fewer than 12% of Texas SMB sites use FAQ schema, despite it powering roughly a third of local search results.\n3. Zero Google Business Profile activity beyond the initial setup — GBP signals now account for close to a third of local ranking weight.\n\nMost of these are fixable in a day, not a quarter.\n\n— Seovize`,
+      `Hi ${name},\n\nA few patterns show up over and over in the Texas businesses we audit:\n\n1. Keyword-stuffed pages with no real topical depth — Google (and now AI search) rewards genuine coverage of a subject, not a page repeating "SEO Dallas" ten times.\n2. No schema markup at all — structured data won't rank a page by itself, but without it you aren't eligible for the rich results your competitors are showing up in.\n3. Zero Google Business Profile activity beyond the initial setup — Google's own local guidance weighs relevance, distance and prominence, and a profile nobody has touched since setup undercuts two of the three.\n\nMost of these are fixable in a day, not a quarter.\n\n— Seovize`,
     buildHtml: (name) =>
       wrapHtml(`
         <p>Hi ${name},</p>
         <p>A few patterns show up over and over in the Texas businesses we audit:</p>
         <ol>
           <li>Keyword-stuffed pages with no real topical depth</li>
-          <li>No schema markup at all — fewer than 12% of Texas SMB sites use FAQ schema</li>
+          <li>No schema markup at all — no rich-result eligibility as a result</li>
           <li>Zero Google Business Profile activity beyond the initial setup</li>
         </ol>
         <p>Most of these are fixable in a day, not a quarter.</p>
@@ -57,13 +73,13 @@ export const nurtureSchedule: NurtureStep[] = [
     day: 5,
     subject: "Why we don't chase keyword rankings anymore",
     buildText: (name) =>
-      `Hi ${name},\n\nRanking #1 for one keyword is fragile — an algorithm update or a better-funded competitor can undo it overnight.\n\nWe build semantic SEO instead: content structured around entities and topic clusters, so your site has durable authority across an entire subject, not a single fragile ranking.\n\nThat's also, mechanically, how you get cited inside AI Overviews and ChatGPT answers — those systems pull from sources with topical depth, not single-keyword pages.\n\n— Seovize`,
+      `Hi ${name},\n\nRanking #1 for one keyword is fragile — an algorithm update or a better-funded competitor can undo it overnight.\n\nWe build semantic SEO instead: content structured around entities and topic clusters, so your site has durable authority across an entire subject, not a single fragile ranking.\n\nIt also improves your odds of being cited inside AI Overviews and ChatGPT answers — those systems draw from sources with clear structure and topical depth. Worth being straight with you: nobody controls whether they cite you, and any agency promising that is selling something. The work makes you easier to draw from, not guaranteed to be drawn from.\n\n— Seovize`,
     buildHtml: (name) =>
       wrapHtml(`
         <p>Hi ${name},</p>
         <p>Ranking #1 for one keyword is fragile — an algorithm update or a better-funded competitor can undo it overnight.</p>
         <p>We build <strong>semantic SEO</strong> instead: content structured around entities and topic clusters, so your site has durable authority across an entire subject, not a single fragile ranking.</p>
-        <p>That's also, mechanically, how you get cited inside AI Overviews and ChatGPT answers.</p>
+        <p>It also improves your odds of being cited inside AI Overviews and ChatGPT answers — though nobody controls whether they cite you, and any agency promising that is selling something.</p>
       `),
   },
   {
@@ -87,12 +103,12 @@ export const nurtureSchedule: NurtureStep[] = [
     day: 13,
     subject: "Is SEO even worth it with AI Overviews now?",
     buildText: (name) =>
-      `Hi ${name},\n\nFair question — AI Overviews have cut organic clicks meaningfully. But that changes *how* people find you, not *whether* they search.\n\nSemantic SEO — entity-first content, structured data — is literally the discipline that gets you cited inside AI answers. Losing clicks to AI Overviews kills agencies still doing keyword-stuffing SEO. It doesn't touch the kind we do.\n\n— Seovize`,
+      `Hi ${name},\n\nFair question — more searches now end without a click than they used to. But that changes *how* people find you, not *whether* they search.\n\nSemantic SEO — entity-first content, structured data — is the discipline aimed squarely at that surface: making your content clear enough for an answer engine to draw from. It isn't a guarantee of citation, and nobody can honestly offer one. But keyword-stuffing SEO has nothing to offer that surface at all.\n\n— Seovize`,
     buildHtml: (name) =>
       wrapHtml(`
         <p>Hi ${name},</p>
-        <p>Fair question — AI Overviews have cut organic clicks meaningfully. But that changes <em>how</em> people find you, not <em>whether</em> they search.</p>
-        <p>Semantic SEO — entity-first content, structured data — is literally the discipline that gets you cited inside AI answers. Losing clicks to AI Overviews kills agencies still doing keyword-stuffing SEO. It doesn't touch the kind we do.</p>
+        <p>Fair question — more searches now end without a click than they used to. But that changes <em>how</em> people find you, not <em>whether</em> they search.</p>
+        <p>Semantic SEO — entity-first content, structured data — is the discipline aimed squarely at that surface: making your content clear enough for an answer engine to draw from. It isn't a guarantee of citation, and nobody can honestly offer one. But keyword-stuffing SEO has nothing to offer that surface at all.</p>
       `),
   },
   {
@@ -113,13 +129,13 @@ export const nurtureSchedule: NurtureStep[] = [
     day: 18,
     subject: "Want a free audit instead of more emails?",
     buildText: (name) =>
-      `Hi ${name},\n\nLast note from this sequence. If the Texas report was useful and you want the same depth applied to your own site, get the free audit: ${CONTACT_URL}\n\nNo pressure either way — you'll still get a note when the next report edition publishes.\n\n— Seovize`,
+      `Hi ${name},\n\nLast note from this sequence. If this way of thinking about search is useful and you want it applied to your own site, the free audit is the fastest way in: ${CONTACT_URL}\n\nNo pressure either way — and thanks for reading.\n\n— Seovize`,
     buildHtml: (name) =>
       wrapHtml(`
         <p>Hi ${name},</p>
-        <p>Last note from this sequence. If the <a href="${REPORT_URL}" style="color:#14B8A6">Texas report</a> was useful and you want the same depth applied to your own site:</p>
+        <p>Last note from this sequence. If this way of thinking about search is useful and you want it applied to your own site:</p>
         <p><a href="${CONTACT_URL}" style="color:#14B8A6;font-weight:600">Get your free audit →</a></p>
-        <p>No pressure either way — you'll still get a note when the next report edition publishes.</p>
+        <p>No pressure either way — and thanks for reading.</p>
       `),
   },
 ];

@@ -724,7 +724,7 @@ export const blogContent: Record<string, ContentBlock[]> = {
         "Planning content without looking at analytics from the previous month — your audience tells you what they want, if you track it",
         "Over-indexing on promotional content — Instagram users follow brands for value and inspiration, not constant sales pitches",
         "Ignoring Texas-specific moments — generic content gets generic engagement; local relevance drives community response",
-        "Skipping Reels — in 2026, Instagram Reels generate 3–5x more reach than static posts for most accounts",
+        "Skipping Reels — Instagram surfaces short-form video to non-followers far more readily than static posts, so skipping it caps your reach at people who already follow you",
         "Planning without batching — trying to create content daily adds cognitive load and inconsistency",
       ],
     },
@@ -1136,7 +1136,7 @@ export const blogContent: Record<string, ContentBlock[]> = {
       items: [
         "Number of posts per month: 12 posts costs less than 30. More content means more design and writing hours.",
         "Custom design vs templates: hand-designed graphics in a real brand system cost more than recycled Canva templates — and perform far better.",
-        "Video production: Reels and short-form video require scripting, direction, and editing, adding to cost but driving 3–5x the reach of static posts.",
+        "Video production: Reels and short-form video require scripting, direction, and editing, adding to cost — but they are the format the platforms actively push to non-followers, so they are usually where the reach is.",
         "Number of platforms: managing 3 platforms costs more than 2. Most Texas small businesses do best concentrating on 2 platforms done well.",
         "Strategy and reporting: providers that include monthly strategy and analytics reporting cost more than pure posting services — but produce measurably better results.",
         "SEO integration: captions and profiles optimized for both social reach and local search add value that pure social providers do not offer.",
@@ -1495,7 +1495,7 @@ export const blogContent: Record<string, ContentBlock[]> = {
       items: [
         "Minimum viable: 3 videos per week (below this, TikTok's algorithm will not show meaningful growth)",
         "Optimal: 5–7 videos per week for businesses with natural video content",
-        "Key factor: TikTok is a discovery platform first — a single video can reach 50–500x your follower count if it resonates. This is worth the volume investment for the right business type.",
+        "Key factor: TikTok is a discovery platform first — distribution is driven by how a video performs with a test audience rather than by follower count, so a single video can substantially outrun the size of your following. This is worth the volume investment for the right business type.",
         "Do NOT optimize for virality — optimize for genuine audience value. TikTok's algorithm is exceptionally good at identifying content that its specific audience will engage with.",
       ],
     },

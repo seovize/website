@@ -35,7 +35,7 @@ export const industriesData: IndustryData[] = [
       {
         name: "Instagram",
         priority: "Primary",
-        desc: "The primary discovery platform for Texas restaurants. Instagram's visual feed and Reels are where new customers find you — 72% of diners use Instagram before choosing a restaurant. Food Reels showing prep, plating, and the dining experience drive the most profile visits.",
+        desc: "The primary discovery platform for Texas restaurants. Instagram's visual feed and Reels are where new customers find you — diners routinely check a restaurant's photos and recent posts before deciding where to eat. Food Reels showing prep, plating, and the dining experience drive the most profile visits.",
       },
       {
         name: "Facebook",
@@ -105,7 +105,7 @@ export const industriesData: IndustryData[] = [
     faqs: [
       {
         q: "Which social media platforms work best for Texas restaurants?",
-        a: "Instagram is the primary discovery and booking platform for Texas restaurants — 72% of diners use Instagram to find and evaluate restaurants before visiting. Facebook drives local event attendance and is essential for the 35+ demographic. TikTok offers viral potential with kitchen and chef content. Most Texas restaurants see the best ROI from Instagram as the primary platform plus Facebook for events and community engagement.",
+        a: "Instagram is the primary discovery and evaluation platform for Texas restaurants — it is where prospective diners check your photos, recent posts and location before deciding to visit. Facebook drives local event attendance and is essential for the 35+ demographic. TikTok offers viral potential with kitchen and chef content. Most Texas restaurants see the best ROI from Instagram as the primary platform plus Facebook for events and community engagement.",
       },
       {
         q: "How often should a Texas restaurant post on social media?",
@@ -226,7 +226,7 @@ export const industriesData: IndustryData[] = [
       },
       {
         q: "Which social media platform drives the most med spa bookings?",
-        a: "Instagram drives the most consultation bookings for Texas med spas — it is where 68% of med spa clients report doing their research before booking. Before/after content, treatment education Reels, and practitioner authority posts perform best on Instagram for capturing high-intent buyers in the 30–55 age range. TikTok is rapidly growing for the 25–40 demographic and educational content, particularly for newer or less-familiar treatments where buyers need extensive education before committing.",
+        a: "Instagram drives the most consultation bookings for Texas med spas — it is the platform where prospective clients do the bulk of their visual research before booking. Before/after content, treatment education Reels, and practitioner authority posts perform best on Instagram for capturing high-intent buyers in the 30–55 age range. TikTok is rapidly growing for the 25–40 demographic and educational content, particularly for newer or less-familiar treatments where buyers need extensive education before committing.",
       },
       {
         q: "How much does social media management cost for a med spa in Texas?",
@@ -234,7 +234,7 @@ export const industriesData: IndustryData[] = [
       },
       {
         q: "What content should a med spa post on social media?",
-        a: "The highest-converting med spa content mix is: 40% education (treatment explanations, FAQ answers, 'what to expect'), 30% transformation (before/after with consent and disclosure), 20% trust (practitioner authority, clinic culture, team spotlights), and 10% promotional (seasonal offers, new treatments, membership programs). The education layer is what most med spa accounts underinvest in — it is the content that captures buyers during the 6–18 month research phase before they are ready to book.",
+        a: "The mix we recommend for med spas, as a starting split to adjust against your own results: roughly 40% education (treatment explanations, FAQ answers, 'what to expect'), 30% transformation (before/after with consent and disclosure), 20% trust (practitioner authority, clinic culture, team spotlights), and 10% promotional (seasonal offers, new treatments, membership programs). The education layer is what most med spa accounts underinvest in — it is the content that reaches buyers while they are still researching, long before they are ready to book.",
       },
       {
         q: "How does social media help a Texas med spa get more consultations?",
