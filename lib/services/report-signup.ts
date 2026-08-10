@@ -19,16 +19,22 @@ export function buildReportSignupConfirmation(
 ): ResendEmailPayload {
   const firstName = data.name?.trim().split(/\s+/)[0];
   const greeting = firstName ? `Hi ${firstName},` : "Hi,";
-  const reportUrl = "https://seovize.com/research/texas-digital-marketing-report-2026";
-  const subject = "Your Texas Digital Marketing Report link — Seovize";
+  const noticeUrl = "https://seovize.com/research/texas-digital-marketing-report-2026";
+  const contactUrl = "https://seovize.com/contact";
+  const subject = "About the Texas report you requested — Seovize";
 
   const text = [
     greeting,
     "",
-    "Thanks for your interest in the Texas Small Business Digital Marketing Report 2026.",
-    `Read it here: ${reportUrl}`,
+    "Thanks for requesting the Texas Small Business Digital Marketing Report.",
     "",
-    "We'll send you a note when the next edition is published — no spam, no daily emails.",
+    "Straight answer: we withdrew it. On review, several of its headline figures did not meet the evidence standard we hold our client work to, so we removed them outright rather than quietly re-sourcing or softening them. You can read exactly what came out and why here:",
+    noticeUrl,
+    "",
+    "We would rather tell you that than send you numbers we cannot stand behind.",
+    "",
+    "What we can offer instead is real: a free audit of your actual site — technical issues found, keyword opportunities, and one clear competitor gap. No template.",
+    contactUrl,
     "",
     "— Seovize · Build authority. Capture demand.",
   ].join("\n");
@@ -36,9 +42,11 @@ export function buildReportSignupConfirmation(
   const html = `
     <div style="font-family:Inter,Arial,sans-serif;color:#0B1020;line-height:1.6">
       <p>${esc(greeting)}</p>
-      <p>Thanks for your interest in the <strong>Texas Small Business Digital Marketing Report 2026</strong>.</p>
-      <p><a href="${reportUrl}" style="color:#14B8A6;font-weight:600">Read the full report →</a></p>
-      <p>We'll send you a note when the next edition is published — no spam, no daily emails.</p>
+      <p>Thanks for requesting the <strong>Texas Small Business Digital Marketing Report</strong>.</p>
+      <p>Straight answer: we withdrew it. On review, several of its headline figures did not meet the evidence standard we hold our client work to, so we removed them outright rather than quietly re-sourcing or softening them. <a href="${noticeUrl}" style="color:#14B8A6">Here is exactly what came out, and why →</a></p>
+      <p>We would rather tell you that than send you numbers we cannot stand behind.</p>
+      <p>What we can offer instead is real: a free audit of your actual site — technical issues found, keyword opportunities, and one clear competitor gap. No template.</p>
+      <p><a href="${contactUrl}" style="color:#14B8A6;font-weight:600">Get your free audit →</a></p>
       <p style="color:#475569;font-size:13px;margin-top:24px">— Seovize · Build authority. Capture demand.</p>
     </div>`.trim();
 

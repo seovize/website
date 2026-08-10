@@ -16,12 +16,25 @@ afterEach(() => {
 });
 
 describe("buildReportSignupConfirmation", () => {
-  it("greets the lead by first name and links the report", () => {
+  it("greets the lead by first name and links the correction notice", () => {
     const data = reportSignupSchema.parse({ name: "Jamie Rivera", email: "jamie@example.com" });
     const payload = buildReportSignupConfirmation(data, env);
     expect(payload.to).toEqual(["jamie@example.com"]);
     expect(payload.text).toContain("Hi Jamie,");
     expect(payload.html).toContain("texas-digital-marketing-report-2026");
+  });
+
+  // Regression guard for the 2026-08-11 correction: the report was retracted on
+  // 2026-08-02 but this email kept promising "Read the full report" and linking
+  // to what is now a correction notice. It must never again offer the withdrawn
+  // report as deliverable content.
+  it("does not promise the withdrawn report as deliverable content", () => {
+    const data = reportSignupSchema.parse({ name: "Jamie Rivera", email: "jamie@example.com" });
+    const payload = buildReportSignupConfirmation(data, env);
+    expect(payload.html).not.toContain("Read the full report");
+    expect(payload.text).not.toContain("Read it here");
+    expect(payload.text).not.toContain("next edition is published");
+    expect(payload.text).toContain("we withdrew it");
   });
 
   it("falls back to a generic greeting when no name is provided", () => {
