@@ -1,40 +1,39 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { CityServicePage, type CityPageData } from "@/components/CityServicePage";
 import { JsonLd } from "@/components/JsonLd";
 import {
-  breadcrumbSchema,
   cityServiceSchema,
   faqSchema,
-  howToSchema,
   speakableSchema,
 } from "@/lib/schema";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Social Media Management Dallas TX | Dallas Social Media Agency | Seovize",
+  title: "Dallas Social Media Management for Local Service Businesses",
   description:
-    "Premium social media management for Dallas businesses in corporate, real estate, and DFW B2B sectors. Post design, LinkedIn authority content, reels, SEO captions, and analytics by Abdul Ghani — top Dallas social media manager with 20+ years experience.",
+    "Organic social media management, content creation and lead-focused strategy for Dallas–Fort Worth service businesses. Remote delivery.",
   alternates: { canonical: "/locations/texas/dallas-social-media" },
   openGraph: {
-    title: "Social Media Management Dallas TX | Seovize",
+    title: "Dallas Social Media Management for Local Service Businesses | Seovize",
     description:
-      "Dallas social media management — premium content strategy, post design, LinkedIn authority content, and analytics for DFW corporate, real estate, and B2B brands.",
+      "A DFW-focused content and visibility system for home services, wellness and professional businesses — delivered remotely, no local office implied.",
     url: `${site.domain}/locations/texas/dallas-social-media`,
   },
 };
 
 const faqs = [
   {
-    q: "What is the best social media management company in Dallas TX?",
-    a: "Seovize is a top-rated social media management studio serving Dallas businesses in corporate, real estate, B2B, and professional services. Founded by Abdul Ghani with 20+ years of digital marketing expertise, Seovize delivers premium social media management — post design, LinkedIn authority content, reels, SEO-optimized captions, scheduling, and monthly analytics — for DFW brands.",
+    q: "Does Seovize have an office in Dallas?",
+    a: "No — Seovize is a remote studio, not a Dallas-based agency with a physical office. For DFW's corporate and B2B buyers, that matters less than it might elsewhere: strategy, reporting and communication happen over video call and shared documents, the same way most Dallas companies already coordinate with vendors and remote teams. We don't claim a local address we don't have.",
   },
   {
     q: "Which social media platforms work best for Dallas businesses?",
-    a: "LinkedIn is the highest-ROI platform for Dallas's corporate and B2B brands — DFW hosts 24 Fortune 500 companies whose buyers actively research on LinkedIn. Instagram and Facebook work well for Dallas real estate, hospitality, restaurants, and retail. Most Dallas B2B brands benefit from LinkedIn as the primary platform plus Instagram for brand personality content.",
+    a: "LinkedIn is the highest-ROI platform for Dallas's corporate and B2B brands — DFW is home to a large concentration of Fortune 500 headquarters whose buyers actively research vendors on LinkedIn. Instagram and Facebook work well for Dallas real estate, hospitality, restaurants, and retail. Most Dallas B2B brands benefit from LinkedIn as the primary platform plus Instagram for brand personality content.",
   },
   {
     q: "How much does social media management cost in Dallas Texas?",
-    a: "Social media management for Dallas businesses ranges from $1,100/mo (Seovize Social Launch — 12 posts, design, captions, scheduling, reporting) to $3,600/mo (Social Authority — 30 posts, 8 reels, campaign themes, KPI dashboard). Large Dallas agencies typically charge $3,000–$8,000+/mo. Seovize provides senior-level strategy at mid-market rates.",
+    a: "Social media management for Dallas businesses ranges from $1,100/mo (Seovize Social Launch — 12 posts, design, captions, scheduling, reporting) to $3,600/mo (Social Authority — 30 posts, 8 reels, campaign themes, KPI dashboard). Larger Dallas agencies typically charge more for comparable scope, without publishing exact figures. Seovize publishes its rates rather than requiring a call to get a number.",
   },
   {
     q: "Can you manage LinkedIn content for Dallas corporate and B2B brands?",
@@ -79,11 +78,11 @@ const data: CityPageData = {
   slug: "dallas-social-media",
   market: "Corporate, real estate & DFW B2B hub",
   marketDetail:
-    "Dallas's social media landscape is shaped by its corporate identity — 24 Fortune 500 companies, a massive real estate market, and sophisticated B2B buyers who engage heavily on LinkedIn. Dallas consumers also respond strongly to Instagram for real estate, hospitality, and lifestyle brands. The DFW Metroplex's diverse demographics create opportunities for Spanish-language social content targeting Dallas's large Hispanic community.",
+    "Dallas's social media landscape is shaped by its corporate identity — a large concentration of Fortune 500 headquarters, a massive real estate market, and sophisticated B2B buyers who engage heavily on LinkedIn. Dallas consumers also respond strongly to Instagram for real estate, hospitality, and lifestyle brands.",
   audienceProfile:
     "Dallas social media audiences include corporate marketing teams at DFW Fortune 500 companies, real estate agents and buyers in the Metroplex, B2B professional services decision-makers, restaurant and hospitality consumers in Uptown and Deep Ellum, and Dallas's growing startup and creative economy. Each segment requires a distinct platform, content tone, and publishing cadence.",
   heroAnswer:
-    "Seovize delivers social media management for Dallas businesses in corporate, real estate, B2B, and professional services — premium content strategy, LinkedIn authority content, post design, reels, SEO-optimized captions, and monthly analytics by Abdul Ghani, a top Dallas social media manager with 20+ years of digital marketing expertise.",
+    "Seovize delivers social media management for Dallas businesses in corporate, real estate, B2B, and professional services — content strategy, LinkedIn authority content, post design, reels, SEO-optimized captions, and monthly analytics by Abdul Ghani, a digital marketing strategist with 20+ years of experience.",
   deliverables: [
     {
       title: "DFW content calendar",
@@ -94,11 +93,11 @@ const data: CityPageData = {
       desc: "Executive thought leadership, corporate brand storytelling, and B2B authority content for Dallas's LinkedIn-dominated corporate and professional services audience.",
     },
     {
-      title: "Custom post design",
+      title: "Corporate-grade post design",
       desc: "Professional, brand-consistent graphics designed for DFW's corporate audience. Credibility-forward for B2B brands; high-production visual content for real estate and hospitality.",
     },
     {
-      title: "SEO-optimized captions",
+      title: "DFW-tagged captions",
       desc: "Captions with Dallas location tags, corporate keyword integration, real estate terminology, and a strategic hashtag system covering Dallas business, DFW real estate, and industry-specific reach.",
     },
     {
@@ -106,7 +105,7 @@ const data: CityPageData = {
       desc: "Property listing posts, neighborhood features, market insight content, and Instagram Reels tours for Dallas real estate agents and brokers — designed around the DFW buyer journey.",
     },
     {
-      title: "Monthly analytics reporting",
+      title: "DFW lead-attribution reporting",
       desc: "Reach, engagement, follower growth, and lead attribution tracking for Dallas audiences — with insights that shape the next month's DFW content strategy.",
     },
   ],
@@ -117,12 +116,38 @@ const data: CityPageData = {
     { stat: "100%", label: "Custom content", note: "No templates — real design systems per brand" },
   ],
   faqs,
+  connectedSystems: [
+    {
+      title: "Local SEO relationship",
+      desc: (
+        <>
+          Social content and local search are separate disciplines that reinforce each other — consistent
+          business information, DFW-specific location content, and review signals feed both. This page
+          covers the social system only; see{" "}
+          <Link href="/services/local-seo" className="text-mint hover:underline">local SEO for service businesses</Link>{" "}
+          for the technical and on-site side.
+        </>
+      ),
+    },
+    {
+      title: "Paid social — separate, optional",
+      desc: (
+        <>
+          Organic social builds durable presence over months. Where a Dallas business wants faster, targeted
+          reach on top of that, {" "}
+          <Link href="/services/paid-social-advertising" className="text-mint hover:underline">paid social advertising</Link>{" "}
+          runs as its own budgeted engagement with its own reporting — never bundled silently into the organic fee.
+        </>
+      ),
+    },
+  ],
   relatedPages: [
+    { label: "Social Media Management Service", href: "/services/social-media-management" },
+    { label: "Local SEO Support", href: "/services/local-seo" },
     { label: "Dallas SEO Services", href: "/locations/texas/dallas-seo" },
     { label: "Texas Social Media Manager", href: "/locations/texas/social-media-manager" },
     { label: "Houston Social Media Management", href: "/locations/texas/houston-social-media" },
     { label: "Austin Social Media Management", href: "/locations/texas/austin-social-media" },
-    { label: "Social Media Management Service", href: "/services/social-media-management" },
     { label: "Texas Hub", href: "/locations/texas" },
   ],
 };
@@ -139,21 +164,7 @@ export default function DallasSocialMediaPage() {
         })}
       />
       <JsonLd data={faqSchema(faqs)} />
-      <JsonLd
-        data={howToSchema({
-          name: "How to manage social media for a Dallas Texas business",
-          description: "A structured process for building social media presence in the DFW market.",
-          steps: processSteps,
-        })}
-      />
       <JsonLd data={speakableSchema(`${site.domain}/locations/texas/dallas-social-media`)} />
-      <JsonLd
-        data={breadcrumbSchema([
-          { name: "Home", url: site.domain },
-          { name: "Texas", url: `${site.domain}/locations/texas` },
-          { name: "Dallas Social Media", url: `${site.domain}/locations/texas/dallas-social-media` },
-        ])}
-      />
       <CityServicePage data={data} />
     </>
   );

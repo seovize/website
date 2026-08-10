@@ -2,10 +2,8 @@ import type { Metadata } from "next";
 import { CityServicePage, type CityPageData } from "@/components/CityServicePage";
 import { JsonLd } from "@/components/JsonLd";
 import {
-  breadcrumbSchema,
   cityServiceSchema,
   faqSchema,
-  howToSchema,
   speakableSchema,
 } from "@/lib/schema";
 import { site } from "@/lib/site";
@@ -13,20 +11,20 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Social Media Management San Antonio TX | San Antonio Social Media Agency | Seovize",
   description:
-    "Premium social media management for San Antonio businesses in hospitality, SMBs, and military-adjacent sectors. Community-driven content, bilingual posts, reels, and analytics by Abdul Ghani — top San Antonio social media manager with 20+ years experience.",
+    "Social media management for San Antonio businesses in hospitality, SMBs, and military-adjacent sectors. Community-driven content, video and photo storytelling, reels, and analytics by Abdul Ghani, 20+ years experience.",
   alternates: { canonical: "/locations/texas/san-antonio-social-media" },
   openGraph: {
     title: "Social Media Management San Antonio TX | Seovize",
     description:
-      "San Antonio social media management — community-driven content strategy, bilingual posts, Instagram storytelling, and analytics for San Antonio hospitality, SMBs, and military-adjacent brands.",
+      "San Antonio social media management — community-driven content strategy, Instagram storytelling, and analytics for San Antonio hospitality, SMBs, and military-adjacent brands.",
     url: `${site.domain}/locations/texas/san-antonio-social-media`,
   },
 };
 
 const faqs = [
   {
-    q: "What is the best social media management company in San Antonio TX?",
-    a: "Seovize is a top-rated social media management studio serving San Antonio businesses in hospitality, healthcare, SMBs, contracting, and military-adjacent sectors. Founded by Abdul Ghani with 20+ years of digital marketing expertise, Seovize delivers premium San Antonio social media management — community-driven content, bilingual posts, Instagram storytelling, reels, and monthly analytics — for San Antonio brands.",
+    q: "Is Seovize a local San Antonio business?",
+    a: "No — Seovize serves San Antonio businesses remotely, without a physical San Antonio office. For the community-first content this market rewards, that means we depend on you for the photos, video and local context that make the content genuinely San Antonio, not generic — we're not walking your storefront ourselves. What we bring is the strategy, design, writing and scheduling built around what you send us.",
   },
   {
     q: "Which social media platforms work best for San Antonio businesses?",
@@ -34,7 +32,7 @@ const faqs = [
   },
   {
     q: "Do you provide bilingual social media management for San Antonio businesses?",
-    a: "Yes. San Antonio's large Spanish-speaking community creates significant bilingual social media opportunities. Seovize builds bilingual content strategies — Spanish-language posts, bilingual captions, Spanish hashtag systems, and culturally resonant content for San Antonio's Hispanic community on Instagram and Facebook. This is a major competitive advantage most San Antonio businesses are not leveraging.",
+    a: "Bilingual content is discussed and scoped per engagement — we don't offer it as a default, standing capability, and we won't claim Spanish-language delivery without confirming it's genuinely staffed for your account. If bilingual content matters for your business, raise it during the initial call and we'll tell you honestly whether we can deliver it well.",
   },
   {
     q: "How much does social media management cost in San Antonio Texas?",
@@ -56,12 +54,12 @@ const processSteps = [
     text: "Build a monthly content calendar reflecting San Antonio community themes — River Walk events, Fiesta San Antonio, military appreciation content, local business milestones, and your specific buyer journey. Community-first content performs significantly better in San Antonio's tight-knit market than generic promotional content.",
   },
   {
-    name: "Bilingual content design and strategy",
-    text: "Design bilingual post graphics — English and Spanish — that resonate with San Antonio's diverse audience. Spanish-language content reaches a large, underserved segment of San Antonio's social media audience and creates a meaningful competitive advantage for businesses willing to invest in bilingual social media.",
+    name: "Video and photo content operations",
+    text: "Build a repeatable capture and production process for San Antonio's visual-first market — event coverage, food and hospitality photography direction, and short-form video that reflects the city's community-first character rather than imported corporate templates.",
   },
   {
     name: "Hospitality and community caption writing",
-    text: "Write captions with San Antonio location tags, local event hashtags, community-specific keyword integration, and a hashtag system covering San Antonio local, Texas travel, hospitality, and industry-specific reach. Spanish-language caption variants where applicable.",
+    text: "Write captions with San Antonio location tags, local event hashtags, community-specific keyword integration, and a hashtag system covering San Antonio local, Texas travel, hospitality, and industry-specific reach.",
   },
   {
     name: "Instagram Reels and visual content production",
@@ -79,22 +77,18 @@ const data: CityPageData = {
   slug: "san-antonio-social-media",
   market: "SMBs, hospitality, military & community hub",
   marketDetail:
-    "San Antonio's social media landscape is shaped by a strong community identity — River Walk tourism, Fiesta San Antonio traditions, military pride, and a deep-rooted Hispanic cultural heritage. San Antonio brands that lead with community, authenticity, and local pride perform far better on social media than brands that import the corporate content strategies from Houston or Dallas. Bilingual content (English and Spanish) is a significant opportunity that most San Antonio brands are not fully leveraging.",
+    "San Antonio's social media landscape is shaped by a strong community identity — River Walk tourism, Fiesta San Antonio traditions, military pride, and a deep-rooted Hispanic cultural heritage. San Antonio brands that lead with community, authenticity and local pride perform far better on social media than brands that import corporate content strategies from Houston or Dallas.",
   audienceProfile:
-    "San Antonio social media audiences include tourists and visitors engaging with River Walk and Alamo attractions, local residents in the SMB and service-economy community, military families at Joint Base San Antonio, Spanish-speaking consumers seeking bilingual service providers, healthcare patients engaging with local providers, and the creative community in the Pearl and Southtown neighborhoods. Each segment responds to distinct content types and cultural references.",
+    "San Antonio social media audiences include tourists and visitors engaging with River Walk and Alamo attractions, local residents in the SMB and service-economy community, military families at Joint Base San Antonio, healthcare patients engaging with local providers, and the creative community in the Pearl and Southtown neighborhoods. Each segment responds to distinct content types and cultural references.",
   heroAnswer:
-    "Seovize delivers social media management for San Antonio businesses in hospitality, SMBs, healthcare, and military-adjacent sectors — community-driven content strategy, bilingual posts, Instagram storytelling, reels, SEO-optimized captions, and monthly analytics by Abdul Ghani, a top San Antonio social media manager with 20+ years of digital marketing expertise.",
+    "Seovize delivers social media management for San Antonio businesses in hospitality, SMBs, healthcare, and military-adjacent sectors — community-driven content strategy, Instagram storytelling, reels, SEO-optimized captions, and monthly analytics by Abdul Ghani, a digital marketing strategist with 20+ years of experience.",
   deliverables: [
     {
       title: "San Antonio community content calendar",
       desc: "Monthly social media calendar reflecting San Antonio community themes — River Walk events, Fiesta San Antonio, military appreciation content, and local business milestones — not generic brand awareness content.",
     },
     {
-      title: "Bilingual content strategy",
-      desc: "English and Spanish posts, captions, and hashtag systems targeting San Antonio's large Hispanic community — a significant social media reach opportunity most businesses are not leveraging.",
-    },
-    {
-      title: "Custom post design",
+      title: "Community-forward post design",
       desc: "Brand-consistent graphics designed for San Antonio's community-forward aesthetic — warm, local, culturally resonant visuals for hospitality and SMBs; professional design for healthcare and B2B brands.",
     },
     {
@@ -102,18 +96,18 @@ const data: CityPageData = {
       desc: "Short-form video content for San Antonio's visual-first hospitality, restaurant, and lifestyle audiences — River Walk scenes, food storytelling, event coverage, and behind-the-scenes business content.",
     },
     {
-      title: "SEO-optimized captions",
-      desc: "Captions with San Antonio location tags, community event hashtags, hospitality and SMB keyword integration, and Spanish-language variants for bilingual reach across Instagram and Facebook.",
+      title: "San Antonio-tagged captions",
+      desc: "Captions with San Antonio location tags, community event hashtags, and hospitality and SMB keyword integration across Instagram and Facebook.",
     },
     {
-      title: "Monthly analytics reporting",
+      title: "San Antonio engagement reporting",
       desc: "Reach, engagement, follower growth, and lead attribution tracking for San Antonio audiences — with insights that shape next month's community-driven content strategy.",
     },
   ],
   processSteps,
   stats: [
     { stat: "20+", label: "Years digital marketing", note: "Applied to San Antonio community social strategy" },
-    { stat: "Bilingual", label: "Content capability", note: "English and Spanish for San Antonio's market" },
+    { stat: "Community-first", label: "Content approach", note: "Built around San Antonio's local identity, not imported templates" },
     { stat: "100%", label: "Custom content", note: "Community-first approach — no generic templates" },
   ],
   faqs,
@@ -139,21 +133,7 @@ export default function SanAntonioSocialMediaPage() {
         })}
       />
       <JsonLd data={faqSchema(faqs)} />
-      <JsonLd
-        data={howToSchema({
-          name: "How to manage social media for a San Antonio Texas business",
-          description: "A structured process for building community-driven social media presence for San Antonio businesses.",
-          steps: processSteps,
-        })}
-      />
       <JsonLd data={speakableSchema(`${site.domain}/locations/texas/san-antonio-social-media`)} />
-      <JsonLd
-        data={breadcrumbSchema([
-          { name: "Home", url: site.domain },
-          { name: "Texas", url: `${site.domain}/locations/texas` },
-          { name: "San Antonio Social Media", url: `${site.domain}/locations/texas/san-antonio-social-media` },
-        ])}
-      />
       <CityServicePage data={data} />
     </>
   );

@@ -8,13 +8,13 @@ import { FAQAccordion } from "@/components/FAQAccordion";
 import { JsonLd } from "@/components/JsonLd";
 import { PricingCards } from "@/components/PricingCards";
 import { Section } from "@/components/Section";
-import { breadcrumbSchema, faqSchema, howToSchema, serviceSchema, speakableSchema } from "@/lib/schema";
+import { breadcrumbSchema, faqSchema, serviceSchema, speakableSchema } from "@/lib/schema";
 import { founder, seoPackages, site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Local SEO Services | Service-Area & GBP Optimization for Texas Businesses | Seovize",
+  title: "Local SEO for Service Businesses",
   description:
-    "Local SEO for service businesses in Texas and across the U.S. — Google Business Profile optimization, service-area pages, LocalBusiness schema with areaServed, citation building, and review systems. No fake address required. From $950/mo.",
+    "Improve local search relevance, website visibility and conversion paths with practical local SEO for service businesses. No fake address required. From $950/mo.",
   alternates: { canonical: "/services/local-seo" },
 };
 
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: "Do I need a physical address to do local SEO?",
-    a: "No. Service-area businesses — consultants, contractors, agencies, mobile services — can build strong local search visibility without a physical storefront. Google Business Profile supports service-area mode (no displayed address). LocalBusiness schema with areaServed markup signals geographic coverage without requiring a street address. Seovize itself is a service-area business ranking in Texas markets — we apply the same ethical strategies to our clients.",
+    a: "No. Service-area businesses — consultants, contractors, agencies, mobile services — can build strong local search visibility without a physical storefront. Google Business Profile supports service-area mode (no displayed address). ProfessionalService schema with areaServed markup signals geographic coverage without requiring a street address. Seovize itself is a service-area business ranking in Texas markets — we apply the same ethical strategies to our clients.",
   },
   {
     q: "How important is Google Business Profile for local SEO?",
@@ -60,7 +60,7 @@ const howToSteps = [
   },
   {
     name: "Schema Deployment",
-    text: "Implement LocalBusiness or ProfessionalService schema with areaServed for every target market. Add FAQPage, BreadcrumbList, and Speakable schema to every service-area page. Validate everything with Google's Rich Results Test before publishing.",
+    text: "Implement ProfessionalService schema with areaServed for every target market. Add FAQPage, BreadcrumbList, and Speakable schema to every service-area page. Validate everything with Google's Rich Results Test before publishing.",
   },
   {
     name: "Review Acquisition System",
@@ -76,7 +76,7 @@ const deliverables = [
   "Google Business Profile audit, category optimization, and ongoing weekly posts",
   "NAP citation audit across 50+ directories — inconsistencies corrected at source",
   "Service-area landing pages with genuine local content (not swapped city names)",
-  "LocalBusiness/ProfessionalService schema with areaServed for every target market",
+  "ProfessionalService schema with areaServed for every target market",
   "Post-engagement review acquisition workflow — timing, templates, direct links",
   "Monthly local rank tracking report — GBP insights, map pack positions, citation growth",
 ];
@@ -104,13 +104,6 @@ export default function LocalSeoPage() {
     <>
       <JsonLd data={serviceSchema("local-seo")} />
       <JsonLd data={faqSchema(faqs)} />
-      <JsonLd
-        data={howToSchema({
-          name: "How Seovize Implements Local SEO for Texas Service Businesses",
-          description: "A 6-step local SEO process covering GBP optimization, citation building, service-area pages, LocalBusiness schema, and review systems.",
-          steps: howToSteps,
-        })}
-      />
       <JsonLd data={speakableSchema(`${site.domain}/services/local-seo`)} />
       <JsonLd
         data={breadcrumbSchema([
@@ -146,7 +139,7 @@ export default function LocalSeoPage() {
               What is local SEO for service businesses?
             </p>
             <p className="text-base leading-[1.85] text-cloud">
-              Local SEO for service businesses builds visibility in geographic search results — local pack rankings, Google Business Profile optimization, service-area landing pages, LocalBusiness schema with areaServed markup, and citation consistency — without requiring a physical storefront. Service-area businesses can rank in multiple Texas cities through ethical, schema-first local SEO architecture.
+              Local SEO for service businesses builds visibility in geographic search results — local pack rankings, Google Business Profile optimization, service-area landing pages, ProfessionalService schema with areaServed markup, and citation consistency — without requiring a physical storefront. Service-area businesses can rank in multiple Texas cities through ethical, schema-first local SEO architecture.
             </p>
           </div>
 
@@ -170,6 +163,22 @@ export default function LocalSeoPage() {
           </div>
         </div>
       </section>
+
+      {/* ── ANSWER-FIRST: LOCAL SEO + SOCIAL ──────────────── */}
+      <Section eyebrow="Direct answer">
+        <h2 className="font-display text-2xl font-black text-cloud md:text-3xl">How do local SEO and social media work together?</h2>
+        <p className="mt-4 max-w-3xl text-base leading-8 text-mist">
+          Local SEO and social media reinforce each other through shared signals: consistent business name, address and service-area information across both; location-specific content that supports local relevance; and reviews that build trust in both search results and social proof. Neither replaces the other — local SEO captures people actively searching, social media builds familiarity before they search.
+        </p>
+        <ul className="mt-5 max-w-2xl space-y-2 text-sm text-mist">
+          <li>— Consistent NAP (name, address, service area) across Google Business Profile, website and social profiles</li>
+          <li>— Location-specific content shared across both channels, not written twice from scratch</li>
+          <li>— Review requests that feed both Google Business Profile and social proof</li>
+        </ul>
+        <p className="mt-4 text-sm text-mist">
+          See how this plays out for a specific industry in the <Link href="/industries/home-services-social-media-management" className="font-semibold text-mint hover:underline">home services growth system</Link>.
+        </p>
+      </Section>
 
       {/* ── HOW LOCAL RANKING WORKS ──────────────────────── */}
       <Section eyebrow="How Google ranks local results" title="Three factors. One competitive edge.">
@@ -336,7 +345,7 @@ export default function LocalSeoPage() {
                 We practice what we build.
               </h2>
               <p className="mt-5 text-base leading-[1.85] text-mist">
-                Seovize is itself a service-area business — we serve Texas clients remotely from a dedicated studio without a physical Texas office. Every local SEO strategy we build for clients is tested on our own presence first: service-area pages for Houston, Dallas, Austin, and San Antonio; LocalBusiness schema with areaServed (no fake address); GBP in service-area mode; citation building across Texas directories.
+                Seovize is itself a service-area business — we serve Texas clients remotely from a dedicated studio without a physical Texas office. Every local SEO strategy we build for clients is tested on our own presence first: service-area pages for Houston, Dallas, Austin, and San Antonio; ProfessionalService schema with areaServed (no fake address); GBP in service-area mode; citation building across Texas directories.
               </p>
               <p className="mt-4 text-base leading-[1.85] text-mist">
                 The tactics that work for Seovize are the tactics we deploy for our clients. No theoretical strategies, no untested advice.

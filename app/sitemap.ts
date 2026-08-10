@@ -105,10 +105,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/locations/texas/san-antonio-social-media",
   ];
   const medPriority = [
-    "/case-studies",
     "/blog",
     "/industries",
     ...industries.map((i) => i.href),
+    "/industries/home-services-social-media-management",
+    "/guides",
+    "/guides/social-media-management-pricing",
+    "/guides/hire-social-media-manager-vs-agency",
+    "/guides/social-media-content-ideas-home-services",
+    "/guides/organic-social-vs-paid-social",
     "/locations",
     // Added — verified public, indexable, self-canonical, and (for the first
     // two) linked from the site footer. /locations/texas/el-paso-social-media
@@ -117,7 +122,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // is linked from anywhere on the site (orphaned), so they fail the
     // "linked from the site" inclusion bar until that's fixed separately.
     "/privacy-policy",
-    "/research/texas-digital-marketing-report-2026",
     "/our-process",
   ];
 

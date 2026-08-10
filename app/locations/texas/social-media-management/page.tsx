@@ -11,7 +11,6 @@ import { Section } from "@/components/Section";
 import {
   breadcrumbSchema,
   faqSchema,
-  howToSchema,
   localBusinessSchema,
   offerCatalogServiceSchema,
   speakableSchema,
@@ -19,14 +18,14 @@ import {
 import { founder, site, socialPackages } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Social Media Management for Small Businesses in Texas | Seovize",
+  title: "Texas Social Media Management for Local Service Businesses",
   description:
-    "Done-for-you social media management for Texas small businesses — content strategy, custom post design, SEO captions, reels, scheduling, and monthly reporting. Plans from $1,100/mo, founder-led by Abdul Ghani. Serving Houston, Dallas, Austin, San Antonio, and all of Texas.",
+    "Social media strategy, content systems and local lead support for service businesses in Dallas, Houston, Austin and San Antonio.",
   alternates: { canonical: "/locations/texas/social-media-management" },
   openGraph: {
-    title: "Social Media Management for Small Businesses in Texas | Seovize",
+    title: "Texas Social Media Management for Local Service Businesses | Seovize",
     description:
-      "Founder-led social media management for Texas small businesses — strategy, design, SEO captions, reels, scheduling, and reporting from $1,100/mo. Serving all of Texas.",
+      "Social media strategy, content systems and local lead support for Texas service businesses — a Texas-focused remote management system, not a copied location template.",
     url: `${site.domain}/locations/texas/social-media-management`,
   },
 };
@@ -73,7 +72,7 @@ const howToSteps = [
   },
   {
     name: "Reels and short-form video direction",
-    text: "Short-form video drives 3–5x more reach than static posts for most small business accounts in 2026. We script, direct, and edit Reels and TikToks that showcase your work, your team, and your results — the content format that wins attention in crowded Texas local markets.",
+    text: "Short-form video reaches non-followers at a meaningfully higher rate than static posts on most platforms. We script, direct, and edit Reels and TikToks that showcase your work, your team, and your results — the content format that wins attention in crowded Texas local markets.",
   },
   {
     name: "Scheduling, publishing, and engagement",
@@ -170,14 +169,6 @@ export default function TexasSocialMediaManagementPage() {
       />
       <JsonLd data={localBusinessSchema()} />
       <JsonLd data={faqSchema(faqs)} />
-      <JsonLd
-        data={howToSchema({
-          name: "How social media management works for a Texas small business",
-          description:
-            "A 6-step done-for-you process Seovize uses to manage social media for small businesses across Texas — from strategy to monthly reporting.",
-          steps: howToSteps,
-        })}
-      />
       <JsonLd data={speakableSchema(`${site.domain}/locations/texas/social-media-management`)} />
       <JsonLd
         data={breadcrumbSchema([
@@ -274,7 +265,7 @@ export default function TexasSocialMediaManagementPage() {
             {[
               { stat: "Consistency", label: "The #1 predictor of small-business social success — and the hardest thing for busy owners to maintain alone." },
               { stat: "2 platforms", label: "Done well beats 5 done poorly. We concentrate effort where your Texas customers actually are." },
-              { stat: "Reels-led", label: "Short-form video earns 3–5x the reach of static posts for most local accounts in 2026." },
+              { stat: "Reels-led", label: "Short-form video reaches meaningfully more non-followers than static posts on most platforms." },
               { stat: "Local intent", label: "Geo-tagged, community-aware content that signals genuine Texas-market relevance to both customers and algorithms." },
             ].map((item) => (
               <div key={item.stat} className="flex items-start gap-4 rounded-2xl border border-line bg-navy p-5">
@@ -357,8 +348,8 @@ export default function TexasSocialMediaManagementPage() {
             ))}
           </div>
           <p className="mt-6 text-sm text-slate-mid">
-            Outside these metros? We serve Fort Worth, El Paso, Arlington, Plano, Corpus Christi, and small businesses
-            in communities across the entire state.
+            Outside these four metros? Seovize also serves Fort Worth and El Paso directly, and delivers
+            remotely to service businesses across the rest of Texas — the process is the same everywhere.
           </p>
         </div>
       </section>

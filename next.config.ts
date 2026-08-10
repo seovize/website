@@ -33,6 +33,10 @@ const nextConfig: NextConfig = {
       { source: "/wordpress-website-design", destination: "/services/website-design", permanent: true },
       { source: "/wordpress-website-design/", destination: "/services/website-design", permanent: true },
 
+      // ── Old WordPress service page (found via GSC "Not found (404)" audit — no redirect existed) ──
+      { source: "/social-media-management", destination: "/services/social-media-management", permanent: true },
+      { source: "/social-media-management/", destination: "/services/social-media-management", permanent: true },
+
       // ── Old WordPress blog posts (29K+ impressions total) ──
       { source: "/how-many-keywords-should-i-use-for-seo", destination: "/blog/how-many-keywords-should-i-use-for-seo", permanent: true },
       { source: "/how-many-keywords-should-i-use-for-seo/", destination: "/blog/how-many-keywords-should-i-use-for-seo", permanent: true },

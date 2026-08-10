@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What is the best social media management company in Fort Worth TX?",
-    a: "Seovize is a top-rated social media management studio serving Fort Worth businesses across manufacturing, healthcare, hospitality, retail, and professional services. Founded by Abdul Ghani with 20+ years of digital marketing expertise, Seovize delivers premium social media management — post design, reels, SEO-optimized captions, scheduling, and monthly analytics — for Fort Worth and the broader DFW-West Texas corridor.",
+    a: "Seovize is a Fort Worth-focused social media management studio serving businesses across manufacturing, healthcare, hospitality, retail, and professional services. Founded by Abdul Ghani with 20+ years of digital marketing expertise, Seovize delivers social media management — post design, reels, SEO-optimized captions, scheduling, and monthly analytics — for Fort Worth and the broader DFW-West Texas corridor.",
   },
   {
     q: "Which social media platforms work best for Fort Worth businesses?",

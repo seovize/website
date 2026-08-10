@@ -47,7 +47,7 @@ export default function AboutPage() {
             <Link href="/" className="font-semibold text-mint hover:underline" itemProp="worksFor">
               Seovize
             </Link>
-            . Recognized as a top local SEO expert serving Texas businesses remotely, he specializes in entity-first
+            . He serves Texas businesses remotely, specializing in entity-first
             content architecture, Google Ads optimization, Meta Ads, and social media management for service-led and
             expert-driven brands. With{" "}
             <span itemProp="yearsOfExperience">20+</span> years of experience, Abdul Ghani helps growth-focused U.S.

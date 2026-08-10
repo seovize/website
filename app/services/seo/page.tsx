@@ -8,11 +8,11 @@ import { JsonLd } from "@/components/JsonLd";
 import { Section } from "@/components/Section";
 import { Button } from "@/components/Button";
 import { PricingCards } from "@/components/PricingCards";
-import { faqSchema, howToSchema, serviceSchema, speakableSchema } from "@/lib/schema";
+import { faqSchema, serviceSchema, speakableSchema } from "@/lib/schema";
 import { seoPackages, site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "SEO Services | Semantic SEO & Local SEO for Growth-Focused Brands | Seovize",
+  title: "SEO Services | Semantic SEO & Local SEO for Growth-Focused Brands",
   description:
     "Expert SEO services — semantic SEO, technical SEO, local SEO, schema markup, and content strategy by Abdul Ghani, 20+ years experience. Serving U.S. service businesses from $1,250/month.",
   alternates: { canonical: "/services/seo" },
@@ -64,7 +64,7 @@ const deliverables = [
   { title: "Technical SEO audit", desc: "Full crawl analysis covering Core Web Vitals, page speed, structured data errors, canonical issues, index coverage, and internal link architecture." },
   { title: "Keyword cluster mapping", desc: "Comprehensive keyword universe segmented by topic cluster, buyer intent, search volume, and competition — mapped to specific pages on your site." },
   { title: "On-page optimization", desc: "Title tags, meta descriptions, H1/H2 structure, internal linking, image alt text, and content expansion for every target page." },
-  { title: "Schema markup implementation", desc: "Service, FAQPage, HowTo, Speakable, BreadcrumbList, and LocalBusiness schema — deployed correctly and validated through Google's Rich Results Test." },
+  { title: "Schema markup implementation", desc: "Service, FAQPage, HowTo, Speakable, and BreadcrumbList schema — deployed correctly and validated through Google's Rich Results Test. Structured data makes your content machine-readable; it does not guarantee rankings, rich-result display, or AI citation." },
   { title: "Content production", desc: "Service pages, location pages, and blog articles written by a semantic SEO specialist — optimized for topical authority, featured snippets, and entity recognition." },
   { title: "Google Search Console management", desc: "Monthly GSC review covering impressions, clicks, CTR, average position, and index coverage. Performance anomalies flagged and investigated immediately." },
   { title: "Featured snippet targeting", desc: "Structured answer boxes targeting PAA questions in your service category. Every eligible page includes a 40–55 word Speakable-marked answer paragraph." },
@@ -76,13 +76,6 @@ export default function SeoServicesPage() {
     <>
       <JsonLd data={serviceSchema("seo")} />
       <JsonLd data={faqSchema(faqs)} />
-      <JsonLd
-        data={howToSchema({
-          name: "How to run an SEO engagement for a service business",
-          description: "The Seovize SEO process — from audit to compounding organic authority.",
-          steps: howToSteps,
-        })}
-      />
       <JsonLd data={speakableSchema(`${site.domain}/services/seo`)} />
 
       <Breadcrumbs items={[{ name: "Services", href: "/services/seo" }, { name: "SEO Services", href: "/services/seo" }]} />
@@ -140,15 +133,44 @@ export default function SeoServicesPage() {
           <div className="rounded-[2rem] border border-mint/20 bg-navy p-8">
             <p className="mb-4 font-mono text-xs font-bold uppercase tracking-widest text-mint">Semantic SEO</p>
             <h3 className="font-display text-xl font-black text-cloud">Topical authority</h3>
-            <p className="mt-4 text-sm leading-7 text-mist">Interconnected content clusters, entity establishment, schema markup, and featured snippet architecture. Google understands your brand, validates your expertise, and surfaces you for every relevant query in your service category.</p>
+            <p className="mt-4 text-sm leading-7 text-mist">Interconnected content clusters, entity establishment, schema markup, and featured-snippet-formatted answers. This helps Google understand what your brand does and where it&apos;s relevant — it doesn&apos;t guarantee rankings or featured placement, but it removes ambiguity that keyword-only pages leave on the table.</p>
             <div className="mt-5 space-y-2">
-              {["Builds topical authority across clusters", "Entity recognition compounds over time", "Schema signals intent and structure", "Featured snippets + AI Overview eligibility"].map((p) => (
+              {["Builds topical authority across clusters", "Entity recognition compounds over time", "Schema clarifies intent and structure", "Featured snippet eligibility (not guaranteed)"].map((p) => (
                 <div key={p} className="flex items-center gap-3 text-sm text-cloud">
                   <span className="h-1.5 w-1.5 rounded-full bg-mint" />
                   {p}
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* ── TECHNICAL SEO, APPLIED TO OUR OWN SITE ────────── */}
+      <Section eyebrow="Technical SEO" title="We run seovize.com on the same technical standards.">
+        <div className="grid gap-6 md:grid-cols-2">
+          <p className="text-sm leading-8 text-mist md:text-base">
+            Technical SEO is easy to describe and hard to verify from a services page. This site is built with the
+            Next.js App Router, statically generated where the content allows it, and deployed on Vercel&apos;s edge
+            network — the same architecture we recommend for clients who need real page-speed and crawlability gains,
+            not a plugin bolted onto an existing WordPress build.
+          </p>
+          <div className="rounded-[2rem] border border-line bg-navy p-7">
+            <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.24em] text-mint">Checkable, not claimed</p>
+            <ul className="space-y-3 text-sm text-mist">
+              <li className="flex items-start gap-2.5">
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-mint" />
+                <span>Sitemap dates reflect real content-change history — <code className="text-cloud">seovize.com/sitemap.xml</code></span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-mint" />
+                <span>Legacy URLs use permanent (308) redirects to their current destination, not soft redirects or dead links</span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-mint" />
+                <span>Structured data validates against Google&apos;s Rich Results Test on every page type we ship</span>
+              </li>
+            </ul>
           </div>
         </div>
       </Section>
@@ -184,17 +206,17 @@ export default function SeoServicesPage() {
       </Section>
 
       {/* ── FEATURED SNIPPET SECTION ──────────────────────── */}
-      <Section variant="navy" eyebrow="Featured snippets & AI Overviews" title="Be the answer Google reads aloud.">
+      <Section variant="navy" eyebrow="Featured snippets & AI Overviews" title="Structured to be quotable — not guaranteed to be quoted.">
         <div className="grid gap-6 md:grid-cols-2">
           <div>
             <p className="text-sm leading-8 text-mist">
-              Google&apos;s AI Overviews pull direct answers from pages that implement Speakable schema and write structured answer paragraphs. When your service page answers a buyer&apos;s question in 40–55 words in a clearly marked section, Google lifts that answer into the AI Overview — placing your brand at the very top of results, above all traditional listings.
+              Google surfaces featured snippets and AI Overviews from pages that answer a specific question clearly and concisely, often in the 40–55 word range. Writing service-page answers in that format, and marking them with Speakable schema, makes a page a stronger <em>candidate</em> for that placement. It is not a guarantee — Google selects sources algorithmically, and no vendor, including Seovize, controls or can promise that outcome.
             </p>
             <p className="mt-5 text-sm leading-8 text-mist">
-              Every Seovize SEO engagement includes featured snippet architecture: PAA-targeted H2 questions, Speakable-marked answer boxes, and HowTo schema for process-oriented content. In 2026, the answer layer is where organic visibility is won or lost for most service categories.
+              Every Seovize SEO engagement includes featured-snippet-formatted content: PAA-targeted H2 questions and Speakable-marked answer boxes, written to the standard Google&apos;s own documentation recommends for this kind of placement.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              {["Speakable schema", "HowTo structured data", "FAQPage schema", "PAA targeting", "AI Overview eligibility"].map((t) => (
+              {["Speakable schema", "FAQPage schema", "PAA targeting", "Featured snippet formatting"].map((t) => (
                 <span key={t} className="rounded-full border border-line bg-obsidian px-3 py-1.5 text-[11px] font-medium text-mist">{t}</span>
               ))}
             </div>
@@ -204,7 +226,7 @@ export default function SeoServicesPage() {
             <div className="rounded-xl border border-line bg-navy p-5">
               <p className="font-display text-sm font-black text-cloud">What is semantic SEO?</p>
               <p className="mt-3 text-xs leading-6 text-mist">Semantic SEO is the practice of building topical authority through interconnected content clusters, entity establishment, and schema markup — so Google understands not just what your pages say, but who you are and why you are the most credible source on a subject.</p>
-              <p className="mt-3 text-[10px] text-slate-mid">↑ Speakable-marked · targets PAA + AI Overview eligibility</p>
+              <p className="mt-3 text-[10px] text-slate-mid">↑ Speakable-marked · formatted for featured-snippet eligibility</p>
             </div>
           </div>
         </div>

@@ -141,6 +141,30 @@ export const services = [
     ],
   },
   {
+    slug: "paid-social-advertising",
+    title: "Paid Social Advertising",
+    eyebrow: "Paid media",
+    description:
+      "Meta and paid-social campaign management focused on qualified local leads, creative testing and clear reporting — scoped and billed separately from organic social and local SEO.",
+    outcomes: ["Pixel + conversion tracking set up first", "Tested creative before scaling spend", "Transparent cost-per-lead reporting"],
+    price: "Management fee + ad spend, quoted per market",
+    href: "/services/paid-social-advertising",
+    icon: "ads",
+    deliverables: [
+      "Meta Pixel implementation and conversion tracking",
+      "Custom audience setup based on your real customer profile",
+      "Creative testing across multiple variations before scaling",
+      "Instant Form vs website-form strategy matched to your sales process",
+      "Monthly reporting: spend, cost per lead, creative performance",
+      "Lead-quality feedback loop where CRM or sales data is shared",
+    ],
+    faqs: [
+      { q: "Is ad spend included in the management fee?", a: "No — ad spend is billed directly by Meta and is always shown separately from the management fee." },
+      { q: "Do you guarantee a specific ROAS?", a: "No. Results depend on offer, market and creative performance. We report actual cost-per-lead rather than promising a universal return." },
+      { q: "Can this run alongside organic social media management?", a: "Yes — they're scoped and billed as separate services so it's clear what each budget is producing." },
+    ],
+  },
+  {
     slug: "content-marketing",
     title: "Content Marketing",
     eyebrow: "Authority content",
@@ -244,27 +268,6 @@ export const processSteps = [
   {
     title: "Optimize",
     text: "We review search data, social analytics, buyer behavior, and conversion signals to refine the next sprint.",
-  },
-];
-
-export const caseStudies = [
-  {
-    title: "Local Service SEO Architecture",
-    metric: "+70% modeled organic growth window",
-    text: "A semantic service-page rebuild designed to improve crawlability, topic coverage, and buyer clarity across local landing pages.",
-    tag: "SEO",
-  },
-  {
-    title: "Social Content System",
-    metric: "30-day creative calendar",
-    text: "Premium post design, SEO captions, reels direction, scheduling, and monthly reporting for consistent brand visibility.",
-    tag: "Social Media",
-  },
-  {
-    title: "Conversion Website Rebuild",
-    metric: "Next.js + Vercel stack",
-    text: "A fast marketing site with metadata, sitemap, robots, structured content, and focused CTAs for qualified leads.",
-    tag: "Web Design",
   },
 ];
 
@@ -458,7 +461,7 @@ export const founder = {
   title: "Founder & Senior SEO Specialist",
   linkedin: "https://www.linkedin.com/in/sardarabdulghani",
   experience: "20+",
-  snippet: "Abdul Ghani is an expert digital marketing strategist, semantic SEO specialist, and the founder of Seovize. Recognized as a top local SEO expert serving Texas businesses remotely, he specializes in entity-first content architecture, Google Ads optimization, Meta Ads, and social media management for service-led and expert-driven brands.",
+  snippet: "Abdul Ghani is a digital marketing strategist and semantic SEO specialist, and the founder of Seovize. He serves Texas businesses remotely, specializing in entity-first content architecture, Google Ads optimization, Meta Ads, and social media management for service-led and expert-driven brands.",
   bio: "Abdul Ghani is a digital marketing specialist with 20+ years of experience in semantic SEO, local search optimization, Google Ads, Meta advertising, and social media management. He founded Seovize to bring entity-first SEO strategy and premium social media systems to U.S. growth-focused brands — with a particular focus on helping Texas businesses build search authority and social presence without relying on outdated keyword tactics.",
   expertise: [
     { area: "Semantic SEO", desc: "Entity mapping, topic cluster architecture, NLP-optimized content, structured data, and internal link graph systems designed for long-term search authority that survives algorithm updates." },
